@@ -321,37 +321,37 @@
     }
   ],
   "bytecode": {
-    "object": "0x6080604052348015600f57600080fd5b506001600055603f8060226000396000f3fe6080604052600080fdfea2646970667358221220f0a153ab745fee74ecf3f75d1c97149a113676dd9579e5e5a035c47e6b6bded364736f6c634300080e0033",
-    "sourceMap": "453:1294:76:-:0;;;;;;;;;;;;-1:-1:-1;2345:1:30;685:16:84;:31;453:1294:76;;;;;;",
+    "object": "0x6080604052348015600f57600080fd5b506001600055603f8060226000396000f3fe6080604052600080fdfea2646970667358221220f16f5d9f1ac0622a95aa52b4f6b62f0e74a8b8e12b8ea8bd9facbf0b516457b464736f6c634300080e0033",
+    "sourceMap": "453:1294:81:-:0;;;;;;;;;;;;-1:-1:-1;2345:1:30;685:16:89;:31;453:1294:81;;;;;;",
     "linkReferences": {}
   },
   "deployedBytecode": {
-    "object": "0x6080604052600080fdfea2646970667358221220f0a153ab745fee74ecf3f75d1c97149a113676dd9579e5e5a035c47e6b6bded364736f6c634300080e0033",
-    "sourceMap": "453:1294:76:-:0;;;;;",
+    "object": "0x6080604052600080fdfea2646970667358221220f16f5d9f1ac0622a95aa52b4f6b62f0e74a8b8e12b8ea8bd9facbf0b516457b464736f6c634300080e0033",
+    "sourceMap": "453:1294:81:-:0;;;;;",
     "linkReferences": {}
   },
   "methodIdentifiers": {},
   "ast": {
     "absolutePath": "reference/lib/ReferenceCounterManager.sol",
-    "id": 36732,
+    "id": 37788,
     "exportedSymbols": {
       "ConsiderationEventsAndErrors": [
         1861
       ],
       "ReferenceCounterManager": [
-        36731
+        37787
       ],
       "ReferenceReentrancyGuard": [
-        41885
+        42941
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "32:1716:76",
+    "src": "32:1716:81",
     "nodes": [
       {
-        "id": 36679,
+        "id": 37735,
         "nodeType": "PragmaDirective",
-        "src": "32:23:76",
+        "src": "32:23:81",
         "literals": [
           "solidity",
           "^",
@@ -360,23 +360,23 @@
         ]
       },
       {
-        "id": 36681,
+        "id": 37737,
         "nodeType": "ImportDirective",
-        "src": "76:105:76",
+        "src": "76:105:81",
         "absolutePath": "contracts/interfaces/ConsiderationEventsAndErrors.sol",
         "file": "contracts/interfaces/ConsiderationEventsAndErrors.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 36732,
+        "scope": 37788,
         "sourceUnit": 1862,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 36680,
+              "id": 37736,
               "name": "ConsiderationEventsAndErrors",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
               "referencedDeclaration": 1861,
-              "src": "89:28:76",
+              "src": "89:28:81",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -385,23 +385,23 @@
         "unitAlias": ""
       },
       {
-        "id": 36683,
+        "id": 37739,
         "nodeType": "ImportDirective",
-        "src": "183:74:76",
+        "src": "183:74:81",
         "absolutePath": "reference/lib/ReferenceReentrancyGuard.sol",
         "file": "./ReferenceReentrancyGuard.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 36732,
-        "sourceUnit": 41886,
+        "scope": 37788,
+        "sourceUnit": 42942,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 36682,
+              "id": 37738,
               "name": "ReferenceReentrancyGuard",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 41885,
-              "src": "192:24:76",
+              "referencedDeclaration": 42941,
+              "src": "192:24:81",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -410,19 +410,19 @@
         "unitAlias": ""
       },
       {
-        "id": 36731,
+        "id": 37787,
         "nodeType": "ContractDefinition",
-        "src": "453:1294:76",
+        "src": "453:1294:81",
         "nodes": [
           {
-            "id": 36692,
+            "id": 37748,
             "nodeType": "VariableDeclaration",
-            "src": "636:45:76",
+            "src": "636:45:81",
             "constant": false,
             "mutability": "mutable",
             "name": "_counters",
-            "nameLocation": "672:9:76",
-            "scope": 36731,
+            "nameLocation": "672:9:81",
+            "scope": 37787,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -430,28 +430,28 @@
               "typeString": "mapping(address => uint256)"
             },
             "typeName": {
-              "id": 36691,
+              "id": 37747,
               "keyType": {
-                "id": 36689,
+                "id": 37745,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
-                "src": "644:7:76",
+                "src": "644:7:81",
                 "typeDescriptions": {
                   "typeIdentifier": "t_address",
                   "typeString": "address"
                 }
               },
               "nodeType": "Mapping",
-              "src": "636:27:76",
+              "src": "636:27:81",
               "typeDescriptions": {
                 "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                 "typeString": "mapping(address => uint256)"
               },
               "valueType": {
-                "id": 36690,
+                "id": 37746,
                 "name": "uint256",
                 "nodeType": "ElementaryTypeName",
-                "src": "655:7:76",
+                "src": "655:7:81",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
                   "typeString": "uint256"
@@ -461,28 +461,28 @@
             "visibility": "private"
           },
           {
-            "id": 36715,
+            "id": 37771,
             "nodeType": "FunctionDefinition",
-            "src": "957:333:76",
+            "src": "957:333:81",
             "body": {
-              "id": 36714,
+              "id": 37770,
               "nodeType": "Block",
-              "src": "1063:227:76",
+              "src": "1063:227:81",
               "statements": [
                 {
                   "expression": {
-                    "id": 36706,
+                    "id": 37762,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 36700,
+                      "id": 37756,
                       "name": "newCounter",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 36698,
-                      "src": "1136:10:76",
+                      "referencedDeclaration": 37754,
+                      "src": "1136:10:81",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -491,7 +491,7 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 36705,
+                      "id": 37761,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -499,42 +499,42 @@
                       "nodeType": "UnaryOperation",
                       "operator": "++",
                       "prefix": true,
-                      "src": "1149:23:76",
+                      "src": "1149:23:81",
                       "subExpression": {
                         "baseExpression": {
-                          "id": 36701,
+                          "id": 37757,
                           "name": "_counters",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 36692,
-                          "src": "1151:9:76",
+                          "referencedDeclaration": 37748,
+                          "src": "1151:9:81",
                           "typeDescriptions": {
                             "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                             "typeString": "mapping(address => uint256)"
                           }
                         },
-                        "id": 36704,
+                        "id": 37760,
                         "indexExpression": {
                           "expression": {
-                            "id": 36702,
+                            "id": 37758,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": -15,
-                            "src": "1161:3:76",
+                            "src": "1161:3:81",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 36703,
+                          "id": 37759,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "memberName": "sender",
                           "nodeType": "MemberAccess",
-                          "src": "1161:10:76",
+                          "src": "1161:10:81",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -545,7 +545,7 @@
                         "isPure": false,
                         "lValueRequested": true,
                         "nodeType": "IndexAccess",
-                        "src": "1151:21:76",
+                        "src": "1151:21:81",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -556,26 +556,26 @@
                         "typeString": "uint256"
                       }
                     },
-                    "src": "1136:36:76",
+                    "src": "1136:36:81",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 36707,
+                  "id": 37763,
                   "nodeType": "ExpressionStatement",
-                  "src": "1136:36:76"
+                  "src": "1136:36:81"
                 },
                 {
                   "eventCall": {
                     "arguments": [
                       {
-                        "id": 36709,
+                        "id": 37765,
                         "name": "newCounter",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 36698,
-                        "src": "1260:10:76",
+                        "referencedDeclaration": 37754,
+                        "src": "1260:10:81",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -583,25 +583,25 @@
                       },
                       {
                         "expression": {
-                          "id": 36710,
+                          "id": 37766,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": -15,
-                          "src": "1272:3:76",
+                          "src": "1272:3:81",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 36711,
+                        "id": 37767,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "sender",
                         "nodeType": "MemberAccess",
-                        "src": "1272:10:76",
+                        "src": "1272:10:81",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -619,18 +619,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 36708,
+                      "id": 37764,
                       "name": "CounterIncremented",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 1785,
-                      "src": "1241:18:76",
+                      "src": "1241:18:81",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_address_$returns$__$",
                         "typeString": "function (uint256,address)"
                       }
                     },
-                    "id": 36712,
+                    "id": 37768,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -638,63 +638,63 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1241:42:76",
+                    "src": "1241:42:81",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 36713,
+                  "id": 37769,
                   "nodeType": "EmitStatement",
-                  "src": "1236:47:76"
+                  "src": "1236:47:81"
                 }
               ]
             },
             "documentation": {
-              "id": 36693,
+              "id": 37749,
               "nodeType": "StructuredDocumentation",
-              "src": "688:264:76",
+              "src": "688:264:81",
               "text": " @dev Internal function to cancel all orders from a given offerer with a\n      given zone in bulk by incrementing a counter. Note that only the\n      offerer may increment the counter.\n @return newCounter The new counter."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
-                "id": 36696,
+                "id": 37752,
                 "kind": "modifierInvocation",
                 "modifierName": {
-                  "id": 36695,
+                  "id": 37751,
                   "name": "notEntered",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 41884,
-                  "src": "1011:10:76"
+                  "referencedDeclaration": 42940,
+                  "src": "1011:10:81"
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "1011:10:76"
+                "src": "1011:10:81"
               }
             ],
             "name": "_incrementCounter",
-            "nameLocation": "966:17:76",
+            "nameLocation": "966:17:81",
             "parameters": {
-              "id": 36694,
+              "id": 37750,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "983:2:76"
+              "src": "983:2:81"
             },
             "returnParameters": {
-              "id": 36699,
+              "id": 37755,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 36698,
+                  "id": 37754,
                   "mutability": "mutable",
                   "name": "newCounter",
-                  "nameLocation": "1047:10:76",
+                  "nameLocation": "1047:10:81",
                   "nodeType": "VariableDeclaration",
-                  "scope": 36715,
-                  "src": "1039:18:76",
+                  "scope": 37771,
+                  "src": "1039:18:81",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -702,10 +702,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 36697,
+                    "id": 37753,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1039:7:76",
+                    "src": "1039:7:81",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -714,36 +714,36 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1038:20:76"
+              "src": "1038:20:81"
             },
-            "scope": 36731,
+            "scope": 37787,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 36730,
+            "id": 37786,
             "nodeType": "FunctionDefinition",
-            "src": "1524:221:76",
+            "src": "1524:221:81",
             "body": {
-              "id": 36729,
+              "id": 37785,
               "nodeType": "Block",
-              "src": "1637:108:76",
+              "src": "1637:108:81",
               "statements": [
                 {
                   "expression": {
-                    "id": 36727,
+                    "id": 37783,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 36723,
+                      "id": 37779,
                       "name": "currentCounter",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 36721,
-                      "src": "1703:14:76",
+                      "referencedDeclaration": 37777,
+                      "src": "1703:14:81",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -753,25 +753,25 @@
                     "operator": "=",
                     "rightHandSide": {
                       "baseExpression": {
-                        "id": 36724,
+                        "id": 37780,
                         "name": "_counters",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 36692,
-                        "src": "1720:9:76",
+                        "referencedDeclaration": 37748,
+                        "src": "1720:9:81",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                           "typeString": "mapping(address => uint256)"
                         }
                       },
-                      "id": 36726,
+                      "id": 37782,
                       "indexExpression": {
-                        "id": 36725,
+                        "id": 37781,
                         "name": "offerer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 36718,
-                        "src": "1730:7:76",
+                        "referencedDeclaration": 37774,
+                        "src": "1730:7:81",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -782,48 +782,48 @@
                       "isPure": false,
                       "lValueRequested": false,
                       "nodeType": "IndexAccess",
-                      "src": "1720:18:76",
+                      "src": "1720:18:81",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "1703:35:76",
+                    "src": "1703:35:81",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 36728,
+                  "id": 37784,
                   "nodeType": "ExpressionStatement",
-                  "src": "1703:35:76"
+                  "src": "1703:35:81"
                 }
               ]
             },
             "documentation": {
-              "id": 36716,
+              "id": 37772,
               "nodeType": "StructuredDocumentation",
-              "src": "1296:223:76",
+              "src": "1296:223:81",
               "text": " @dev Internal view function to retrieve the current counter for a given\n      offerer.\n @param offerer The offerer in question.\n @return currentCounter The current counter."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_getCounter",
-            "nameLocation": "1533:11:76",
+            "nameLocation": "1533:11:81",
             "parameters": {
-              "id": 36719,
+              "id": 37775,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 36718,
+                  "id": 37774,
                   "mutability": "mutable",
                   "name": "offerer",
-                  "nameLocation": "1553:7:76",
+                  "nameLocation": "1553:7:81",
                   "nodeType": "VariableDeclaration",
-                  "scope": 36730,
-                  "src": "1545:15:76",
+                  "scope": 37786,
+                  "src": "1545:15:81",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -831,10 +831,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 36717,
+                    "id": 37773,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1545:7:76",
+                    "src": "1545:7:81",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -844,21 +844,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1544:17:76"
+              "src": "1544:17:81"
             },
             "returnParameters": {
-              "id": 36722,
+              "id": 37778,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 36721,
+                  "id": 37777,
                   "mutability": "mutable",
                   "name": "currentCounter",
-                  "nameLocation": "1617:14:76",
+                  "nameLocation": "1617:14:81",
                   "nodeType": "VariableDeclaration",
-                  "scope": 36730,
-                  "src": "1609:22:76",
+                  "scope": 37786,
+                  "src": "1609:22:81",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -866,10 +866,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 36720,
+                    "id": 37776,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1609:7:76",
+                    "src": "1609:7:81",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -878,9 +878,9 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1608:24:76"
+              "src": "1608:24:81"
             },
-            "scope": 36731,
+            "scope": 37787,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "internal"
@@ -890,48 +890,48 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 36685,
+              "id": 37741,
               "name": "ConsiderationEventsAndErrors",
               "nodeType": "IdentifierPath",
               "referencedDeclaration": 1861,
-              "src": "493:28:76"
+              "src": "493:28:81"
             },
-            "id": 36686,
+            "id": 37742,
             "nodeType": "InheritanceSpecifier",
-            "src": "493:28:76"
+            "src": "493:28:81"
           },
           {
             "baseName": {
-              "id": 36687,
+              "id": 37743,
               "name": "ReferenceReentrancyGuard",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 41885,
-              "src": "527:24:76"
+              "referencedDeclaration": 42941,
+              "src": "527:24:81"
             },
-            "id": 36688,
+            "id": 37744,
             "nodeType": "InheritanceSpecifier",
-            "src": "527:24:76"
+            "src": "527:24:81"
           }
         ],
         "canonicalName": "ReferenceCounterManager",
         "contractDependencies": [],
         "contractKind": "contract",
         "documentation": {
-          "id": 36684,
+          "id": 37740,
           "nodeType": "StructuredDocumentation",
-          "src": "259:193:76",
+          "src": "259:193:81",
           "text": " @title CounterManager\n @author 0age\n @notice CounterManager contains a storage mapping and related functionality\n         for retrieving and incrementing a per-offerer counter."
         },
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          36731,
-          41885,
+          37787,
+          42941,
           2192,
           1861
         ],
         "name": "ReferenceCounterManager",
-        "nameLocation": "462:23:76",
-        "scope": 36732,
+        "nameLocation": "462:23:81",
+        "scope": 37788,
         "usedErrors": [
           1790,
           1793,
@@ -956,5 +956,5 @@
     ],
     "license": "MIT"
   },
-  "id": 76
+  "id": 81
 }
