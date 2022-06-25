@@ -4,6 +4,7 @@ pragma solidity ^0.8.13;
 import { ZoneInterface } from "./interfaces/ZoneInterface.sol";
 import { ZoneInteractionErrors } from "./interfaces/ZoneInteractionErrors.sol";
 import { SeaportInterface } from "./interfaces/SeaportInterface.sol";
+import "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
 
 import "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 
@@ -79,14 +80,32 @@ contract OrderCheckZone is ZoneInterface {
         priorOrderHashes;
         criteriaResolvers;
 
+        // orderhash.extraData is an abi encoded bytes object containing
+        // (voucherHash, bytes32), (voucherSignature, bytes32), 
+        // (merkleProof, bytes32), (merkleRoot, bytes32)
+        (
+            bytes32 _voucherHash, 
+            bytes32 _voucherSignature,
+            bytes32 _merkleProof, 
+            bytes32 _merkleRoot
+        ) = abi.decode(
+            order.extraData, 
+            (
+                bytes32, 
+                bytes32, 
+                bytes32, 
+                bytes32, 
+            )
+        );
+
         // Check that voucher is signed by caller (called fulfill function)
         // Voucher signature is stored in order.extraData
-        address signer = ECDSA.recover(voucherHash, order.extraData);
+        address signer = ECDSA.recover(_voucherHash, _voucherSignature);
         require(signer == order.parameters.offerer, "extraData not signed by offerer");
 
         // Check that the caller is in the merkle root
         bytes32 leaf = keccak256(abi.encodePacked(caller));
-        require(MerkleProof.verify(_merkleProof, merkleRoot, leaf), "Invalid proof");
+        require(MerkleProof.verify(_merkleProof, _merkleRoot, leaf), "Invalid proof");
 
         // Return the selector of isValidOrder as the magic value.
         validOrderMagicValue = ZoneInterface.isValidOrder.selector;
