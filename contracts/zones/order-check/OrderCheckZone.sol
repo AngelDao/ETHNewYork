@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
-import { ZoneInterface } from "../interfaces/ZoneInterface.sol";
-import { ZoneInteractionErrors } from "../interfaces/ZoneInteractionErrors.sol";
-import { SeaportInterface } from "../interfaces/SeaportInterface.sol";
+import { ZoneInterface } from "./interfaces/ZoneInterface.sol";
+import { ZoneInteractionErrors } from "./interfaces/ZoneInteractionErrors.sol";
+import { SeaportInterface } from "./interfaces/SeaportInterface.sol";
 
 import {recover} from "@openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol";
 
@@ -15,7 +15,7 @@ import {
     OrderComponents,
     Fulfillment,
     Execution
-} from "../lib/ConsiderationStructs.sol";
+} from "./lib/ConsiderationStructs.sol";
 
 contract OrderCheckZone is ZoneInterface {
     
