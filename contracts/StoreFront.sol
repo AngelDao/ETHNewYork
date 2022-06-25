@@ -2,8 +2,8 @@
 pragma solidity ^0.8.14;
 
 import { ERC1155 } from "@rari-capital/solmate/src/tokens/ERC1155.sol";
-import { Ownable } from "openzeppelin-contracts/contracts/access/Ownable.sol";
-import { Strings } from "openzeppelin-contracts/contracts/utils/Strings.sol";
+import { Ownable } from "@openzeppelin/contracts/access/Ownable.sol";
+import { Strings } from "@openzeppelin/contracts/utils/Strings.sol";
 
 contract StoreFront is ERC1155, Ownable {
     mapping(uint256 => uint256) public totalSupply;
