@@ -31,7 +31,7 @@ export interface StoreFrontInterface extends utils.Interface {
     "balanceOf(address,uint256)": FunctionFragment;
     "balanceOfBatch(address[],uint256[])": FunctionFragment;
     "isApprovedForAll(address,address)": FunctionFragment;
-    "mint(address,uint256,uint256,bytes)": FunctionFragment;
+    "mint(address,uint256)": FunctionFragment;
     "owner()": FunctionFragment;
     "renounceOwnership()": FunctionFragment;
     "safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)": FunctionFragment;
@@ -76,7 +76,7 @@ export interface StoreFrontInterface extends utils.Interface {
   ): string;
   encodeFunctionData(
     functionFragment: "mint",
-    values: [string, BigNumberish, BigNumberish, BytesLike]
+    values: [string, BigNumberish]
   ): string;
   encodeFunctionData(functionFragment: "owner", values?: undefined): string;
   encodeFunctionData(
@@ -280,9 +280,7 @@ export interface StoreFront extends BaseContract {
 
     mint(
       _to: string,
-      _id: BigNumberish,
       _amount: BigNumberish,
-      _data: BytesLike,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
@@ -359,9 +357,7 @@ export interface StoreFront extends BaseContract {
 
   mint(
     _to: string,
-    _id: BigNumberish,
     _amount: BigNumberish,
-    _data: BytesLike,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
@@ -438,9 +434,7 @@ export interface StoreFront extends BaseContract {
 
     mint(
       _to: string,
-      _id: BigNumberish,
       _amount: BigNumberish,
-      _data: BytesLike,
       overrides?: CallOverrides
     ): Promise<void>;
 
@@ -571,9 +565,7 @@ export interface StoreFront extends BaseContract {
 
     mint(
       _to: string,
-      _id: BigNumberish,
       _amount: BigNumberish,
-      _data: BytesLike,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
@@ -651,9 +643,7 @@ export interface StoreFront extends BaseContract {
 
     mint(
       _to: string,
-      _id: BigNumberish,
       _amount: BigNumberish,
-      _data: BytesLike,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
