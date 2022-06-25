@@ -1,0 +1,1593 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "operatorToAssign",
+          "type": "address"
+        }
+      ],
+      "name": "assignOperator",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract SeaportInterface",
+          "name": "seaport",
+          "type": "address"
+        },
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "offerer",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "zone",
+              "type": "address"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "enum ItemType",
+                  "name": "itemType",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "address",
+                  "name": "token",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "identifierOrCriteria",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "startAmount",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "endAmount",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct OfferItem[]",
+              "name": "offer",
+              "type": "tuple[]"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "enum ItemType",
+                  "name": "itemType",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "address",
+                  "name": "token",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "identifierOrCriteria",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "startAmount",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "endAmount",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "address payable",
+                  "name": "recipient",
+                  "type": "address"
+                }
+              ],
+              "internalType": "struct ConsiderationItem[]",
+              "name": "consideration",
+              "type": "tuple[]"
+            },
+            {
+              "internalType": "enum OrderType",
+              "name": "orderType",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint256",
+              "name": "startTime",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "endTime",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "zoneHash",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "salt",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "conduitKey",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "counter",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct OrderComponents[]",
+          "name": "orders",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "cancelOrders",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "cancelled",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract SeaportInterface",
+          "name": "seaport",
+          "type": "address"
+        },
+        {
+          "components": [
+            {
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "offerer",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "zone",
+                  "type": "address"
+                },
+                {
+                  "components": [
+                    {
+                      "internalType": "enum ItemType",
+                      "name": "itemType",
+                      "type": "uint8"
+                    },
+                    {
+                      "internalType": "address",
+                      "name": "token",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "identifierOrCriteria",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "startAmount",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "endAmount",
+                      "type": "uint256"
+                    }
+                  ],
+                  "internalType": "struct OfferItem[]",
+                  "name": "offer",
+                  "type": "tuple[]"
+                },
+                {
+                  "components": [
+                    {
+                      "internalType": "enum ItemType",
+                      "name": "itemType",
+                      "type": "uint8"
+                    },
+                    {
+                      "internalType": "address",
+                      "name": "token",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "identifierOrCriteria",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "startAmount",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "endAmount",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "address payable",
+                      "name": "recipient",
+                      "type": "address"
+                    }
+                  ],
+                  "internalType": "struct ConsiderationItem[]",
+                  "name": "consideration",
+                  "type": "tuple[]"
+                },
+                {
+                  "internalType": "enum OrderType",
+                  "name": "orderType",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "startTime",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "endTime",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "bytes32",
+                  "name": "zoneHash",
+                  "type": "bytes32"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "salt",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "bytes32",
+                  "name": "conduitKey",
+                  "type": "bytes32"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "totalOriginalConsiderationItems",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct OrderParameters",
+              "name": "parameters",
+              "type": "tuple"
+            },
+            {
+              "internalType": "uint120",
+              "name": "numerator",
+              "type": "uint120"
+            },
+            {
+              "internalType": "uint120",
+              "name": "denominator",
+              "type": "uint120"
+            },
+            {
+              "internalType": "bytes",
+              "name": "signature",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "extraData",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct AdvancedOrder[]",
+          "name": "orders",
+          "type": "tuple[]"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "orderIndex",
+              "type": "uint256"
+            },
+            {
+              "internalType": "enum Side",
+              "name": "side",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint256",
+              "name": "index",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "identifier",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "criteriaProof",
+              "type": "bytes32[]"
+            }
+          ],
+          "internalType": "struct CriteriaResolver[]",
+          "name": "criteriaResolvers",
+          "type": "tuple[]"
+        },
+        {
+          "components": [
+            {
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "orderIndex",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "itemIndex",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct FulfillmentComponent[]",
+              "name": "offerComponents",
+              "type": "tuple[]"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "orderIndex",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "itemIndex",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct FulfillmentComponent[]",
+              "name": "considerationComponents",
+              "type": "tuple[]"
+            }
+          ],
+          "internalType": "struct Fulfillment[]",
+          "name": "fulfillments",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "executeMatchAdvancedOrders",
+      "outputs": [
+        {
+          "components": [
+            {
+              "components": [
+                {
+                  "internalType": "enum ItemType",
+                  "name": "itemType",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "address",
+                  "name": "token",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "identifier",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "address payable",
+                  "name": "recipient",
+                  "type": "address"
+                }
+              ],
+              "internalType": "struct ReceivedItem",
+              "name": "item",
+              "type": "tuple"
+            },
+            {
+              "internalType": "address",
+              "name": "offerer",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "conduitKey",
+              "type": "bytes32"
+            }
+          ],
+          "internalType": "struct Execution[]",
+          "name": "executions",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract SeaportInterface",
+          "name": "seaport",
+          "type": "address"
+        },
+        {
+          "components": [
+            {
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "offerer",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "zone",
+                  "type": "address"
+                },
+                {
+                  "components": [
+                    {
+                      "internalType": "enum ItemType",
+                      "name": "itemType",
+                      "type": "uint8"
+                    },
+                    {
+                      "internalType": "address",
+                      "name": "token",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "identifierOrCriteria",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "startAmount",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "endAmount",
+                      "type": "uint256"
+                    }
+                  ],
+                  "internalType": "struct OfferItem[]",
+                  "name": "offer",
+                  "type": "tuple[]"
+                },
+                {
+                  "components": [
+                    {
+                      "internalType": "enum ItemType",
+                      "name": "itemType",
+                      "type": "uint8"
+                    },
+                    {
+                      "internalType": "address",
+                      "name": "token",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "identifierOrCriteria",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "startAmount",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "endAmount",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "address payable",
+                      "name": "recipient",
+                      "type": "address"
+                    }
+                  ],
+                  "internalType": "struct ConsiderationItem[]",
+                  "name": "consideration",
+                  "type": "tuple[]"
+                },
+                {
+                  "internalType": "enum OrderType",
+                  "name": "orderType",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "startTime",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "endTime",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "bytes32",
+                  "name": "zoneHash",
+                  "type": "bytes32"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "salt",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "bytes32",
+                  "name": "conduitKey",
+                  "type": "bytes32"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "totalOriginalConsiderationItems",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct OrderParameters",
+              "name": "parameters",
+              "type": "tuple"
+            },
+            {
+              "internalType": "bytes",
+              "name": "signature",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct Order[]",
+          "name": "orders",
+          "type": "tuple[]"
+        },
+        {
+          "components": [
+            {
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "orderIndex",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "itemIndex",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct FulfillmentComponent[]",
+              "name": "offerComponents",
+              "type": "tuple[]"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "orderIndex",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "itemIndex",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct FulfillmentComponent[]",
+              "name": "considerationComponents",
+              "type": "tuple[]"
+            }
+          ],
+          "internalType": "struct Fulfillment[]",
+          "name": "fulfillments",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "executeMatchOrders",
+      "outputs": [
+        {
+          "components": [
+            {
+              "components": [
+                {
+                  "internalType": "enum ItemType",
+                  "name": "itemType",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "address",
+                  "name": "token",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "identifier",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "address payable",
+                  "name": "recipient",
+                  "type": "address"
+                }
+              ],
+              "internalType": "struct ReceivedItem",
+              "name": "item",
+              "type": "tuple"
+            },
+            {
+              "internalType": "address",
+              "name": "offerer",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "conduitKey",
+              "type": "bytes32"
+            }
+          ],
+          "internalType": "struct Execution[]",
+          "name": "executions",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "payee",
+          "type": "address"
+        }
+      ],
+      "name": "pause",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "assignOperator(address)": "84385c6f",
+    "cancelOrders(address,(address,address,(uint8,address,uint256,uint256,uint256)[],(uint8,address,uint256,uint256,uint256,address)[],uint8,uint256,uint256,bytes32,uint256,bytes32,uint256)[])": "e5c27af1",
+    "executeMatchAdvancedOrders(address,((address,address,(uint8,address,uint256,uint256,uint256)[],(uint8,address,uint256,uint256,uint256,address)[],uint8,uint256,uint256,bytes32,uint256,bytes32,uint256),uint120,uint120,bytes,bytes)[],(uint256,uint8,uint256,uint256,bytes32[])[],((uint256,uint256)[],(uint256,uint256)[])[])": "65c4eb72",
+    "executeMatchOrders(address,((address,address,(uint8,address,uint256,uint256,uint256)[],(uint8,address,uint256,uint256,uint256,address)[],uint8,uint256,uint256,bytes32,uint256,bytes32,uint256),bytes)[],((uint256,uint256)[],(uint256,uint256)[])[])": "2718034d",
+    "pause(address)": "76a67a51"
+  },
+  "ast": {
+    "absolutePath": "contracts/zones/interfaces/PausableZoneInterface.sol",
+    "id": 10241,
+    "exportedSymbols": {
+      "AdvancedOrder": [
+        4481
+      ],
+      "CriteriaResolver": [
+        4503
+      ],
+      "Execution": [
+        4525
+      ],
+      "Fulfillment": [
+        4512
+      ],
+      "Order": [
+        4469
+      ],
+      "OrderComponents": [
+        4342
+      ],
+      "PausableZoneInterface": [
+        10240
+      ],
+      "SeaportInterface": [
+        2075
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:3983:50",
+    "nodes": [
+      {
+        "id": 10162,
+        "nodeType": "PragmaDirective",
+        "src": "32:24:50",
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".7"
+        ]
+      },
+      {
+        "id": 10164,
+        "nodeType": "ImportDirective",
+        "src": "58:73:50",
+        "absolutePath": "contracts/interfaces/SeaportInterface.sol",
+        "file": "../../interfaces/SeaportInterface.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 10241,
+        "sourceUnit": 2076,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 10163,
+              "name": "SeaportInterface",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 2075,
+              "src": "67:16:50",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 10171,
+        "nodeType": "ImportDirective",
+        "src": "152:157:50",
+        "absolutePath": "contracts/lib/ConsiderationStructs.sol",
+        "file": "../../lib/ConsiderationStructs.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 10241,
+        "sourceUnit": 4526,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 10165,
+              "name": "AdvancedOrder",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4481,
+              "src": "165:13:50",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 10166,
+              "name": "CriteriaResolver",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4503,
+              "src": "184:16:50",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 10167,
+              "name": "Order",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4469,
+              "src": "206:5:50",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 10168,
+              "name": "OrderComponents",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4342,
+              "src": "217:15:50",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 10169,
+              "name": "Fulfillment",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4512,
+              "src": "238:11:50",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 10170,
+              "name": "Execution",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4525,
+              "src": "255:9:50",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 10240,
+        "nodeType": "ContractDefinition",
+        "src": "592:3422:50",
+        "nodes": [
+          {
+            "id": 10185,
+            "nodeType": "FunctionDefinition",
+            "src": "1001:139:50",
+            "documentation": {
+              "id": 10173,
+              "nodeType": "StructuredDocumentation",
+              "src": "630:366:50",
+              "text": " @notice Cancel an arbitrary number of orders that have agreed to use the\n         contract as their zone.\n @param seaport  The Seaport address.\n @param orders   The orders to cancel.\n @return cancelled A boolean indicating whether the supplied orders have\n                   been successfully cancelled."
+            },
+            "functionSelector": "e5c27af1",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "cancelOrders",
+            "nameLocation": "1010:12:50",
+            "parameters": {
+              "id": 10181,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10176,
+                  "mutability": "mutable",
+                  "name": "seaport",
+                  "nameLocation": "1049:7:50",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10185,
+                  "src": "1032:24:50",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_SeaportInterface_$2075",
+                    "typeString": "contract SeaportInterface"
+                  },
+                  "typeName": {
+                    "id": 10175,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 10174,
+                      "name": "SeaportInterface",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 2075,
+                      "src": "1032:16:50"
+                    },
+                    "referencedDeclaration": 2075,
+                    "src": "1032:16:50",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_SeaportInterface_$2075",
+                      "typeString": "contract SeaportInterface"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10180,
+                  "mutability": "mutable",
+                  "name": "orders",
+                  "nameLocation": "1093:6:50",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10185,
+                  "src": "1066:33:50",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_OrderComponents_$4342_calldata_ptr_$dyn_calldata_ptr",
+                    "typeString": "struct OrderComponents[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 10178,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 10177,
+                        "name": "OrderComponents",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 4342,
+                        "src": "1066:15:50"
+                      },
+                      "referencedDeclaration": 4342,
+                      "src": "1066:15:50",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_OrderComponents_$4342_storage_ptr",
+                        "typeString": "struct OrderComponents"
+                      }
+                    },
+                    "id": 10179,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1066:17:50",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_OrderComponents_$4342_storage_$dyn_storage_ptr",
+                      "typeString": "struct OrderComponents[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1022:83:50"
+            },
+            "returnParameters": {
+              "id": 10184,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10183,
+                  "mutability": "mutable",
+                  "name": "cancelled",
+                  "nameLocation": "1129:9:50",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10185,
+                  "src": "1124:14:50",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 10182,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1124:4:50",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1123:16:50"
+            },
+            "scope": 10240,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 10204,
+            "nodeType": "FunctionDefinition",
+            "src": "1852:203:50",
+            "documentation": {
+              "id": 10186,
+              "nodeType": "StructuredDocumentation",
+              "src": "1146:701:50",
+              "text": " @notice Execute an arbitrary number of matched orders, each with\n         an arbitrary number of items for offer and consideration\n         along with a set of fulfillments allocating offer components\n         to consideration components.\n @param seaport      The Seaport address.\n @param orders       The orders to match.\n @param fulfillments An array of elements allocating offer components\n                     to consideration components.\n @return executions An array of elements indicating the sequence of\n                    transfers performed as part of matching the given\n                    orders."
+            },
+            "functionSelector": "2718034d",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "executeMatchOrders",
+            "nameLocation": "1861:18:50",
+            "parameters": {
+              "id": 10198,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10189,
+                  "mutability": "mutable",
+                  "name": "seaport",
+                  "nameLocation": "1906:7:50",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10204,
+                  "src": "1889:24:50",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_SeaportInterface_$2075",
+                    "typeString": "contract SeaportInterface"
+                  },
+                  "typeName": {
+                    "id": 10188,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 10187,
+                      "name": "SeaportInterface",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 2075,
+                      "src": "1889:16:50"
+                    },
+                    "referencedDeclaration": 2075,
+                    "src": "1889:16:50",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_SeaportInterface_$2075",
+                      "typeString": "contract SeaportInterface"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10193,
+                  "mutability": "mutable",
+                  "name": "orders",
+                  "nameLocation": "1940:6:50",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10204,
+                  "src": "1923:23:50",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Order_$4469_calldata_ptr_$dyn_calldata_ptr",
+                    "typeString": "struct Order[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 10191,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 10190,
+                        "name": "Order",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 4469,
+                        "src": "1923:5:50"
+                      },
+                      "referencedDeclaration": 4469,
+                      "src": "1923:5:50",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Order_$4469_storage_ptr",
+                        "typeString": "struct Order"
+                      }
+                    },
+                    "id": 10192,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1923:7:50",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Order_$4469_storage_$dyn_storage_ptr",
+                      "typeString": "struct Order[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10197,
+                  "mutability": "mutable",
+                  "name": "fulfillments",
+                  "nameLocation": "1979:12:50",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10204,
+                  "src": "1956:35:50",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Fulfillment_$4512_calldata_ptr_$dyn_calldata_ptr",
+                    "typeString": "struct Fulfillment[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 10195,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 10194,
+                        "name": "Fulfillment",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 4512,
+                        "src": "1956:11:50"
+                      },
+                      "referencedDeclaration": 4512,
+                      "src": "1956:11:50",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Fulfillment_$4512_storage_ptr",
+                        "typeString": "struct Fulfillment"
+                      }
+                    },
+                    "id": 10196,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1956:13:50",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Fulfillment_$4512_storage_$dyn_storage_ptr",
+                      "typeString": "struct Fulfillment[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1879:118:50"
+            },
+            "returnParameters": {
+              "id": 10203,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10202,
+                  "mutability": "mutable",
+                  "name": "executions",
+                  "nameLocation": "2043:10:50",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10204,
+                  "src": "2024:29:50",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Execution_$4525_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct Execution[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 10200,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 10199,
+                        "name": "Execution",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 4525,
+                        "src": "2024:9:50"
+                      },
+                      "referencedDeclaration": 4525,
+                      "src": "2024:9:50",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Execution_$4525_storage_ptr",
+                        "typeString": "struct Execution"
+                      }
+                    },
+                    "id": 10201,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2024:11:50",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Execution_$4525_storage_$dyn_storage_ptr",
+                      "typeString": "struct Execution[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2023:31:50"
+            },
+            "scope": 10240,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 10227,
+            "nodeType": "FunctionDefinition",
+            "src": "3181:274:50",
+            "documentation": {
+              "id": 10205,
+              "nodeType": "StructuredDocumentation",
+              "src": "2061:1115:50",
+              "text": " @notice Execute an arbitrary number of matched advanced orders,\n         each with an arbitrary number of items for offer and\n         consideration along with a set of fulfillments allocating\n         offer components to consideration components.\n @param seaport           The Seaport address.\n @param orders            The orders to match.\n @param criteriaResolvers An array where each element contains a reference\n                          to a specific order as well as that order's\n                          offer or consideration, a token identifier, and\n                          a proof that the supplied token identifier is\n                          contained in the order's merkle root.\n @param fulfillments      An array of elements allocating offer components\n                          to consideration components.\n @return executions An array of elements indicating the sequence of\n                    transfers performed as part of matching the given\n                    orders."
+            },
+            "functionSelector": "65c4eb72",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "executeMatchAdvancedOrders",
+            "nameLocation": "3190:26:50",
+            "parameters": {
+              "id": 10221,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10208,
+                  "mutability": "mutable",
+                  "name": "seaport",
+                  "nameLocation": "3243:7:50",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10227,
+                  "src": "3226:24:50",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_SeaportInterface_$2075",
+                    "typeString": "contract SeaportInterface"
+                  },
+                  "typeName": {
+                    "id": 10207,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 10206,
+                      "name": "SeaportInterface",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 2075,
+                      "src": "3226:16:50"
+                    },
+                    "referencedDeclaration": 2075,
+                    "src": "3226:16:50",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_SeaportInterface_$2075",
+                      "typeString": "contract SeaportInterface"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10212,
+                  "mutability": "mutable",
+                  "name": "orders",
+                  "nameLocation": "3285:6:50",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10227,
+                  "src": "3260:31:50",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_AdvancedOrder_$4481_calldata_ptr_$dyn_calldata_ptr",
+                    "typeString": "struct AdvancedOrder[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 10210,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 10209,
+                        "name": "AdvancedOrder",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 4481,
+                        "src": "3260:13:50"
+                      },
+                      "referencedDeclaration": 4481,
+                      "src": "3260:13:50",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_AdvancedOrder_$4481_storage_ptr",
+                        "typeString": "struct AdvancedOrder"
+                      }
+                    },
+                    "id": 10211,
+                    "nodeType": "ArrayTypeName",
+                    "src": "3260:15:50",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_AdvancedOrder_$4481_storage_$dyn_storage_ptr",
+                      "typeString": "struct AdvancedOrder[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10216,
+                  "mutability": "mutable",
+                  "name": "criteriaResolvers",
+                  "nameLocation": "3329:17:50",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10227,
+                  "src": "3301:45:50",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_CriteriaResolver_$4503_calldata_ptr_$dyn_calldata_ptr",
+                    "typeString": "struct CriteriaResolver[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 10214,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 10213,
+                        "name": "CriteriaResolver",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 4503,
+                        "src": "3301:16:50"
+                      },
+                      "referencedDeclaration": 4503,
+                      "src": "3301:16:50",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_CriteriaResolver_$4503_storage_ptr",
+                        "typeString": "struct CriteriaResolver"
+                      }
+                    },
+                    "id": 10215,
+                    "nodeType": "ArrayTypeName",
+                    "src": "3301:18:50",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_CriteriaResolver_$4503_storage_$dyn_storage_ptr",
+                      "typeString": "struct CriteriaResolver[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10220,
+                  "mutability": "mutable",
+                  "name": "fulfillments",
+                  "nameLocation": "3379:12:50",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10227,
+                  "src": "3356:35:50",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Fulfillment_$4512_calldata_ptr_$dyn_calldata_ptr",
+                    "typeString": "struct Fulfillment[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 10218,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 10217,
+                        "name": "Fulfillment",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 4512,
+                        "src": "3356:11:50"
+                      },
+                      "referencedDeclaration": 4512,
+                      "src": "3356:11:50",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Fulfillment_$4512_storage_ptr",
+                        "typeString": "struct Fulfillment"
+                      }
+                    },
+                    "id": 10219,
+                    "nodeType": "ArrayTypeName",
+                    "src": "3356:13:50",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Fulfillment_$4512_storage_$dyn_storage_ptr",
+                      "typeString": "struct Fulfillment[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3216:181:50"
+            },
+            "returnParameters": {
+              "id": 10226,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10225,
+                  "mutability": "mutable",
+                  "name": "executions",
+                  "nameLocation": "3443:10:50",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10227,
+                  "src": "3424:29:50",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Execution_$4525_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct Execution[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 10223,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 10222,
+                        "name": "Execution",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 4525,
+                        "src": "3424:9:50"
+                      },
+                      "referencedDeclaration": 4525,
+                      "src": "3424:9:50",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Execution_$4525_storage_ptr",
+                        "typeString": "struct Execution"
+                      }
+                    },
+                    "id": 10224,
+                    "nodeType": "ArrayTypeName",
+                    "src": "3424:11:50",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Execution_$4525_storage_$dyn_storage_ptr",
+                      "typeString": "struct Execution[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3423:31:50"
+            },
+            "scope": 10240,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 10233,
+            "nodeType": "FunctionDefinition",
+            "src": "3737:39:50",
+            "documentation": {
+              "id": 10228,
+              "nodeType": "StructuredDocumentation",
+              "src": "3461:271:50",
+              "text": " @notice Pause this contract, safely stopping orders from using\n         the contract as a zone. Restricted orders with this address as a\n         zone will not be fulfillable unless the zone is redeployed to the\n         same address."
+            },
+            "functionSelector": "76a67a51",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "pause",
+            "nameLocation": "3746:5:50",
+            "parameters": {
+              "id": 10231,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10230,
+                  "mutability": "mutable",
+                  "name": "payee",
+                  "nameLocation": "3760:5:50",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10233,
+                  "src": "3752:13:50",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10229,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3752:7:50",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3751:15:50"
+            },
+            "returnParameters": {
+              "id": 10232,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3775:0:50"
+            },
+            "scope": 10240,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 10239,
+            "nodeType": "FunctionDefinition",
+            "src": "3953:59:50",
+            "documentation": {
+              "id": 10234,
+              "nodeType": "StructuredDocumentation",
+              "src": "3782:166:50",
+              "text": " @notice Assign the given address with the ability to operate the zone.\n @param operatorToAssign The address to assign as the operator."
+            },
+            "functionSelector": "84385c6f",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "assignOperator",
+            "nameLocation": "3962:14:50",
+            "parameters": {
+              "id": 10237,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10236,
+                  "mutability": "mutable",
+                  "name": "operatorToAssign",
+                  "nameLocation": "3985:16:50",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10239,
+                  "src": "3977:24:50",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10235,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3977:7:50",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3976:26:50"
+            },
+            "returnParameters": {
+              "id": 10238,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4011:0:50"
+            },
+            "scope": 10240,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "PausableZoneInterface",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 10172,
+          "nodeType": "StructuredDocumentation",
+          "src": "311:280:50",
+          "text": " @title  PausableZone\n @author cupOJoseph, BCLeFevre, ryanio\n @notice PausableZone is a simple zone implementation that approves every\n         order. It can be self-destructed by its controller to pause\n         restricted orders that have it set as their zone."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          10240
+        ],
+        "name": "PausableZoneInterface",
+        "nameLocation": "602:21:50",
+        "scope": 10241,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 50
+}

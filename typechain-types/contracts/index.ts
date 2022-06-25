@@ -11,4 +11,6 @@ import type * as lib from "./lib";
 export type { lib };
 import type * as test from "./test";
 export type { test };
+import type * as zones from "./zones";
+export type { zones };
 export type { Seaport } from "./Seaport";

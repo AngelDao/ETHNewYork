@@ -6,4 +6,5 @@ export * as helpers from "./helpers";
 export * as interfaces from "./interfaces";
 export * as lib from "./lib";
 export * as test from "./test";
+export * as zones from "./zones";
 export { Seaport__factory } from "./Seaport__factory";
