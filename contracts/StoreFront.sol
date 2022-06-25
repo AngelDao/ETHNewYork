@@ -9,7 +9,7 @@ contract StoreFront is ERC1155, Ownable {
     mapping(uint256 => uint256) public totalSupply;
     string baseURI;
     address minter;
-    uint256 id;
+    uint256 nextId;
 
     constructor(address _minter, string memory _baseURI) {
         minter = _minter;
@@ -22,8 +22,8 @@ contract StoreFront is ERC1155, Ownable {
     }
 
     function mint(address _to, uint256 _amount) external onlyMinter {
-        _mint(_to, _id, _amount, "");
-        totalSupply[_id++] += _amount;
+        _mint(_to, nextId, _amount, "");
+        totalSupply[nextId++] += _amount;
     }
 
     function updateBaseUri(string calldata base) external onlyOwner {
