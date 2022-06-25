@@ -154,19 +154,19 @@
   "methodIdentifiers": {},
   "ast": {
     "absolutePath": "contracts/zones/interfaces/PausableZoneEventsAndErrors.sol",
-    "id": 10161,
+    "id": 11158,
     "exportedSymbols": {
       "PausableZoneEventsAndErrors": [
-        10160
+        11157
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "32:3066:49",
+    "src": "32:3066:59",
     "nodes": [
       {
-        "id": 10094,
+        "id": 11091,
         "nodeType": "PragmaDirective",
-        "src": "32:24:49",
+        "src": "32:24:59",
         "literals": [
           "solidity",
           ">=",
@@ -175,80 +175,80 @@
         ]
       },
       {
-        "id": 10160,
+        "id": 11157,
         "nodeType": "ContractDefinition",
-        "src": "172:2925:49",
+        "src": "172:2925:59",
         "nodes": [
           {
-            "id": 10098,
+            "id": 11095,
             "nodeType": "EventDefinition",
-            "src": "298:15:49",
+            "src": "298:15:59",
             "anonymous": false,
             "documentation": {
-              "id": 10096,
+              "id": 11093,
               "nodeType": "StructuredDocumentation",
-              "src": "216:77:49",
+              "src": "216:77:59",
               "text": " @dev Emit an event whenever a zone is successfully paused."
             },
             "eventSelector": "9e87fac88ff661f02d44f95383c817fece4bce600a3dab7a54406878b965e752",
             "name": "Paused",
-            "nameLocation": "304:6:49",
+            "nameLocation": "304:6:59",
             "parameters": {
-              "id": 10097,
+              "id": 11094,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "310:2:49"
+              "src": "310:2:59"
             }
           },
           {
-            "id": 10101,
+            "id": 11098,
             "nodeType": "EventDefinition",
-            "src": "413:17:49",
+            "src": "413:17:59",
             "anonymous": false,
             "documentation": {
-              "id": 10099,
+              "id": 11096,
               "nodeType": "StructuredDocumentation",
-              "src": "319:89:49",
+              "src": "319:89:59",
               "text": " @dev Emit an event whenever a zone is successfully unpaused (created)."
             },
             "eventSelector": "a45f47fdea8a1efdd9029a5691c7f759c32b7c698632b563573e155625d16933",
             "name": "Unpaused",
-            "nameLocation": "419:8:49",
+            "nameLocation": "419:8:59",
             "parameters": {
-              "id": 10100,
+              "id": 11097,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "427:2:49"
+              "src": "427:2:59"
             }
           },
           {
-            "id": 10106,
+            "id": 11103,
             "nodeType": "EventDefinition",
-            "src": "635:55:49",
+            "src": "635:55:59",
             "anonymous": false,
             "documentation": {
-              "id": 10102,
+              "id": 11099,
               "nodeType": "StructuredDocumentation",
-              "src": "436:194:49",
+              "src": "436:194:59",
               "text": " @dev Emit an event whenever a zone owner registers a new potential\n      owner for that zone.\n @param newPotentialOwner The new potential owner of the zone."
             },
             "eventSelector": "11a3cf439fb225bfe74225716b6774765670ec1060e3796802e62139d69974da",
             "name": "PotentialOwnerUpdated",
-            "nameLocation": "641:21:49",
+            "nameLocation": "641:21:59",
             "parameters": {
-              "id": 10105,
+              "id": 11102,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10104,
+                  "id": 11101,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "newPotentialOwner",
-                  "nameLocation": "671:17:49",
+                  "nameLocation": "671:17:59",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10106,
-                  "src": "663:25:49",
+                  "scope": 11103,
+                  "src": "663:25:59",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -256,10 +256,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 10103,
+                    "id": 11100,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "663:7:49",
+                    "src": "663:7:59",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -269,37 +269,37 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "662:27:49"
+              "src": "662:27:59"
             }
           },
           {
-            "id": 10113,
+            "id": 11110,
             "nodeType": "EventDefinition",
-            "src": "900:68:49",
+            "src": "900:68:59",
             "anonymous": false,
             "documentation": {
-              "id": 10107,
+              "id": 11104,
               "nodeType": "StructuredDocumentation",
-              "src": "696:199:49",
+              "src": "696:199:59",
               "text": " @dev Emit an event whenever zone ownership is transferred.\n @param previousOwner The previous owner of the zone.\n @param newOwner      The new owner of the zone."
             },
             "eventSelector": "8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0",
             "name": "OwnershipTransferred",
-            "nameLocation": "906:20:49",
+            "nameLocation": "906:20:59",
             "parameters": {
-              "id": 10112,
+              "id": 11109,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10109,
+                  "id": 11106,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "previousOwner",
-                  "nameLocation": "935:13:49",
+                  "nameLocation": "935:13:59",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10113,
-                  "src": "927:21:49",
+                  "scope": 11110,
+                  "src": "927:21:59",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -307,10 +307,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 10108,
+                    "id": 11105,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "927:7:49",
+                    "src": "927:7:59",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -321,14 +321,14 @@
                 },
                 {
                   "constant": false,
-                  "id": 10111,
+                  "id": 11108,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "newOwner",
-                  "nameLocation": "958:8:49",
+                  "nameLocation": "958:8:59",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10113,
-                  "src": "950:16:49",
+                  "scope": 11110,
+                  "src": "950:16:59",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -336,10 +336,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 10110,
+                    "id": 11107,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "950:7:49",
+                    "src": "950:7:59",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -349,37 +349,37 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "926:41:49"
+              "src": "926:41:59"
             }
           },
           {
-            "id": 10120,
+            "id": 11117,
             "nodeType": "EventDefinition",
-            "src": "1152:46:49",
+            "src": "1152:46:59",
             "anonymous": false,
             "documentation": {
-              "id": 10114,
+              "id": 11111,
               "nodeType": "StructuredDocumentation",
-              "src": "974:173:49",
+              "src": "974:173:59",
               "text": " @dev Emit an event whenever a new zone is created.\n @param zone The address of the zone.\n @param salt The salt used to deploy the zone."
             },
             "eventSelector": "d1fa916c9f898e9a8dcedb0f78093657d07014799896193f2b219bed6ac7399c",
             "name": "ZoneCreated",
-            "nameLocation": "1158:11:49",
+            "nameLocation": "1158:11:59",
             "parameters": {
-              "id": 10119,
+              "id": 11116,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10116,
+                  "id": 11113,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "zone",
-                  "nameLocation": "1178:4:49",
+                  "nameLocation": "1178:4:59",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10120,
-                  "src": "1170:12:49",
+                  "scope": 11117,
+                  "src": "1170:12:59",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -387,10 +387,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 10115,
+                    "id": 11112,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1170:7:49",
+                    "src": "1170:7:59",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -401,14 +401,14 @@
                 },
                 {
                   "constant": false,
-                  "id": 10118,
+                  "id": 11115,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "salt",
-                  "nameLocation": "1192:4:49",
+                  "nameLocation": "1192:4:59",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10120,
-                  "src": "1184:12:49",
+                  "scope": 11117,
+                  "src": "1184:12:59",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -416,10 +416,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 10117,
+                    "id": 11114,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1184:7:49",
+                    "src": "1184:7:59",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -428,37 +428,37 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1169:28:49"
+              "src": "1169:28:59"
             }
           },
           {
-            "id": 10125,
+            "id": 11122,
             "nodeType": "EventDefinition",
-            "src": "1349:39:49",
+            "src": "1349:39:59",
             "anonymous": false,
             "documentation": {
-              "id": 10121,
+              "id": 11118,
               "nodeType": "StructuredDocumentation",
-              "src": "1204:140:49",
+              "src": "1204:140:59",
               "text": " @dev Emit an event whenever a zone owner assigns a new pauser\n @param newPauser The new pausear of the zone."
             },
             "eventSelector": "a4336c0cb1e245b95ad204faed7e940d6dc999684fd8b5e1ff597a0c4efca8ab",
             "name": "PauserUpdated",
-            "nameLocation": "1355:13:49",
+            "nameLocation": "1355:13:59",
             "parameters": {
-              "id": 10124,
+              "id": 11121,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10123,
+                  "id": 11120,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "newPauser",
-                  "nameLocation": "1377:9:49",
+                  "nameLocation": "1377:9:59",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10125,
-                  "src": "1369:17:49",
+                  "scope": 11122,
+                  "src": "1369:17:59",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -466,10 +466,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 10122,
+                    "id": 11119,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1369:7:49",
+                    "src": "1369:7:59",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -479,37 +479,37 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1368:19:49"
+              "src": "1368:19:59"
             }
           },
           {
-            "id": 10130,
+            "id": 11127,
             "nodeType": "EventDefinition",
-            "src": "1544:43:49",
+            "src": "1544:43:59",
             "anonymous": false,
             "documentation": {
-              "id": 10126,
+              "id": 11123,
               "nodeType": "StructuredDocumentation",
-              "src": "1394:145:49",
+              "src": "1394:145:59",
               "text": " @dev Emit an event whenever a zone owner assigns a new operator\n @param newOperator The new operator of the zone."
             },
             "eventSelector": "b3b3f5f64ab192e4b5fefde1f51ce9733bbdcf831951543b325aebd49cc27ec4",
             "name": "OperatorUpdated",
-            "nameLocation": "1550:15:49",
+            "nameLocation": "1550:15:59",
             "parameters": {
-              "id": 10129,
+              "id": 11126,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10128,
+                  "id": 11125,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "newOperator",
-                  "nameLocation": "1574:11:49",
+                  "nameLocation": "1574:11:59",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10130,
-                  "src": "1566:19:49",
+                  "scope": 11127,
+                  "src": "1566:19:59",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -517,10 +517,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 10127,
+                    "id": 11124,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1566:7:49",
+                    "src": "1566:7:59",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -530,95 +530,95 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1565:21:49"
+              "src": "1565:21:59"
             }
           },
           {
-            "id": 10133,
+            "id": 11130,
             "nodeType": "ErrorDefinition",
-            "src": "1745:22:49",
+            "src": "1745:22:59",
             "documentation": {
-              "id": 10131,
+              "id": 11128,
               "nodeType": "StructuredDocumentation",
-              "src": "1593:147:49",
+              "src": "1593:147:59",
               "text": " @dev Revert with an error when attempting to pause the zone\n      while the caller is not the owner or pauser of the zone."
             },
             "errorSelector": "c7260843",
             "name": "InvalidPauser",
-            "nameLocation": "1751:13:49",
+            "nameLocation": "1751:13:59",
             "parameters": {
-              "id": 10132,
+              "id": 11129,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1764:2:49"
+              "src": "1764:2:59"
             }
           },
           {
-            "id": 10136,
+            "id": 11133,
             "nodeType": "ErrorDefinition",
-            "src": "1935:24:49",
+            "src": "1935:24:59",
             "documentation": {
-              "id": 10134,
+              "id": 11131,
               "nodeType": "StructuredDocumentation",
-              "src": "1773:157:49",
+              "src": "1773:157:59",
               "text": " @dev Revert with an error when attempting to call an operation\n      while the caller is not the controller or operator of the zone."
             },
             "errorSelector": "ccea9e6f",
             "name": "InvalidOperator",
-            "nameLocation": "1941:15:49",
+            "nameLocation": "1941:15:59",
             "parameters": {
-              "id": 10135,
+              "id": 11132,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1956:2:49"
+              "src": "1956:2:59"
             }
           },
           {
-            "id": 10139,
+            "id": 11136,
             "nodeType": "ErrorDefinition",
-            "src": "2135:26:49",
+            "src": "2135:26:59",
             "documentation": {
-              "id": 10137,
+              "id": 11134,
               "nodeType": "StructuredDocumentation",
-              "src": "1965:165:49",
+              "src": "1965:165:59",
               "text": " @dev Revert with an error when attempting to pause the zone or update the\n      operator while the caller is not the controller of the zone."
             },
             "errorSelector": "6d5769be",
             "name": "InvalidController",
-            "nameLocation": "2141:17:49",
+            "nameLocation": "2141:17:59",
             "parameters": {
-              "id": 10138,
+              "id": 11135,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2158:2:49"
+              "src": "2158:2:59"
             }
           },
           {
-            "id": 10144,
+            "id": 11141,
             "nodeType": "ErrorDefinition",
-            "src": "2288:38:49",
+            "src": "2288:38:59",
             "documentation": {
-              "id": 10140,
+              "id": 11137,
               "nodeType": "StructuredDocumentation",
-              "src": "2166:117:49",
+              "src": "2166:117:59",
               "text": " @dev Revert with an error when attempting to deploy a zone that is\n      currently deployed."
             },
             "errorSelector": "00834385",
             "name": "ZoneAlreadyExists",
-            "nameLocation": "2294:17:49",
+            "nameLocation": "2294:17:59",
             "parameters": {
-              "id": 10143,
+              "id": 11140,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10142,
+                  "id": 11139,
                   "mutability": "mutable",
                   "name": "zone",
-                  "nameLocation": "2320:4:49",
+                  "nameLocation": "2320:4:59",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10144,
-                  "src": "2312:12:49",
+                  "scope": 11141,
+                  "src": "2312:12:59",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -626,10 +626,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 10141,
+                    "id": 11138,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2312:7:49",
+                    "src": "2312:7:59",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -639,107 +639,107 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2311:14:49"
+              "src": "2311:14:59"
             }
           },
           {
-            "id": 10147,
+            "id": 11144,
             "nodeType": "ErrorDefinition",
-            "src": "2434:25:49",
+            "src": "2434:25:59",
             "documentation": {
-              "id": 10145,
+              "id": 11142,
               "nodeType": "StructuredDocumentation",
-              "src": "2332:97:49",
+              "src": "2332:97:59",
               "text": " @dev Revert with an error when the caller does not have the _owner role"
             },
             "errorSelector": "6db2465f",
             "name": "CallerIsNotOwner",
-            "nameLocation": "2440:16:49",
+            "nameLocation": "2440:16:59",
             "parameters": {
-              "id": 10146,
+              "id": 11143,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2456:2:49"
+              "src": "2456:2:59"
             }
           },
           {
-            "id": 10150,
+            "id": 11147,
             "nodeType": "ErrorDefinition",
-            "src": "2569:28:49",
+            "src": "2569:28:59",
             "documentation": {
-              "id": 10148,
+              "id": 11145,
               "nodeType": "StructuredDocumentation",
-              "src": "2465:99:49",
+              "src": "2465:99:59",
               "text": " @dev Revert with an error when the caller does not have the operator role"
             },
             "errorSelector": "d0769d8e",
             "name": "CallerIsNotOperator",
-            "nameLocation": "2575:19:49",
+            "nameLocation": "2575:19:59",
             "parameters": {
-              "id": 10149,
+              "id": 11146,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2594:2:49"
+              "src": "2594:2:59"
             }
           },
           {
-            "id": 10153,
+            "id": 11150,
             "nodeType": "ErrorDefinition",
-            "src": "2736:31:49",
+            "src": "2736:31:59",
             "documentation": {
-              "id": 10151,
+              "id": 11148,
               "nodeType": "StructuredDocumentation",
-              "src": "2603:128:49",
+              "src": "2603:128:59",
               "text": " @dev Revert with an error when attempting to set the new potential owner\n      as the 0 address."
             },
             "errorSelector": "da72ecf9",
             "name": "OwnerCanNotBeSetAsZero",
-            "nameLocation": "2742:22:49",
+            "nameLocation": "2742:22:59",
             "parameters": {
-              "id": 10152,
+              "id": 11149,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2764:2:49"
+              "src": "2764:2:59"
             }
           },
           {
-            "id": 10156,
+            "id": 11153,
             "nodeType": "ErrorDefinition",
-            "src": "2907:32:49",
+            "src": "2907:32:59",
             "documentation": {
-              "id": 10154,
+              "id": 11151,
               "nodeType": "StructuredDocumentation",
-              "src": "2773:129:49",
+              "src": "2773:129:59",
               "text": " @dev Revert with an error when attempting to set the new potential pauser\n      as the 0 address."
             },
             "errorSelector": "5384e6f5",
             "name": "PauserCanNotBeSetAsZero",
-            "nameLocation": "2913:23:49",
+            "nameLocation": "2913:23:59",
             "parameters": {
-              "id": 10155,
+              "id": 11152,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2936:2:49"
+              "src": "2936:2:59"
             }
           },
           {
-            "id": 10159,
+            "id": 11156,
             "nodeType": "ErrorDefinition",
-            "src": "3061:34:49",
+            "src": "3061:34:59",
             "documentation": {
-              "id": 10157,
+              "id": 11154,
               "nodeType": "StructuredDocumentation",
-              "src": "2945:111:49",
+              "src": "2945:111:59",
               "text": " @dev Revert with an error when the caller does not have\n      the potentialOwner role."
             },
             "errorSelector": "1ff958b6",
             "name": "CallerIsNotPotentialOwner",
-            "nameLocation": "3067:25:49",
+            "nameLocation": "3067:25:59",
             "parameters": {
-              "id": 10158,
+              "id": 11155,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "3092:2:49"
+              "src": "3092:2:59"
             }
           }
         ],
@@ -749,32 +749,32 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 10095,
+          "id": 11092,
           "nodeType": "StructuredDocumentation",
-          "src": "58:113:49",
+          "src": "58:113:59",
           "text": " @notice PausableZoneEventsAndErrors contains errors and events\n         related to zone interaction."
         },
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          10160
+          11157
         ],
         "name": "PausableZoneEventsAndErrors",
-        "nameLocation": "182:27:49",
-        "scope": 10161,
+        "nameLocation": "182:27:59",
+        "scope": 11158,
         "usedErrors": [
-          10133,
-          10136,
-          10139,
-          10144,
-          10147,
-          10150,
-          10153,
-          10156,
-          10159
+          11130,
+          11133,
+          11136,
+          11141,
+          11144,
+          11147,
+          11150,
+          11153,
+          11156
         ]
       }
     ],
     "license": "MIT"
   },
-  "id": 49
+  "id": 59
 }

@@ -26,7 +26,7 @@ foundryup
 To install dependencies:
 
 ```
-forge install
+git submodule update --init --recursive
 ```
 
 ```bash
