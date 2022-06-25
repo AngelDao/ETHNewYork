@@ -245,6 +245,22 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.TestZone__factory>;
     getContractFactory(
+      name: "SeaportInterface",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.SeaportInterface__factory>;
+    getContractFactory(
+      name: "ZoneInteractionErrors",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.ZoneInteractionErrors__factory>;
+    getContractFactory(
+      name: "ZoneInterface",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.ZoneInterface__factory>;
+    getContractFactory(
+      name: "OrderCheckZone",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.OrderCheckZone__factory>;
+    getContractFactory(
       name: "PausableZoneControllerInterface",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.PausableZoneControllerInterface__factory>;
@@ -555,6 +571,26 @@ declare module "hardhat/types/runtime" {
       address: string,
       signer?: ethers.Signer
     ): Promise<Contracts.TestZone>;
+    getContractAt(
+      name: "SeaportInterface",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.SeaportInterface>;
+    getContractAt(
+      name: "ZoneInteractionErrors",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.ZoneInteractionErrors>;
+    getContractAt(
+      name: "ZoneInterface",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.ZoneInterface>;
+    getContractAt(
+      name: "OrderCheckZone",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.OrderCheckZone>;
     getContractAt(
       name: "PausableZoneControllerInterface",
       address: string,

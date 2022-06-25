@@ -18,8 +18,7 @@ import {
     Execution
 } from "./lib/ConsiderationStructs.sol";
 
-contract OrderCheckZone is ZoneInterface, ECDSA {
-    
+contract OrderCheckZone is ZoneInterface {
     /**
     * @notice No checks required 
     * @dev This function is called by Seaport whenever extraData is not
@@ -49,24 +48,24 @@ contract OrderCheckZone is ZoneInterface, ECDSA {
     }
 
     /**
-    * @notice Check if a given order including hash in extraData is signed by the same addresss
-    *         that created the order, and fits the Merkle root.
-    *
-    * @dev This function is called by Seaport whenever any extraData is
-    *      provided by the caller.
-    *
-    * @param orderHash         The hash of the order.
-    * @param caller            The caller in question.
-    * @param order             The order in question.
-    * @param priorOrderHashes  The order hashes of each order supplied prior to
-    *                          the current order as part of a "match" variety
-    *                          of order fulfillment.
-    * @param criteriaResolvers The criteria resolvers corresponding to
-    *                          the order.
-    *
-    * @return validOrderMagicValue A magic value indicating if the order is
-    *                              currently valid.
-    */
+     * @notice Check if a given order including hash in extraData is signed by the same addresss
+     *         that created the order, and fits the Merkle root.
+     *
+     * @dev This function is called by Seaport whenever any extraData is
+     *      provided by the caller.
+     *
+     * @param orderHash         The hash of the order.
+     * @param caller            The caller in question.
+     * @param order             The order in question.
+     * @param priorOrderHashes  The order hashes of each order supplied prior to
+     *                          the current order as part of a "match" variety
+     *                          of order fulfillment.
+     * @param criteriaResolvers The criteria resolvers corresponding to
+     *                          the order.
+     *
+     * @return validOrderMagicValue A magic value indicating if the order is
+     *                              currently valid.
+     */
     function isValidOrderIncludingExtraData(
         bytes32 orderHash,
         address caller,
@@ -81,30 +80,31 @@ contract OrderCheckZone is ZoneInterface, ECDSA {
         criteriaResolvers;
 
         // orderhash.extraData is an abi encoded bytes object containing
-        // (voucherHash, bytes32), (voucherSignature, bytes32), 
+        // (voucherHash, bytes32), (voucherSignature, bytes),
         // (merkleProof, bytes32), (merkleRoot, bytes32)
         (
-            bytes32 _voucherHash, 
-            bytes32 _voucherSignature,
-            bytes32 _merkleProof, 
+            bytes32 _voucherHash,
+            bytes memory _voucherSignature,
+            bytes32[] memory _merkleProof,
             bytes32 _merkleRoot
-        ) = abi.decode(
-            order.extraData, 
-            (bytes32, bytes32, bytes32, bytes32)
-        );
+        ) = abi.decode(order.extraData, (bytes32, bytes, bytes32[], bytes32));
 
         // Check that voucher is signed by caller (called fulfill function)
         // Voucher signature is stored in order.extraData
         address signer = ECDSA.recover(_voucherHash, _voucherSignature);
-        require(signer == order.parameters.offerer, "extraData not signed by offerer");
+        require(
+            signer == order.parameters.offerer,
+            "extraData not signed by offerer"
+        );
 
         // Check that the caller is in the merkle root
         bytes32 leaf = keccak256(abi.encodePacked(caller));
-        require(MerkleProof.verify(_merkleProof, _merkleRoot, leaf), "Invalid proof");
+        require(
+            MerkleProof.verify(_merkleProof, _merkleRoot, leaf),
+            "Invalid proof"
+        );
 
         // Return the selector of isValidOrder as the magic value.
         validOrderMagicValue = ZoneInterface.isValidOrder.selector;
     }
-
-
 }
