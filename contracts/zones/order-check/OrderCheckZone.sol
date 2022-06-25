@@ -5,7 +5,7 @@ import { ZoneInterface } from "./interfaces/ZoneInterface.sol";
 import { ZoneInteractionErrors } from "./interfaces/ZoneInteractionErrors.sol";
 import { SeaportInterface } from "./interfaces/SeaportInterface.sol";
 
-import {recover} from "@openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol";
+import {recover} from "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 
 // prettier-ignore
 import {
@@ -79,7 +79,7 @@ contract OrderCheckZone is ZoneInterface {
         priorOrderHashes;
         criteriaResolvers;
 
-        // Check that voucher is signed by offerer
+        // Check that voucher is signed by caller (called fulfill function)
         // Voucher signature is stored in order.extraData
         address signer = recover(voucherHash, order.extraData);
         require(signer == order.parameters.offerer, "extraData not signed by offerer");
