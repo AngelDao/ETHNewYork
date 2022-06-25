@@ -18,7 +18,7 @@ import {
     Execution
 } from "./lib/ConsiderationStructs.sol";
 
-contract OrderCheckZone is ZoneInterface {
+contract OrderCheckZone is ZoneInterface, ECDSA {
     
     /**
     * @notice No checks required 
@@ -90,12 +90,7 @@ contract OrderCheckZone is ZoneInterface {
             bytes32 _merkleRoot
         ) = abi.decode(
             order.extraData, 
-            (
-                bytes32, 
-                bytes32, 
-                bytes32, 
-                bytes32, 
-            )
+            (bytes32, bytes32, bytes32, bytes32)
         );
 
         // Check that voucher is signed by caller (called fulfill function)
