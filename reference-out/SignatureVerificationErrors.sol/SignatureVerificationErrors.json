@@ -1,0 +1,201 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "BadContractSignature",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint8",
+          "name": "v",
+          "type": "uint8"
+        }
+      ],
+      "name": "BadSignatureV",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidSignature",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidSigner",
+      "type": "error"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "ast": {
+    "absolutePath": "contracts/interfaces/SignatureVerificationErrors.sol",
+    "id": 1640,
+    "exportedSymbols": {
+      "SignatureVerificationErrors": [
+        1639
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:1007:18",
+    "nodes": [
+      {
+        "id": 1623,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:18",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".7"
+        ]
+      },
+      {
+        "id": 1639,
+        "nodeType": "ContractDefinition",
+        "src": "224:814:18",
+        "nodes": [
+          {
+            "id": 1629,
+            "nodeType": "ErrorDefinition",
+            "src": "453:29:18",
+            "documentation": {
+              "id": 1625,
+              "nodeType": "StructuredDocumentation",
+              "src": "268:180:18",
+              "text": " @dev Revert with an error when a signature that does not contain a v\n      value of 27 or 28 has been supplied.\n @param v The invalid v value."
+            },
+            "name": "BadSignatureV",
+            "nameLocation": "459:13:18",
+            "parameters": {
+              "id": 1628,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1627,
+                  "mutability": "mutable",
+                  "name": "v",
+                  "nameLocation": "479:1:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1629,
+                  "src": "473:7:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 1626,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "473:5:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "472:9:18"
+            }
+          },
+          {
+            "id": 1632,
+            "nodeType": "ErrorDefinition",
+            "src": "732:22:18",
+            "documentation": {
+              "id": 1630,
+              "nodeType": "StructuredDocumentation",
+              "src": "488:239:18",
+              "text": " @dev Revert with an error when the signer recovered by the supplied\n      signature does not match the offerer or an allowed EIP-1271 signer\n      as specified by the offerer in the event they are a contract."
+            },
+            "name": "InvalidSigner",
+            "nameLocation": "738:13:18",
+            "parameters": {
+              "id": 1631,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "751:2:18"
+            }
+          },
+          {
+            "id": 1635,
+            "nodeType": "ErrorDefinition",
+            "src": "884:25:18",
+            "documentation": {
+              "id": 1633,
+              "nodeType": "StructuredDocumentation",
+              "src": "760:119:18",
+              "text": " @dev Revert with an error when a signer cannot be recovered from the\n      supplied signature."
+            },
+            "name": "InvalidSignature",
+            "nameLocation": "890:16:18",
+            "parameters": {
+              "id": 1634,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "906:2:18"
+            }
+          },
+          {
+            "id": 1638,
+            "nodeType": "ErrorDefinition",
+            "src": "1007:29:18",
+            "documentation": {
+              "id": 1636,
+              "nodeType": "StructuredDocumentation",
+              "src": "915:87:18",
+              "text": " @dev Revert with an error when an EIP-1271 call to an account fails."
+            },
+            "name": "BadContractSignature",
+            "nameLocation": "1013:20:18",
+            "parameters": {
+              "id": 1637,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1033:2:18"
+            }
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 1624,
+          "nodeType": "StructuredDocumentation",
+          "src": "57:166:18",
+          "text": " @title SignatureVerificationErrors\n @author 0age\n @notice SignatureVerificationErrors contains all errors related to signature\n         verification."
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          1639
+        ],
+        "name": "SignatureVerificationErrors",
+        "nameLocation": "234:27:18",
+        "scope": 1640,
+        "usedErrors": [
+          1629,
+          1632,
+          1635,
+          1638
+        ]
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 18
+}

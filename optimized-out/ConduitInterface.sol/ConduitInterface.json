@@ -1,0 +1,1065 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "channel",
+          "type": "address"
+        }
+      ],
+      "name": "ChannelClosed",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "channel",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "isOpen",
+          "type": "bool"
+        }
+      ],
+      "name": "ChannelStatusAlreadySet",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidController",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidItemType",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "channel",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "open",
+          "type": "bool"
+        }
+      ],
+      "name": "ChannelUpdated",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "enum ConduitItemType",
+              "name": "itemType",
+              "type": "uint8"
+            },
+            {
+              "internalType": "address",
+              "name": "token",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "identifier",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct ConduitTransfer[]",
+          "name": "transfers",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "execute",
+      "outputs": [
+        {
+          "internalType": "bytes4",
+          "name": "magicValue",
+          "type": "bytes4"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "token",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "ids",
+              "type": "uint256[]"
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "amounts",
+              "type": "uint256[]"
+            }
+          ],
+          "internalType": "struct ConduitBatch1155Transfer[]",
+          "name": "batch1155Transfers",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "executeBatch1155",
+      "outputs": [
+        {
+          "internalType": "bytes4",
+          "name": "magicValue",
+          "type": "bytes4"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "enum ConduitItemType",
+              "name": "itemType",
+              "type": "uint8"
+            },
+            {
+              "internalType": "address",
+              "name": "token",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "identifier",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct ConduitTransfer[]",
+          "name": "standardTransfers",
+          "type": "tuple[]"
+        },
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "token",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "ids",
+              "type": "uint256[]"
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "amounts",
+              "type": "uint256[]"
+            }
+          ],
+          "internalType": "struct ConduitBatch1155Transfer[]",
+          "name": "batch1155Transfers",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "executeWithBatch1155",
+      "outputs": [
+        {
+          "internalType": "bytes4",
+          "name": "magicValue",
+          "type": "bytes4"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "channel",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "isOpen",
+          "type": "bool"
+        }
+      ],
+      "name": "updateChannel",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "execute((uint8,address,address,address,uint256,uint256)[])": "4ce34aa2",
+    "executeBatch1155((address,address,address,uint256[],uint256[])[])": "8df25d92",
+    "executeWithBatch1155((uint8,address,address,address,uint256,uint256)[],(address,address,address,uint256[],uint256[])[])": "899e104c",
+    "updateChannel(address,bool)": "c4e8fcb5"
+  },
+  "ast": {
+    "absolutePath": "contracts/interfaces/ConduitInterface.sol",
+    "id": 1736,
+    "exportedSymbols": {
+      "ConduitBatch1155Transfer": [
+        1135
+      ],
+      "ConduitInterface": [
+        1735
+      ],
+      "ConduitTransfer": [
+        1122
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:3326:11",
+    "nodes": [
+      {
+        "id": 1663,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:11",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".7"
+        ]
+      },
+      {
+        "id": 1666,
+        "nodeType": "ImportDirective",
+        "src": "76:102:11",
+        "absolutePath": "contracts/conduit/lib/ConduitStructs.sol",
+        "file": "../conduit/lib/ConduitStructs.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 1736,
+        "sourceUnit": 1136,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 1664,
+              "name": "ConduitTransfer",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 1122,
+              "src": "89:15:11",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 1665,
+              "name": "ConduitBatch1155Transfer",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 1135,
+              "src": "110:24:11",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 1735,
+        "nodeType": "ContractDefinition",
+        "src": "355:3002:11",
+        "nodes": [
+          {
+            "id": 1672,
+            "nodeType": "ErrorDefinition",
+            "src": "537:37:11",
+            "documentation": {
+              "id": 1668,
+              "nodeType": "StructuredDocumentation",
+              "src": "388:144:11",
+              "text": " @dev Revert with an error when attempting to execute transfers using a\n      caller that does not have an open channel."
+            },
+            "errorSelector": "93daadf2",
+            "name": "ChannelClosed",
+            "nameLocation": "543:13:11",
+            "parameters": {
+              "id": 1671,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1670,
+                  "mutability": "mutable",
+                  "name": "channel",
+                  "nameLocation": "565:7:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1672,
+                  "src": "557:15:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1669,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "557:7:11",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "556:17:11"
+            }
+          },
+          {
+            "id": 1679,
+            "nodeType": "ErrorDefinition",
+            "src": "716:60:11",
+            "documentation": {
+              "id": 1673,
+              "nodeType": "StructuredDocumentation",
+              "src": "580:131:11",
+              "text": " @dev Revert with an error when attempting to update a channel to the\n      current status of that channel."
+            },
+            "errorSelector": "924e341e",
+            "name": "ChannelStatusAlreadySet",
+            "nameLocation": "722:23:11",
+            "parameters": {
+              "id": 1678,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1675,
+                  "mutability": "mutable",
+                  "name": "channel",
+                  "nameLocation": "754:7:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1679,
+                  "src": "746:15:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1674,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "746:7:11",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1677,
+                  "mutability": "mutable",
+                  "name": "isOpen",
+                  "nameLocation": "768:6:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1679,
+                  "src": "763:11:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1676,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "763:4:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "745:30:11"
+            }
+          },
+          {
+            "id": 1682,
+            "nodeType": "ErrorDefinition",
+            "src": "941:24:11",
+            "documentation": {
+              "id": 1680,
+              "nodeType": "StructuredDocumentation",
+              "src": "782:154:11",
+              "text": " @dev Revert with an error when attempting to execute a transfer for an\n      item that does not have an ERC20/721/1155 item type."
+            },
+            "errorSelector": "7932f1fc",
+            "name": "InvalidItemType",
+            "nameLocation": "947:15:11",
+            "parameters": {
+              "id": 1681,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "962:2:11"
+            }
+          },
+          {
+            "id": 1685,
+            "nodeType": "ErrorDefinition",
+            "src": "1132:26:11",
+            "documentation": {
+              "id": 1683,
+              "nodeType": "StructuredDocumentation",
+              "src": "971:156:11",
+              "text": " @dev Revert with an error when attempting to update the status of a\n      channel from a caller that is not the conduit controller."
+            },
+            "errorSelector": "6d5769be",
+            "name": "InvalidController",
+            "nameLocation": "1138:17:11",
+            "parameters": {
+              "id": 1684,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1155:2:11"
+            }
+          },
+          {
+            "id": 1692,
+            "nodeType": "EventDefinition",
+            "src": "1389:57:11",
+            "anonymous": false,
+            "documentation": {
+              "id": 1686,
+              "nodeType": "StructuredDocumentation",
+              "src": "1164:220:11",
+              "text": " @dev Emit an event whenever a channel is opened or closed.\n @param channel The channel that has been updated.\n @param open    A boolean indicating whether the conduit is open or not."
+            },
+            "eventSelector": "ae63067d43ac07563b7eb8db6595635fc77f1578a2a5ea06ba91b63e2afa37e2",
+            "name": "ChannelUpdated",
+            "nameLocation": "1395:14:11",
+            "parameters": {
+              "id": 1691,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1688,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "channel",
+                  "nameLocation": "1426:7:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1692,
+                  "src": "1410:23:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1687,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1410:7:11",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1690,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "open",
+                  "nameLocation": "1440:4:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1692,
+                  "src": "1435:9:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1689,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1435:4:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1409:36:11"
+            }
+          },
+          {
+            "id": 1702,
+            "nodeType": "FunctionDefinition",
+            "src": "1809:108:11",
+            "documentation": {
+              "id": 1693,
+              "nodeType": "StructuredDocumentation",
+              "src": "1452:352:11",
+              "text": " @notice Execute a sequence of ERC20/721/1155 transfers. Only a caller\n         with an open channel can call this function.\n @param transfers The ERC20/721/1155 transfers to perform.\n @return magicValue A magic value indicating that the transfers were\n                    performed successfully."
+            },
+            "functionSelector": "4ce34aa2",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "execute",
+            "nameLocation": "1818:7:11",
+            "parameters": {
+              "id": 1698,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1697,
+                  "mutability": "mutable",
+                  "name": "transfers",
+                  "nameLocation": "1853:9:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1702,
+                  "src": "1826:36:11",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_ConduitTransfer_$1122_calldata_ptr_$dyn_calldata_ptr",
+                    "typeString": "struct ConduitTransfer[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1695,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 1694,
+                        "name": "ConduitTransfer",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 1122,
+                        "src": "1826:15:11"
+                      },
+                      "referencedDeclaration": 1122,
+                      "src": "1826:15:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_ConduitTransfer_$1122_storage_ptr",
+                        "typeString": "struct ConduitTransfer"
+                      }
+                    },
+                    "id": 1696,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1826:17:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_ConduitTransfer_$1122_storage_$dyn_storage_ptr",
+                      "typeString": "struct ConduitTransfer[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1825:38:11"
+            },
+            "returnParameters": {
+              "id": 1701,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1700,
+                  "mutability": "mutable",
+                  "name": "magicValue",
+                  "nameLocation": "1905:10:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1702,
+                  "src": "1898:17:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 1699,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1898:6:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1897:19:11"
+            },
+            "scope": 1735,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1712,
+            "nodeType": "FunctionDefinition",
+            "src": "2281:133:11",
+            "documentation": {
+              "id": 1703,
+              "nodeType": "StructuredDocumentation",
+              "src": "1923:353:11",
+              "text": " @notice Execute a sequence of batch 1155 transfers. Only a caller with an\n         open channel can call this function.\n @param batch1155Transfers The 1155 batch transfers to perform.\n @return magicValue A magic value indicating that the transfers were\n                    performed successfully."
+            },
+            "functionSelector": "8df25d92",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "executeBatch1155",
+            "nameLocation": "2290:16:11",
+            "parameters": {
+              "id": 1708,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1707,
+                  "mutability": "mutable",
+                  "name": "batch1155Transfers",
+                  "nameLocation": "2352:18:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1712,
+                  "src": "2316:54:11",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_ConduitBatch1155Transfer_$1135_calldata_ptr_$dyn_calldata_ptr",
+                    "typeString": "struct ConduitBatch1155Transfer[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1705,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 1704,
+                        "name": "ConduitBatch1155Transfer",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 1135,
+                        "src": "2316:24:11"
+                      },
+                      "referencedDeclaration": 1135,
+                      "src": "2316:24:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_ConduitBatch1155Transfer_$1135_storage_ptr",
+                        "typeString": "struct ConduitBatch1155Transfer"
+                      }
+                    },
+                    "id": 1706,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2316:26:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_ConduitBatch1155Transfer_$1135_storage_$dyn_storage_ptr",
+                      "typeString": "struct ConduitBatch1155Transfer[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2306:70:11"
+            },
+            "returnParameters": {
+              "id": 1711,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1710,
+                  "mutability": "mutable",
+                  "name": "magicValue",
+                  "nameLocation": "2402:10:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1712,
+                  "src": "2395:17:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 1709,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2395:6:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2394:19:11"
+            },
+            "scope": 1735,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1726,
+            "nodeType": "FunctionDefinition",
+            "src": "2869:191:11",
+            "documentation": {
+              "id": 1713,
+              "nodeType": "StructuredDocumentation",
+              "src": "2420:444:11",
+              "text": " @notice Execute a sequence of transfers, both single and batch 1155. Only\n         a caller with an open channel can call this function.\n @param standardTransfers  The ERC20/721/1155 transfers to perform.\n @param batch1155Transfers The 1155 batch transfers to perform.\n @return magicValue A magic value indicating that the transfers were\n                    performed successfully."
+            },
+            "functionSelector": "899e104c",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "executeWithBatch1155",
+            "nameLocation": "2878:20:11",
+            "parameters": {
+              "id": 1722,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1717,
+                  "mutability": "mutable",
+                  "name": "standardTransfers",
+                  "nameLocation": "2935:17:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1726,
+                  "src": "2908:44:11",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_ConduitTransfer_$1122_calldata_ptr_$dyn_calldata_ptr",
+                    "typeString": "struct ConduitTransfer[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1715,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 1714,
+                        "name": "ConduitTransfer",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 1122,
+                        "src": "2908:15:11"
+                      },
+                      "referencedDeclaration": 1122,
+                      "src": "2908:15:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_ConduitTransfer_$1122_storage_ptr",
+                        "typeString": "struct ConduitTransfer"
+                      }
+                    },
+                    "id": 1716,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2908:17:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_ConduitTransfer_$1122_storage_$dyn_storage_ptr",
+                      "typeString": "struct ConduitTransfer[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1721,
+                  "mutability": "mutable",
+                  "name": "batch1155Transfers",
+                  "nameLocation": "2998:18:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1726,
+                  "src": "2962:54:11",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_ConduitBatch1155Transfer_$1135_calldata_ptr_$dyn_calldata_ptr",
+                    "typeString": "struct ConduitBatch1155Transfer[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1719,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 1718,
+                        "name": "ConduitBatch1155Transfer",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 1135,
+                        "src": "2962:24:11"
+                      },
+                      "referencedDeclaration": 1135,
+                      "src": "2962:24:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_ConduitBatch1155Transfer_$1135_storage_ptr",
+                        "typeString": "struct ConduitBatch1155Transfer"
+                      }
+                    },
+                    "id": 1720,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2962:26:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_ConduitBatch1155Transfer_$1135_storage_$dyn_storage_ptr",
+                      "typeString": "struct ConduitBatch1155Transfer[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2898:124:11"
+            },
+            "returnParameters": {
+              "id": 1725,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1724,
+                  "mutability": "mutable",
+                  "name": "magicValue",
+                  "nameLocation": "3048:10:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1726,
+                  "src": "3041:17:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 1723,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3041:6:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3040:19:11"
+            },
+            "scope": 1735,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1734,
+            "nodeType": "FunctionDefinition",
+            "src": "3293:62:11",
+            "documentation": {
+              "id": 1727,
+              "nodeType": "StructuredDocumentation",
+              "src": "3066:222:11",
+              "text": " @notice Open or close a given channel. Only callable by the controller.\n @param channel The channel to open or close.\n @param isOpen  The status of the channel (either open or closed)."
+            },
+            "functionSelector": "c4e8fcb5",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updateChannel",
+            "nameLocation": "3302:13:11",
+            "parameters": {
+              "id": 1732,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1729,
+                  "mutability": "mutable",
+                  "name": "channel",
+                  "nameLocation": "3324:7:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1734,
+                  "src": "3316:15:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1728,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3316:7:11",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1731,
+                  "mutability": "mutable",
+                  "name": "isOpen",
+                  "nameLocation": "3338:6:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1734,
+                  "src": "3333:11:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1730,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3333:4:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3315:30:11"
+            },
+            "returnParameters": {
+              "id": 1733,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3354:0:11"
+            },
+            "scope": 1735,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ConduitInterface",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 1667,
+          "nodeType": "StructuredDocumentation",
+          "src": "180:174:11",
+          "text": " @title ConduitInterface\n @author 0age\n @notice ConduitInterface contains all external function interfaces, events,\n         and errors for conduit contracts."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          1735
+        ],
+        "name": "ConduitInterface",
+        "nameLocation": "365:16:11",
+        "scope": 1736,
+        "usedErrors": [
+          1672,
+          1679,
+          1682,
+          1685
+        ]
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 11
+}

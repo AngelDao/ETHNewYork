@@ -1,0 +1,128 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "orderHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "InvalidRestrictedOrder",
+      "type": "error"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "ast": {
+    "absolutePath": "contracts/interfaces/ZoneInteractionErrors.sol",
+    "id": 2526,
+    "exportedSymbols": {
+      "ZoneInteractionErrors": [
+        2525
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:644:23",
+    "nodes": [
+      {
+        "id": 2518,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:23",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".7"
+        ]
+      },
+      {
+        "id": 2525,
+        "nodeType": "ContractDefinition",
+        "src": "191:484:23",
+        "nodes": [
+          {
+            "id": 2524,
+            "nodeType": "ErrorDefinition",
+            "src": "625:48:23",
+            "documentation": {
+              "id": 2520,
+              "nodeType": "StructuredDocumentation",
+              "src": "229:391:23",
+              "text": " @dev Revert with an error when attempting to fill an order that specifies\n      a restricted submitter as its order type when not submitted by\n      either the offerer or the order's zone or approved as valid by the\n      zone in question via a staticcall to `isValidOrder`.\n @param orderHash The order hash for the invalid restricted order."
+            },
+            "errorSelector": "fb5014fc",
+            "name": "InvalidRestrictedOrder",
+            "nameLocation": "631:22:23",
+            "parameters": {
+              "id": 2523,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2522,
+                  "mutability": "mutable",
+                  "name": "orderHash",
+                  "nameLocation": "662:9:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2524,
+                  "src": "654:17:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 2521,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "654:7:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "653:19:23"
+            }
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ZoneInteractionErrors",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 2519,
+          "nodeType": "StructuredDocumentation",
+          "src": "57:133:23",
+          "text": " @title ZoneInteractionErrors\n @author 0age\n @notice ZoneInteractionErrors contains errors related to zone interaction."
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          2525
+        ],
+        "name": "ZoneInteractionErrors",
+        "nameLocation": "201:21:23",
+        "scope": 2526,
+        "usedErrors": [
+          2524
+        ]
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 23
+}

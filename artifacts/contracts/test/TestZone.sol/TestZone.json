@@ -1,0 +1,254 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "TestZone",
+  "sourceName": "contracts/test/TestZone.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "orderHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "offerer",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "zoneHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "isValidOrder",
+      "outputs": [
+        {
+          "internalType": "bytes4",
+          "name": "validOrderMagicValue",
+          "type": "bytes4"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "orderHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        },
+        {
+          "components": [
+            {
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "offerer",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "zone",
+                  "type": "address"
+                },
+                {
+                  "components": [
+                    {
+                      "internalType": "enum ItemType",
+                      "name": "itemType",
+                      "type": "uint8"
+                    },
+                    {
+                      "internalType": "address",
+                      "name": "token",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "identifierOrCriteria",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "startAmount",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "endAmount",
+                      "type": "uint256"
+                    }
+                  ],
+                  "internalType": "struct OfferItem[]",
+                  "name": "offer",
+                  "type": "tuple[]"
+                },
+                {
+                  "components": [
+                    {
+                      "internalType": "enum ItemType",
+                      "name": "itemType",
+                      "type": "uint8"
+                    },
+                    {
+                      "internalType": "address",
+                      "name": "token",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "identifierOrCriteria",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "startAmount",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "endAmount",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "address payable",
+                      "name": "recipient",
+                      "type": "address"
+                    }
+                  ],
+                  "internalType": "struct ConsiderationItem[]",
+                  "name": "consideration",
+                  "type": "tuple[]"
+                },
+                {
+                  "internalType": "enum OrderType",
+                  "name": "orderType",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "startTime",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "endTime",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "bytes32",
+                  "name": "zoneHash",
+                  "type": "bytes32"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "salt",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "bytes32",
+                  "name": "conduitKey",
+                  "type": "bytes32"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "totalOriginalConsiderationItems",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct OrderParameters",
+              "name": "parameters",
+              "type": "tuple"
+            },
+            {
+              "internalType": "uint120",
+              "name": "numerator",
+              "type": "uint120"
+            },
+            {
+              "internalType": "uint120",
+              "name": "denominator",
+              "type": "uint120"
+            },
+            {
+              "internalType": "bytes",
+              "name": "signature",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "extraData",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct AdvancedOrder",
+          "name": "order",
+          "type": "tuple"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "priorOrderHashes",
+          "type": "bytes32[]"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "orderIndex",
+              "type": "uint256"
+            },
+            {
+              "internalType": "enum Side",
+              "name": "side",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint256",
+              "name": "index",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "identifier",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "criteriaProof",
+              "type": "bytes32[]"
+            }
+          ],
+          "internalType": "struct CriteriaResolver[]",
+          "name": "criteriaResolvers",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "isValidOrderIncludingExtraData",
+      "outputs": [
+        {
+          "internalType": "bytes4",
+          "name": "validOrderMagicValue",
+          "type": "bytes4"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080806040523461001657610436908161001c8239f35b600080fdfe60806040526004361015610013575b600080fd5b6000803560e01c9081630e1d31dc1461003e575063331315701461003657600080fd5b61000e6101f6565b3461017c5760807ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc36011261017c5761007561017f565b5061007e6101a2565b50606435600181036100e2577f08c379a0000000000000000000000000000000000000000000000000000000006080526020608452601560a4527f526576657274206f6e207a6f6e6520686173682031000000000000000000000060c45260646080fd5b6002811461017857600314905061014f5761014b7f0e1d31dc000000000000000000000000000000000000000000000000000000005b6040517fffffffff0000000000000000000000000000000000000000000000000000000090911681529081906020820190565b0390f35b61014b7fffffffff00000000000000000000000000000000000000000000000000000000610118565b5080fd5b80fd5b6024359073ffffffffffffffffffffffffffffffffffffffff8216820361000e57565b6044359073ffffffffffffffffffffffffffffffffffffffff8216820361000e57565b9181601f8401121561000e5782359167ffffffffffffffff831161000e576020808501948460051b01011161000e57565b503461000e577ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc60a08136011261000e5761022f61017f565b506044359067ffffffffffffffff9081831161000e5760a090833603011261000e5760643581811161000e576102699036906004016101c5565b505060843590811161000e5761014b9161028a6101189236906004016101c5565b5050600401610318565b9035907fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe18136030182121561000e570180359067ffffffffffffffff821161000e5760200191813603831361000e57565b9035907ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffea18136030182121561000e570190565b6080810160046103288284610294565b9050146000146103905760646040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601c60248201527f526576657274206f6e20657874726144617461206c656e6774682034000000006044820152fd5b61039c60059183610294565b90501461000e5760e06103b1600392806102e5565b0135146103dc577f0e1d31dc0000000000000000000000000000000000000000000000000000000090565b7fffffffff000000000000000000000000000000000000000000000000000000009056fea26469706673582212205e5d923305f013d1ca21fe662143c8c8c15745d3fe2e388ec60da0538c5bc02764736f6c634300080e0033",
+  "deployedBytecode": "0x60806040526004361015610013575b600080fd5b6000803560e01c9081630e1d31dc1461003e575063331315701461003657600080fd5b61000e6101f6565b3461017c5760807ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc36011261017c5761007561017f565b5061007e6101a2565b50606435600181036100e2577f08c379a0000000000000000000000000000000000000000000000000000000006080526020608452601560a4527f526576657274206f6e207a6f6e6520686173682031000000000000000000000060c45260646080fd5b6002811461017857600314905061014f5761014b7f0e1d31dc000000000000000000000000000000000000000000000000000000005b6040517fffffffff0000000000000000000000000000000000000000000000000000000090911681529081906020820190565b0390f35b61014b7fffffffff00000000000000000000000000000000000000000000000000000000610118565b5080fd5b80fd5b6024359073ffffffffffffffffffffffffffffffffffffffff8216820361000e57565b6044359073ffffffffffffffffffffffffffffffffffffffff8216820361000e57565b9181601f8401121561000e5782359167ffffffffffffffff831161000e576020808501948460051b01011161000e57565b503461000e577ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc60a08136011261000e5761022f61017f565b506044359067ffffffffffffffff9081831161000e5760a090833603011261000e5760643581811161000e576102699036906004016101c5565b505060843590811161000e5761014b9161028a6101189236906004016101c5565b5050600401610318565b9035907fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe18136030182121561000e570180359067ffffffffffffffff821161000e5760200191813603831361000e57565b9035907ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffea18136030182121561000e570190565b6080810160046103288284610294565b9050146000146103905760646040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601c60248201527f526576657274206f6e20657874726144617461206c656e6774682034000000006044820152fd5b61039c60059183610294565b90501461000e5760e06103b1600392806102e5565b0135146103dc577f0e1d31dc0000000000000000000000000000000000000000000000000000000090565b7fffffffff000000000000000000000000000000000000000000000000000000009056fea26469706673582212205e5d923305f013d1ca21fe662143c8c8c15745d3fe2e388ec60da0538c5bc02764736f6c634300080e0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

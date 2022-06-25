@@ -1,0 +1,1628 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "test/foundry/utils/reentrancy/ReentrantStructs.sol",
+    "id": 50014,
+    "exportedSymbols": {
+      "AdvancedOrder": [
+        4844
+      ],
+      "BasicOrderParameters": [
+        4793
+      ],
+      "CancelParameters": [
+        49980
+      ],
+      "ConsiderationItem": [
+        4731
+      ],
+      "CriteriaResolver": [
+        4866
+      ],
+      "Execution": [
+        4888
+      ],
+      "FulfillAdvancedOrderParameters": [
+        49911
+      ],
+      "FulfillAvailableAdvancedOrdersParameters": [
+        49953
+      ],
+      "FulfillAvailableOrdersParameters": [
+        49930
+      ],
+      "FulfillBasicOrderParameters": [
+        49895
+      ],
+      "FulfillOrderParameters": [
+        49901
+      ],
+      "Fulfillment": [
+        4875
+      ],
+      "FulfillmentComponent": [
+        4880
+      ],
+      "MatchAdvancedOrdersParameters": [
+        49975
+      ],
+      "MatchOrdersParameters": [
+        49962
+      ],
+      "OfferItem": [
+        4717
+      ],
+      "Order": [
+        4832
+      ],
+      "OrderComponents": [
+        4705
+      ],
+      "OrderParameters": [
+        4826
+      ],
+      "OrderStatus": [
+        4853
+      ],
+      "ReentrantCallParameters": [
+        50013
+      ],
+      "ValidateParameters": [
+        49985
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "37:2031:105",
+    "nodes": [
+      {
+        "id": 49878,
+        "nodeType": "PragmaDirective",
+        "src": "37:24:105",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 49891,
+        "nodeType": "ImportDirective",
+        "src": "62:253:105",
+        "absolutePath": "contracts/lib/ConsiderationStructs.sol",
+        "file": "../../../../contracts/lib/ConsiderationStructs.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 50014,
+        "sourceUnit": 4889,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 49879,
+              "name": "BasicOrderParameters",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4793,
+              "src": "71:20:105",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 49880,
+              "name": "OfferItem",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4717,
+              "src": "93:9:105",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 49881,
+              "name": "ConsiderationItem",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4731,
+              "src": "104:17:105",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 49882,
+              "name": "OrderParameters",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4826,
+              "src": "123:15:105",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 49883,
+              "name": "OrderComponents",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4705,
+              "src": "140:15:105",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 49884,
+              "name": "Fulfillment",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4875,
+              "src": "157:11:105",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 49885,
+              "name": "FulfillmentComponent",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4880,
+              "src": "170:20:105",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 49886,
+              "name": "Execution",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4888,
+              "src": "192:9:105",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 49887,
+              "name": "Order",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4832,
+              "src": "203:5:105",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 49888,
+              "name": "AdvancedOrder",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4844,
+              "src": "210:13:105",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 49889,
+              "name": "OrderStatus",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4853,
+              "src": "225:11:105",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 49890,
+              "name": "CriteriaResolver",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4866,
+              "src": "238:16:105",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 49895,
+        "nodeType": "StructDefinition",
+        "src": "317:75:105",
+        "canonicalName": "FulfillBasicOrderParameters",
+        "members": [
+          {
+            "constant": false,
+            "id": 49894,
+            "mutability": "mutable",
+            "name": "parameters",
+            "nameLocation": "379:10:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 49895,
+            "src": "358:31:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_BasicOrderParameters_$4793_storage_ptr",
+              "typeString": "struct BasicOrderParameters"
+            },
+            "typeName": {
+              "id": 49893,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 49892,
+                "name": "BasicOrderParameters",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 4793,
+                "src": "358:20:105"
+              },
+              "referencedDeclaration": 4793,
+              "src": "358:20:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_BasicOrderParameters_$4793_storage_ptr",
+                "typeString": "struct BasicOrderParameters"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "FulfillBasicOrderParameters",
+        "nameLocation": "324:27:105",
+        "scope": 50014,
+        "visibility": "public"
+      },
+      {
+        "id": 49901,
+        "nodeType": "StructDefinition",
+        "src": "394:83:105",
+        "canonicalName": "FulfillOrderParameters",
+        "members": [
+          {
+            "constant": false,
+            "id": 49898,
+            "mutability": "mutable",
+            "name": "order",
+            "nameLocation": "436:5:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 49901,
+            "src": "430:11:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_Order_$4832_storage_ptr",
+              "typeString": "struct Order"
+            },
+            "typeName": {
+              "id": 49897,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 49896,
+                "name": "Order",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 4832,
+                "src": "430:5:105"
+              },
+              "referencedDeclaration": 4832,
+              "src": "430:5:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Order_$4832_storage_ptr",
+                "typeString": "struct Order"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 49900,
+            "mutability": "mutable",
+            "name": "fulfillerConduitKey",
+            "nameLocation": "455:19:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 49901,
+            "src": "447:27:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 49899,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "447:7:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "FulfillOrderParameters",
+        "nameLocation": "401:22:105",
+        "scope": 50014,
+        "visibility": "public"
+      },
+      {
+        "id": 49911,
+        "nodeType": "StructDefinition",
+        "src": "479:141:105",
+        "canonicalName": "FulfillAdvancedOrderParameters",
+        "members": [
+          {
+            "constant": false,
+            "id": 49904,
+            "mutability": "mutable",
+            "name": "order",
+            "nameLocation": "537:5:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 49911,
+            "src": "523:19:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_AdvancedOrder_$4844_storage_ptr",
+              "typeString": "struct AdvancedOrder"
+            },
+            "typeName": {
+              "id": 49903,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 49902,
+                "name": "AdvancedOrder",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 4844,
+                "src": "523:13:105"
+              },
+              "referencedDeclaration": 4844,
+              "src": "523:13:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_AdvancedOrder_$4844_storage_ptr",
+                "typeString": "struct AdvancedOrder"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 49908,
+            "mutability": "mutable",
+            "name": "criteriaResolvers",
+            "nameLocation": "567:17:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 49911,
+            "src": "548:36:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_CriteriaResolver_$4866_storage_$dyn_storage_ptr",
+              "typeString": "struct CriteriaResolver[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 49906,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 49905,
+                  "name": "CriteriaResolver",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 4866,
+                  "src": "548:16:105"
+                },
+                "referencedDeclaration": 4866,
+                "src": "548:16:105",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_CriteriaResolver_$4866_storage_ptr",
+                  "typeString": "struct CriteriaResolver"
+                }
+              },
+              "id": 49907,
+              "nodeType": "ArrayTypeName",
+              "src": "548:18:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_CriteriaResolver_$4866_storage_$dyn_storage_ptr",
+                "typeString": "struct CriteriaResolver[]"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 49910,
+            "mutability": "mutable",
+            "name": "fulfillerConduitKey",
+            "nameLocation": "598:19:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 49911,
+            "src": "590:27:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 49909,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "590:7:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "FulfillAdvancedOrderParameters",
+        "nameLocation": "486:30:105",
+        "scope": 50014,
+        "visibility": "public"
+      },
+      {
+        "id": 49930,
+        "nodeType": "StructDefinition",
+        "src": "622:230:105",
+        "canonicalName": "FulfillAvailableOrdersParameters",
+        "members": [
+          {
+            "constant": false,
+            "id": 49915,
+            "mutability": "mutable",
+            "name": "orders",
+            "nameLocation": "676:6:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 49930,
+            "src": "668:14:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Order_$4832_storage_$dyn_storage_ptr",
+              "typeString": "struct Order[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 49913,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 49912,
+                  "name": "Order",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 4832,
+                  "src": "668:5:105"
+                },
+                "referencedDeclaration": 4832,
+                "src": "668:5:105",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Order_$4832_storage_ptr",
+                  "typeString": "struct Order"
+                }
+              },
+              "id": 49914,
+              "nodeType": "ArrayTypeName",
+              "src": "668:7:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Order_$4832_storage_$dyn_storage_ptr",
+                "typeString": "struct Order[]"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 49920,
+            "mutability": "mutable",
+            "name": "orderFulfillments",
+            "nameLocation": "713:17:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 49930,
+            "src": "688:42:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_array$_t_struct$_FulfillmentComponent_$4880_storage_$dyn_storage_$dyn_storage_ptr",
+              "typeString": "struct FulfillmentComponent[][]"
+            },
+            "typeName": {
+              "baseType": {
+                "baseType": {
+                  "id": 49917,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 49916,
+                    "name": "FulfillmentComponent",
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 4880,
+                    "src": "688:20:105"
+                  },
+                  "referencedDeclaration": 4880,
+                  "src": "688:20:105",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_FulfillmentComponent_$4880_storage_ptr",
+                    "typeString": "struct FulfillmentComponent"
+                  }
+                },
+                "id": 49918,
+                "nodeType": "ArrayTypeName",
+                "src": "688:22:105",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_FulfillmentComponent_$4880_storage_$dyn_storage_ptr",
+                  "typeString": "struct FulfillmentComponent[]"
+                }
+              },
+              "id": 49919,
+              "nodeType": "ArrayTypeName",
+              "src": "688:24:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_array$_t_struct$_FulfillmentComponent_$4880_storage_$dyn_storage_$dyn_storage_ptr",
+                "typeString": "struct FulfillmentComponent[][]"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 49925,
+            "mutability": "mutable",
+            "name": "considerationFulfillments",
+            "nameLocation": "761:25:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 49930,
+            "src": "736:50:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_array$_t_struct$_FulfillmentComponent_$4880_storage_$dyn_storage_$dyn_storage_ptr",
+              "typeString": "struct FulfillmentComponent[][]"
+            },
+            "typeName": {
+              "baseType": {
+                "baseType": {
+                  "id": 49922,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 49921,
+                    "name": "FulfillmentComponent",
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 4880,
+                    "src": "736:20:105"
+                  },
+                  "referencedDeclaration": 4880,
+                  "src": "736:20:105",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_FulfillmentComponent_$4880_storage_ptr",
+                    "typeString": "struct FulfillmentComponent"
+                  }
+                },
+                "id": 49923,
+                "nodeType": "ArrayTypeName",
+                "src": "736:22:105",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_FulfillmentComponent_$4880_storage_$dyn_storage_ptr",
+                  "typeString": "struct FulfillmentComponent[]"
+                }
+              },
+              "id": 49924,
+              "nodeType": "ArrayTypeName",
+              "src": "736:24:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_array$_t_struct$_FulfillmentComponent_$4880_storage_$dyn_storage_$dyn_storage_ptr",
+                "typeString": "struct FulfillmentComponent[][]"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 49927,
+            "mutability": "mutable",
+            "name": "fulfillerConduitKey",
+            "nameLocation": "800:19:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 49930,
+            "src": "792:27:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 49926,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "792:7:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 49929,
+            "mutability": "mutable",
+            "name": "maximumFulfilled",
+            "nameLocation": "833:16:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 49930,
+            "src": "825:24:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 49928,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "825:7:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "FulfillAvailableOrdersParameters",
+        "nameLocation": "629:32:105",
+        "scope": 50014,
+        "visibility": "public"
+      },
+      {
+        "id": 49953,
+        "nodeType": "StructDefinition",
+        "src": "854:296:105",
+        "canonicalName": "FulfillAvailableAdvancedOrdersParameters",
+        "members": [
+          {
+            "constant": false,
+            "id": 49934,
+            "mutability": "mutable",
+            "name": "advancedOrders",
+            "nameLocation": "924:14:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 49953,
+            "src": "908:30:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_AdvancedOrder_$4844_storage_$dyn_storage_ptr",
+              "typeString": "struct AdvancedOrder[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 49932,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 49931,
+                  "name": "AdvancedOrder",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 4844,
+                  "src": "908:13:105"
+                },
+                "referencedDeclaration": 4844,
+                "src": "908:13:105",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_AdvancedOrder_$4844_storage_ptr",
+                  "typeString": "struct AdvancedOrder"
+                }
+              },
+              "id": 49933,
+              "nodeType": "ArrayTypeName",
+              "src": "908:15:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_AdvancedOrder_$4844_storage_$dyn_storage_ptr",
+                "typeString": "struct AdvancedOrder[]"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 49938,
+            "mutability": "mutable",
+            "name": "criteriaResolvers",
+            "nameLocation": "963:17:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 49953,
+            "src": "944:36:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_CriteriaResolver_$4866_storage_$dyn_storage_ptr",
+              "typeString": "struct CriteriaResolver[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 49936,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 49935,
+                  "name": "CriteriaResolver",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 4866,
+                  "src": "944:16:105"
+                },
+                "referencedDeclaration": 4866,
+                "src": "944:16:105",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_CriteriaResolver_$4866_storage_ptr",
+                  "typeString": "struct CriteriaResolver"
+                }
+              },
+              "id": 49937,
+              "nodeType": "ArrayTypeName",
+              "src": "944:18:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_CriteriaResolver_$4866_storage_$dyn_storage_ptr",
+                "typeString": "struct CriteriaResolver[]"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 49943,
+            "mutability": "mutable",
+            "name": "orderFulfillments",
+            "nameLocation": "1011:17:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 49953,
+            "src": "986:42:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_array$_t_struct$_FulfillmentComponent_$4880_storage_$dyn_storage_$dyn_storage_ptr",
+              "typeString": "struct FulfillmentComponent[][]"
+            },
+            "typeName": {
+              "baseType": {
+                "baseType": {
+                  "id": 49940,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 49939,
+                    "name": "FulfillmentComponent",
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 4880,
+                    "src": "986:20:105"
+                  },
+                  "referencedDeclaration": 4880,
+                  "src": "986:20:105",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_FulfillmentComponent_$4880_storage_ptr",
+                    "typeString": "struct FulfillmentComponent"
+                  }
+                },
+                "id": 49941,
+                "nodeType": "ArrayTypeName",
+                "src": "986:22:105",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_FulfillmentComponent_$4880_storage_$dyn_storage_ptr",
+                  "typeString": "struct FulfillmentComponent[]"
+                }
+              },
+              "id": 49942,
+              "nodeType": "ArrayTypeName",
+              "src": "986:24:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_array$_t_struct$_FulfillmentComponent_$4880_storage_$dyn_storage_$dyn_storage_ptr",
+                "typeString": "struct FulfillmentComponent[][]"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 49948,
+            "mutability": "mutable",
+            "name": "considerationFulfillments",
+            "nameLocation": "1059:25:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 49953,
+            "src": "1034:50:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_array$_t_struct$_FulfillmentComponent_$4880_storage_$dyn_storage_$dyn_storage_ptr",
+              "typeString": "struct FulfillmentComponent[][]"
+            },
+            "typeName": {
+              "baseType": {
+                "baseType": {
+                  "id": 49945,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 49944,
+                    "name": "FulfillmentComponent",
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 4880,
+                    "src": "1034:20:105"
+                  },
+                  "referencedDeclaration": 4880,
+                  "src": "1034:20:105",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_FulfillmentComponent_$4880_storage_ptr",
+                    "typeString": "struct FulfillmentComponent"
+                  }
+                },
+                "id": 49946,
+                "nodeType": "ArrayTypeName",
+                "src": "1034:22:105",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_FulfillmentComponent_$4880_storage_$dyn_storage_ptr",
+                  "typeString": "struct FulfillmentComponent[]"
+                }
+              },
+              "id": 49947,
+              "nodeType": "ArrayTypeName",
+              "src": "1034:24:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_array$_t_struct$_FulfillmentComponent_$4880_storage_$dyn_storage_$dyn_storage_ptr",
+                "typeString": "struct FulfillmentComponent[][]"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 49950,
+            "mutability": "mutable",
+            "name": "fulfillerConduitKey",
+            "nameLocation": "1098:19:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 49953,
+            "src": "1090:27:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 49949,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "1090:7:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 49952,
+            "mutability": "mutable",
+            "name": "maximumFulfilled",
+            "nameLocation": "1131:16:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 49953,
+            "src": "1123:24:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 49951,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "1123:7:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "FulfillAvailableAdvancedOrdersParameters",
+        "nameLocation": "861:40:105",
+        "scope": 50014,
+        "visibility": "public"
+      },
+      {
+        "id": 49962,
+        "nodeType": "StructDefinition",
+        "src": "1152:84:105",
+        "canonicalName": "MatchOrdersParameters",
+        "members": [
+          {
+            "constant": false,
+            "id": 49957,
+            "mutability": "mutable",
+            "name": "orders",
+            "nameLocation": "1195:6:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 49962,
+            "src": "1187:14:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Order_$4832_storage_$dyn_storage_ptr",
+              "typeString": "struct Order[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 49955,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 49954,
+                  "name": "Order",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 4832,
+                  "src": "1187:5:105"
+                },
+                "referencedDeclaration": 4832,
+                "src": "1187:5:105",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Order_$4832_storage_ptr",
+                  "typeString": "struct Order"
+                }
+              },
+              "id": 49956,
+              "nodeType": "ArrayTypeName",
+              "src": "1187:7:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Order_$4832_storage_$dyn_storage_ptr",
+                "typeString": "struct Order[]"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 49961,
+            "mutability": "mutable",
+            "name": "fulfillments",
+            "nameLocation": "1221:12:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 49962,
+            "src": "1207:26:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Fulfillment_$4875_storage_$dyn_storage_ptr",
+              "typeString": "struct Fulfillment[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 49959,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 49958,
+                  "name": "Fulfillment",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 4875,
+                  "src": "1207:11:105"
+                },
+                "referencedDeclaration": 4875,
+                "src": "1207:11:105",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Fulfillment_$4875_storage_ptr",
+                  "typeString": "struct Fulfillment"
+                }
+              },
+              "id": 49960,
+              "nodeType": "ArrayTypeName",
+              "src": "1207:13:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Fulfillment_$4875_storage_$dyn_storage_ptr",
+                "typeString": "struct Fulfillment[]"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "MatchOrdersParameters",
+        "nameLocation": "1159:21:105",
+        "scope": 50014,
+        "visibility": "public"
+      },
+      {
+        "id": 49975,
+        "nodeType": "StructDefinition",
+        "src": "1238:150:105",
+        "canonicalName": "MatchAdvancedOrdersParameters",
+        "members": [
+          {
+            "constant": false,
+            "id": 49966,
+            "mutability": "mutable",
+            "name": "advancedOrders",
+            "nameLocation": "1297:14:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 49975,
+            "src": "1281:30:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_AdvancedOrder_$4844_storage_$dyn_storage_ptr",
+              "typeString": "struct AdvancedOrder[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 49964,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 49963,
+                  "name": "AdvancedOrder",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 4844,
+                  "src": "1281:13:105"
+                },
+                "referencedDeclaration": 4844,
+                "src": "1281:13:105",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_AdvancedOrder_$4844_storage_ptr",
+                  "typeString": "struct AdvancedOrder"
+                }
+              },
+              "id": 49965,
+              "nodeType": "ArrayTypeName",
+              "src": "1281:15:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_AdvancedOrder_$4844_storage_$dyn_storage_ptr",
+                "typeString": "struct AdvancedOrder[]"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 49970,
+            "mutability": "mutable",
+            "name": "criteriaResolvers",
+            "nameLocation": "1336:17:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 49975,
+            "src": "1317:36:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_CriteriaResolver_$4866_storage_$dyn_storage_ptr",
+              "typeString": "struct CriteriaResolver[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 49968,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 49967,
+                  "name": "CriteriaResolver",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 4866,
+                  "src": "1317:16:105"
+                },
+                "referencedDeclaration": 4866,
+                "src": "1317:16:105",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_CriteriaResolver_$4866_storage_ptr",
+                  "typeString": "struct CriteriaResolver"
+                }
+              },
+              "id": 49969,
+              "nodeType": "ArrayTypeName",
+              "src": "1317:18:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_CriteriaResolver_$4866_storage_$dyn_storage_ptr",
+                "typeString": "struct CriteriaResolver[]"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 49974,
+            "mutability": "mutable",
+            "name": "fulfillments",
+            "nameLocation": "1373:12:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 49975,
+            "src": "1359:26:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Fulfillment_$4875_storage_$dyn_storage_ptr",
+              "typeString": "struct Fulfillment[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 49972,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 49971,
+                  "name": "Fulfillment",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 4875,
+                  "src": "1359:11:105"
+                },
+                "referencedDeclaration": 4875,
+                "src": "1359:11:105",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Fulfillment_$4875_storage_ptr",
+                  "typeString": "struct Fulfillment"
+                }
+              },
+              "id": 49973,
+              "nodeType": "ArrayTypeName",
+              "src": "1359:13:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Fulfillment_$4875_storage_$dyn_storage_ptr",
+                "typeString": "struct Fulfillment[]"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "MatchAdvancedOrdersParameters",
+        "nameLocation": "1245:29:105",
+        "scope": 50014,
+        "visibility": "public"
+      },
+      {
+        "id": 49980,
+        "nodeType": "StructDefinition",
+        "src": "1390:57:105",
+        "canonicalName": "CancelParameters",
+        "members": [
+          {
+            "constant": false,
+            "id": 49979,
+            "mutability": "mutable",
+            "name": "orders",
+            "nameLocation": "1438:6:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 49980,
+            "src": "1420:24:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_OrderComponents_$4705_storage_$dyn_storage_ptr",
+              "typeString": "struct OrderComponents[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 49977,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 49976,
+                  "name": "OrderComponents",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 4705,
+                  "src": "1420:15:105"
+                },
+                "referencedDeclaration": 4705,
+                "src": "1420:15:105",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_OrderComponents_$4705_storage_ptr",
+                  "typeString": "struct OrderComponents"
+                }
+              },
+              "id": 49978,
+              "nodeType": "ArrayTypeName",
+              "src": "1420:17:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_OrderComponents_$4705_storage_$dyn_storage_ptr",
+                "typeString": "struct OrderComponents[]"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "CancelParameters",
+        "nameLocation": "1397:16:105",
+        "scope": 50014,
+        "visibility": "public"
+      },
+      {
+        "id": 49985,
+        "nodeType": "StructDefinition",
+        "src": "1449:49:105",
+        "canonicalName": "ValidateParameters",
+        "members": [
+          {
+            "constant": false,
+            "id": 49984,
+            "mutability": "mutable",
+            "name": "orders",
+            "nameLocation": "1489:6:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 49985,
+            "src": "1481:14:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Order_$4832_storage_$dyn_storage_ptr",
+              "typeString": "struct Order[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 49982,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 49981,
+                  "name": "Order",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 4832,
+                  "src": "1481:5:105"
+                },
+                "referencedDeclaration": 4832,
+                "src": "1481:5:105",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Order_$4832_storage_ptr",
+                  "typeString": "struct Order"
+                }
+              },
+              "id": 49983,
+              "nodeType": "ArrayTypeName",
+              "src": "1481:7:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Order_$4832_storage_$dyn_storage_ptr",
+                "typeString": "struct Order[]"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "ValidateParameters",
+        "nameLocation": "1456:18:105",
+        "scope": 50014,
+        "visibility": "public"
+      },
+      {
+        "id": 50013,
+        "nodeType": "StructDefinition",
+        "src": "1500:567:105",
+        "canonicalName": "ReentrantCallParameters",
+        "members": [
+          {
+            "constant": false,
+            "id": 49988,
+            "mutability": "mutable",
+            "name": "fulfillBasicOrderParameters",
+            "nameLocation": "1565:27:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 50013,
+            "src": "1537:55:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_FulfillBasicOrderParameters_$49895_storage_ptr",
+              "typeString": "struct FulfillBasicOrderParameters"
+            },
+            "typeName": {
+              "id": 49987,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 49986,
+                "name": "FulfillBasicOrderParameters",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 49895,
+                "src": "1537:27:105"
+              },
+              "referencedDeclaration": 49895,
+              "src": "1537:27:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_FulfillBasicOrderParameters_$49895_storage_ptr",
+                "typeString": "struct FulfillBasicOrderParameters"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 49991,
+            "mutability": "mutable",
+            "name": "fulfillOrderParameters",
+            "nameLocation": "1621:22:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 50013,
+            "src": "1598:45:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_FulfillOrderParameters_$49901_storage_ptr",
+              "typeString": "struct FulfillOrderParameters"
+            },
+            "typeName": {
+              "id": 49990,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 49989,
+                "name": "FulfillOrderParameters",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 49901,
+                "src": "1598:22:105"
+              },
+              "referencedDeclaration": 49901,
+              "src": "1598:22:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_FulfillOrderParameters_$49901_storage_ptr",
+                "typeString": "struct FulfillOrderParameters"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 49994,
+            "mutability": "mutable",
+            "name": "fulfillAdvancedOrderParameters",
+            "nameLocation": "1680:30:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 50013,
+            "src": "1649:61:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_FulfillAdvancedOrderParameters_$49911_storage_ptr",
+              "typeString": "struct FulfillAdvancedOrderParameters"
+            },
+            "typeName": {
+              "id": 49993,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 49992,
+                "name": "FulfillAdvancedOrderParameters",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 49911,
+                "src": "1649:30:105"
+              },
+              "referencedDeclaration": 49911,
+              "src": "1649:30:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_FulfillAdvancedOrderParameters_$49911_storage_ptr",
+                "typeString": "struct FulfillAdvancedOrderParameters"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 49997,
+            "mutability": "mutable",
+            "name": "fulfillAvailableOrdersParameters",
+            "nameLocation": "1749:32:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 50013,
+            "src": "1716:65:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_FulfillAvailableOrdersParameters_$49930_storage_ptr",
+              "typeString": "struct FulfillAvailableOrdersParameters"
+            },
+            "typeName": {
+              "id": 49996,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 49995,
+                "name": "FulfillAvailableOrdersParameters",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 49930,
+                "src": "1716:32:105"
+              },
+              "referencedDeclaration": 49930,
+              "src": "1716:32:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_FulfillAvailableOrdersParameters_$49930_storage_ptr",
+                "typeString": "struct FulfillAvailableOrdersParameters"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 50000,
+            "mutability": "mutable",
+            "name": "fulfillAvailableAdvancedOrdersParameters",
+            "nameLocation": "1828:40:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 50013,
+            "src": "1787:81:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_FulfillAvailableAdvancedOrdersParameters_$49953_storage_ptr",
+              "typeString": "struct FulfillAvailableAdvancedOrdersParameters"
+            },
+            "typeName": {
+              "id": 49999,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 49998,
+                "name": "FulfillAvailableAdvancedOrdersParameters",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 49953,
+                "src": "1787:40:105"
+              },
+              "referencedDeclaration": 49953,
+              "src": "1787:40:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_FulfillAvailableAdvancedOrdersParameters_$49953_storage_ptr",
+                "typeString": "struct FulfillAvailableAdvancedOrdersParameters"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 50003,
+            "mutability": "mutable",
+            "name": "matchOrdersParameters",
+            "nameLocation": "1896:21:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 50013,
+            "src": "1874:43:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_MatchOrdersParameters_$49962_storage_ptr",
+              "typeString": "struct MatchOrdersParameters"
+            },
+            "typeName": {
+              "id": 50002,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 50001,
+                "name": "MatchOrdersParameters",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 49962,
+                "src": "1874:21:105"
+              },
+              "referencedDeclaration": 49962,
+              "src": "1874:21:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_MatchOrdersParameters_$49962_storage_ptr",
+                "typeString": "struct MatchOrdersParameters"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 50006,
+            "mutability": "mutable",
+            "name": "matchAdvancedOrdersParameters",
+            "nameLocation": "1953:29:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 50013,
+            "src": "1923:59:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_MatchAdvancedOrdersParameters_$49975_storage_ptr",
+              "typeString": "struct MatchAdvancedOrdersParameters"
+            },
+            "typeName": {
+              "id": 50005,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 50004,
+                "name": "MatchAdvancedOrdersParameters",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 49975,
+                "src": "1923:29:105"
+              },
+              "referencedDeclaration": 49975,
+              "src": "1923:29:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_MatchAdvancedOrdersParameters_$49975_storage_ptr",
+                "typeString": "struct MatchAdvancedOrdersParameters"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 50009,
+            "mutability": "mutable",
+            "name": "cancelParameters",
+            "nameLocation": "2005:16:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 50013,
+            "src": "1988:33:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_CancelParameters_$49980_storage_ptr",
+              "typeString": "struct CancelParameters"
+            },
+            "typeName": {
+              "id": 50008,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 50007,
+                "name": "CancelParameters",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 49980,
+                "src": "1988:16:105"
+              },
+              "referencedDeclaration": 49980,
+              "src": "1988:16:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_CancelParameters_$49980_storage_ptr",
+                "typeString": "struct CancelParameters"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 50012,
+            "mutability": "mutable",
+            "name": "validateParameters",
+            "nameLocation": "2046:18:105",
+            "nodeType": "VariableDeclaration",
+            "scope": 50013,
+            "src": "2027:37:105",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_ValidateParameters_$49985_storage_ptr",
+              "typeString": "struct ValidateParameters"
+            },
+            "typeName": {
+              "id": 50011,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 50010,
+                "name": "ValidateParameters",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 49985,
+                "src": "2027:18:105"
+              },
+              "referencedDeclaration": 49985,
+              "src": "2027:18:105",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_ValidateParameters_$49985_storage_ptr",
+                "typeString": "struct ValidateParameters"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "ReentrantCallParameters",
+        "nameLocation": "1507:23:105",
+        "scope": 50014,
+        "visibility": "public"
+      }
+    ],
+    "license": "Unlicense"
+  },
+  "id": 105
+}

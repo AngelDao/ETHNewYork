@@ -1,0 +1,326 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "InvalidItemType",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "enum ConduitItemType",
+              "name": "itemType",
+              "type": "uint8"
+            },
+            {
+              "internalType": "address",
+              "name": "token",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "identifier",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct TransferHelperItem[]",
+          "name": "items",
+          "type": "tuple[]"
+        },
+        {
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "conduitKey",
+          "type": "bytes32"
+        }
+      ],
+      "name": "bulkTransfer",
+      "outputs": [
+        {
+          "internalType": "bytes4",
+          "name": "",
+          "type": "bytes4"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "bulkTransfer((uint8,address,uint256,uint256)[],address,bytes32)": "73b69d03"
+  },
+  "ast": {
+    "absolutePath": "contracts/interfaces/TransferHelperInterface.sol",
+    "id": 1722,
+    "exportedSymbols": {
+      "TransferHelperInterface": [
+        1721
+      ],
+      "TransferHelperItem": [
+        602
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:730:20",
+    "nodes": [
+      {
+        "id": 1701,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:20",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".7"
+        ]
+      },
+      {
+        "id": 1703,
+        "nodeType": "ImportDirective",
+        "src": "57:74:20",
+        "absolutePath": "contracts/helpers/TransferHelperStructs.sol",
+        "file": "../helpers/TransferHelperStructs.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 1722,
+        "sourceUnit": 603,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 1702,
+              "name": "TransferHelperItem",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "66:18:20",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 1721,
+        "nodeType": "ContractDefinition",
+        "src": "133:628:20",
+        "nodes": [
+          {
+            "id": 1706,
+            "nodeType": "ErrorDefinition",
+            "src": "295:24:20",
+            "documentation": {
+              "id": 1704,
+              "nodeType": "StructuredDocumentation",
+              "src": "173:117:20",
+              "text": " @dev Revert with an error when attempting to execute transfers with a\n      NATIVE itemType."
+            },
+            "name": "InvalidItemType",
+            "nameLocation": "301:15:20",
+            "parameters": {
+              "id": 1705,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "316:2:20"
+            }
+          },
+          {
+            "id": 1720,
+            "nodeType": "FunctionDefinition",
+            "src": "605:154:20",
+            "documentation": {
+              "id": 1707,
+              "nodeType": "StructuredDocumentation",
+              "src": "325:275:20",
+              "text": " @notice Transfer multiple items to a single recipient.\n @param items The items to transfer.\n @param recipient  The address the items should be transferred to.\n @param conduitKey  The key of the conduit performing the bulk transfer."
+            },
+            "functionSelector": "73b69d03",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "bulkTransfer",
+            "nameLocation": "614:12:20",
+            "parameters": {
+              "id": 1716,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1711,
+                  "mutability": "mutable",
+                  "name": "items",
+                  "nameLocation": "666:5:20",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1720,
+                  "src": "636:35:20",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_TransferHelperItem_$602_calldata_ptr_$dyn_calldata_ptr",
+                    "typeString": "struct TransferHelperItem[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1709,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 1708,
+                        "name": "TransferHelperItem",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 602,
+                        "src": "636:18:20"
+                      },
+                      "referencedDeclaration": 602,
+                      "src": "636:18:20",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_TransferHelperItem_$602_storage_ptr",
+                        "typeString": "struct TransferHelperItem"
+                      }
+                    },
+                    "id": 1710,
+                    "nodeType": "ArrayTypeName",
+                    "src": "636:20:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_TransferHelperItem_$602_storage_$dyn_storage_ptr",
+                      "typeString": "struct TransferHelperItem[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1713,
+                  "mutability": "mutable",
+                  "name": "recipient",
+                  "nameLocation": "689:9:20",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1720,
+                  "src": "681:17:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1712,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "681:7:20",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1715,
+                  "mutability": "mutable",
+                  "name": "conduitKey",
+                  "nameLocation": "716:10:20",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1720,
+                  "src": "708:18:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1714,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "708:7:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "626:106:20"
+            },
+            "returnParameters": {
+              "id": 1719,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1718,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1720,
+                  "src": "751:6:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 1717,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "751:6:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "750:8:20"
+            },
+            "scope": 1721,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          1721
+        ],
+        "name": "TransferHelperInterface",
+        "nameLocation": "143:23:20",
+        "scope": 1722,
+        "usedErrors": [
+          1706
+        ]
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 20
+}

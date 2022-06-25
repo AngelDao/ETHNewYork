@@ -1,0 +1,393 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "contracts/lib/ConsiderationEnums.sol",
+    "id": 2348,
+    "exportedSymbols": {
+      "BasicOrderRouteType": [
+        2337
+      ],
+      "BasicOrderType": [
+        2330
+      ],
+      "ItemType": [
+        2344
+      ],
+      "OrderType": [
+        2305
+      ],
+      "Side": [
+        2347
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:3844:24",
+    "nodes": [
+      {
+        "id": 2300,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:24",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".7"
+        ]
+      },
+      {
+        "id": 2305,
+        "nodeType": "EnumDefinition",
+        "src": "76:328:24",
+        "canonicalName": "OrderType",
+        "members": [
+          {
+            "id": 2301,
+            "name": "FULL_OPEN",
+            "nameLocation": "144:9:24",
+            "nodeType": "EnumValue",
+            "src": "144:9:24"
+          },
+          {
+            "id": 2302,
+            "name": "PARTIAL_OPEN",
+            "nameLocation": "214:12:24",
+            "nodeType": "EnumValue",
+            "src": "214:12:24"
+          },
+          {
+            "id": 2303,
+            "name": "FULL_RESTRICTED",
+            "nameLocation": "294:15:24",
+            "nodeType": "EnumValue",
+            "src": "294:15:24"
+          },
+          {
+            "id": 2304,
+            "name": "PARTIAL_RESTRICTED",
+            "nameLocation": "384:18:24",
+            "nodeType": "EnumValue",
+            "src": "384:18:24"
+          }
+        ],
+        "name": "OrderType",
+        "nameLocation": "81:9:24"
+      },
+      {
+        "id": 2330,
+        "nodeType": "EnumDefinition",
+        "src": "425:2287:24",
+        "canonicalName": "BasicOrderType",
+        "members": [
+          {
+            "id": 2306,
+            "name": "ETH_TO_ERC721_FULL_OPEN",
+            "nameLocation": "498:23:24",
+            "nodeType": "EnumValue",
+            "src": "498:23:24"
+          },
+          {
+            "id": 2307,
+            "name": "ETH_TO_ERC721_PARTIAL_OPEN",
+            "nameLocation": "582:26:24",
+            "nodeType": "EnumValue",
+            "src": "582:26:24"
+          },
+          {
+            "id": 2308,
+            "name": "ETH_TO_ERC721_FULL_RESTRICTED",
+            "nameLocation": "676:29:24",
+            "nodeType": "EnumValue",
+            "src": "676:29:24"
+          },
+          {
+            "id": 2309,
+            "name": "ETH_TO_ERC721_PARTIAL_RESTRICTED",
+            "nameLocation": "780:32:24",
+            "nodeType": "EnumValue",
+            "src": "780:32:24"
+          },
+          {
+            "id": 2310,
+            "name": "ETH_TO_ERC1155_FULL_OPEN",
+            "nameLocation": "866:24:24",
+            "nodeType": "EnumValue",
+            "src": "866:24:24"
+          },
+          {
+            "id": 2311,
+            "name": "ETH_TO_ERC1155_PARTIAL_OPEN",
+            "nameLocation": "951:27:24",
+            "nodeType": "EnumValue",
+            "src": "951:27:24"
+          },
+          {
+            "id": 2312,
+            "name": "ETH_TO_ERC1155_FULL_RESTRICTED",
+            "nameLocation": "1046:30:24",
+            "nodeType": "EnumValue",
+            "src": "1046:30:24"
+          },
+          {
+            "id": 2313,
+            "name": "ETH_TO_ERC1155_PARTIAL_RESTRICTED",
+            "nameLocation": "1151:33:24",
+            "nodeType": "EnumValue",
+            "src": "1151:33:24"
+          },
+          {
+            "id": 2314,
+            "name": "ERC20_TO_ERC721_FULL_OPEN",
+            "nameLocation": "1238:25:24",
+            "nodeType": "EnumValue",
+            "src": "1238:25:24"
+          },
+          {
+            "id": 2315,
+            "name": "ERC20_TO_ERC721_PARTIAL_OPEN",
+            "nameLocation": "1324:28:24",
+            "nodeType": "EnumValue",
+            "src": "1324:28:24"
+          },
+          {
+            "id": 2316,
+            "name": "ERC20_TO_ERC721_FULL_RESTRICTED",
+            "nameLocation": "1421:31:24",
+            "nodeType": "EnumValue",
+            "src": "1421:31:24"
+          },
+          {
+            "id": 2317,
+            "name": "ERC20_TO_ERC721_PARTIAL_RESTRICTED",
+            "nameLocation": "1528:34:24",
+            "nodeType": "EnumValue",
+            "src": "1528:34:24"
+          },
+          {
+            "id": 2318,
+            "name": "ERC20_TO_ERC1155_FULL_OPEN",
+            "nameLocation": "1617:26:24",
+            "nodeType": "EnumValue",
+            "src": "1617:26:24"
+          },
+          {
+            "id": 2319,
+            "name": "ERC20_TO_ERC1155_PARTIAL_OPEN",
+            "nameLocation": "1705:29:24",
+            "nodeType": "EnumValue",
+            "src": "1705:29:24"
+          },
+          {
+            "id": 2320,
+            "name": "ERC20_TO_ERC1155_FULL_RESTRICTED",
+            "nameLocation": "1803:32:24",
+            "nodeType": "EnumValue",
+            "src": "1803:32:24"
+          },
+          {
+            "id": 2321,
+            "name": "ERC20_TO_ERC1155_PARTIAL_RESTRICTED",
+            "nameLocation": "1911:35:24",
+            "nodeType": "EnumValue",
+            "src": "1911:35:24"
+          },
+          {
+            "id": 2322,
+            "name": "ERC721_TO_ERC20_FULL_OPEN",
+            "nameLocation": "2001:25:24",
+            "nodeType": "EnumValue",
+            "src": "2001:25:24"
+          },
+          {
+            "id": 2323,
+            "name": "ERC721_TO_ERC20_PARTIAL_OPEN",
+            "nameLocation": "2088:28:24",
+            "nodeType": "EnumValue",
+            "src": "2088:28:24"
+          },
+          {
+            "id": 2324,
+            "name": "ERC721_TO_ERC20_FULL_RESTRICTED",
+            "nameLocation": "2185:31:24",
+            "nodeType": "EnumValue",
+            "src": "2185:31:24"
+          },
+          {
+            "id": 2325,
+            "name": "ERC721_TO_ERC20_PARTIAL_RESTRICTED",
+            "nameLocation": "2292:34:24",
+            "nodeType": "EnumValue",
+            "src": "2292:34:24"
+          },
+          {
+            "id": 2326,
+            "name": "ERC1155_TO_ERC20_FULL_OPEN",
+            "nameLocation": "2381:26:24",
+            "nodeType": "EnumValue",
+            "src": "2381:26:24"
+          },
+          {
+            "id": 2327,
+            "name": "ERC1155_TO_ERC20_PARTIAL_OPEN",
+            "nameLocation": "2469:29:24",
+            "nodeType": "EnumValue",
+            "src": "2469:29:24"
+          },
+          {
+            "id": 2328,
+            "name": "ERC1155_TO_ERC20_FULL_RESTRICTED",
+            "nameLocation": "2567:32:24",
+            "nodeType": "EnumValue",
+            "src": "2567:32:24"
+          },
+          {
+            "id": 2329,
+            "name": "ERC1155_TO_ERC20_PARTIAL_RESTRICTED",
+            "nameLocation": "2675:35:24",
+            "nodeType": "EnumValue",
+            "src": "2675:35:24"
+          }
+        ],
+        "name": "BasicOrderType",
+        "nameLocation": "430:14:24"
+      },
+      {
+        "id": 2337,
+        "nodeType": "EnumDefinition",
+        "src": "2733:564:24",
+        "canonicalName": "BasicOrderRouteType",
+        "members": [
+          {
+            "id": 2331,
+            "name": "ETH_TO_ERC721",
+            "nameLocation": "2844:13:24",
+            "nodeType": "EnumValue",
+            "src": "2844:13:24"
+          },
+          {
+            "id": 2332,
+            "name": "ETH_TO_ERC1155",
+            "nameLocation": "2945:14:24",
+            "nodeType": "EnumValue",
+            "src": "2945:14:24"
+          },
+          {
+            "id": 2333,
+            "name": "ERC20_TO_ERC721",
+            "nameLocation": "3027:15:24",
+            "nodeType": "EnumValue",
+            "src": "3027:15:24"
+          },
+          {
+            "id": 2334,
+            "name": "ERC20_TO_ERC1155",
+            "nameLocation": "3111:16:24",
+            "nodeType": "EnumValue",
+            "src": "3111:16:24"
+          },
+          {
+            "id": 2335,
+            "name": "ERC721_TO_ERC20",
+            "nameLocation": "3195:15:24",
+            "nodeType": "EnumValue",
+            "src": "3195:15:24"
+          },
+          {
+            "id": 2336,
+            "name": "ERC1155_TO_ERC20",
+            "nameLocation": "3279:16:24",
+            "nodeType": "EnumValue",
+            "src": "3279:16:24"
+          }
+        ],
+        "name": "BasicOrderRouteType",
+        "nameLocation": "2738:19:24"
+      },
+      {
+        "id": 2344,
+        "nodeType": "EnumDefinition",
+        "src": "3318:421:24",
+        "canonicalName": "ItemType",
+        "members": [
+          {
+            "id": 2338,
+            "name": "NATIVE",
+            "nameLocation": "3387:6:24",
+            "nodeType": "EnumValue",
+            "src": "3387:6:24"
+          },
+          {
+            "id": 2339,
+            "name": "ERC20",
+            "nameLocation": "3479:5:24",
+            "nodeType": "EnumValue",
+            "src": "3479:5:24"
+          },
+          {
+            "id": 2340,
+            "name": "ERC721",
+            "nameLocation": "3514:6:24",
+            "nodeType": "EnumValue",
+            "src": "3514:6:24"
+          },
+          {
+            "id": 2341,
+            "name": "ERC1155",
+            "nameLocation": "3551:7:24",
+            "nodeType": "EnumValue",
+            "src": "3551:7:24"
+          },
+          {
+            "id": 2342,
+            "name": "ERC721_WITH_CRITERIA",
+            "nameLocation": "3629:20:24",
+            "nodeType": "EnumValue",
+            "src": "3629:20:24"
+          },
+          {
+            "id": 2343,
+            "name": "ERC1155_WITH_CRITERIA",
+            "nameLocation": "3716:21:24",
+            "nodeType": "EnumValue",
+            "src": "3716:21:24"
+          }
+        ],
+        "name": "ItemType",
+        "nameLocation": "3323:8:24"
+      },
+      {
+        "id": 2347,
+        "nodeType": "EnumDefinition",
+        "src": "3760:115:24",
+        "canonicalName": "Side",
+        "members": [
+          {
+            "id": 2345,
+            "name": "OFFER",
+            "nameLocation": "3810:5:24",
+            "nodeType": "EnumValue",
+            "src": "3810:5:24"
+          },
+          {
+            "id": 2346,
+            "name": "CONSIDERATION",
+            "nameLocation": "3860:13:24",
+            "nodeType": "EnumValue",
+            "src": "3860:13:24"
+          }
+        ],
+        "name": "Side",
+        "nameLocation": "3765:4:24"
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 24
+}
