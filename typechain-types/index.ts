@@ -124,6 +124,8 @@ export type { TestERC721 } from "./contracts/test/TestERC721";
 export { TestERC721__factory } from "./factories/contracts/test/TestERC721__factory";
 export type { TestZone } from "./contracts/test/TestZone";
 export { TestZone__factory } from "./factories/contracts/test/TestZone__factory";
+export type { OrderCheckZone } from "./contracts/zones/order-check/OrderCheckZone";
+export { OrderCheckZone__factory } from "./factories/contracts/zones/order-check/OrderCheckZone__factory";
 export type { PausableZoneControllerInterface } from "./contracts/zones/pausable/interfaces/PausableZoneControllerInterface";
 export { PausableZoneControllerInterface__factory } from "./factories/contracts/zones/pausable/interfaces/PausableZoneControllerInterface__factory";
 export type { PausableZoneEventsAndErrors } from "./contracts/zones/pausable/interfaces/PausableZoneEventsAndErrors";
