@@ -257,26 +257,6 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.PausableZoneInterface__factory>;
     getContractFactory(
-      name: "PausableZoneControllerInterface",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.PausableZoneControllerInterface__factory>;
-    getContractFactory(
-      name: "PausableZoneEventsAndErrors",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.PausableZoneEventsAndErrors__factory>;
-    getContractFactory(
-      name: "PausableZoneInterface",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.PausableZoneInterface__factory>;
-    getContractFactory(
-      name: "PausableZone",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.PausableZone__factory>;
-    getContractFactory(
-      name: "PausableZoneController",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.PausableZoneController__factory>;
-    getContractFactory(
       name: "PausableZone",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.PausableZone__factory>;
@@ -590,31 +570,6 @@ declare module "hardhat/types/runtime" {
       address: string,
       signer?: ethers.Signer
     ): Promise<Contracts.PausableZoneInterface>;
-    getContractAt(
-      name: "PausableZoneControllerInterface",
-      address: string,
-      signer?: ethers.Signer
-    ): Promise<Contracts.PausableZoneControllerInterface>;
-    getContractAt(
-      name: "PausableZoneEventsAndErrors",
-      address: string,
-      signer?: ethers.Signer
-    ): Promise<Contracts.PausableZoneEventsAndErrors>;
-    getContractAt(
-      name: "PausableZoneInterface",
-      address: string,
-      signer?: ethers.Signer
-    ): Promise<Contracts.PausableZoneInterface>;
-    getContractAt(
-      name: "PausableZone",
-      address: string,
-      signer?: ethers.Signer
-    ): Promise<Contracts.PausableZone>;
-    getContractAt(
-      name: "PausableZoneController",
-      address: string,
-      signer?: ethers.Signer
-    ): Promise<Contracts.PausableZoneController>;
     getContractAt(
       name: "PausableZone",
       address: string,
