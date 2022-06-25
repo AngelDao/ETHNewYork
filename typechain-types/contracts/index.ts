@@ -14,3 +14,4 @@ export type { test };
 import type * as zones from "./zones";
 export type { zones };
 export type { Seaport } from "./Seaport";
+export type { StoreFront } from "./StoreFront";

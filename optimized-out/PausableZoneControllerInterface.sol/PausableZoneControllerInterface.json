@@ -832,47 +832,47 @@
     "transferOwnership(address)": "f2fde38b"
   },
   "ast": {
-    "absolutePath": "contracts/zones/interfaces/PausableZoneControllerInterface.sol",
-    "id": 10093,
+    "absolutePath": "contracts/zones/pausable/interfaces/PausableZoneControllerInterface.sol",
+    "id": 10210,
     "exportedSymbols": {
       "AdvancedOrder": [
-        4481
+        4598
       ],
       "CriteriaResolver": [
-        4503
+        4620
       ],
       "Execution": [
-        4525
+        4642
       ],
       "Fulfillment": [
-        4512
+        4629
       ],
       "Order": [
-        4469
+        4586
       ],
       "OrderComponents": [
-        4342
+        4459
       ],
       "PausableZone": [
-        9451
+        9568
       ],
       "PausableZoneControllerInterface": [
-        10092
+        10209
       ],
       "PausableZoneEventsAndErrors": [
-        10160
+        10277
       ],
       "SeaportInterface": [
-        2075
+        2192
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "32:6297:48",
+    "src": "32:6303:49",
     "nodes": [
       {
-        "id": 9956,
+        "id": 10073,
         "nodeType": "PragmaDirective",
-        "src": "32:24:48",
+        "src": "32:24:49",
         "literals": [
           "solidity",
           ">=",
@@ -881,23 +881,23 @@
         ]
       },
       {
-        "id": 9958,
+        "id": 10075,
         "nodeType": "ImportDirective",
-        "src": "57:51:48",
-        "absolutePath": "contracts/zones/PausableZone.sol",
+        "src": "57:51:49",
+        "absolutePath": "contracts/zones/pausable/PausableZone.sol",
         "file": "../PausableZone.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 10093,
-        "sourceUnit": 9452,
+        "scope": 10210,
+        "sourceUnit": 9569,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 9957,
+              "id": 10074,
               "name": "PausableZone",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 9451,
-              "src": "66:12:48",
+              "referencedDeclaration": 9568,
+              "src": "66:12:49",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -906,23 +906,23 @@
         "unitAlias": ""
       },
       {
-        "id": 9960,
+        "id": 10077,
         "nodeType": "ImportDirective",
-        "src": "129:84:48",
-        "absolutePath": "contracts/zones/interfaces/PausableZoneEventsAndErrors.sol",
+        "src": "129:84:49",
+        "absolutePath": "contracts/zones/pausable/interfaces/PausableZoneEventsAndErrors.sol",
         "file": "./PausableZoneEventsAndErrors.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 10093,
-        "sourceUnit": 10161,
+        "scope": 10210,
+        "sourceUnit": 10278,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 9959,
+              "id": 10076,
               "name": "PausableZoneEventsAndErrors",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 10160,
-              "src": "142:27:48",
+              "referencedDeclaration": 10277,
+              "src": "142:27:49",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -931,83 +931,83 @@
         "unitAlias": ""
       },
       {
-        "id": 9967,
+        "id": 10084,
         "nodeType": "ImportDirective",
-        "src": "234:157:48",
+        "src": "234:160:49",
         "absolutePath": "contracts/lib/ConsiderationStructs.sol",
-        "file": "../../lib/ConsiderationStructs.sol",
+        "file": "../../../lib/ConsiderationStructs.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 10093,
-        "sourceUnit": 4526,
+        "scope": 10210,
+        "sourceUnit": 4643,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 9961,
+              "id": 10078,
               "name": "Order",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 4469,
-              "src": "247:5:48",
+              "referencedDeclaration": 4586,
+              "src": "247:5:49",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
           },
           {
             "foreign": {
-              "id": 9962,
+              "id": 10079,
               "name": "Fulfillment",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 4512,
-              "src": "258:11:48",
+              "referencedDeclaration": 4629,
+              "src": "258:11:49",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
           },
           {
             "foreign": {
-              "id": 9963,
+              "id": 10080,
               "name": "OrderComponents",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 4342,
-              "src": "275:15:48",
+              "referencedDeclaration": 4459,
+              "src": "275:15:49",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
           },
           {
             "foreign": {
-              "id": 9964,
+              "id": 10081,
               "name": "AdvancedOrder",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 4481,
-              "src": "296:13:48",
+              "referencedDeclaration": 4598,
+              "src": "296:13:49",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
           },
           {
             "foreign": {
-              "id": 9965,
+              "id": 10082,
               "name": "CriteriaResolver",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 4503,
-              "src": "315:16:48",
+              "referencedDeclaration": 4620,
+              "src": "315:16:49",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
           },
           {
             "foreign": {
-              "id": 9966,
+              "id": 10083,
               "name": "Execution",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 4525,
-              "src": "337:9:48",
+              "referencedDeclaration": 4642,
+              "src": "337:9:49",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -1016,23 +1016,23 @@
         "unitAlias": ""
       },
       {
-        "id": 9969,
+        "id": 10086,
         "nodeType": "ImportDirective",
-        "src": "393:73:48",
+        "src": "396:76:49",
         "absolutePath": "contracts/interfaces/SeaportInterface.sol",
-        "file": "../../interfaces/SeaportInterface.sol",
+        "file": "../../../interfaces/SeaportInterface.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 10093,
-        "sourceUnit": 2076,
+        "scope": 10210,
+        "sourceUnit": 2193,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 9968,
+              "id": 10085,
               "name": "SeaportInterface",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 2075,
-              "src": "402:16:48",
+              "referencedDeclaration": 2192,
+              "src": "405:16:49",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -1041,18 +1041,18 @@
         "unitAlias": ""
       },
       {
-        "id": 10092,
+        "id": 10209,
         "nodeType": "ContractDefinition",
-        "src": "758:5570:48",
+        "src": "764:5570:49",
         "nodes": [
           {
-            "id": 9978,
+            "id": 10095,
             "nodeType": "FunctionDefinition",
-            "src": "1029:76:48",
+            "src": "1035:76:49",
             "documentation": {
-              "id": 9971,
+              "id": 10088,
               "nodeType": "StructuredDocumentation",
-              "src": "806:218:48",
+              "src": "812:218:49",
               "text": " @notice Deploy a PausableZone to a precomputed address.\n @param salt The salt to be used to derive the zone address\n @return derivedAddress The derived address for the zone."
             },
             "functionSelector": "46b3ce9f",
@@ -1060,20 +1060,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "createZone",
-            "nameLocation": "1038:10:48",
+            "nameLocation": "1044:10:49",
             "parameters": {
-              "id": 9974,
+              "id": 10091,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9973,
+                  "id": 10090,
                   "mutability": "mutable",
                   "name": "salt",
-                  "nameLocation": "1057:4:48",
+                  "nameLocation": "1063:4:49",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9978,
-                  "src": "1049:12:48",
+                  "scope": 10095,
+                  "src": "1055:12:49",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1081,10 +1081,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 9972,
+                    "id": 10089,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1049:7:48",
+                    "src": "1055:7:49",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -1093,21 +1093,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1048:14:48"
+              "src": "1054:14:49"
             },
             "returnParameters": {
-              "id": 9977,
+              "id": 10094,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9976,
+                  "id": 10093,
                   "mutability": "mutable",
                   "name": "derivedAddress",
-                  "nameLocation": "1089:14:48",
+                  "nameLocation": "1095:14:49",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9978,
-                  "src": "1081:22:48",
+                  "scope": 10095,
+                  "src": "1087:22:49",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1115,10 +1115,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9975,
+                    "id": 10092,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1081:7:48",
+                    "src": "1087:7:49",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1128,21 +1128,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1080:24:48"
+              "src": "1086:24:49"
             },
-            "scope": 10092,
+            "scope": 10209,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 9986,
+            "id": 10103,
             "nodeType": "FunctionDefinition",
-            "src": "1313:61:48",
+            "src": "1319:61:49",
             "documentation": {
-              "id": 9979,
+              "id": 10096,
               "nodeType": "StructuredDocumentation",
-              "src": "1111:197:48",
+              "src": "1117:197:49",
               "text": " @notice Pause orders on a given zone.\n @param zone The address of the zone to be paused.\n @return success A boolean indicating the zone has been paused."
             },
             "functionSelector": "76a67a51",
@@ -1150,20 +1150,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "pause",
-            "nameLocation": "1322:5:48",
+            "nameLocation": "1328:5:49",
             "parameters": {
-              "id": 9982,
+              "id": 10099,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9981,
+                  "id": 10098,
                   "mutability": "mutable",
                   "name": "zone",
-                  "nameLocation": "1336:4:48",
+                  "nameLocation": "1342:4:49",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9986,
-                  "src": "1328:12:48",
+                  "scope": 10103,
+                  "src": "1334:12:49",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1171,10 +1171,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9980,
+                    "id": 10097,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1328:7:48",
+                    "src": "1334:7:49",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1184,21 +1184,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1327:14:48"
+              "src": "1333:14:49"
             },
             "returnParameters": {
-              "id": 9985,
+              "id": 10102,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9984,
+                  "id": 10101,
                   "mutability": "mutable",
                   "name": "success",
-                  "nameLocation": "1365:7:48",
+                  "nameLocation": "1371:7:49",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9986,
-                  "src": "1360:12:48",
+                  "scope": 10103,
+                  "src": "1366:12:49",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1206,10 +1206,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 9983,
+                    "id": 10100,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1360:4:48",
+                    "src": "1366:4:49",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1218,21 +1218,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1359:14:48"
+              "src": "1365:14:49"
             },
-            "scope": 10092,
+            "scope": 10209,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 9999,
+            "id": 10116,
             "nodeType": "FunctionDefinition",
-            "src": "1686:158:48",
+            "src": "1692:158:49",
             "documentation": {
-              "id": 9987,
+              "id": 10104,
               "nodeType": "StructuredDocumentation",
-              "src": "1380:301:48",
+              "src": "1386:301:49",
               "text": " @notice Cancel Seaport offers on a given zone.\n @param pausableZoneAddress The zone that manages the orders to be\n                            cancelled.\n @param seaportAddress      The Seaport address.\n @param orders              The orders to cancel."
             },
             "functionSelector": "d6f3b110",
@@ -1240,20 +1240,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "cancelOrders",
-            "nameLocation": "1695:12:48",
+            "nameLocation": "1701:12:49",
             "parameters": {
-              "id": 9997,
+              "id": 10114,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9989,
+                  "id": 10106,
                   "mutability": "mutable",
                   "name": "pausableZoneAddress",
-                  "nameLocation": "1725:19:48",
+                  "nameLocation": "1731:19:49",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9999,
-                  "src": "1717:27:48",
+                  "scope": 10116,
+                  "src": "1723:27:49",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1261,10 +1261,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9988,
+                    "id": 10105,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1717:7:48",
+                    "src": "1723:7:49",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1275,33 +1275,33 @@
                 },
                 {
                   "constant": false,
-                  "id": 9992,
+                  "id": 10109,
                   "mutability": "mutable",
                   "name": "seaportAddress",
-                  "nameLocation": "1771:14:48",
+                  "nameLocation": "1777:14:49",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9999,
-                  "src": "1754:31:48",
+                  "scope": 10116,
+                  "src": "1760:31:49",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_SeaportInterface_$2075",
+                    "typeIdentifier": "t_contract$_SeaportInterface_$2192",
                     "typeString": "contract SeaportInterface"
                   },
                   "typeName": {
-                    "id": 9991,
+                    "id": 10108,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 9990,
+                      "id": 10107,
                       "name": "SeaportInterface",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 2075,
-                      "src": "1754:16:48"
+                      "referencedDeclaration": 2192,
+                      "src": "1760:16:49"
                     },
-                    "referencedDeclaration": 2075,
-                    "src": "1754:16:48",
+                    "referencedDeclaration": 2192,
+                    "src": "1760:16:49",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_SeaportInterface_$2075",
+                      "typeIdentifier": "t_contract$_SeaportInterface_$2192",
                       "typeString": "contract SeaportInterface"
                     }
                   },
@@ -1309,69 +1309,69 @@
                 },
                 {
                   "constant": false,
-                  "id": 9996,
+                  "id": 10113,
                   "mutability": "mutable",
                   "name": "orders",
-                  "nameLocation": "1822:6:48",
+                  "nameLocation": "1828:6:49",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9999,
-                  "src": "1795:33:48",
+                  "scope": 10116,
+                  "src": "1801:33:49",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_OrderComponents_$4342_calldata_ptr_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_OrderComponents_$4459_calldata_ptr_$dyn_calldata_ptr",
                     "typeString": "struct OrderComponents[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 9994,
+                      "id": 10111,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 9993,
+                        "id": 10110,
                         "name": "OrderComponents",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4342,
-                        "src": "1795:15:48"
+                        "referencedDeclaration": 4459,
+                        "src": "1801:15:49"
                       },
-                      "referencedDeclaration": 4342,
-                      "src": "1795:15:48",
+                      "referencedDeclaration": 4459,
+                      "src": "1801:15:49",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_OrderComponents_$4342_storage_ptr",
+                        "typeIdentifier": "t_struct$_OrderComponents_$4459_storage_ptr",
                         "typeString": "struct OrderComponents"
                       }
                     },
-                    "id": 9995,
+                    "id": 10112,
                     "nodeType": "ArrayTypeName",
-                    "src": "1795:17:48",
+                    "src": "1801:17:49",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_OrderComponents_$4342_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_OrderComponents_$4459_storage_$dyn_storage_ptr",
                       "typeString": "struct OrderComponents[]"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "1707:127:48"
+              "src": "1713:127:49"
             },
             "returnParameters": {
-              "id": 9998,
+              "id": 10115,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1843:0:48"
+              "src": "1849:0:49"
             },
-            "scope": 10092,
+            "scope": 10209,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 10020,
+            "id": 10137,
             "nodeType": "FunctionDefinition",
-            "src": "2516:247:48",
+            "src": "2522:247:49",
             "documentation": {
-              "id": 10000,
+              "id": 10117,
               "nodeType": "StructuredDocumentation",
-              "src": "1850:661:48",
+              "src": "1856:661:49",
               "text": " @notice Execute an arbitrary number of matched orders on a given zone.\n @param pausableZoneAddress The zone that manages the orders to be\n                            cancelled.\n @param seaportAddress      The Seaport address.\n @param orders              The orders to match.\n @param fulfillments        An array of elements allocating offer\n                            components to consideration components.\n @return executions An array of elements indicating the sequence of\n                    transfers performed as part of matching the given\n                    orders."
             },
             "functionSelector": "40ddc788",
@@ -1379,20 +1379,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "executeMatchOrders",
-            "nameLocation": "2525:18:48",
+            "nameLocation": "2531:18:49",
             "parameters": {
-              "id": 10014,
+              "id": 10131,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10002,
+                  "id": 10119,
                   "mutability": "mutable",
                   "name": "pausableZoneAddress",
-                  "nameLocation": "2561:19:48",
+                  "nameLocation": "2567:19:49",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10020,
-                  "src": "2553:27:48",
+                  "scope": 10137,
+                  "src": "2559:27:49",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1400,10 +1400,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 10001,
+                    "id": 10118,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2553:7:48",
+                    "src": "2559:7:49",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1414,33 +1414,33 @@
                 },
                 {
                   "constant": false,
-                  "id": 10005,
+                  "id": 10122,
                   "mutability": "mutable",
                   "name": "seaportAddress",
-                  "nameLocation": "2607:14:48",
+                  "nameLocation": "2613:14:49",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10020,
-                  "src": "2590:31:48",
+                  "scope": 10137,
+                  "src": "2596:31:49",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_SeaportInterface_$2075",
+                    "typeIdentifier": "t_contract$_SeaportInterface_$2192",
                     "typeString": "contract SeaportInterface"
                   },
                   "typeName": {
-                    "id": 10004,
+                    "id": 10121,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 10003,
+                      "id": 10120,
                       "name": "SeaportInterface",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 2075,
-                      "src": "2590:16:48"
+                      "referencedDeclaration": 2192,
+                      "src": "2596:16:49"
                     },
-                    "referencedDeclaration": 2075,
-                    "src": "2590:16:48",
+                    "referencedDeclaration": 2192,
+                    "src": "2596:16:49",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_SeaportInterface_$2075",
+                      "typeIdentifier": "t_contract$_SeaportInterface_$2192",
                       "typeString": "contract SeaportInterface"
                     }
                   },
@@ -1448,42 +1448,42 @@
                 },
                 {
                   "constant": false,
-                  "id": 10009,
+                  "id": 10126,
                   "mutability": "mutable",
                   "name": "orders",
-                  "nameLocation": "2648:6:48",
+                  "nameLocation": "2654:6:49",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10020,
-                  "src": "2631:23:48",
+                  "scope": 10137,
+                  "src": "2637:23:49",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_Order_$4469_calldata_ptr_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_Order_$4586_calldata_ptr_$dyn_calldata_ptr",
                     "typeString": "struct Order[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 10007,
+                      "id": 10124,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 10006,
+                        "id": 10123,
                         "name": "Order",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4469,
-                        "src": "2631:5:48"
+                        "referencedDeclaration": 4586,
+                        "src": "2637:5:49"
                       },
-                      "referencedDeclaration": 4469,
-                      "src": "2631:5:48",
+                      "referencedDeclaration": 4586,
+                      "src": "2637:5:49",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Order_$4469_storage_ptr",
+                        "typeIdentifier": "t_struct$_Order_$4586_storage_ptr",
                         "typeString": "struct Order"
                       }
                     },
-                    "id": 10008,
+                    "id": 10125,
                     "nodeType": "ArrayTypeName",
-                    "src": "2631:7:48",
+                    "src": "2637:7:49",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Order_$4469_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_Order_$4586_storage_$dyn_storage_ptr",
                       "typeString": "struct Order[]"
                     }
                   },
@@ -1491,113 +1491,113 @@
                 },
                 {
                   "constant": false,
-                  "id": 10013,
+                  "id": 10130,
                   "mutability": "mutable",
                   "name": "fulfillments",
-                  "nameLocation": "2687:12:48",
+                  "nameLocation": "2693:12:49",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10020,
-                  "src": "2664:35:48",
+                  "scope": 10137,
+                  "src": "2670:35:49",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_Fulfillment_$4512_calldata_ptr_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_Fulfillment_$4629_calldata_ptr_$dyn_calldata_ptr",
                     "typeString": "struct Fulfillment[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 10011,
+                      "id": 10128,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 10010,
+                        "id": 10127,
                         "name": "Fulfillment",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4512,
-                        "src": "2664:11:48"
+                        "referencedDeclaration": 4629,
+                        "src": "2670:11:49"
                       },
-                      "referencedDeclaration": 4512,
-                      "src": "2664:11:48",
+                      "referencedDeclaration": 4629,
+                      "src": "2670:11:49",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Fulfillment_$4512_storage_ptr",
+                        "typeIdentifier": "t_struct$_Fulfillment_$4629_storage_ptr",
                         "typeString": "struct Fulfillment"
                       }
                     },
-                    "id": 10012,
+                    "id": 10129,
                     "nodeType": "ArrayTypeName",
-                    "src": "2664:13:48",
+                    "src": "2670:13:49",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Fulfillment_$4512_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_Fulfillment_$4629_storage_$dyn_storage_ptr",
                       "typeString": "struct Fulfillment[]"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "2543:162:48"
+              "src": "2549:162:49"
             },
             "returnParameters": {
-              "id": 10019,
+              "id": 10136,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10018,
+                  "id": 10135,
                   "mutability": "mutable",
                   "name": "executions",
-                  "nameLocation": "2751:10:48",
+                  "nameLocation": "2757:10:49",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10020,
-                  "src": "2732:29:48",
+                  "scope": 10137,
+                  "src": "2738:29:49",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_Execution_$4525_memory_ptr_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_Execution_$4642_memory_ptr_$dyn_memory_ptr",
                     "typeString": "struct Execution[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 10016,
+                      "id": 10133,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 10015,
+                        "id": 10132,
                         "name": "Execution",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4525,
-                        "src": "2732:9:48"
+                        "referencedDeclaration": 4642,
+                        "src": "2738:9:49"
                       },
-                      "referencedDeclaration": 4525,
-                      "src": "2732:9:48",
+                      "referencedDeclaration": 4642,
+                      "src": "2738:9:49",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Execution_$4525_storage_ptr",
+                        "typeIdentifier": "t_struct$_Execution_$4642_storage_ptr",
                         "typeString": "struct Execution"
                       }
                     },
-                    "id": 10017,
+                    "id": 10134,
                     "nodeType": "ArrayTypeName",
-                    "src": "2732:11:48",
+                    "src": "2738:11:49",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Execution_$4525_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_Execution_$4642_storage_$dyn_storage_ptr",
                       "typeString": "struct Execution[]"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "2731:31:48"
+              "src": "2737:31:49"
             },
-            "scope": 10092,
+            "scope": 10209,
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 10045,
+            "id": 10162,
             "nodeType": "FunctionDefinition",
-            "src": "3888:318:48",
+            "src": "3894:318:49",
             "documentation": {
-              "id": 10021,
+              "id": 10138,
               "nodeType": "StructuredDocumentation",
-              "src": "2769:1114:48",
+              "src": "2775:1114:49",
               "text": " @notice Execute an arbitrary number of matched advanced orders on a\n         given zone.\n @param pausableZoneAddress The zone that manages the orders to be\n                            cancelled.\n @param seaportAddress      The Seaport address.\n @param orders              The orders to match.\n @param criteriaResolvers   An array where each element contains a\n                            reference to a specific order as well as\n                            that order's offer or consideration,\n                            a token identifier, and a proof that\n                            the supplied token identifier is\n                            contained in the order's merkle root.\n @param fulfillments        An array of elements allocating offer\n                            components to consideration components.\n @return executions An array of elements indicating the sequence of\n                    transfers performed as part of matching the given\n                    orders."
             },
             "functionSelector": "b44f6608",
@@ -1605,20 +1605,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "executeMatchAdvancedOrders",
-            "nameLocation": "3897:26:48",
+            "nameLocation": "3903:26:49",
             "parameters": {
-              "id": 10039,
+              "id": 10156,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10023,
+                  "id": 10140,
                   "mutability": "mutable",
                   "name": "pausableZoneAddress",
-                  "nameLocation": "3941:19:48",
+                  "nameLocation": "3947:19:49",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10045,
-                  "src": "3933:27:48",
+                  "scope": 10162,
+                  "src": "3939:27:49",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1626,10 +1626,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 10022,
+                    "id": 10139,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3933:7:48",
+                    "src": "3939:7:49",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1640,33 +1640,33 @@
                 },
                 {
                   "constant": false,
-                  "id": 10026,
+                  "id": 10143,
                   "mutability": "mutable",
                   "name": "seaportAddress",
-                  "nameLocation": "3987:14:48",
+                  "nameLocation": "3993:14:49",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10045,
-                  "src": "3970:31:48",
+                  "scope": 10162,
+                  "src": "3976:31:49",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_SeaportInterface_$2075",
+                    "typeIdentifier": "t_contract$_SeaportInterface_$2192",
                     "typeString": "contract SeaportInterface"
                   },
                   "typeName": {
-                    "id": 10025,
+                    "id": 10142,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 10024,
+                      "id": 10141,
                       "name": "SeaportInterface",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 2075,
-                      "src": "3970:16:48"
+                      "referencedDeclaration": 2192,
+                      "src": "3976:16:49"
                     },
-                    "referencedDeclaration": 2075,
-                    "src": "3970:16:48",
+                    "referencedDeclaration": 2192,
+                    "src": "3976:16:49",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_SeaportInterface_$2075",
+                      "typeIdentifier": "t_contract$_SeaportInterface_$2192",
                       "typeString": "contract SeaportInterface"
                     }
                   },
@@ -1674,42 +1674,42 @@
                 },
                 {
                   "constant": false,
-                  "id": 10030,
+                  "id": 10147,
                   "mutability": "mutable",
                   "name": "orders",
-                  "nameLocation": "4036:6:48",
+                  "nameLocation": "4042:6:49",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10045,
-                  "src": "4011:31:48",
+                  "scope": 10162,
+                  "src": "4017:31:49",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_AdvancedOrder_$4481_calldata_ptr_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_AdvancedOrder_$4598_calldata_ptr_$dyn_calldata_ptr",
                     "typeString": "struct AdvancedOrder[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 10028,
+                      "id": 10145,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 10027,
+                        "id": 10144,
                         "name": "AdvancedOrder",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4481,
-                        "src": "4011:13:48"
+                        "referencedDeclaration": 4598,
+                        "src": "4017:13:49"
                       },
-                      "referencedDeclaration": 4481,
-                      "src": "4011:13:48",
+                      "referencedDeclaration": 4598,
+                      "src": "4017:13:49",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_AdvancedOrder_$4481_storage_ptr",
+                        "typeIdentifier": "t_struct$_AdvancedOrder_$4598_storage_ptr",
                         "typeString": "struct AdvancedOrder"
                       }
                     },
-                    "id": 10029,
+                    "id": 10146,
                     "nodeType": "ArrayTypeName",
-                    "src": "4011:15:48",
+                    "src": "4017:15:49",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_AdvancedOrder_$4481_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_AdvancedOrder_$4598_storage_$dyn_storage_ptr",
                       "typeString": "struct AdvancedOrder[]"
                     }
                   },
@@ -1717,42 +1717,42 @@
                 },
                 {
                   "constant": false,
-                  "id": 10034,
+                  "id": 10151,
                   "mutability": "mutable",
                   "name": "criteriaResolvers",
-                  "nameLocation": "4080:17:48",
+                  "nameLocation": "4086:17:49",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10045,
-                  "src": "4052:45:48",
+                  "scope": 10162,
+                  "src": "4058:45:49",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_CriteriaResolver_$4503_calldata_ptr_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_CriteriaResolver_$4620_calldata_ptr_$dyn_calldata_ptr",
                     "typeString": "struct CriteriaResolver[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 10032,
+                      "id": 10149,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 10031,
+                        "id": 10148,
                         "name": "CriteriaResolver",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4503,
-                        "src": "4052:16:48"
+                        "referencedDeclaration": 4620,
+                        "src": "4058:16:49"
                       },
-                      "referencedDeclaration": 4503,
-                      "src": "4052:16:48",
+                      "referencedDeclaration": 4620,
+                      "src": "4058:16:49",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_CriteriaResolver_$4503_storage_ptr",
+                        "typeIdentifier": "t_struct$_CriteriaResolver_$4620_storage_ptr",
                         "typeString": "struct CriteriaResolver"
                       }
                     },
-                    "id": 10033,
+                    "id": 10150,
                     "nodeType": "ArrayTypeName",
-                    "src": "4052:18:48",
+                    "src": "4058:18:49",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_CriteriaResolver_$4503_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_CriteriaResolver_$4620_storage_$dyn_storage_ptr",
                       "typeString": "struct CriteriaResolver[]"
                     }
                   },
@@ -1760,113 +1760,113 @@
                 },
                 {
                   "constant": false,
-                  "id": 10038,
+                  "id": 10155,
                   "mutability": "mutable",
                   "name": "fulfillments",
-                  "nameLocation": "4130:12:48",
+                  "nameLocation": "4136:12:49",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10045,
-                  "src": "4107:35:48",
+                  "scope": 10162,
+                  "src": "4113:35:49",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_Fulfillment_$4512_calldata_ptr_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_Fulfillment_$4629_calldata_ptr_$dyn_calldata_ptr",
                     "typeString": "struct Fulfillment[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 10036,
+                      "id": 10153,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 10035,
+                        "id": 10152,
                         "name": "Fulfillment",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4512,
-                        "src": "4107:11:48"
+                        "referencedDeclaration": 4629,
+                        "src": "4113:11:49"
                       },
-                      "referencedDeclaration": 4512,
-                      "src": "4107:11:48",
+                      "referencedDeclaration": 4629,
+                      "src": "4113:11:49",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Fulfillment_$4512_storage_ptr",
+                        "typeIdentifier": "t_struct$_Fulfillment_$4629_storage_ptr",
                         "typeString": "struct Fulfillment"
                       }
                     },
-                    "id": 10037,
+                    "id": 10154,
                     "nodeType": "ArrayTypeName",
-                    "src": "4107:13:48",
+                    "src": "4113:13:49",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Fulfillment_$4512_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_Fulfillment_$4629_storage_$dyn_storage_ptr",
                       "typeString": "struct Fulfillment[]"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "3923:225:48"
+              "src": "3929:225:49"
             },
             "returnParameters": {
-              "id": 10044,
+              "id": 10161,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10043,
+                  "id": 10160,
                   "mutability": "mutable",
                   "name": "executions",
-                  "nameLocation": "4194:10:48",
+                  "nameLocation": "4200:10:49",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10045,
-                  "src": "4175:29:48",
+                  "scope": 10162,
+                  "src": "4181:29:49",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_Execution_$4525_memory_ptr_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_Execution_$4642_memory_ptr_$dyn_memory_ptr",
                     "typeString": "struct Execution[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 10041,
+                      "id": 10158,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 10040,
+                        "id": 10157,
                         "name": "Execution",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4525,
-                        "src": "4175:9:48"
+                        "referencedDeclaration": 4642,
+                        "src": "4181:9:49"
                       },
-                      "referencedDeclaration": 4525,
-                      "src": "4175:9:48",
+                      "referencedDeclaration": 4642,
+                      "src": "4181:9:49",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Execution_$4525_storage_ptr",
+                        "typeIdentifier": "t_struct$_Execution_$4642_storage_ptr",
                         "typeString": "struct Execution"
                       }
                     },
-                    "id": 10042,
+                    "id": 10159,
                     "nodeType": "ArrayTypeName",
-                    "src": "4175:11:48",
+                    "src": "4181:11:49",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Execution_$4525_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_Execution_$4642_storage_$dyn_storage_ptr",
                       "typeString": "struct Execution[]"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "4174:31:48"
+              "src": "4180:31:49"
             },
-            "scope": 10092,
+            "scope": 10209,
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 10051,
+            "id": 10168,
             "nodeType": "FunctionDefinition",
-            "src": "4631:63:48",
+            "src": "4637:63:49",
             "documentation": {
-              "id": 10046,
+              "id": 10163,
               "nodeType": "StructuredDocumentation",
-              "src": "4212:414:48",
+              "src": "4218:414:49",
               "text": " @notice Initiate Zone ownership transfer by assigning a new potential\n         owner this contract. Once set, the new potential owner\n         may call `acceptOwnership` to claim ownership.\n         Only the owner in question may call this function.\n @param newPotentialOwner The address for which to initiate ownership\n                          transfer to."
             },
             "functionSelector": "f2fde38b",
@@ -1874,20 +1874,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "transferOwnership",
-            "nameLocation": "4640:17:48",
+            "nameLocation": "4646:17:49",
             "parameters": {
-              "id": 10049,
+              "id": 10166,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10048,
+                  "id": 10165,
                   "mutability": "mutable",
                   "name": "newPotentialOwner",
-                  "nameLocation": "4666:17:48",
+                  "nameLocation": "4672:17:49",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10051,
-                  "src": "4658:25:48",
+                  "scope": 10168,
+                  "src": "4664:25:49",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1895,10 +1895,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 10047,
+                    "id": 10164,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4658:7:48",
+                    "src": "4664:7:49",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1908,27 +1908,27 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4657:27:48"
+              "src": "4663:27:49"
             },
             "returnParameters": {
-              "id": 10050,
+              "id": 10167,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "4693:0:48"
+              "src": "4699:0:49"
             },
-            "scope": 10092,
+            "scope": 10209,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 10055,
+            "id": 10172,
             "nodeType": "FunctionDefinition",
-            "src": "4851:44:48",
+            "src": "4857:44:49",
             "documentation": {
-              "id": 10052,
+              "id": 10169,
               "nodeType": "StructuredDocumentation",
-              "src": "4700:146:48",
+              "src": "4706:146:49",
               "text": " @notice Clear the currently set potential owner, if any.\n         Only the owner of this contract may call this function."
             },
             "functionSelector": "23452b9c",
@@ -1936,32 +1936,32 @@
             "kind": "function",
             "modifiers": [],
             "name": "cancelOwnershipTransfer",
-            "nameLocation": "4860:23:48",
+            "nameLocation": "4866:23:49",
             "parameters": {
-              "id": 10053,
+              "id": 10170,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "4883:2:48"
+              "src": "4889:2:49"
             },
             "returnParameters": {
-              "id": 10054,
+              "id": 10171,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "4894:0:48"
+              "src": "4900:0:49"
             },
-            "scope": 10092,
+            "scope": 10209,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 10059,
+            "id": 10176,
             "nodeType": "FunctionDefinition",
-            "src": "5096:36:48",
+            "src": "5102:36:49",
             "documentation": {
-              "id": 10056,
+              "id": 10173,
               "nodeType": "StructuredDocumentation",
-              "src": "4901:190:48",
+              "src": "4907:190:49",
               "text": " @notice Accept ownership of this contract. Only the account that the\n         current owner has set as the new potential owner may call this\n         function."
             },
             "functionSelector": "79ba5097",
@@ -1969,32 +1969,32 @@
             "kind": "function",
             "modifiers": [],
             "name": "acceptOwnership",
-            "nameLocation": "5105:15:48",
+            "nameLocation": "5111:15:49",
             "parameters": {
-              "id": 10057,
+              "id": 10174,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "5120:2:48"
+              "src": "5126:2:49"
             },
             "returnParameters": {
-              "id": 10058,
+              "id": 10175,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "5131:0:48"
+              "src": "5137:0:49"
             },
-            "scope": 10092,
+            "scope": 10209,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 10065,
+            "id": 10182,
             "nodeType": "FunctionDefinition",
-            "src": "5305:55:48",
+            "src": "5311:55:49",
             "documentation": {
-              "id": 10060,
+              "id": 10177,
               "nodeType": "StructuredDocumentation",
-              "src": "5138:162:48",
+              "src": "5144:162:49",
               "text": " @notice Assign the given address with the ability to pause the zone.\n @param pauserToAssign The address to assign the pauser role."
             },
             "functionSelector": "dcd5b13e",
@@ -2002,20 +2002,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "assignPauser",
-            "nameLocation": "5314:12:48",
+            "nameLocation": "5320:12:49",
             "parameters": {
-              "id": 10063,
+              "id": 10180,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10062,
+                  "id": 10179,
                   "mutability": "mutable",
                   "name": "pauserToAssign",
-                  "nameLocation": "5335:14:48",
+                  "nameLocation": "5341:14:49",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10065,
-                  "src": "5327:22:48",
+                  "scope": 10182,
+                  "src": "5333:22:49",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2023,10 +2023,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 10061,
+                    "id": 10178,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5327:7:48",
+                    "src": "5333:7:49",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2036,27 +2036,27 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "5326:24:48"
+              "src": "5332:24:49"
             },
             "returnParameters": {
-              "id": 10064,
+              "id": 10181,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "5359:0:48"
+              "src": "5365:0:49"
             },
-            "scope": 10092,
+            "scope": 10209,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 10073,
+            "id": 10190,
             "nodeType": "FunctionDefinition",
-            "src": "5633:110:48",
+            "src": "5639:110:49",
             "documentation": {
-              "id": 10066,
+              "id": 10183,
               "nodeType": "StructuredDocumentation",
-              "src": "5366:262:48",
+              "src": "5372:262:49",
               "text": " @notice Assign the given address with the ability to operate the\n         given zone.\n @param pausableZoneAddress The zone address to assign operator role.\n @param operatorToAssign    The address to assign as operator."
             },
             "functionSelector": "f7e4aac6",
@@ -2064,20 +2064,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "assignOperator",
-            "nameLocation": "5642:14:48",
+            "nameLocation": "5648:14:49",
             "parameters": {
-              "id": 10071,
+              "id": 10188,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10068,
+                  "id": 10185,
                   "mutability": "mutable",
                   "name": "pausableZoneAddress",
-                  "nameLocation": "5674:19:48",
+                  "nameLocation": "5680:19:49",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10073,
-                  "src": "5666:27:48",
+                  "scope": 10190,
+                  "src": "5672:27:49",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2085,10 +2085,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 10067,
+                    "id": 10184,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5666:7:48",
+                    "src": "5672:7:49",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2099,13 +2099,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 10070,
+                  "id": 10187,
                   "mutability": "mutable",
                   "name": "operatorToAssign",
-                  "nameLocation": "5711:16:48",
+                  "nameLocation": "5717:16:49",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10073,
-                  "src": "5703:24:48",
+                  "scope": 10190,
+                  "src": "5709:24:49",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2113,10 +2113,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 10069,
+                    "id": 10186,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5703:7:48",
+                    "src": "5709:7:49",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2126,27 +2126,27 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "5656:77:48"
+              "src": "5662:77:49"
             },
             "returnParameters": {
-              "id": 10072,
+              "id": 10189,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "5742:0:48"
+              "src": "5748:0:49"
             },
-            "scope": 10092,
+            "scope": 10209,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 10079,
+            "id": 10196,
             "nodeType": "FunctionDefinition",
-            "src": "5878:49:48",
+            "src": "5884:49:49",
             "documentation": {
-              "id": 10074,
+              "id": 10191,
               "nodeType": "StructuredDocumentation",
-              "src": "5749:124:48",
+              "src": "5755:124:49",
               "text": " @notice An external view function that returns the owner.\n @return The address of the owner."
             },
             "functionSelector": "8da5cb5b",
@@ -2154,26 +2154,26 @@
             "kind": "function",
             "modifiers": [],
             "name": "owner",
-            "nameLocation": "5887:5:48",
+            "nameLocation": "5893:5:49",
             "parameters": {
-              "id": 10075,
+              "id": 10192,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "5892:2:48"
+              "src": "5898:2:49"
             },
             "returnParameters": {
-              "id": 10078,
+              "id": 10195,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10077,
+                  "id": 10194,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10079,
-                  "src": "5918:7:48",
+                  "scope": 10196,
+                  "src": "5924:7:49",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2181,10 +2181,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 10076,
+                    "id": 10193,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5918:7:48",
+                    "src": "5924:7:49",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2194,21 +2194,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "5917:9:48"
+              "src": "5923:9:49"
             },
-            "scope": 10092,
+            "scope": 10209,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 10085,
+            "id": 10202,
             "nodeType": "FunctionDefinition",
-            "src": "6081:58:48",
+            "src": "6087:58:49",
             "documentation": {
-              "id": 10080,
+              "id": 10197,
               "nodeType": "StructuredDocumentation",
-              "src": "5933:143:48",
+              "src": "5939:143:49",
               "text": " @notice An external view function that return the potential owner.\n @return The address of the potential owner."
             },
             "functionSelector": "7762df25",
@@ -2216,26 +2216,26 @@
             "kind": "function",
             "modifiers": [],
             "name": "potentialOwner",
-            "nameLocation": "6090:14:48",
+            "nameLocation": "6096:14:49",
             "parameters": {
-              "id": 10081,
+              "id": 10198,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "6104:2:48"
+              "src": "6110:2:49"
             },
             "returnParameters": {
-              "id": 10084,
+              "id": 10201,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10083,
+                  "id": 10200,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10085,
-                  "src": "6130:7:48",
+                  "scope": 10202,
+                  "src": "6136:7:49",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2243,10 +2243,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 10082,
+                    "id": 10199,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "6130:7:48",
+                    "src": "6136:7:49",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2256,21 +2256,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "6129:9:48"
+              "src": "6135:9:49"
             },
-            "scope": 10092,
+            "scope": 10209,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 10091,
+            "id": 10208,
             "nodeType": "FunctionDefinition",
-            "src": "6276:50:48",
+            "src": "6282:50:49",
             "documentation": {
-              "id": 10086,
+              "id": 10203,
               "nodeType": "StructuredDocumentation",
-              "src": "6145:126:48",
+              "src": "6151:126:49",
               "text": " @notice An external view function that returns the pauser.\n @return The address of the pauser."
             },
             "functionSelector": "9fd0506d",
@@ -2278,26 +2278,26 @@
             "kind": "function",
             "modifiers": [],
             "name": "pauser",
-            "nameLocation": "6285:6:48",
+            "nameLocation": "6291:6:49",
             "parameters": {
-              "id": 10087,
+              "id": 10204,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "6291:2:48"
+              "src": "6297:2:49"
             },
             "returnParameters": {
-              "id": 10090,
+              "id": 10207,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10089,
+                  "id": 10206,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10091,
-                  "src": "6317:7:48",
+                  "scope": 10208,
+                  "src": "6323:7:49",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2305,10 +2305,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 10088,
+                    "id": 10205,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "6317:7:48",
+                    "src": "6323:7:49",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2318,9 +2318,9 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "6316:9:48"
+              "src": "6322:9:49"
             },
-            "scope": 10092,
+            "scope": 10209,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -2332,22 +2332,22 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 9970,
+          "id": 10087,
           "nodeType": "StructuredDocumentation",
-          "src": "468:289:48",
+          "src": "474:289:49",
           "text": " @title  PausableZoneController\n @author cupOJoseph, BCLeFevre, stuckinaboot\n @notice PausableZoneController enables deploying, pausing and executing\n         orders on PausableZones. This deployer is designed to be owned\n         by a gnosis safe, DAO, or trusted party."
         },
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          10092
+          10209
         ],
         "name": "PausableZoneControllerInterface",
-        "nameLocation": "768:31:48",
-        "scope": 10093,
+        "nameLocation": "774:31:49",
+        "scope": 10210,
         "usedErrors": []
       }
     ],
     "license": "MIT"
   },
-  "id": 48
+  "id": 49
 }

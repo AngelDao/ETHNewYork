@@ -3,5 +3,7 @@
 /* eslint-disable */
 import type * as interfaces from "./interfaces";
 export type { interfaces };
+import type * as pausable from "./pausable";
+export type { pausable };
 export type { PausableZone } from "./PausableZone";
 export type { PausableZoneController } from "./PausableZoneController";
