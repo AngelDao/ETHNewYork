@@ -1,0 +1,27 @@
+name: Consideration Test CI
+
+on: [push, pull_request]
+
+concurrency:
+  group: ${{github.workflow}}-${{github.ref}}
+  cancel-in-progress: true
+
+jobs:
+  forge-lite:
+    name: Run "Lite" Forge Tests (via_ir = false; fuzz_runs = 1000)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: nightly
+
+      - name: Install forge dependencies
+        run: git submodule update --init --recursive
+
+      - name: Run tests
+        run: FOUNDRY_PROFILE=lite forge test -vvv

@@ -1,13 +1,42 @@
-# ETHNewYork
+## Install
 
-## Setup
+To install dependencies and compile contracts:
 
-> Required **> node 12**
+```bash
+yarn install
+yarn build
+```
 
-> On windows use WSL or the Docker image
+### Foundry Tests
 
-#### Install Foundry on Mac/Unix:
+Seaport also includes a suite of fuzzing tests written in solidity with Foundry.
+
+To install Foundry (assuming a Linux or macOS system):
 
 ```bash
 curl -L https://foundry.paradigm.xyz | bash
 ```
+
+This will download foundryup. To start Foundry, run:
+
+```bash
+foundryup
+```
+
+To install dependencies:
+
+```
+forge install
+```
+
+```bash
+FOUNDRY_PROFILE=lite forge test # with 1000 fuzz runs
+```
+
+```bash
+FOUNDRY_PROFILE=lite forge test  -vv
+```
+
+## License
+
+[MIT](LICENSE) Copyright 2022 Ozone Networks, Inc.

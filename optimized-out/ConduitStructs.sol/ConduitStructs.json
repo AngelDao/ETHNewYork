@@ -1,0 +1,420 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "contracts/conduit/lib/ConduitStructs.sol",
+    "id": 1136,
+    "exportedSymbols": {
+      "ConduitBatch1155Transfer": [
+        1135
+      ],
+      "ConduitItemType": [
+        1104
+      ],
+      "ConduitTransfer": [
+        1122
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:366:5",
+    "nodes": [
+      {
+        "id": 1106,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:5",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".7"
+        ]
+      },
+      {
+        "id": 1108,
+        "nodeType": "ImportDirective",
+        "src": "57:53:5",
+        "absolutePath": "contracts/conduit/lib/ConduitEnums.sol",
+        "file": "./ConduitEnums.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 1136,
+        "sourceUnit": 1105,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 1107,
+              "name": "ConduitItemType",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 1104,
+              "src": "66:15:5",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 1122,
+        "nodeType": "StructDefinition",
+        "src": "112:153:5",
+        "canonicalName": "ConduitTransfer",
+        "members": [
+          {
+            "constant": false,
+            "id": 1111,
+            "mutability": "mutable",
+            "name": "itemType",
+            "nameLocation": "157:8:5",
+            "nodeType": "VariableDeclaration",
+            "scope": 1122,
+            "src": "141:24:5",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_enum$_ConduitItemType_$1104",
+              "typeString": "enum ConduitItemType"
+            },
+            "typeName": {
+              "id": 1110,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 1109,
+                "name": "ConduitItemType",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 1104,
+                "src": "141:15:5"
+              },
+              "referencedDeclaration": 1104,
+              "src": "141:15:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_enum$_ConduitItemType_$1104",
+                "typeString": "enum ConduitItemType"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1113,
+            "mutability": "mutable",
+            "name": "token",
+            "nameLocation": "179:5:5",
+            "nodeType": "VariableDeclaration",
+            "scope": 1122,
+            "src": "171:13:5",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 1112,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "171:7:5",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1115,
+            "mutability": "mutable",
+            "name": "from",
+            "nameLocation": "198:4:5",
+            "nodeType": "VariableDeclaration",
+            "scope": 1122,
+            "src": "190:12:5",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 1114,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "190:7:5",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1117,
+            "mutability": "mutable",
+            "name": "to",
+            "nameLocation": "216:2:5",
+            "nodeType": "VariableDeclaration",
+            "scope": 1122,
+            "src": "208:10:5",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 1116,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "208:7:5",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1119,
+            "mutability": "mutable",
+            "name": "identifier",
+            "nameLocation": "232:10:5",
+            "nodeType": "VariableDeclaration",
+            "scope": 1122,
+            "src": "224:18:5",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 1118,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "224:7:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1121,
+            "mutability": "mutable",
+            "name": "amount",
+            "nameLocation": "256:6:5",
+            "nodeType": "VariableDeclaration",
+            "scope": 1122,
+            "src": "248:14:5",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 1120,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "248:7:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "ConduitTransfer",
+        "nameLocation": "119:15:5",
+        "scope": 1136,
+        "visibility": "public"
+      },
+      {
+        "id": 1135,
+        "nodeType": "StructDefinition",
+        "src": "267:130:5",
+        "canonicalName": "ConduitBatch1155Transfer",
+        "members": [
+          {
+            "constant": false,
+            "id": 1124,
+            "mutability": "mutable",
+            "name": "token",
+            "nameLocation": "313:5:5",
+            "nodeType": "VariableDeclaration",
+            "scope": 1135,
+            "src": "305:13:5",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 1123,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "305:7:5",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1126,
+            "mutability": "mutable",
+            "name": "from",
+            "nameLocation": "332:4:5",
+            "nodeType": "VariableDeclaration",
+            "scope": 1135,
+            "src": "324:12:5",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 1125,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "324:7:5",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1128,
+            "mutability": "mutable",
+            "name": "to",
+            "nameLocation": "350:2:5",
+            "nodeType": "VariableDeclaration",
+            "scope": 1135,
+            "src": "342:10:5",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 1127,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "342:7:5",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1131,
+            "mutability": "mutable",
+            "name": "ids",
+            "nameLocation": "368:3:5",
+            "nodeType": "VariableDeclaration",
+            "scope": 1135,
+            "src": "358:13:5",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+              "typeString": "uint256[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 1129,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "358:7:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "id": 1130,
+              "nodeType": "ArrayTypeName",
+              "src": "358:9:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                "typeString": "uint256[]"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1134,
+            "mutability": "mutable",
+            "name": "amounts",
+            "nameLocation": "387:7:5",
+            "nodeType": "VariableDeclaration",
+            "scope": 1135,
+            "src": "377:17:5",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+              "typeString": "uint256[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 1132,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "377:7:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "id": 1133,
+              "nodeType": "ArrayTypeName",
+              "src": "377:9:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                "typeString": "uint256[]"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "ConduitBatch1155Transfer",
+        "nameLocation": "274:24:5",
+        "scope": 1136,
+        "visibility": "public"
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 5
+}
