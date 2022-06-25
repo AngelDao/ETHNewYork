@@ -2,9 +2,14 @@
 pragma solidity ^0.8.13;
 
 import "forge-std/Test.sol";
+import "../src/TokenFactory.sol";
 
 contract ContractTest is Test {
-    function setUp() public {}
+    TokenFactory factory;
+
+    function setUp() public {
+        factory = new TokenFactory();
+    }
 
     function testExample() public {
         assertTrue(true);
