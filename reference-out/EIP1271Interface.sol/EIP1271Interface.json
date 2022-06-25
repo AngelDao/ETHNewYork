@@ -1,0 +1,196 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "digest",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes",
+          "name": "signature",
+          "type": "bytes"
+        }
+      ],
+      "name": "isValidSignature",
+      "outputs": [
+        {
+          "internalType": "bytes4",
+          "name": "",
+          "type": "bytes4"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "isValidSignature(bytes32,bytes)": "1626ba7e"
+  },
+  "ast": {
+    "absolutePath": "contracts/interfaces/EIP1271Interface.sol",
+    "id": 1328,
+    "exportedSymbols": {
+      "EIP1271Interface": [
+        1327
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:184:13",
+    "nodes": [
+      {
+        "id": 1317,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:13",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".7"
+        ]
+      },
+      {
+        "id": 1327,
+        "nodeType": "ContractDefinition",
+        "src": "57:158:13",
+        "nodes": [
+          {
+            "id": 1326,
+            "nodeType": "FunctionDefinition",
+            "src": "90:123:13",
+            "functionSelector": "1626ba7e",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isValidSignature",
+            "nameLocation": "99:16:13",
+            "parameters": {
+              "id": 1322,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1319,
+                  "mutability": "mutable",
+                  "name": "digest",
+                  "nameLocation": "124:6:13",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1326,
+                  "src": "116:14:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1318,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "116:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1321,
+                  "mutability": "mutable",
+                  "name": "signature",
+                  "nameLocation": "147:9:13",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1326,
+                  "src": "132:24:13",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 1320,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "132:5:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "115:42:13"
+            },
+            "returnParameters": {
+              "id": 1325,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1324,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1326,
+                  "src": "205:6:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 1323,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "205:6:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "204:8:13"
+            },
+            "scope": 1327,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          1327
+        ],
+        "name": "EIP1271Interface",
+        "nameLocation": "67:16:13",
+        "scope": 1328,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 13
+}

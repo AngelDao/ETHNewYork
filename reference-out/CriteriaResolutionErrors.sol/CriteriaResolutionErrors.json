@@ -1,0 +1,242 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "ConsiderationCriteriaResolverOutOfRange",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "CriteriaNotEnabledForItem",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidProof",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "OfferCriteriaResolverOutOfRange",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "OrderCriteriaResolverOutOfRange",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "UnresolvedConsiderationCriteria",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "UnresolvedOfferCriteria",
+      "type": "error"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "ast": {
+    "absolutePath": "contracts/interfaces/CriteriaResolutionErrors.sol",
+    "id": 1316,
+    "exportedSymbols": {
+      "CriteriaResolutionErrors": [
+        1315
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:1694:12",
+    "nodes": [
+      {
+        "id": 1292,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:12",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".7"
+        ]
+      },
+      {
+        "id": 1315,
+        "nodeType": "ContractDefinition",
+        "src": "215:1510:12",
+        "nodes": [
+          {
+            "id": 1296,
+            "nodeType": "ErrorDefinition",
+            "src": "404:40:12",
+            "documentation": {
+              "id": 1294,
+              "nodeType": "StructuredDocumentation",
+              "src": "256:143:12",
+              "text": " @dev Revert with an error when providing a criteria resolver that refers\n      to an order that has not been supplied."
+            },
+            "name": "OrderCriteriaResolverOutOfRange",
+            "nameLocation": "410:31:12",
+            "parameters": {
+              "id": 1295,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "441:2:12"
+            }
+          },
+          {
+            "id": 1299,
+            "nodeType": "ErrorDefinition",
+            "src": "597:32:12",
+            "documentation": {
+              "id": 1297,
+              "nodeType": "StructuredDocumentation",
+              "src": "450:142:12",
+              "text": " @dev Revert with an error if an offer item still has unresolved criteria\n      after applying all criteria resolvers."
+            },
+            "name": "UnresolvedOfferCriteria",
+            "nameLocation": "603:23:12",
+            "parameters": {
+              "id": 1298,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "626:2:12"
+            }
+          },
+          {
+            "id": 1302,
+            "nodeType": "ErrorDefinition",
+            "src": "789:40:12",
+            "documentation": {
+              "id": 1300,
+              "nodeType": "StructuredDocumentation",
+              "src": "635:149:12",
+              "text": " @dev Revert with an error if a consideration item still has unresolved\n      criteria after applying all criteria resolvers."
+            },
+            "name": "UnresolvedConsiderationCriteria",
+            "nameLocation": "795:31:12",
+            "parameters": {
+              "id": 1301,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "826:2:12"
+            }
+          },
+          {
+            "id": 1305,
+            "nodeType": "ErrorDefinition",
+            "src": "1002:40:12",
+            "documentation": {
+              "id": 1303,
+              "nodeType": "StructuredDocumentation",
+              "src": "835:162:12",
+              "text": " @dev Revert with an error when providing a criteria resolver that refers\n      to an order with an offer item that has not been supplied."
+            },
+            "name": "OfferCriteriaResolverOutOfRange",
+            "nameLocation": "1008:31:12",
+            "parameters": {
+              "id": 1304,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1039:2:12"
+            }
+          },
+          {
+            "id": 1308,
+            "nodeType": "ErrorDefinition",
+            "src": "1222:48:12",
+            "documentation": {
+              "id": 1306,
+              "nodeType": "StructuredDocumentation",
+              "src": "1048:169:12",
+              "text": " @dev Revert with an error when providing a criteria resolver that refers\n      to an order with a consideration item that has not been supplied."
+            },
+            "name": "ConsiderationCriteriaResolverOutOfRange",
+            "nameLocation": "1228:39:12",
+            "parameters": {
+              "id": 1307,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1267:2:12"
+            }
+          },
+          {
+            "id": 1311,
+            "nodeType": "ErrorDefinition",
+            "src": "1469:34:12",
+            "documentation": {
+              "id": 1309,
+              "nodeType": "StructuredDocumentation",
+              "src": "1276:188:12",
+              "text": " @dev Revert with an error when providing a criteria resolver that refers\n      to an order with an item that does not expect a criteria to be\n      resolved."
+            },
+            "name": "CriteriaNotEnabledForItem",
+            "nameLocation": "1475:25:12",
+            "parameters": {
+              "id": 1310,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1500:2:12"
+            }
+          },
+          {
+            "id": 1314,
+            "nodeType": "ErrorDefinition",
+            "src": "1702:21:12",
+            "documentation": {
+              "id": 1312,
+              "nodeType": "StructuredDocumentation",
+              "src": "1509:188:12",
+              "text": " @dev Revert with an error when providing a criteria resolver that\n      contains an invalid proof with respect to the given item and\n      chosen identifier."
+            },
+            "name": "InvalidProof",
+            "nameLocation": "1708:12:12",
+            "parameters": {
+              "id": 1313,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1720:2:12"
+            }
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 1293,
+          "nodeType": "StructuredDocumentation",
+          "src": "57:157:12",
+          "text": " @title CriteriaResolutionErrors\n @author 0age\n @notice CriteriaResolutionErrors contains all errors related to criteria\n         resolution."
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          1315
+        ],
+        "name": "CriteriaResolutionErrors",
+        "nameLocation": "225:24:12",
+        "scope": 1316,
+        "usedErrors": [
+          1296,
+          1299,
+          1302,
+          1305,
+          1308,
+          1311,
+          1314
+        ]
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 12
+}

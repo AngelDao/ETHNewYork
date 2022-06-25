@@ -1,0 +1,347 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "delegateProxyImplementation",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_addr",
+          "type": "address"
+        }
+      ],
+      "name": "proxies",
+      "outputs": [
+        {
+          "internalType": "contract OwnableDelegateProxy",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "registerProxy",
+      "outputs": [
+        {
+          "internalType": "contract OwnableDelegateProxy",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "delegateProxyImplementation()": "97204d8e",
+    "proxies(address)": "c4552791",
+    "registerProxy()": "ddd81f82"
+  },
+  "ast": {
+    "absolutePath": "test/foundry/interfaces/ProxyRegistry.sol",
+    "id": 44704,
+    "exportedSymbols": {
+      "OwnableDelegateProxy": [
+        44679
+      ],
+      "ProxyRegistry": [
+        44703
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:371:91",
+    "nodes": [
+      {
+        "id": 44681,
+        "nodeType": "PragmaDirective",
+        "src": "32:24:91",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 44683,
+        "nodeType": "ImportDirective",
+        "src": "58:66:91",
+        "absolutePath": "test/foundry/interfaces/OwnableDelegateProxy.sol",
+        "file": "./OwnableDelegateProxy.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 44704,
+        "sourceUnit": 44680,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 44682,
+              "name": "OwnableDelegateProxy",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 44679,
+              "src": "67:20:91",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 44703,
+        "nodeType": "ContractDefinition",
+        "src": "126:276:91",
+        "nodes": [
+          {
+            "id": 44688,
+            "nodeType": "FunctionDefinition",
+            "src": "156:66:91",
+            "functionSelector": "97204d8e",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "delegateProxyImplementation",
+            "nameLocation": "165:27:91",
+            "parameters": {
+              "id": 44684,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "192:2:91"
+            },
+            "returnParameters": {
+              "id": 44687,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 44686,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44688,
+                  "src": "213:7:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 44685,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "213:7:91",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "212:9:91"
+            },
+            "scope": 44703,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 44694,
+            "nodeType": "FunctionDefinition",
+            "src": "228:65:91",
+            "functionSelector": "ddd81f82",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "registerProxy",
+            "nameLocation": "237:13:91",
+            "parameters": {
+              "id": 44689,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "250:2:91"
+            },
+            "returnParameters": {
+              "id": 44693,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 44692,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44694,
+                  "src": "271:20:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_OwnableDelegateProxy_$44679",
+                    "typeString": "contract OwnableDelegateProxy"
+                  },
+                  "typeName": {
+                    "id": 44691,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 44690,
+                      "name": "OwnableDelegateProxy",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 44679,
+                      "src": "271:20:91"
+                    },
+                    "referencedDeclaration": 44679,
+                    "src": "271:20:91",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_OwnableDelegateProxy_$44679",
+                      "typeString": "contract OwnableDelegateProxy"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "270:22:91"
+            },
+            "scope": 44703,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 44702,
+            "nodeType": "FunctionDefinition",
+            "src": "299:101:91",
+            "functionSelector": "c4552791",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "proxies",
+            "nameLocation": "308:7:91",
+            "parameters": {
+              "id": 44697,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 44696,
+                  "mutability": "mutable",
+                  "name": "_addr",
+                  "nameLocation": "324:5:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44702,
+                  "src": "316:13:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 44695,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "316:7:91",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "315:15:91"
+            },
+            "returnParameters": {
+              "id": 44701,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 44700,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44702,
+                  "src": "378:20:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_OwnableDelegateProxy_$44679",
+                    "typeString": "contract OwnableDelegateProxy"
+                  },
+                  "typeName": {
+                    "id": 44699,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 44698,
+                      "name": "OwnableDelegateProxy",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 44679,
+                      "src": "378:20:91"
+                    },
+                    "referencedDeclaration": 44679,
+                    "src": "378:20:91",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_OwnableDelegateProxy_$44679",
+                      "typeString": "contract OwnableDelegateProxy"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "377:22:91"
+            },
+            "scope": 44703,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ProxyRegistry",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          44703
+        ],
+        "name": "ProxyRegistry",
+        "nameLocation": "136:13:91",
+        "scope": 44704,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 91
+}

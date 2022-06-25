@@ -1,0 +1,740 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "orderHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "offerer",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "zoneHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "isValidOrder",
+      "outputs": [
+        {
+          "internalType": "bytes4",
+          "name": "validOrderMagicValue",
+          "type": "bytes4"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "orderHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        },
+        {
+          "components": [
+            {
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "offerer",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "zone",
+                  "type": "address"
+                },
+                {
+                  "components": [
+                    {
+                      "internalType": "enum ItemType",
+                      "name": "itemType",
+                      "type": "uint8"
+                    },
+                    {
+                      "internalType": "address",
+                      "name": "token",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "identifierOrCriteria",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "startAmount",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "endAmount",
+                      "type": "uint256"
+                    }
+                  ],
+                  "internalType": "struct OfferItem[]",
+                  "name": "offer",
+                  "type": "tuple[]"
+                },
+                {
+                  "components": [
+                    {
+                      "internalType": "enum ItemType",
+                      "name": "itemType",
+                      "type": "uint8"
+                    },
+                    {
+                      "internalType": "address",
+                      "name": "token",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "identifierOrCriteria",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "startAmount",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "endAmount",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "address payable",
+                      "name": "recipient",
+                      "type": "address"
+                    }
+                  ],
+                  "internalType": "struct ConsiderationItem[]",
+                  "name": "consideration",
+                  "type": "tuple[]"
+                },
+                {
+                  "internalType": "enum OrderType",
+                  "name": "orderType",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "startTime",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "endTime",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "bytes32",
+                  "name": "zoneHash",
+                  "type": "bytes32"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "salt",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "bytes32",
+                  "name": "conduitKey",
+                  "type": "bytes32"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "totalOriginalConsiderationItems",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct OrderParameters",
+              "name": "parameters",
+              "type": "tuple"
+            },
+            {
+              "internalType": "uint120",
+              "name": "numerator",
+              "type": "uint120"
+            },
+            {
+              "internalType": "uint120",
+              "name": "denominator",
+              "type": "uint120"
+            },
+            {
+              "internalType": "bytes",
+              "name": "signature",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "extraData",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct AdvancedOrder",
+          "name": "order",
+          "type": "tuple"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "priorOrderHashes",
+          "type": "bytes32[]"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "orderIndex",
+              "type": "uint256"
+            },
+            {
+              "internalType": "enum Side",
+              "name": "side",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint256",
+              "name": "index",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "identifier",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "criteriaProof",
+              "type": "bytes32[]"
+            }
+          ],
+          "internalType": "struct CriteriaResolver[]",
+          "name": "criteriaResolvers",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "isValidOrderIncludingExtraData",
+      "outputs": [
+        {
+          "internalType": "bytes4",
+          "name": "validOrderMagicValue",
+          "type": "bytes4"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "isValidOrder(bytes32,address,address,bytes32)": "0e1d31dc",
+    "isValidOrderIncludingExtraData(bytes32,address,((address,address,(uint8,address,uint256,uint256,uint256)[],(uint8,address,uint256,uint256,uint256,address)[],uint8,uint256,uint256,bytes32,uint256,bytes32,uint256),uint120,uint120,bytes,bytes),bytes32[],(uint256,uint8,uint256,uint256,bytes32[])[])": "33131570"
+  },
+  "ast": {
+    "absolutePath": "contracts/interfaces/ZoneInterface.sol",
+    "id": 2564,
+    "exportedSymbols": {
+      "AdvancedOrder": [
+        4844
+      ],
+      "CriteriaResolver": [
+        4866
+      ],
+      "ZoneInterface": [
+        2563
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:806:24",
+    "nodes": [
+      {
+        "id": 2527,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:24",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".7"
+        ]
+      },
+      {
+        "id": 2530,
+        "nodeType": "ImportDirective",
+        "src": "76:90:24",
+        "absolutePath": "contracts/lib/ConsiderationStructs.sol",
+        "file": "../lib/ConsiderationStructs.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 2564,
+        "sourceUnit": 4889,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 2528,
+              "name": "AdvancedOrder",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4844,
+              "src": "89:13:24",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 2529,
+              "name": "CriteriaResolver",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4866,
+              "src": "108:16:24",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 2563,
+        "nodeType": "ContractDefinition",
+        "src": "168:669:24",
+        "nodes": [
+          {
+            "id": 2543,
+            "nodeType": "FunctionDefinition",
+            "src": "279:182:24",
+            "functionSelector": "0e1d31dc",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isValidOrder",
+            "nameLocation": "288:12:24",
+            "parameters": {
+              "id": 2539,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2532,
+                  "mutability": "mutable",
+                  "name": "orderHash",
+                  "nameLocation": "318:9:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2543,
+                  "src": "310:17:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 2531,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "310:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2534,
+                  "mutability": "mutable",
+                  "name": "caller",
+                  "nameLocation": "345:6:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2543,
+                  "src": "337:14:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2533,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "337:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2536,
+                  "mutability": "mutable",
+                  "name": "offerer",
+                  "nameLocation": "369:7:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2543,
+                  "src": "361:15:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2535,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "361:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2538,
+                  "mutability": "mutable",
+                  "name": "zoneHash",
+                  "nameLocation": "394:8:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2543,
+                  "src": "386:16:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 2537,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "386:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "300:108:24"
+            },
+            "returnParameters": {
+              "id": 2542,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2541,
+                  "mutability": "mutable",
+                  "name": "validOrderMagicValue",
+                  "nameLocation": "439:20:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2543,
+                  "src": "432:27:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 2540,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "432:6:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "431:29:24"
+            },
+            "scope": 2563,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 2562,
+            "nodeType": "FunctionDefinition",
+            "src": "548:287:24",
+            "functionSelector": "33131570",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isValidOrderIncludingExtraData",
+            "nameLocation": "557:30:24",
+            "parameters": {
+              "id": 2558,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2545,
+                  "mutability": "mutable",
+                  "name": "orderHash",
+                  "nameLocation": "605:9:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2562,
+                  "src": "597:17:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 2544,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "597:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2547,
+                  "mutability": "mutable",
+                  "name": "caller",
+                  "nameLocation": "632:6:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2562,
+                  "src": "624:14:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2546,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "624:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2550,
+                  "mutability": "mutable",
+                  "name": "order",
+                  "nameLocation": "671:5:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2562,
+                  "src": "648:28:24",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_AdvancedOrder_$4844_calldata_ptr",
+                    "typeString": "struct AdvancedOrder"
+                  },
+                  "typeName": {
+                    "id": 2549,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 2548,
+                      "name": "AdvancedOrder",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 4844,
+                      "src": "648:13:24"
+                    },
+                    "referencedDeclaration": 4844,
+                    "src": "648:13:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_AdvancedOrder_$4844_storage_ptr",
+                      "typeString": "struct AdvancedOrder"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2553,
+                  "mutability": "mutable",
+                  "name": "priorOrderHashes",
+                  "nameLocation": "705:16:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2562,
+                  "src": "686:35:24",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes32_$dyn_calldata_ptr",
+                    "typeString": "bytes32[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2551,
+                      "name": "bytes32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "686:7:24",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "id": 2552,
+                    "nodeType": "ArrayTypeName",
+                    "src": "686:9:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                      "typeString": "bytes32[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2557,
+                  "mutability": "mutable",
+                  "name": "criteriaResolvers",
+                  "nameLocation": "759:17:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2562,
+                  "src": "731:45:24",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_CriteriaResolver_$4866_calldata_ptr_$dyn_calldata_ptr",
+                    "typeString": "struct CriteriaResolver[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2555,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 2554,
+                        "name": "CriteriaResolver",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 4866,
+                        "src": "731:16:24"
+                      },
+                      "referencedDeclaration": 4866,
+                      "src": "731:16:24",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_CriteriaResolver_$4866_storage_ptr",
+                        "typeString": "struct CriteriaResolver"
+                      }
+                    },
+                    "id": 2556,
+                    "nodeType": "ArrayTypeName",
+                    "src": "731:18:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_CriteriaResolver_$4866_storage_$dyn_storage_ptr",
+                      "typeString": "struct CriteriaResolver[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "587:195:24"
+            },
+            "returnParameters": {
+              "id": 2561,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2560,
+                  "mutability": "mutable",
+                  "name": "validOrderMagicValue",
+                  "nameLocation": "813:20:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2562,
+                  "src": "806:27:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 2559,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "806:6:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "805:29:24"
+            },
+            "scope": 2563,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ZoneInterface",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          2563
+        ],
+        "name": "ZoneInterface",
+        "nameLocation": "178:13:24",
+        "scope": 2564,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 24
+}

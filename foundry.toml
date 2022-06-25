@@ -1,47 +1,45 @@
-## defaults for _all_ profiles
 [default]
-src = 'src'
-test = 'test'
+solc = '0.8.14'
+via_ir = true
+src = 'contracts'
 out = 'out'
-libs = ['lib']
-remappings = []
-libraries = []
-# cache = true
-cache_path = 'cache'
-force = false
-evm_version = 'london'
-## Sets the concrete solc version to use, this overrides the `auto_detect_solc` value
-# solc_version = '0.8.10'
-auto_detect_solc = true
-offline = false
-optimizer = false
-#optimizer_runs = 200
+libs = ["node_modules", "lib"]
+test = 'test/foundry'
+remappings = [
+    'ds-test=lib/ds-test/src/',
+    'forge-std=lib/forge-std/src/',
+    '@rari-capital/solmate/=lib/solmate/',
+    'contracts/=contracts/',
+    'murky/=lib/murky/src/',
+]
+fuzz_runs = 5000
+fuzz_max_global_rejects = 2_000_000
+optimizer_runs = 19_066
+
+[reference]
+solc = '0.8.7'
 via_ir = false
-verbosity = 0
-ignored_error_codes = []
-fuzz_runs = 256
-ffi = false
-sender = '0x00a329c0648769a73afac7f9381e08fb43dbea72'
-tx_origin = '0x00a329c0648769a73afac7f9381e08fb43dbea72'
-initial_balance = '0xffffffffffffffffffffffff'
-block_number = 0
-# NOTE due to a toml-rs limitation, this value needs to be a string if the desired gas limit exceeds `i64::MAX` (9223372036854775807)
-gas_limit = 9223372036854775807
-gas_price = 0
-block_base_fee_per_gas = 0
-block_coinbase = '0x0000000000000000000000000000000000000000'
-block_timestamp = 0
-block_difficulty = 0
-# caches storage retrieved locally for certain chains and endpoints
-# can also be restrictied to `chains = ["optimism", "mainnet"]`
-# by default all endpoints will be cached, alternative options are "remote" for only caching non localhost endpoints and "<regex>"
-# to disable storage caching entirely set `no_storage_caching = true`
-rpc_storage_caching = { chains = "all", endpoints = "all" }
-# this overrides `rpc_storage_caching` entirely
-no_storage_caching = false
-# use ipfs method to generate the metadata hash, solc's default.
-# To not include the metadata hash, to allow for deterministic code: https://docs.soliditylang.org/en/latest/metadata.html, use "none"
-bytecode_hash = "ipfs"
-# If this option is enabled, Solc is instructed to generate output (bytecode) only for the required contracts
-# this can reduce compile time for `forge test` a bit but is considered experimental at this point.
-sparse_mode = false
+src = 'reference'
+out = 'reference-out'
+# specify something so it doesn't try to compile the 0.8.14 files in test/foundry
+test = 'reference'
+
+[optimized]
+out = 'optimized-out'
+
+[test]
+via_ir = false
+src = 'test/foundry'
+
+[lite]
+out = 'optimized-out'
+via_ir = false
+fuzz_runs = 1000
+
+[local]
+via_ir = false
+fuzz_runs = 1000
+src = 'reference'
+out = 'reference-out'
+
+# See more config options https://github.com/gakonst/foundry/tree/master/config

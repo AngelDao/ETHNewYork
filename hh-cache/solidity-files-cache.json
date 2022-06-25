@@ -1,0 +1,2260 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/conduit/Conduit.sol": {
+      "lastModificationDate": 1656133999964,
+      "contentHash": "64a3ee459c20bd7ecf5ef05cfbd6b61b",
+      "sourceName": "contracts/conduit/Conduit.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/ConduitInterface.sol",
+        "./lib/ConduitEnums.sol",
+        "../lib/TokenTransferrer.sol",
+        "./lib/ConduitStructs.sol",
+        "./lib/ConduitConstants.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "Conduit"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/helpers/TransferHelper.sol": {
+      "lastModificationDate": 1656133999964,
+      "contentHash": "f1813c19f1f56b5a7d2b834d8c865cdf",
+      "sourceName": "contracts/helpers/TransferHelper.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./TransferHelperStructs.sol",
+        "../lib/TokenTransferrer.sol",
+        "../interfaces/ConduitInterface.sol",
+        "../interfaces/ConduitControllerInterface.sol",
+        "../conduit/Conduit.sol",
+        "../conduit/lib/ConduitStructs.sol",
+        "../interfaces/TransferHelperInterface.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "TransferHelper"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/helpers/TransferHelperStructs.sol": {
+      "lastModificationDate": 1656133999964,
+      "contentHash": "ca055f166e376400cddb74afa13451e6",
+      "sourceName": "contracts/helpers/TransferHelperStructs.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../conduit/lib/ConduitEnums.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": []
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/lib/TokenTransferrer.sol": {
+      "lastModificationDate": 1656133999970,
+      "contentHash": "2f4937a0ccd38a0f3b76239d49ac630f",
+      "sourceName": "contracts/lib/TokenTransferrer.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./TokenTransferrerConstants.sol",
+        "../interfaces/TokenTransferrerErrors.sol",
+        "../conduit/lib/ConduitStructs.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "TokenTransferrer"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/interfaces/ConduitInterface.sol": {
+      "lastModificationDate": 1656133999965,
+      "contentHash": "7a91752a88cc5769888a5de28ad2d95d",
+      "sourceName": "contracts/interfaces/ConduitInterface.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../conduit/lib/ConduitStructs.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "ConduitInterface"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/interfaces/ConduitControllerInterface.sol": {
+      "lastModificationDate": 1656133999965,
+      "contentHash": "efa5c6870e37d21a403a3d165671ed2c",
+      "sourceName": "contracts/interfaces/ConduitControllerInterface.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "ConduitControllerInterface"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/conduit/lib/ConduitStructs.sol": {
+      "lastModificationDate": 1656133999964,
+      "contentHash": "8435b8f9681d37ee4d20e11b2c54e47f",
+      "sourceName": "contracts/conduit/lib/ConduitStructs.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ConduitEnums.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": []
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/interfaces/TransferHelperInterface.sol": {
+      "lastModificationDate": 1656133999966,
+      "contentHash": "e9f6d1d460af6d2dce7080d334ad1409",
+      "sourceName": "contracts/interfaces/TransferHelperInterface.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../helpers/TransferHelperStructs.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "TransferHelperInterface"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/conduit/lib/ConduitEnums.sol": {
+      "lastModificationDate": 1656133999964,
+      "contentHash": "77a46f44f10ea0278118b35df67551ae",
+      "sourceName": "contracts/conduit/lib/ConduitEnums.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": []
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/lib/TokenTransferrerConstants.sol": {
+      "lastModificationDate": 1656133999970,
+      "contentHash": "2c89f93d9ea5b75816a2920f11eb3490",
+      "sourceName": "contracts/lib/TokenTransferrerConstants.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": []
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/interfaces/TokenTransferrerErrors.sol": {
+      "lastModificationDate": 1656133999966,
+      "contentHash": "1fdc064969ea05befa714e769201b8f2",
+      "sourceName": "contracts/interfaces/TokenTransferrerErrors.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "TokenTransferrerErrors"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/conduit/lib/ConduitConstants.sol": {
+      "lastModificationDate": 1656133999964,
+      "contentHash": "998ca816adbe7dd835fb4c896b7438fe",
+      "sourceName": "contracts/conduit/lib/ConduitConstants.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": []
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/lib/Executor.sol": {
+      "lastModificationDate": 1656133999968,
+      "contentHash": "7ebe1b9e741c3844e81a501650cb2b0c",
+      "sourceName": "contracts/lib/Executor.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/ConduitInterface.sol",
+        "../conduit/lib/ConduitEnums.sol",
+        "./ConsiderationEnums.sol",
+        "./ConsiderationStructs.sol",
+        "./Verifiers.sol",
+        "./TokenTransferrer.sol",
+        "./ConsiderationConstants.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "Executor"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/lib/ConsiderationEnums.sol": {
+      "lastModificationDate": 1656133999968,
+      "contentHash": "759343974462fa5bd1860c994c71178b",
+      "sourceName": "contracts/lib/ConsiderationEnums.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": []
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/lib/ConsiderationStructs.sol": {
+      "lastModificationDate": 1656133999968,
+      "contentHash": "b44554d78ae9de7f28b7ca3c313ea1bb",
+      "sourceName": "contracts/lib/ConsiderationStructs.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ConsiderationEnums.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": []
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/lib/Verifiers.sol": {
+      "lastModificationDate": 1656133999970,
+      "contentHash": "3f3ee72eba4bed8b1ec40a35ed10ebf5",
+      "sourceName": "contracts/lib/Verifiers.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ConsiderationStructs.sol",
+        "./Assertions.sol",
+        "./SignatureVerification.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "Verifiers"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/lib/ConsiderationConstants.sol": {
+      "lastModificationDate": 1656133999968,
+      "contentHash": "695d6f3bf3d7685d428ca7db5670bb44",
+      "sourceName": "contracts/lib/ConsiderationConstants.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": []
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/lib/Assertions.sol": {
+      "lastModificationDate": 1656133999967,
+      "contentHash": "10b8ca06b1335aafab8bdefbc7a87d42",
+      "sourceName": "contracts/lib/Assertions.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ConsiderationStructs.sol",
+        "./GettersAndDerivers.sol",
+        "../interfaces/TokenTransferrerErrors.sol",
+        "./CounterManager.sol",
+        "./ConsiderationConstants.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "Assertions"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/lib/SignatureVerification.sol": {
+      "lastModificationDate": 1656133999970,
+      "contentHash": "065e1f8c52fdc93409e7cf1e1719ef6f",
+      "sourceName": "contracts/lib/SignatureVerification.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/EIP1271Interface.sol",
+        "../interfaces/SignatureVerificationErrors.sol",
+        "./LowLevelHelpers.sol",
+        "./ConsiderationConstants.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "SignatureVerification"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/lib/GettersAndDerivers.sol": {
+      "lastModificationDate": 1656133999969,
+      "contentHash": "a77c2e14f1695fcef62ab8b4009fc6e3",
+      "sourceName": "contracts/lib/GettersAndDerivers.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ConsiderationStructs.sol",
+        "./ConsiderationBase.sol",
+        "./ConsiderationConstants.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "GettersAndDerivers"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/lib/CounterManager.sol": {
+      "lastModificationDate": 1656133999968,
+      "contentHash": "3a6fdb48031dec32ecfa2489a6b6f3f5",
+      "sourceName": "contracts/lib/CounterManager.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/ConsiderationEventsAndErrors.sol",
+        "./ReentrancyGuard.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "CounterManager"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/lib/ConsiderationBase.sol": {
+      "lastModificationDate": 1656133999968,
+      "contentHash": "df618c7693592393e96e080ac95578d5",
+      "sourceName": "contracts/lib/ConsiderationBase.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/ConduitControllerInterface.sol",
+        "../interfaces/ConsiderationEventsAndErrors.sol",
+        "./ConsiderationConstants.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "ConsiderationBase"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/interfaces/ConsiderationEventsAndErrors.sol": {
+      "lastModificationDate": 1656133999965,
+      "contentHash": "8ebda06050588523515b5ebdef7681bd",
+      "sourceName": "contracts/interfaces/ConsiderationEventsAndErrors.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../lib/ConsiderationStructs.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "ConsiderationEventsAndErrors"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/lib/ReentrancyGuard.sol": {
+      "lastModificationDate": 1656133999970,
+      "contentHash": "4f21170b59886f035c98456938dbd0c9",
+      "sourceName": "contracts/lib/ReentrancyGuard.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/ReentrancyErrors.sol",
+        "./ConsiderationConstants.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "ReentrancyGuard"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/interfaces/ReentrancyErrors.sol": {
+      "lastModificationDate": 1656133999966,
+      "contentHash": "9b38abf20c996d6ba33000556157662b",
+      "sourceName": "contracts/interfaces/ReentrancyErrors.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "ReentrancyErrors"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/interfaces/EIP1271Interface.sol": {
+      "lastModificationDate": 1656133999965,
+      "contentHash": "933352a947551a91f326f80440cb6465",
+      "sourceName": "contracts/interfaces/EIP1271Interface.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "EIP1271Interface"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/interfaces/SignatureVerificationErrors.sol": {
+      "lastModificationDate": 1656133999966,
+      "contentHash": "6a9c420736e5e3b2b65ba88b51ea7ff1",
+      "sourceName": "contracts/interfaces/SignatureVerificationErrors.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "SignatureVerificationErrors"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/lib/LowLevelHelpers.sol": {
+      "lastModificationDate": 1656133999969,
+      "contentHash": "8b515c2cc0abc3c4dddfe3f6983388cf",
+      "sourceName": "contracts/lib/LowLevelHelpers.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ConsiderationConstants.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "LowLevelHelpers"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/lib/FulfillmentApplier.sol": {
+      "lastModificationDate": 1656133999969,
+      "contentHash": "31205b7ea2018748e6327006d3510495",
+      "sourceName": "contracts/lib/FulfillmentApplier.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ConsiderationEnums.sol",
+        "./ConsiderationStructs.sol",
+        "./ConsiderationConstants.sol",
+        "../interfaces/FulfillmentApplicationErrors.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "FulfillmentApplier"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/interfaces/FulfillmentApplicationErrors.sol": {
+      "lastModificationDate": 1656133999966,
+      "contentHash": "e60af5d4154260f9b524c21c7427d3b9",
+      "sourceName": "contracts/interfaces/FulfillmentApplicationErrors.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../lib/ConsiderationEnums.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "FulfillmentApplicationErrors"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/lib/CriteriaResolution.sol": {
+      "lastModificationDate": 1656133999968,
+      "contentHash": "a131c7373225f573d6288fb27f863dff",
+      "sourceName": "contracts/lib/CriteriaResolution.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ConsiderationEnums.sol",
+        "./ConsiderationStructs.sol",
+        "./ConsiderationConstants.sol",
+        "../interfaces/CriteriaResolutionErrors.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "CriteriaResolution"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/interfaces/CriteriaResolutionErrors.sol": {
+      "lastModificationDate": 1656133999965,
+      "contentHash": "60dc98ef4d535b0322a85c922e6f2b2f",
+      "sourceName": "contracts/interfaces/CriteriaResolutionErrors.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "CriteriaResolutionErrors"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/test/TestZone.sol": {
+      "lastModificationDate": 1656133999971,
+      "contentHash": "3a4be5872e56b3427118c2a1fb743c0a",
+      "sourceName": "contracts/test/TestZone.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/ZoneInterface.sol",
+        "../lib/ConsiderationStructs.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "TestZone"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/interfaces/ZoneInterface.sol": {
+      "lastModificationDate": 1656133999967,
+      "contentHash": "ddb6cd30ff48b864f64df73b93de1447",
+      "sourceName": "contracts/interfaces/ZoneInterface.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../lib/ConsiderationStructs.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "ZoneInterface"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/lib/ZoneInteraction.sol": {
+      "lastModificationDate": 1656133999970,
+      "contentHash": "303b0e82989982cf93d771c82ae3322c",
+      "sourceName": "contracts/lib/ZoneInteraction.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/ZoneInterface.sol",
+        "./ConsiderationEnums.sol",
+        "./ConsiderationStructs.sol",
+        "./ConsiderationConstants.sol",
+        "../interfaces/ZoneInteractionErrors.sol",
+        "./LowLevelHelpers.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "ZoneInteraction"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/interfaces/ZoneInteractionErrors.sol": {
+      "lastModificationDate": 1656133999966,
+      "contentHash": "3b6f292253722793410d3e3c9f0ce75e",
+      "sourceName": "contracts/interfaces/ZoneInteractionErrors.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "ZoneInteractionErrors"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/lib/BasicOrderFulfiller.sol": {
+      "lastModificationDate": 1656133999967,
+      "contentHash": "71904d1c23c636d3702c006566b4d77e",
+      "sourceName": "contracts/lib/BasicOrderFulfiller.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/ConduitInterface.sol",
+        "./ConsiderationEnums.sol",
+        "./ConsiderationStructs.sol",
+        "./OrderValidator.sol",
+        "./ConsiderationConstants.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "BasicOrderFulfiller"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/lib/OrderValidator.sol": {
+      "lastModificationDate": 1656133999969,
+      "contentHash": "d983c24a55fe5f41169a75396dcba719",
+      "sourceName": "contracts/lib/OrderValidator.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ConsiderationEnums.sol",
+        "./ConsiderationStructs.sol",
+        "./ConsiderationConstants.sol",
+        "./Executor.sol",
+        "./ZoneInteraction.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "OrderValidator"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/lib/OrderFulfiller.sol": {
+      "lastModificationDate": 1656133999969,
+      "contentHash": "5e2ba9b35628f6e8e11d89840ad9969d",
+      "sourceName": "contracts/lib/OrderFulfiller.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ConsiderationEnums.sol",
+        "./ConsiderationStructs.sol",
+        "./BasicOrderFulfiller.sol",
+        "./CriteriaResolution.sol",
+        "./AmountDeriver.sol",
+        "./ConsiderationConstants.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "OrderFulfiller"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/lib/AmountDeriver.sol": {
+      "lastModificationDate": 1656133999967,
+      "contentHash": "bc421091669eb802a0c72f7e8639fd22",
+      "sourceName": "contracts/lib/AmountDeriver.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/AmountDerivationErrors.sol",
+        "./ConsiderationConstants.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "AmountDeriver"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/interfaces/AmountDerivationErrors.sol": {
+      "lastModificationDate": 1656133999965,
+      "contentHash": "7928ac0f820221d4e5dad10b18b7cb73",
+      "sourceName": "contracts/interfaces/AmountDerivationErrors.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "AmountDerivationErrors"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/lib/OrderCombiner.sol": {
+      "lastModificationDate": 1656133999969,
+      "contentHash": "1638d46c8e4f8b81b6185c2300c3232c",
+      "sourceName": "contracts/lib/OrderCombiner.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ConsiderationEnums.sol",
+        "./ConsiderationStructs.sol",
+        "./OrderFulfiller.sol",
+        "./FulfillmentApplier.sol",
+        "./ConsiderationConstants.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "OrderCombiner"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/lib/Consideration.sol": {
+      "lastModificationDate": 1656133999967,
+      "contentHash": "11ffe50fb849ef48ffc357a640b566c2",
+      "sourceName": "contracts/lib/Consideration.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/ConsiderationInterface.sol",
+        "./ConsiderationStructs.sol",
+        "./OrderCombiner.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "Consideration"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/interfaces/ConsiderationInterface.sol": {
+      "lastModificationDate": 1656133999965,
+      "contentHash": "1d6deffd0c6d3de675192e2ffd1e4a33",
+      "sourceName": "contracts/interfaces/ConsiderationInterface.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../lib/ConsiderationStructs.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "ConsiderationInterface"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/Seaport.sol": {
+      "lastModificationDate": 1656133999963,
+      "contentHash": "b60180472fbae278a71a8368bc858c7d",
+      "sourceName": "contracts/Seaport.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./lib/Consideration.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "Seaport"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/interfaces/SeaportInterface.sol": {
+      "lastModificationDate": 1656133999966,
+      "contentHash": "d4efd853c24cc27da7bff7078e63b459",
+      "sourceName": "contracts/interfaces/SeaportInterface.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../lib/ConsiderationStructs.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "SeaportInterface"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/interfaces/AbridgedTokenInterfaces.sol": {
+      "lastModificationDate": 1656133999964,
+      "contentHash": "e950f0f48e919ed32b9af0ea24e0bc0b",
+      "sourceName": "contracts/interfaces/AbridgedTokenInterfaces.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "ERC1155Interface",
+        "ERC20Interface",
+        "ERC721Interface"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/interfaces/ImmutableCreate2FactoryInterface.sol": {
+      "lastModificationDate": 1656133999966,
+      "contentHash": "a39410d67294125fa2a5c01c27bc86c0",
+      "sourceName": "contracts/interfaces/ImmutableCreate2FactoryInterface.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "ImmutableCreate2FactoryInterface"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/test/EIP1271Wallet.sol": {
+      "lastModificationDate": 1656133999970,
+      "contentHash": "a76431ce1f75913244af286c010bbe20",
+      "sourceName": "contracts/test/EIP1271Wallet.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "EIP1271Wallet",
+        "ERC20ApprovalInterface",
+        "NFTApprovalInterface"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/test/ERC1155BatchRecipient.sol": {
+      "lastModificationDate": 1656133999971,
+      "contentHash": "660d9a02c772ba1e05f3b0a4c9253209",
+      "sourceName": "contracts/test/ERC1155BatchRecipient.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "ERC1155BatchRecipient"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/test/ExcessReturnDataRecipient.sol": {
+      "lastModificationDate": 1656133999971,
+      "contentHash": "3c630bd3ade1dde05ca2d7ce7c897bf4",
+      "sourceName": "contracts/test/ExcessReturnDataRecipient.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "ExcessReturnDataRecipient"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/test/Reenterer.sol": {
+      "lastModificationDate": 1656133999971,
+      "contentHash": "6641c2e3491c7e43a9829ffddca689e3",
+      "sourceName": "contracts/test/Reenterer.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "Reenterer"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/test/TestERC1155.sol": {
+      "lastModificationDate": 1656133999971,
+      "contentHash": "ed976112d89bc814efa5e446d95d3835",
+      "sourceName": "contracts/test/TestERC1155.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@rari-capital/solmate/src/tokens/ERC1155.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "TestERC1155"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/node_modules/@rari-capital/solmate/src/tokens/ERC1155.sol": {
+      "lastModificationDate": 1656134034988,
+      "contentHash": "c2eba959a95675f7cd374b6539232153",
+      "sourceName": "@rari-capital/solmate/src/tokens/ERC1155.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.0"
+      ],
+      "artifacts": [
+        "ERC1155",
+        "ERC1155TokenReceiver"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/test/TestERC20.sol": {
+      "lastModificationDate": 1656133999971,
+      "contentHash": "65292f203f7f966adae8718d5e8e8521",
+      "sourceName": "contracts/test/TestERC20.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@rari-capital/solmate/src/tokens/ERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "TestERC20"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/node_modules/@rari-capital/solmate/src/tokens/ERC20.sol": {
+      "lastModificationDate": 1656134034988,
+      "contentHash": "e2c22aed19719e4909dbd84d07295e2b",
+      "sourceName": "@rari-capital/solmate/src/tokens/ERC20.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.0"
+      ],
+      "artifacts": [
+        "ERC20"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/test/TestERC721.sol": {
+      "lastModificationDate": 1656133999971,
+      "contentHash": "0b00e9e4584ba342b5de61fcc65bf36f",
+      "sourceName": "contracts/test/TestERC721.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@rari-capital/solmate/src/tokens/ERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "TestERC721"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/node_modules/@rari-capital/solmate/src/tokens/ERC721.sol": {
+      "lastModificationDate": 1656134034988,
+      "contentHash": "570fd56c160b36eedded340d7f877495",
+      "sourceName": "@rari-capital/solmate/src/tokens/ERC721.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 19066
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.0"
+      ],
+      "artifacts": [
+        "ERC721",
+        "ERC721TokenReceiver"
+      ]
+    },
+    "/Users/stevennevins/Documents/javascript/seaport/contracts/conduit/ConduitController.sol": {
+      "lastModificationDate": 1656133999964,
+      "contentHash": "24be4cedde90d5f849770f1e9c909344",
+      "sourceName": "contracts/conduit/ConduitController.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/ConduitControllerInterface.sol",
+        "../interfaces/ConduitInterface.sol",
+        "./Conduit.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "ConduitController"
+      ]
+    }
+  }
+}

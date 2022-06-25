@@ -4,7 +4,8 @@ pragma solidity ^0.8.13;
 import {LazyMintable} from "./LazyMintable.sol";
 
 contract TokenFactory {
-    function deploy() public {
-        LazyMintable token = new LazyMintable();
+    function deploy() public returns (LazyMintable token) {
+        token = new LazyMintable();
+        token.transferOwnership(msg.sender);
     }
 }

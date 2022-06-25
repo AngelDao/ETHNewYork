@@ -1,0 +1,2723 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "conduit",
+          "type": "address"
+        }
+      ],
+      "name": "CallerIsNotNewPotentialOwner",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "conduit",
+          "type": "address"
+        }
+      ],
+      "name": "CallerIsNotOwner",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "conduit",
+          "type": "address"
+        }
+      ],
+      "name": "ChannelOutOfRange",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "conduit",
+          "type": "address"
+        }
+      ],
+      "name": "ConduitAlreadyExists",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidCreator",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidInitialOwner",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "conduit",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "newPotentialOwner",
+          "type": "address"
+        }
+      ],
+      "name": "NewPotentialOwnerAlreadySet",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "conduit",
+          "type": "address"
+        }
+      ],
+      "name": "NewPotentialOwnerIsZeroAddress",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NoConduit",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "conduit",
+          "type": "address"
+        }
+      ],
+      "name": "NoPotentialOwnerCurrentlySet",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "conduit",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "conduitKey",
+          "type": "bytes32"
+        }
+      ],
+      "name": "NewConduit",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "conduit",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newPotentialOwner",
+          "type": "address"
+        }
+      ],
+      "name": "PotentialOwnerUpdated",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "conduit",
+          "type": "address"
+        }
+      ],
+      "name": "acceptOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "conduit",
+          "type": "address"
+        }
+      ],
+      "name": "cancelOwnershipTransfer",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "conduitKey",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "initialOwner",
+          "type": "address"
+        }
+      ],
+      "name": "createConduit",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "conduit",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "conduit",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "channelIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "getChannel",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "channel",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "conduit",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "channel",
+          "type": "address"
+        }
+      ],
+      "name": "getChannelStatus",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "isOpen",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "conduit",
+          "type": "address"
+        }
+      ],
+      "name": "getChannels",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "channels",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "conduitKey",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getConduit",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "conduit",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "exists",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getConduitCodeHashes",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "creationCodeHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "runtimeCodeHash",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "conduit",
+          "type": "address"
+        }
+      ],
+      "name": "getKey",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "conduitKey",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "conduit",
+          "type": "address"
+        }
+      ],
+      "name": "getPotentialOwner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "potentialOwner",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "conduit",
+          "type": "address"
+        }
+      ],
+      "name": "getTotalChannels",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "totalChannels",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "conduit",
+          "type": "address"
+        }
+      ],
+      "name": "ownerOf",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "conduit",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "newPotentialOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "conduit",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "channel",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "isOpen",
+          "type": "bool"
+        }
+      ],
+      "name": "updateChannel",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "acceptOwnership(address)": "51710e45",
+    "cancelOwnershipTransfer(address)": "7b37e561",
+    "createConduit(bytes32,address)": "794593bc",
+    "getChannel(address,uint256)": "027cc764",
+    "getChannelStatus(address,address)": "33bc8572",
+    "getChannels(address)": "8b9e028b",
+    "getConduit(bytes32)": "6e9bfd9f",
+    "getConduitCodeHashes()": "0a96ad39",
+    "getKey(address)": "93790f44",
+    "getPotentialOwner(address)": "906c87cc",
+    "getTotalChannels(address)": "4e3f9580",
+    "ownerOf(address)": "14afd79e",
+    "transferOwnership(address,address)": "6d435421",
+    "updateChannel(address,address,bool)": "13ad9cab"
+  },
+  "ast": {
+    "absolutePath": "contracts/interfaces/ConduitControllerInterface.sol",
+    "id": 1662,
+    "exportedSymbols": {
+      "ConduitControllerInterface": [
+        1661
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:10700:10",
+    "nodes": [
+      {
+        "id": 1459,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:10",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".7"
+        ]
+      },
+      {
+        "id": 1661,
+        "nodeType": "ContractDefinition",
+        "src": "266:10465:10",
+        "nodes": [
+          {
+            "id": 1474,
+            "nodeType": "StructDefinition",
+            "src": "453:195:10",
+            "canonicalName": "ConduitControllerInterface.ConduitProperties",
+            "members": [
+              {
+                "constant": false,
+                "id": 1462,
+                "mutability": "mutable",
+                "name": "key",
+                "nameLocation": "496:3:10",
+                "nodeType": "VariableDeclaration",
+                "scope": 1474,
+                "src": "488:11:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 1461,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "488:7:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1464,
+                "mutability": "mutable",
+                "name": "owner",
+                "nameLocation": "517:5:10",
+                "nodeType": "VariableDeclaration",
+                "scope": 1474,
+                "src": "509:13:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1463,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "509:7:10",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1466,
+                "mutability": "mutable",
+                "name": "potentialOwner",
+                "nameLocation": "540:14:10",
+                "nodeType": "VariableDeclaration",
+                "scope": 1474,
+                "src": "532:22:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1465,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "532:7:10",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1469,
+                "mutability": "mutable",
+                "name": "channels",
+                "nameLocation": "574:8:10",
+                "nodeType": "VariableDeclaration",
+                "scope": 1474,
+                "src": "564:18:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                  "typeString": "address[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 1467,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "564:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 1468,
+                  "nodeType": "ArrayTypeName",
+                  "src": "564:9:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                    "typeString": "address[]"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1473,
+                "mutability": "mutable",
+                "name": "channelIndexesPlusOne",
+                "nameLocation": "620:21:10",
+                "nodeType": "VariableDeclaration",
+                "scope": 1474,
+                "src": "592:49:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                  "typeString": "mapping(address => uint256)"
+                },
+                "typeName": {
+                  "id": 1472,
+                  "keyType": {
+                    "id": 1470,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "600:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "Mapping",
+                  "src": "592:27:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                    "typeString": "mapping(address => uint256)"
+                  },
+                  "valueType": {
+                    "id": 1471,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "611:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "ConduitProperties",
+            "nameLocation": "460:17:10",
+            "scope": 1661,
+            "visibility": "public"
+          },
+          {
+            "id": 1481,
+            "nodeType": "EventDefinition",
+            "src": "863:54:10",
+            "anonymous": false,
+            "documentation": {
+              "id": 1475,
+              "nodeType": "StructuredDocumentation",
+              "src": "654:204:10",
+              "text": " @dev Emit an event whenever a new conduit is created.\n @param conduit    The newly created conduit.\n @param conduitKey The conduit key used to create the new conduit."
+            },
+            "eventSelector": "4397af6128d529b8ae0442f99db1296d5136062597a15bbc61c1b2a6431a7d15",
+            "name": "NewConduit",
+            "nameLocation": "869:10:10",
+            "parameters": {
+              "id": 1480,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1477,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "conduit",
+                  "nameLocation": "888:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1481,
+                  "src": "880:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1476,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "880:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1479,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "conduitKey",
+                  "nameLocation": "905:10:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1481,
+                  "src": "897:18:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1478,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "897:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "879:37:10"
+            }
+          },
+          {
+            "id": 1490,
+            "nodeType": "EventDefinition",
+            "src": "1246:139:10",
+            "anonymous": false,
+            "documentation": {
+              "id": 1482,
+              "nodeType": "StructuredDocumentation",
+              "src": "923:318:10",
+              "text": " @dev Emit an event whenever conduit ownership is transferred.\n @param conduit       The conduit for which ownership has been\n                      transferred.\n @param previousOwner The previous owner of the conduit.\n @param newOwner      The new owner of the conduit."
+            },
+            "eventSelector": "c8894f26f396ce8c004245c8b7cd1b92103a6e4302fcbab883987149ac01b7ec",
+            "name": "OwnershipTransferred",
+            "nameLocation": "1252:20:10",
+            "parameters": {
+              "id": 1489,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1484,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "conduit",
+                  "nameLocation": "1298:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1490,
+                  "src": "1282:23:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1483,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1282:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1486,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "previousOwner",
+                  "nameLocation": "1331:13:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1490,
+                  "src": "1315:29:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1485,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1315:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1488,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "newOwner",
+                  "nameLocation": "1370:8:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1490,
+                  "src": "1354:24:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1487,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1354:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1272:112:10"
+            }
+          },
+          {
+            "id": 1495,
+            "nodeType": "EventDefinition",
+            "src": "1599:63:10",
+            "anonymous": false,
+            "documentation": {
+              "id": 1491,
+              "nodeType": "StructuredDocumentation",
+              "src": "1391:203:10",
+              "text": " @dev Emit an event whenever a conduit owner registers a new potential\n      owner for that conduit.\n @param newPotentialOwner The new potential owner of the conduit."
+            },
+            "eventSelector": "11a3cf439fb225bfe74225716b6774765670ec1060e3796802e62139d69974da",
+            "name": "PotentialOwnerUpdated",
+            "nameLocation": "1605:21:10",
+            "parameters": {
+              "id": 1494,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1493,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "newPotentialOwner",
+                  "nameLocation": "1643:17:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1495,
+                  "src": "1627:33:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1492,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1627:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1626:35:10"
+            }
+          },
+          {
+            "id": 1498,
+            "nodeType": "ErrorDefinition",
+            "src": "1881:23:10",
+            "documentation": {
+              "id": 1496,
+              "nodeType": "StructuredDocumentation",
+              "src": "1668:208:10",
+              "text": " @dev Revert with an error when attempting to create a new conduit using a\n      conduit key where the first twenty bytes of the key do not match the\n      address of the caller."
+            },
+            "errorSelector": "cb6e5344",
+            "name": "InvalidCreator",
+            "nameLocation": "1887:14:10",
+            "parameters": {
+              "id": 1497,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1901:2:10"
+            }
+          },
+          {
+            "id": 1501,
+            "nodeType": "ErrorDefinition",
+            "src": "2054:28:10",
+            "documentation": {
+              "id": 1499,
+              "nodeType": "StructuredDocumentation",
+              "src": "1910:139:10",
+              "text": " @dev Revert with an error when attempting to create a new conduit when no\n      initial owner address is supplied."
+            },
+            "errorSelector": "99faaa04",
+            "name": "InvalidInitialOwner",
+            "nameLocation": "2060:19:10",
+            "parameters": {
+              "id": 1500,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2079:2:10"
+            }
+          },
+          {
+            "id": 1508,
+            "nodeType": "ErrorDefinition",
+            "src": "2215:100:10",
+            "documentation": {
+              "id": 1502,
+              "nodeType": "StructuredDocumentation",
+              "src": "2088:122:10",
+              "text": " @dev Revert with an error when attempting to set a new potential owner\n      that is already set."
+            },
+            "errorSelector": "cbc080ca",
+            "name": "NewPotentialOwnerAlreadySet",
+            "nameLocation": "2221:27:10",
+            "parameters": {
+              "id": 1507,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1504,
+                  "mutability": "mutable",
+                  "name": "conduit",
+                  "nameLocation": "2266:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1508,
+                  "src": "2258:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1503,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2258:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1506,
+                  "mutability": "mutable",
+                  "name": "newPotentialOwner",
+                  "nameLocation": "2291:17:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1508,
+                  "src": "2283:25:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1505,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2283:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2248:66:10"
+            }
+          },
+          {
+            "id": 1513,
+            "nodeType": "ErrorDefinition",
+            "src": "2473:52:10",
+            "documentation": {
+              "id": 1509,
+              "nodeType": "StructuredDocumentation",
+              "src": "2321:147:10",
+              "text": " @dev Revert with an error when attempting to cancel ownership transfer\n      when no new potential owner is currently set."
+            },
+            "errorSelector": "6b013616",
+            "name": "NoPotentialOwnerCurrentlySet",
+            "nameLocation": "2479:28:10",
+            "parameters": {
+              "id": 1512,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1511,
+                  "mutability": "mutable",
+                  "name": "conduit",
+                  "nameLocation": "2516:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1513,
+                  "src": "2508:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1510,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2508:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2507:17:10"
+            }
+          },
+          {
+            "id": 1516,
+            "nodeType": "ErrorDefinition",
+            "src": "2660:18:10",
+            "documentation": {
+              "id": 1514,
+              "nodeType": "StructuredDocumentation",
+              "src": "2531:124:10",
+              "text": " @dev Revert with an error when attempting to interact with a conduit that\n      does not yet exist."
+            },
+            "errorSelector": "4ca82090",
+            "name": "NoConduit",
+            "nameLocation": "2666:9:10",
+            "parameters": {
+              "id": 1515,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2675:2:10"
+            }
+          },
+          {
+            "id": 1521,
+            "nodeType": "ErrorDefinition",
+            "src": "2802:44:10",
+            "documentation": {
+              "id": 1517,
+              "nodeType": "StructuredDocumentation",
+              "src": "2684:113:10",
+              "text": " @dev Revert with an error when attempting to create a conduit that\n      already exists."
+            },
+            "errorSelector": "6328ccb2",
+            "name": "ConduitAlreadyExists",
+            "nameLocation": "2808:20:10",
+            "parameters": {
+              "id": 1520,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1519,
+                  "mutability": "mutable",
+                  "name": "conduit",
+                  "nameLocation": "2837:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1521,
+                  "src": "2829:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1518,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2829:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2828:17:10"
+            }
+          },
+          {
+            "id": 1526,
+            "nodeType": "ErrorDefinition",
+            "src": "3056:40:10",
+            "documentation": {
+              "id": 1522,
+              "nodeType": "StructuredDocumentation",
+              "src": "2852:199:10",
+              "text": " @dev Revert with an error when attempting to update channels or transfer\n      ownership of a conduit when the caller is not the owner of the\n      conduit in question."
+            },
+            "errorSelector": "d4ed9a17",
+            "name": "CallerIsNotOwner",
+            "nameLocation": "3062:16:10",
+            "parameters": {
+              "id": 1525,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1524,
+                  "mutability": "mutable",
+                  "name": "conduit",
+                  "nameLocation": "3087:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1526,
+                  "src": "3079:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1523,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3079:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3078:17:10"
+            }
+          },
+          {
+            "id": 1531,
+            "nodeType": "ErrorDefinition",
+            "src": "3245:54:10",
+            "documentation": {
+              "id": 1527,
+              "nodeType": "StructuredDocumentation",
+              "src": "3102:138:10",
+              "text": " @dev Revert with an error when attempting to register a new potential\n      owner and supplying the null address."
+            },
+            "errorSelector": "a388d263",
+            "name": "NewPotentialOwnerIsZeroAddress",
+            "nameLocation": "3251:30:10",
+            "parameters": {
+              "id": 1530,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1529,
+                  "mutability": "mutable",
+                  "name": "conduit",
+                  "nameLocation": "3290:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1531,
+                  "src": "3282:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1528,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3282:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3281:17:10"
+            }
+          },
+          {
+            "id": 1536,
+            "nodeType": "ErrorDefinition",
+            "src": "3509:52:10",
+            "documentation": {
+              "id": 1532,
+              "nodeType": "StructuredDocumentation",
+              "src": "3305:199:10",
+              "text": " @dev Revert with an error when attempting to claim ownership of a conduit\n      with a caller that is not the current potential owner for the\n      conduit in question."
+            },
+            "errorSelector": "88c3a115",
+            "name": "CallerIsNotNewPotentialOwner",
+            "nameLocation": "3515:28:10",
+            "parameters": {
+              "id": 1535,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1534,
+                  "mutability": "mutable",
+                  "name": "conduit",
+                  "nameLocation": "3552:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1536,
+                  "src": "3544:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1533,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3544:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3543:17:10"
+            }
+          },
+          {
+            "id": 1541,
+            "nodeType": "ErrorDefinition",
+            "src": "3703:41:10",
+            "documentation": {
+              "id": 1537,
+              "nodeType": "StructuredDocumentation",
+              "src": "3567:131:10",
+              "text": " @dev Revert with an error when attempting to retrieve a channel using an\n      index that is out of range."
+            },
+            "errorSelector": "6ceb340b",
+            "name": "ChannelOutOfRange",
+            "nameLocation": "3709:17:10",
+            "parameters": {
+              "id": 1540,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1539,
+                  "mutability": "mutable",
+                  "name": "conduit",
+                  "nameLocation": "3735:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1541,
+                  "src": "3727:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1538,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3727:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3726:17:10"
+            }
+          },
+          {
+            "id": 1551,
+            "nodeType": "FunctionDefinition",
+            "src": "4503:116:10",
+            "documentation": {
+              "id": 1542,
+              "nodeType": "StructuredDocumentation",
+              "src": "3750:748:10",
+              "text": " @notice Deploy a new conduit using a supplied conduit key and assigning\n         an initial owner for the deployed conduit. Note that the first\n         twenty bytes of the supplied conduit key must match the caller\n         and that a new conduit cannot be created if one has already been\n         deployed using the same conduit key.\n @param conduitKey   The conduit key used to deploy the conduit. Note that\n                     the first twenty bytes of the conduit key must match\n                     the caller of this contract.\n @param initialOwner The initial owner to set for the new conduit.\n @return conduit The address of the newly deployed conduit."
+            },
+            "functionSelector": "794593bc",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createConduit",
+            "nameLocation": "4512:13:10",
+            "parameters": {
+              "id": 1547,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1544,
+                  "mutability": "mutable",
+                  "name": "conduitKey",
+                  "nameLocation": "4534:10:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1551,
+                  "src": "4526:18:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1543,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4526:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1546,
+                  "mutability": "mutable",
+                  "name": "initialOwner",
+                  "nameLocation": "4554:12:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1551,
+                  "src": "4546:20:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1545,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4546:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4525:42:10"
+            },
+            "returnParameters": {
+              "id": 1550,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1549,
+                  "mutability": "mutable",
+                  "name": "conduit",
+                  "nameLocation": "4610:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1551,
+                  "src": "4602:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1548,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4602:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4601:17:10"
+            },
+            "scope": 1661,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1561,
+            "nodeType": "FunctionDefinition",
+            "src": "5346:109:10",
+            "documentation": {
+              "id": 1552,
+              "nodeType": "StructuredDocumentation",
+              "src": "4625:716:10",
+              "text": " @notice Open or close a channel on a given conduit, thereby allowing the\n         specified account to execute transfers against that conduit.\n         Extreme care must be taken when updating channels, as malicious\n         or vulnerable channels can transfer any ERC20, ERC721 and ERC1155\n         tokens where the token holder has granted the conduit approval.\n         Only the owner of the conduit in question may call this function.\n @param conduit The conduit for which to open or close the channel.\n @param channel The channel to open or close on the conduit.\n @param isOpen  A boolean indicating whether to open or close the channel."
+            },
+            "functionSelector": "13ad9cab",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updateChannel",
+            "nameLocation": "5355:13:10",
+            "parameters": {
+              "id": 1559,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1554,
+                  "mutability": "mutable",
+                  "name": "conduit",
+                  "nameLocation": "5386:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1561,
+                  "src": "5378:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1553,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5378:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1556,
+                  "mutability": "mutable",
+                  "name": "channel",
+                  "nameLocation": "5411:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1561,
+                  "src": "5403:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1555,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5403:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1558,
+                  "mutability": "mutable",
+                  "name": "isOpen",
+                  "nameLocation": "5433:6:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1561,
+                  "src": "5428:11:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1557,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5428:4:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5368:77:10"
+            },
+            "returnParameters": {
+              "id": 1560,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5454:0:10"
+            },
+            "scope": 1661,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1569,
+            "nodeType": "FunctionDefinition",
+            "src": "5948:88:10",
+            "documentation": {
+              "id": 1562,
+              "nodeType": "StructuredDocumentation",
+              "src": "5461:482:10",
+              "text": " @notice Initiate conduit ownership transfer by assigning a new potential\n         owner for the given conduit. Once set, the new potential owner\n         may call `acceptOwnership` to claim ownership of the conduit.\n         Only the owner of the conduit in question may call this function.\n @param conduit The conduit for which to initiate ownership transfer.\n @param newPotentialOwner The new potential owner of the conduit."
+            },
+            "functionSelector": "6d435421",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "transferOwnership",
+            "nameLocation": "5957:17:10",
+            "parameters": {
+              "id": 1567,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1564,
+                  "mutability": "mutable",
+                  "name": "conduit",
+                  "nameLocation": "5983:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1569,
+                  "src": "5975:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1563,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5975:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1566,
+                  "mutability": "mutable",
+                  "name": "newPotentialOwner",
+                  "nameLocation": "6000:17:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1569,
+                  "src": "5992:25:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1565,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5992:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5974:44:10"
+            },
+            "returnParameters": {
+              "id": 1568,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "6035:0:10"
+            },
+            "scope": 1661,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1575,
+            "nodeType": "FunctionDefinition",
+            "src": "6300:59:10",
+            "documentation": {
+              "id": 1570,
+              "nodeType": "StructuredDocumentation",
+              "src": "6042:253:10",
+              "text": " @notice Clear the currently set potential owner, if any, from a conduit.\n         Only the owner of the conduit in question may call this function.\n @param conduit The conduit for which to cancel ownership transfer."
+            },
+            "functionSelector": "7b37e561",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "cancelOwnershipTransfer",
+            "nameLocation": "6309:23:10",
+            "parameters": {
+              "id": 1573,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1572,
+                  "mutability": "mutable",
+                  "name": "conduit",
+                  "nameLocation": "6341:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1575,
+                  "src": "6333:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1571,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6333:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6332:17:10"
+            },
+            "returnParameters": {
+              "id": 1574,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "6358:0:10"
+            },
+            "scope": 1661,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1581,
+            "nodeType": "FunctionDefinition",
+            "src": "6634:51:10",
+            "documentation": {
+              "id": 1576,
+              "nodeType": "StructuredDocumentation",
+              "src": "6365:264:10",
+              "text": " @notice Accept ownership of a supplied conduit. Only accounts that the\n         current owner has set as the new potential owner may call this\n         function.\n @param conduit The conduit for which to accept ownership."
+            },
+            "functionSelector": "51710e45",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "acceptOwnership",
+            "nameLocation": "6643:15:10",
+            "parameters": {
+              "id": 1579,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1578,
+                  "mutability": "mutable",
+                  "name": "conduit",
+                  "nameLocation": "6667:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1581,
+                  "src": "6659:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1577,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6659:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6658:17:10"
+            },
+            "returnParameters": {
+              "id": 1580,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "6684:0:10"
+            },
+            "scope": 1661,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1589,
+            "nodeType": "FunctionDefinition",
+            "src": "6920:72:10",
+            "documentation": {
+              "id": 1582,
+              "nodeType": "StructuredDocumentation",
+              "src": "6691:224:10",
+              "text": " @notice Retrieve the current owner of a deployed conduit.\n @param conduit The conduit for which to retrieve the associated owner.\n @return owner The owner of the supplied conduit."
+            },
+            "functionSelector": "14afd79e",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "ownerOf",
+            "nameLocation": "6929:7:10",
+            "parameters": {
+              "id": 1585,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1584,
+                  "mutability": "mutable",
+                  "name": "conduit",
+                  "nameLocation": "6945:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1589,
+                  "src": "6937:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1583,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6937:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6936:17:10"
+            },
+            "returnParameters": {
+              "id": 1588,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1587,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "nameLocation": "6985:5:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1589,
+                  "src": "6977:13:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1586,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6977:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6976:15:10"
+            },
+            "scope": 1661,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1597,
+            "nodeType": "FunctionDefinition",
+            "src": "7311:76:10",
+            "documentation": {
+              "id": 1590,
+              "nodeType": "StructuredDocumentation",
+              "src": "6998:308:10",
+              "text": " @notice Retrieve the conduit key for a deployed conduit via reverse\n         lookup.\n @param conduit The conduit for which to retrieve the associated conduit\n                key.\n @return conduitKey The conduit key used to deploy the supplied conduit."
+            },
+            "functionSelector": "93790f44",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getKey",
+            "nameLocation": "7320:6:10",
+            "parameters": {
+              "id": 1593,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1592,
+                  "mutability": "mutable",
+                  "name": "conduit",
+                  "nameLocation": "7335:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1597,
+                  "src": "7327:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1591,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7327:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7326:17:10"
+            },
+            "returnParameters": {
+              "id": 1596,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1595,
+                  "mutability": "mutable",
+                  "name": "conduitKey",
+                  "nameLocation": "7375:10:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1597,
+                  "src": "7367:18:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1594,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7367:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7366:20:10"
+            },
+            "scope": 1661,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1607,
+            "nodeType": "FunctionDefinition",
+            "src": "7851:117:10",
+            "documentation": {
+              "id": 1598,
+              "nodeType": "StructuredDocumentation",
+              "src": "7393:453:10",
+              "text": " @notice Derive the conduit associated with a given conduit key and\n         determine whether that conduit exists (i.e. whether it has been\n         deployed).\n @param conduitKey The conduit key used to derive the conduit.\n @return conduit The derived address of the conduit.\n @return exists  A boolean indicating whether the derived conduit has been\n                 deployed or not."
+            },
+            "functionSelector": "6e9bfd9f",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getConduit",
+            "nameLocation": "7860:10:10",
+            "parameters": {
+              "id": 1601,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1600,
+                  "mutability": "mutable",
+                  "name": "conduitKey",
+                  "nameLocation": "7879:10:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1607,
+                  "src": "7871:18:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1599,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7871:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7870:20:10"
+            },
+            "returnParameters": {
+              "id": 1606,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1603,
+                  "mutability": "mutable",
+                  "name": "conduit",
+                  "nameLocation": "7946:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1607,
+                  "src": "7938:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1602,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7938:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1605,
+                  "mutability": "mutable",
+                  "name": "exists",
+                  "nameLocation": "7960:6:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1607,
+                  "src": "7955:11:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1604,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7955:4:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7937:30:10"
+            },
+            "scope": 1661,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1615,
+            "nodeType": "FunctionDefinition",
+            "src": "8439:115:10",
+            "documentation": {
+              "id": 1608,
+              "nodeType": "StructuredDocumentation",
+              "src": "7974:460:10",
+              "text": " @notice Retrieve the potential owner, if any, for a given conduit. The\n         current owner may set a new potential owner via\n         `transferOwnership` and that owner may then accept ownership of\n         the conduit in question via `acceptOwnership`.\n @param conduit The conduit for which to retrieve the potential owner.\n @return potentialOwner The potential owner, if any, for the conduit."
+            },
+            "functionSelector": "906c87cc",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPotentialOwner",
+            "nameLocation": "8448:17:10",
+            "parameters": {
+              "id": 1611,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1610,
+                  "mutability": "mutable",
+                  "name": "conduit",
+                  "nameLocation": "8474:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1615,
+                  "src": "8466:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1609,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8466:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8465:17:10"
+            },
+            "returnParameters": {
+              "id": 1614,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1613,
+                  "mutability": "mutable",
+                  "name": "potentialOwner",
+                  "nameLocation": "8538:14:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1615,
+                  "src": "8530:22:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1612,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8530:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8529:24:10"
+            },
+            "scope": 1661,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1625,
+            "nodeType": "FunctionDefinition",
+            "src": "8911:120:10",
+            "documentation": {
+              "id": 1616,
+              "nodeType": "StructuredDocumentation",
+              "src": "8560:346:10",
+              "text": " @notice Retrieve the status (either open or closed) of a given channel on\n         a conduit.\n @param conduit The conduit for which to retrieve the channel status.\n @param channel The channel for which to retrieve the status.\n @return isOpen The status of the channel on the given conduit."
+            },
+            "functionSelector": "33bc8572",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getChannelStatus",
+            "nameLocation": "8920:16:10",
+            "parameters": {
+              "id": 1621,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1618,
+                  "mutability": "mutable",
+                  "name": "conduit",
+                  "nameLocation": "8945:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1625,
+                  "src": "8937:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1617,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8937:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1620,
+                  "mutability": "mutable",
+                  "name": "channel",
+                  "nameLocation": "8962:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1625,
+                  "src": "8954:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1619,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8954:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8936:34:10"
+            },
+            "returnParameters": {
+              "id": 1624,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1623,
+                  "mutability": "mutable",
+                  "name": "isOpen",
+                  "nameLocation": "9023:6:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1625,
+                  "src": "9018:11:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1622,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "9018:4:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "9017:13:10"
+            },
+            "scope": 1661,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1633,
+            "nodeType": "FunctionDefinition",
+            "src": "9307:113:10",
+            "documentation": {
+              "id": 1626,
+              "nodeType": "StructuredDocumentation",
+              "src": "9037:265:10",
+              "text": " @notice Retrieve the total number of open channels for a given conduit.\n @param conduit The conduit for which to retrieve the total channel count.\n @return totalChannels The total number of open channels for the conduit."
+            },
+            "functionSelector": "4e3f9580",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTotalChannels",
+            "nameLocation": "9316:16:10",
+            "parameters": {
+              "id": 1629,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1628,
+                  "mutability": "mutable",
+                  "name": "conduit",
+                  "nameLocation": "9341:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1633,
+                  "src": "9333:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1627,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "9333:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "9332:17:10"
+            },
+            "returnParameters": {
+              "id": 1632,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1631,
+                  "mutability": "mutable",
+                  "name": "totalChannels",
+                  "nameLocation": "9405:13:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1633,
+                  "src": "9397:21:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1630,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "9397:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "9396:23:10"
+            },
+            "scope": 1661,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1643,
+            "nodeType": "FunctionDefinition",
+            "src": "9895:123:10",
+            "documentation": {
+              "id": 1634,
+              "nodeType": "StructuredDocumentation",
+              "src": "9426:464:10",
+              "text": " @notice Retrieve an open channel at a specific index for a given conduit.\n         Note that the index of a channel can change as a result of other\n         channels being closed on the conduit.\n @param conduit      The conduit for which to retrieve the open channel.\n @param channelIndex The index of the channel in question.\n @return channel The open channel, if any, at the specified channel index."
+            },
+            "functionSelector": "027cc764",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getChannel",
+            "nameLocation": "9904:10:10",
+            "parameters": {
+              "id": 1639,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1636,
+                  "mutability": "mutable",
+                  "name": "conduit",
+                  "nameLocation": "9923:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1643,
+                  "src": "9915:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1635,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "9915:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1638,
+                  "mutability": "mutable",
+                  "name": "channelIndex",
+                  "nameLocation": "9940:12:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1643,
+                  "src": "9932:20:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1637,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "9932:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "9914:39:10"
+            },
+            "returnParameters": {
+              "id": 1642,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1641,
+                  "mutability": "mutable",
+                  "name": "channel",
+                  "nameLocation": "10009:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1643,
+                  "src": "10001:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1640,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "10001:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "10000:17:10"
+            },
+            "scope": 1661,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1652,
+            "nodeType": "FunctionDefinition",
+            "src": "10393:112:10",
+            "documentation": {
+              "id": 1644,
+              "nodeType": "StructuredDocumentation",
+              "src": "10024:364:10",
+              "text": " @notice Retrieve all open channels for a given conduit. Note that calling\n         this function for a conduit with many channels will revert with\n         an out-of-gas error.\n @param conduit The conduit for which to retrieve open channels.\n @return channels An array of open channels on the given conduit."
+            },
+            "functionSelector": "8b9e028b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getChannels",
+            "nameLocation": "10402:11:10",
+            "parameters": {
+              "id": 1647,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1646,
+                  "mutability": "mutable",
+                  "name": "conduit",
+                  "nameLocation": "10422:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1652,
+                  "src": "10414:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1645,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "10414:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "10413:17:10"
+            },
+            "returnParameters": {
+              "id": 1651,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1650,
+                  "mutability": "mutable",
+                  "name": "channels",
+                  "nameLocation": "10495:8:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1652,
+                  "src": "10478:25:10",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1648,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "10478:7:10",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 1649,
+                    "nodeType": "ArrayTypeName",
+                    "src": "10478:9:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "10477:27:10"
+            },
+            "scope": 1661,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1660,
+            "nodeType": "FunctionDefinition",
+            "src": "10599:130:10",
+            "documentation": {
+              "id": 1653,
+              "nodeType": "StructuredDocumentation",
+              "src": "10511:83:10",
+              "text": " @dev Retrieve the conduit creation code and runtime code hashes."
+            },
+            "functionSelector": "0a96ad39",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getConduitCodeHashes",
+            "nameLocation": "10608:20:10",
+            "parameters": {
+              "id": 1654,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "10628:2:10"
+            },
+            "returnParameters": {
+              "id": 1659,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1656,
+                  "mutability": "mutable",
+                  "name": "creationCodeHash",
+                  "nameLocation": "10686:16:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1660,
+                  "src": "10678:24:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1655,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "10678:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1658,
+                  "mutability": "mutable",
+                  "name": "runtimeCodeHash",
+                  "nameLocation": "10712:15:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1660,
+                  "src": "10704:23:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1657,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "10704:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "10677:51:10"
+            },
+            "scope": 1661,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ConduitControllerInterface",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 1460,
+          "nodeType": "StructuredDocumentation",
+          "src": "57:208:10",
+          "text": " @title ConduitControllerInterface\n @author 0age\n @notice ConduitControllerInterface contains all external function interfaces,\n         structs, events, and errors for the conduit controller."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          1661
+        ],
+        "name": "ConduitControllerInterface",
+        "nameLocation": "276:26:10",
+        "scope": 1662,
+        "usedErrors": [
+          1498,
+          1501,
+          1508,
+          1513,
+          1516,
+          1521,
+          1526,
+          1531,
+          1536,
+          1541
+        ]
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 10
+}
