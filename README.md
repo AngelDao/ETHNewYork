@@ -7,6 +7,12 @@ yarn install
 yarn build
 ```
 
+### Javascript Tests
+
+```
+yarn test
+```
+
 ### Foundry Tests
 
 Seaport also includes a suite of fuzzing tests written in solidity with Foundry.
@@ -32,11 +38,3 @@ git submodule update --init --recursive
 ```bash
 FOUNDRY_PROFILE=lite forge test # with 1000 fuzz runs
 ```
-
-```bash
-FOUNDRY_PROFILE=lite forge test  -vv
-```
-
-## License
-
-[MIT](LICENSE) Copyright 2022 Ozone Networks, Inc.
