@@ -3,9 +3,9 @@ pragma solidity ^0.8.13;
 
 import { ZoneInterface } from "../interfaces/ZoneInterface.sol";
 import { ZoneInteractionErrors } from "../interfaces/ZoneInteractionErrors.sol";
-import {recover} from "@openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol";
-
 import { SeaportInterface } from "../interfaces/SeaportInterface.sol";
+
+import {recover} from "@openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol";
 
 // prettier-ignore
 import {
@@ -17,11 +17,10 @@ import {
     Execution
 } from "../lib/ConsiderationStructs.sol";
 
-contract OfferCheckZone is ZoneInterface {
+contract OrderCheckZone is ZoneInterface {
     
     /**
-    * @notice Check if a given order is signed by the same addresss
-    *         that created the order, and fits the Merkle root.
+    * @notice No checks required 
     * @dev This function is called by Seaport whenever extraData is not
     *      provided by the caller.
 
@@ -85,8 +84,13 @@ contract OfferCheckZone is ZoneInterface {
         address signer = recover(voucherHash, order.extraData);
         require(signer == order.parameters.offerer, "extraData not signed by offerer");
 
+        // Check that the caller is in the merkle root
+        bytes32 leaf = keccak256(abi.encodePacked(caller));
+        require(MerkleProof.verify(_merkleProof, merkleRoot, leaf), "Invalid proof");
+
         // Return the selector of isValidOrder as the magic value.
         validOrderMagicValue = ZoneInterface.isValidOrder.selector;
     }
+
 
 }
