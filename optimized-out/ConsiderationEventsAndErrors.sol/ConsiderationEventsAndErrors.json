@@ -328,25 +328,25 @@
   "methodIdentifiers": {},
   "ast": {
     "absolutePath": "contracts/interfaces/ConsiderationEventsAndErrors.sol",
-    "id": 1994,
+    "id": 2283,
     "exportedSymbols": {
       "ConsiderationEventsAndErrors": [
-        1993
+        2282
       ],
       "ReceivedItem": [
-        4885
+        5356
       ],
       "SpentItem": [
-        4873
+        5344
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "32:6544:13",
+    "src": "32:6544:14",
     "nodes": [
       {
-        "id": 1869,
+        "id": 2158,
         "nodeType": "PragmaDirective",
-        "src": "32:23:13",
+        "src": "32:23:14",
         "literals": [
           "solidity",
           "^",
@@ -355,35 +355,35 @@
         ]
       },
       {
-        "id": 1872,
+        "id": 2161,
         "nodeType": "ImportDirective",
-        "src": "57:74:13",
+        "src": "57:74:14",
         "absolutePath": "contracts/lib/ConsiderationStructs.sol",
         "file": "../lib/ConsiderationStructs.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 1994,
-        "sourceUnit": 5021,
+        "scope": 2283,
+        "sourceUnit": 5492,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 1870,
+              "id": 2159,
               "name": "SpentItem",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 4873,
-              "src": "66:9:13",
+              "referencedDeclaration": 5344,
+              "src": "66:9:14",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
           },
           {
             "foreign": {
-              "id": 1871,
+              "id": 2160,
               "name": "ReceivedItem",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 4885,
-              "src": "77:12:13",
+              "referencedDeclaration": 5356,
+              "src": "77:12:14",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -392,38 +392,38 @@
         "unitAlias": ""
       },
       {
-        "id": 1993,
+        "id": 2282,
         "nodeType": "ContractDefinition",
-        "src": "268:6307:13",
+        "src": "268:6307:14",
         "nodes": [
           {
-            "id": 1892,
+            "id": 2181,
             "nodeType": "EventDefinition",
-            "src": "1192:209:13",
+            "src": "1192:209:14",
             "anonymous": false,
             "documentation": {
-              "id": 1874,
+              "id": 2163,
               "nodeType": "StructuredDocumentation",
-              "src": "313:874:13",
+              "src": "313:874:14",
               "text": " @dev Emit an event whenever an order is successfully fulfilled.\n @param orderHash     The hash of the fulfilled order.\n @param offerer       The offerer of the fulfilled order.\n @param zone          The zone of the fulfilled order.\n @param recipient     The recipient of each spent item on the fulfilled\n                      order, or the null address if there is no specific\n                      fulfiller (i.e. the order is part of a group of\n                      orders). Defaults to the caller unless explicitly\n                      specified otherwise by the fulfiller.\n @param offer         The offer items spent as part of the order.\n @param consideration The consideration items received as part of the\n                      order along with the recipients of each item."
             },
             "eventSelector": "9d9af8e38d66c62e2c12f0225249fd9d721c54b83f48d9352c97c6cacdcb6f31",
             "name": "OrderFulfilled",
-            "nameLocation": "1198:14:13",
+            "nameLocation": "1198:14:14",
             "parameters": {
-              "id": 1891,
+              "id": 2180,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1876,
+                  "id": 2165,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "orderHash",
-                  "nameLocation": "1230:9:13",
+                  "nameLocation": "1230:9:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1892,
-                  "src": "1222:17:13",
+                  "scope": 2181,
+                  "src": "1222:17:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -431,10 +431,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 1875,
+                    "id": 2164,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1222:7:13",
+                    "src": "1222:7:14",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -444,14 +444,14 @@
                 },
                 {
                   "constant": false,
-                  "id": 1878,
+                  "id": 2167,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "offerer",
-                  "nameLocation": "1265:7:13",
+                  "nameLocation": "1265:7:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1892,
-                  "src": "1249:23:13",
+                  "scope": 2181,
+                  "src": "1249:23:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -459,10 +459,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1877,
+                    "id": 2166,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1249:7:13",
+                    "src": "1249:7:14",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -473,14 +473,14 @@
                 },
                 {
                   "constant": false,
-                  "id": 1880,
+                  "id": 2169,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "zone",
-                  "nameLocation": "1298:4:13",
+                  "nameLocation": "1298:4:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1892,
-                  "src": "1282:20:13",
+                  "scope": 2181,
+                  "src": "1282:20:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -488,10 +488,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1879,
+                    "id": 2168,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1282:7:13",
+                    "src": "1282:7:14",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -502,14 +502,14 @@
                 },
                 {
                   "constant": false,
-                  "id": 1882,
+                  "id": 2171,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "recipient",
-                  "nameLocation": "1320:9:13",
+                  "nameLocation": "1320:9:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1892,
-                  "src": "1312:17:13",
+                  "scope": 2181,
+                  "src": "1312:17:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -517,10 +517,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1881,
+                    "id": 2170,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1312:7:13",
+                    "src": "1312:7:14",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -531,43 +531,43 @@
                 },
                 {
                   "constant": false,
-                  "id": 1886,
+                  "id": 2175,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "offer",
-                  "nameLocation": "1351:5:13",
+                  "nameLocation": "1351:5:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1892,
-                  "src": "1339:17:13",
+                  "scope": 2181,
+                  "src": "1339:17:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_SpentItem_$4873_memory_ptr_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_SpentItem_$5344_memory_ptr_$dyn_memory_ptr",
                     "typeString": "struct SpentItem[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 1884,
+                      "id": 2173,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 1883,
+                        "id": 2172,
                         "name": "SpentItem",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4873,
-                        "src": "1339:9:13"
+                        "referencedDeclaration": 5344,
+                        "src": "1339:9:14"
                       },
-                      "referencedDeclaration": 4873,
-                      "src": "1339:9:13",
+                      "referencedDeclaration": 5344,
+                      "src": "1339:9:14",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_SpentItem_$4873_storage_ptr",
+                        "typeIdentifier": "t_struct$_SpentItem_$5344_storage_ptr",
                         "typeString": "struct SpentItem"
                       }
                     },
-                    "id": 1885,
+                    "id": 2174,
                     "nodeType": "ArrayTypeName",
-                    "src": "1339:11:13",
+                    "src": "1339:11:14",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_SpentItem_$4873_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_SpentItem_$5344_storage_$dyn_storage_ptr",
                       "typeString": "struct SpentItem[]"
                     }
                   },
@@ -575,80 +575,80 @@
                 },
                 {
                   "constant": false,
-                  "id": 1890,
+                  "id": 2179,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "consideration",
-                  "nameLocation": "1381:13:13",
+                  "nameLocation": "1381:13:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1892,
-                  "src": "1366:28:13",
+                  "scope": 2181,
+                  "src": "1366:28:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_ReceivedItem_$4885_memory_ptr_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_ReceivedItem_$5356_memory_ptr_$dyn_memory_ptr",
                     "typeString": "struct ReceivedItem[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 1888,
+                      "id": 2177,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 1887,
+                        "id": 2176,
                         "name": "ReceivedItem",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4885,
-                        "src": "1366:12:13"
+                        "referencedDeclaration": 5356,
+                        "src": "1366:12:14"
                       },
-                      "referencedDeclaration": 4885,
-                      "src": "1366:12:13",
+                      "referencedDeclaration": 5356,
+                      "src": "1366:12:14",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_ReceivedItem_$4885_storage_ptr",
+                        "typeIdentifier": "t_struct$_ReceivedItem_$5356_storage_ptr",
                         "typeString": "struct ReceivedItem"
                       }
                     },
-                    "id": 1889,
+                    "id": 2178,
                     "nodeType": "ArrayTypeName",
-                    "src": "1366:14:13",
+                    "src": "1366:14:14",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_ReceivedItem_$4885_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_ReceivedItem_$5356_storage_$dyn_storage_ptr",
                       "typeString": "struct ReceivedItem[]"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "1212:188:13"
+              "src": "1212:188:14"
             }
           },
           {
-            "id": 1901,
+            "id": 2190,
             "nodeType": "EventDefinition",
-            "src": "1675:117:13",
+            "src": "1675:117:14",
             "anonymous": false,
             "documentation": {
-              "id": 1893,
+              "id": 2182,
               "nodeType": "StructuredDocumentation",
-              "src": "1407:263:13",
+              "src": "1407:263:14",
               "text": " @dev Emit an event whenever an order is successfully cancelled.\n @param orderHash The hash of the cancelled order.\n @param offerer   The offerer of the cancelled order.\n @param zone      The zone of the cancelled order."
             },
             "eventSelector": "6bacc01dbe442496068f7d234edd811f1a5f833243e0aec824f86ab861f3c90d",
             "name": "OrderCancelled",
-            "nameLocation": "1681:14:13",
+            "nameLocation": "1681:14:14",
             "parameters": {
-              "id": 1900,
+              "id": 2189,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1895,
+                  "id": 2184,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "orderHash",
-                  "nameLocation": "1713:9:13",
+                  "nameLocation": "1713:9:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1901,
-                  "src": "1705:17:13",
+                  "scope": 2190,
+                  "src": "1705:17:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -656,10 +656,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 1894,
+                    "id": 2183,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1705:7:13",
+                    "src": "1705:7:14",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -669,14 +669,14 @@
                 },
                 {
                   "constant": false,
-                  "id": 1897,
+                  "id": 2186,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "offerer",
-                  "nameLocation": "1748:7:13",
+                  "nameLocation": "1748:7:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1901,
-                  "src": "1732:23:13",
+                  "scope": 2190,
+                  "src": "1732:23:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -684,10 +684,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1896,
+                    "id": 2185,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1732:7:13",
+                    "src": "1732:7:14",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -698,14 +698,14 @@
                 },
                 {
                   "constant": false,
-                  "id": 1899,
+                  "id": 2188,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "zone",
-                  "nameLocation": "1781:4:13",
+                  "nameLocation": "1781:4:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1901,
-                  "src": "1765:20:13",
+                  "scope": 2190,
+                  "src": "1765:20:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -713,10 +713,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1898,
+                    "id": 2187,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1765:7:13",
+                    "src": "1765:7:14",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -726,37 +726,37 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1695:96:13"
+              "src": "1695:96:14"
             }
           },
           {
-            "id": 1910,
+            "id": 2199,
             "nodeType": "EventDefinition",
-            "src": "2217:117:13",
+            "src": "2217:117:14",
             "anonymous": false,
             "documentation": {
-              "id": 1902,
+              "id": 2191,
               "nodeType": "StructuredDocumentation",
-              "src": "1798:414:13",
+              "src": "1798:414:14",
               "text": " @dev Emit an event whenever an order is explicitly validated. Note that\n      this event will not be emitted on partial fills even though they do\n      validate the order as part of partial fulfillment.\n @param orderHash The hash of the validated order.\n @param offerer   The offerer of the validated order.\n @param zone      The zone of the validated order."
             },
             "eventSelector": "fde361574a066b44b3b5fe98a87108b7565e327327954c4faeea56a4e6491a0a",
             "name": "OrderValidated",
-            "nameLocation": "2223:14:13",
+            "nameLocation": "2223:14:14",
             "parameters": {
-              "id": 1909,
+              "id": 2198,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1904,
+                  "id": 2193,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "orderHash",
-                  "nameLocation": "2255:9:13",
+                  "nameLocation": "2255:9:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1910,
-                  "src": "2247:17:13",
+                  "scope": 2199,
+                  "src": "2247:17:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -764,10 +764,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 1903,
+                    "id": 2192,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2247:7:13",
+                    "src": "2247:7:14",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -777,14 +777,14 @@
                 },
                 {
                   "constant": false,
-                  "id": 1906,
+                  "id": 2195,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "offerer",
-                  "nameLocation": "2290:7:13",
+                  "nameLocation": "2290:7:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1910,
-                  "src": "2274:23:13",
+                  "scope": 2199,
+                  "src": "2274:23:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -792,10 +792,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1905,
+                    "id": 2194,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2274:7:13",
+                    "src": "2274:7:14",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -806,14 +806,14 @@
                 },
                 {
                   "constant": false,
-                  "id": 1908,
+                  "id": 2197,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "zone",
-                  "nameLocation": "2323:4:13",
+                  "nameLocation": "2323:4:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1910,
-                  "src": "2307:20:13",
+                  "scope": 2199,
+                  "src": "2307:20:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -821,10 +821,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1907,
+                    "id": 2196,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2307:7:13",
+                    "src": "2307:7:14",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -834,37 +834,37 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2237:96:13"
+              "src": "2237:96:14"
             }
           },
           {
-            "id": 1917,
+            "id": 2206,
             "nodeType": "EventDefinition",
-            "src": "2550:70:13",
+            "src": "2550:70:14",
             "anonymous": false,
             "documentation": {
-              "id": 1911,
+              "id": 2200,
               "nodeType": "StructuredDocumentation",
-              "src": "2340:205:13",
+              "src": "2340:205:14",
               "text": " @dev Emit an event whenever a counter for a given offerer is incremented.\n @param newCounter The new counter for the offerer.\n @param offerer  The offerer in question."
             },
             "eventSelector": "721c20121297512b72821b97f5326877ea8ecf4bb9948fea5bfcb6453074d37f",
             "name": "CounterIncremented",
-            "nameLocation": "2556:18:13",
+            "nameLocation": "2556:18:14",
             "parameters": {
-              "id": 1916,
+              "id": 2205,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1913,
+                  "id": 2202,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "newCounter",
-                  "nameLocation": "2583:10:13",
+                  "nameLocation": "2583:10:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1917,
-                  "src": "2575:18:13",
+                  "scope": 2206,
+                  "src": "2575:18:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -872,10 +872,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1912,
+                    "id": 2201,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2575:7:13",
+                    "src": "2575:7:14",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -885,14 +885,14 @@
                 },
                 {
                   "constant": false,
-                  "id": 1915,
+                  "id": 2204,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "offerer",
-                  "nameLocation": "2611:7:13",
+                  "nameLocation": "2611:7:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1917,
-                  "src": "2595:23:13",
+                  "scope": 2206,
+                  "src": "2595:23:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -900,10 +900,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1914,
+                    "id": 2203,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2595:7:13",
+                    "src": "2595:7:14",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -913,35 +913,35 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2574:45:13"
+              "src": "2574:45:14"
             }
           },
           {
-            "id": 1922,
+            "id": 2211,
             "nodeType": "ErrorDefinition",
-            "src": "2833:44:13",
+            "src": "2833:44:14",
             "documentation": {
-              "id": 1918,
+              "id": 2207,
               "nodeType": "StructuredDocumentation",
-              "src": "2626:202:13",
+              "src": "2626:202:14",
               "text": " @dev Revert with an error when attempting to fill an order that has\n      already been fully filled.\n @param orderHash The order hash on which a fill was attempted."
             },
             "errorSelector": "10fda3e1",
             "name": "OrderAlreadyFilled",
-            "nameLocation": "2839:18:13",
+            "nameLocation": "2839:18:14",
             "parameters": {
-              "id": 1921,
+              "id": 2210,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1920,
+                  "id": 2209,
                   "mutability": "mutable",
                   "name": "orderHash",
-                  "nameLocation": "2866:9:13",
+                  "nameLocation": "2866:9:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1922,
-                  "src": "2858:17:13",
+                  "scope": 2211,
+                  "src": "2858:17:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -949,10 +949,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 1919,
+                    "id": 2208,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2858:7:13",
+                    "src": "2858:7:14",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -961,55 +961,55 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2857:19:13"
+              "src": "2857:19:14"
             }
           },
           {
-            "id": 1925,
+            "id": 2214,
             "nodeType": "ErrorDefinition",
-            "src": "3024:20:13",
+            "src": "3024:20:14",
             "documentation": {
-              "id": 1923,
+              "id": 2212,
               "nodeType": "StructuredDocumentation",
-              "src": "2883:136:13",
+              "src": "2883:136:14",
               "text": " @dev Revert with an error when attempting to fill an order outside the\n      specified start time and end time."
             },
             "errorSelector": "6f7eac26",
             "name": "InvalidTime",
-            "nameLocation": "3030:11:13",
+            "nameLocation": "3030:11:14",
             "parameters": {
-              "id": 1924,
+              "id": 2213,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "3041:2:13"
+              "src": "3041:2:14"
             }
           },
           {
-            "id": 1932,
+            "id": 2221,
             "nodeType": "ErrorDefinition",
-            "src": "3214:58:13",
+            "src": "3214:58:14",
             "documentation": {
-              "id": 1926,
+              "id": 2215,
               "nodeType": "StructuredDocumentation",
-              "src": "3050:159:13",
+              "src": "3050:159:14",
               "text": " @dev Revert with an error when attempting to fill an order referencing an\n      invalid conduit (i.e. one that has not been deployed)."
             },
             "errorSelector": "1cf99b26",
             "name": "InvalidConduit",
-            "nameLocation": "3220:14:13",
+            "nameLocation": "3220:14:14",
             "parameters": {
-              "id": 1931,
+              "id": 2220,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1928,
+                  "id": 2217,
                   "mutability": "mutable",
                   "name": "conduitKey",
-                  "nameLocation": "3243:10:13",
+                  "nameLocation": "3243:10:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1932,
-                  "src": "3235:18:13",
+                  "scope": 2221,
+                  "src": "3235:18:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1017,10 +1017,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 1927,
+                    "id": 2216,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3235:7:13",
+                    "src": "3235:7:14",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -1030,13 +1030,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 1930,
+                  "id": 2219,
                   "mutability": "mutable",
                   "name": "conduit",
-                  "nameLocation": "3263:7:13",
+                  "nameLocation": "3263:7:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1932,
-                  "src": "3255:15:13",
+                  "scope": 2221,
+                  "src": "3255:15:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1044,10 +1044,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1929,
+                    "id": 2218,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3255:7:13",
+                    "src": "3255:7:14",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1057,55 +1057,55 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3234:37:13"
+              "src": "3234:37:14"
             }
           },
           {
-            "id": 1935,
+            "id": 2224,
             "nodeType": "ErrorDefinition",
-            "src": "3449:42:13",
+            "src": "3449:42:14",
             "documentation": {
-              "id": 1933,
+              "id": 2222,
               "nodeType": "StructuredDocumentation",
-              "src": "3278:166:13",
+              "src": "3278:166:14",
               "text": " @dev Revert with an error when an order is supplied for fulfillment with\n      a consideration array that is shorter than the original array."
             },
             "errorSelector": "466aa616",
             "name": "MissingOriginalConsiderationItems",
-            "nameLocation": "3455:33:13",
+            "nameLocation": "3455:33:14",
             "parameters": {
-              "id": 1934,
+              "id": 2223,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "3488:2:13"
+              "src": "3488:2:14"
             }
           },
           {
-            "id": 1940,
+            "id": 2229,
             "nodeType": "ErrorDefinition",
-            "src": "3639:44:13",
+            "src": "3639:44:14",
             "documentation": {
-              "id": 1936,
+              "id": 2225,
               "nodeType": "StructuredDocumentation",
-              "src": "3497:137:13",
+              "src": "3497:137:14",
               "text": " @dev Revert with an error when a call to a conduit fails with revert data\n      that is too expensive to return."
             },
             "errorSelector": "d13d53d4",
             "name": "InvalidCallToConduit",
-            "nameLocation": "3645:20:13",
+            "nameLocation": "3645:20:14",
             "parameters": {
-              "id": 1939,
+              "id": 2228,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1938,
+                  "id": 2227,
                   "mutability": "mutable",
                   "name": "conduit",
-                  "nameLocation": "3674:7:13",
+                  "nameLocation": "3674:7:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1940,
-                  "src": "3666:15:13",
+                  "scope": 2229,
+                  "src": "3666:15:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1113,10 +1113,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1937,
+                    "id": 2226,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3666:7:13",
+                    "src": "3666:7:14",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1126,35 +1126,35 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3665:17:13"
+              "src": "3665:17:14"
             }
           },
           {
-            "id": 1949,
+            "id": 2238,
             "nodeType": "ErrorDefinition",
-            "src": "4168:129:13",
+            "src": "4168:129:14",
             "documentation": {
-              "id": 1941,
+              "id": 2230,
               "nodeType": "StructuredDocumentation",
-              "src": "3689:474:13",
+              "src": "3689:474:14",
               "text": " @dev Revert with an error if a consideration amount has not been fully\n      zeroed out after applying all fulfillments.\n @param orderIndex         The index of the order with the consideration\n                           item with a shortfall.\n @param considerationIndex The index of the consideration item on the\n                           order.\n @param shortfallAmount    The unfulfilled consideration amount."
             },
             "errorSelector": "a5f54208",
             "name": "ConsiderationNotMet",
-            "nameLocation": "4174:19:13",
+            "nameLocation": "4174:19:14",
             "parameters": {
-              "id": 1948,
+              "id": 2237,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1943,
+                  "id": 2232,
                   "mutability": "mutable",
                   "name": "orderIndex",
-                  "nameLocation": "4211:10:13",
+                  "nameLocation": "4211:10:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1949,
-                  "src": "4203:18:13",
+                  "scope": 2238,
+                  "src": "4203:18:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1162,10 +1162,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1942,
+                    "id": 2231,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4203:7:13",
+                    "src": "4203:7:14",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1175,13 +1175,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 1945,
+                  "id": 2234,
                   "mutability": "mutable",
                   "name": "considerationIndex",
-                  "nameLocation": "4239:18:13",
+                  "nameLocation": "4239:18:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1949,
-                  "src": "4231:26:13",
+                  "scope": 2238,
+                  "src": "4231:26:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1189,10 +1189,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1944,
+                    "id": 2233,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4231:7:13",
+                    "src": "4231:7:14",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1202,13 +1202,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 1947,
+                  "id": 2236,
                   "mutability": "mutable",
                   "name": "shortfallAmount",
-                  "nameLocation": "4275:15:13",
+                  "nameLocation": "4275:15:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1949,
-                  "src": "4267:23:13",
+                  "scope": 2238,
+                  "src": "4267:23:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1216,10 +1216,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1946,
+                    "id": 2235,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4267:7:13",
+                    "src": "4267:7:14",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1228,55 +1228,55 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4193:103:13"
+              "src": "4193:103:14"
             }
           },
           {
-            "id": 1952,
+            "id": 2241,
             "nodeType": "ErrorDefinition",
-            "src": "4445:34:13",
+            "src": "4445:34:14",
             "documentation": {
-              "id": 1950,
+              "id": 2239,
               "nodeType": "StructuredDocumentation",
-              "src": "4303:137:13",
+              "src": "4303:137:14",
               "text": " @dev Revert with an error when insufficient ether is supplied as part of\n      msg.value when fulfilling orders."
             },
             "errorSelector": "1a783b8d",
             "name": "InsufficientEtherSupplied",
-            "nameLocation": "4451:25:13",
+            "nameLocation": "4451:25:14",
             "parameters": {
-              "id": 1951,
+              "id": 2240,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "4476:2:13"
+              "src": "4476:2:14"
             }
           },
           {
-            "id": 1959,
+            "id": 2248,
             "nodeType": "ErrorDefinition",
-            "src": "4566:67:13",
+            "src": "4566:67:14",
             "documentation": {
-              "id": 1953,
+              "id": 2242,
               "nodeType": "StructuredDocumentation",
-              "src": "4485:76:13",
+              "src": "4485:76:14",
               "text": " @dev Revert with an error when an ether transfer reverts."
             },
             "errorSelector": "470c7c1d",
             "name": "EtherTransferGenericFailure",
-            "nameLocation": "4572:27:13",
+            "nameLocation": "4572:27:14",
             "parameters": {
-              "id": 1958,
+              "id": 2247,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1955,
+                  "id": 2244,
                   "mutability": "mutable",
                   "name": "account",
-                  "nameLocation": "4608:7:13",
+                  "nameLocation": "4608:7:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1959,
-                  "src": "4600:15:13",
+                  "scope": 2248,
+                  "src": "4600:15:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1284,10 +1284,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1954,
+                    "id": 2243,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4600:7:13",
+                    "src": "4600:7:14",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1298,13 +1298,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 1957,
+                  "id": 2246,
                   "mutability": "mutable",
                   "name": "amount",
-                  "nameLocation": "4625:6:13",
+                  "nameLocation": "4625:6:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1959,
-                  "src": "4617:14:13",
+                  "scope": 2248,
+                  "src": "4617:14:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1312,10 +1312,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1956,
+                    "id": 2245,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4617:7:13",
+                    "src": "4617:7:14",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1324,55 +1324,55 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4599:33:13"
+              "src": "4599:33:14"
             }
           },
           {
-            "id": 1962,
+            "id": 2251,
             "nodeType": "ErrorDefinition",
-            "src": "4807:39:13",
+            "src": "4807:39:14",
             "documentation": {
-              "id": 1960,
+              "id": 2249,
               "nodeType": "StructuredDocumentation",
-              "src": "4639:163:13",
+              "src": "4639:163:14",
               "text": " @dev Revert with an error when a partial fill is attempted on an order\n      that does not specify partial fill support in its order type."
             },
             "errorSelector": "a11b63ff",
             "name": "PartialFillsNotEnabledForOrder",
-            "nameLocation": "4813:30:13",
+            "nameLocation": "4813:30:14",
             "parameters": {
-              "id": 1961,
+              "id": 2250,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "4843:2:13"
+              "src": "4843:2:14"
             }
           },
           {
-            "id": 1967,
+            "id": 2256,
             "nodeType": "ErrorDefinition",
-            "src": "5035:42:13",
+            "src": "5035:42:14",
             "documentation": {
-              "id": 1963,
+              "id": 2252,
               "nodeType": "StructuredDocumentation",
-              "src": "4852:178:13",
+              "src": "4852:178:14",
               "text": " @dev Revert with an error when attempting to fill an order that has been\n      cancelled.\n @param orderHash The hash of the cancelled order."
             },
             "errorSelector": "1a515574",
             "name": "OrderIsCancelled",
-            "nameLocation": "5041:16:13",
+            "nameLocation": "5041:16:14",
             "parameters": {
-              "id": 1966,
+              "id": 2255,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1965,
+                  "id": 2254,
                   "mutability": "mutable",
                   "name": "orderHash",
-                  "nameLocation": "5066:9:13",
+                  "nameLocation": "5066:9:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1967,
-                  "src": "5058:17:13",
+                  "scope": 2256,
+                  "src": "5058:17:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1380,10 +1380,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 1964,
+                    "id": 2253,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5058:7:13",
+                    "src": "5058:7:14",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -1392,35 +1392,35 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "5057:19:13"
+              "src": "5057:19:14"
             }
           },
           {
-            "id": 1972,
+            "id": 2261,
             "nodeType": "ErrorDefinition",
-            "src": "5283:46:13",
+            "src": "5283:46:14",
             "documentation": {
-              "id": 1968,
+              "id": 2257,
               "nodeType": "StructuredDocumentation",
-              "src": "5083:195:13",
+              "src": "5083:195:14",
               "text": " @dev Revert with an error when attempting to fill a basic order that has\n      been partially filled.\n @param orderHash The hash of the partially used order."
             },
             "errorSelector": "ee9e0e63",
             "name": "OrderPartiallyFilled",
-            "nameLocation": "5289:20:13",
+            "nameLocation": "5289:20:14",
             "parameters": {
-              "id": 1971,
+              "id": 2260,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1970,
+                  "id": 2259,
                   "mutability": "mutable",
                   "name": "orderHash",
-                  "nameLocation": "5318:9:13",
+                  "nameLocation": "5318:9:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1972,
-                  "src": "5310:17:13",
+                  "scope": 2261,
+                  "src": "5310:17:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1428,10 +1428,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 1969,
+                    "id": 2258,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5310:7:13",
+                    "src": "5310:7:14",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -1440,75 +1440,75 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "5309:19:13"
+              "src": "5309:19:14"
             }
           },
           {
-            "id": 1975,
+            "id": 2264,
             "nodeType": "ErrorDefinition",
-            "src": "5485:25:13",
+            "src": "5485:25:14",
             "documentation": {
-              "id": 1973,
+              "id": 2262,
               "nodeType": "StructuredDocumentation",
-              "src": "5335:145:13",
+              "src": "5335:145:14",
               "text": " @dev Revert with an error when attempting to cancel an order as a caller\n      other than the indicated offerer or zone."
             },
             "errorSelector": "80ec7374",
             "name": "InvalidCanceller",
-            "nameLocation": "5491:16:13",
+            "nameLocation": "5491:16:14",
             "parameters": {
-              "id": 1974,
+              "id": 2263,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "5507:2:13"
+              "src": "5507:2:14"
             }
           },
           {
-            "id": 1978,
+            "id": 2267,
             "nodeType": "ErrorDefinition",
-            "src": "5722:20:13",
+            "src": "5722:20:14",
             "documentation": {
-              "id": 1976,
+              "id": 2265,
               "nodeType": "StructuredDocumentation",
-              "src": "5516:201:13",
+              "src": "5516:201:14",
               "text": " @dev Revert with an error when supplying a fraction with a value of zero\n      for the numerator or denominator, or one where the numerator exceeds\n      the denominator."
             },
             "errorSelector": "5a052b32",
             "name": "BadFraction",
-            "nameLocation": "5728:11:13",
+            "nameLocation": "5728:11:14",
             "parameters": {
-              "id": 1977,
+              "id": 2266,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "5739:2:13"
+              "src": "5739:2:14"
             }
           },
           {
-            "id": 1983,
+            "id": 2272,
             "nodeType": "ErrorDefinition",
-            "src": "5964:37:13",
+            "src": "5964:37:14",
             "documentation": {
-              "id": 1979,
+              "id": 2268,
               "nodeType": "StructuredDocumentation",
-              "src": "5748:211:13",
+              "src": "5748:211:14",
               "text": " @dev Revert with an error when a caller attempts to supply callvalue to a\n      non-payable basic order route or does not supply any callvalue to a\n      payable basic order route."
             },
             "errorSelector": "a61be9f0",
             "name": "InvalidMsgValue",
-            "nameLocation": "5970:15:13",
+            "nameLocation": "5970:15:14",
             "parameters": {
-              "id": 1982,
+              "id": 2271,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1981,
+                  "id": 2270,
                   "mutability": "mutable",
                   "name": "value",
-                  "nameLocation": "5994:5:13",
+                  "nameLocation": "5994:5:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1983,
-                  "src": "5986:13:13",
+                  "scope": 2272,
+                  "src": "5986:13:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1516,10 +1516,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1980,
+                    "id": 2269,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5986:7:13",
+                    "src": "5986:7:14",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1528,67 +1528,67 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "5985:15:13"
+              "src": "5985:15:14"
             }
           },
           {
-            "id": 1986,
+            "id": 2275,
             "nodeType": "ErrorDefinition",
-            "src": "6159:43:13",
+            "src": "6159:43:14",
             "documentation": {
-              "id": 1984,
+              "id": 2273,
               "nodeType": "StructuredDocumentation",
-              "src": "6007:147:13",
+              "src": "6007:147:14",
               "text": " @dev Revert with an error when attempting to fill a basic order using\n      calldata not produced by default ABI encoding."
             },
             "errorSelector": "39f3e3fd",
             "name": "InvalidBasicOrderParameterEncoding",
-            "nameLocation": "6165:34:13",
+            "nameLocation": "6165:34:14",
             "parameters": {
-              "id": 1985,
+              "id": 2274,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "6199:2:13"
+              "src": "6199:2:14"
             }
           },
           {
-            "id": 1989,
+            "id": 2278,
             "nodeType": "ErrorDefinition",
-            "src": "6354:35:13",
+            "src": "6354:35:14",
             "documentation": {
-              "id": 1987,
+              "id": 2276,
               "nodeType": "StructuredDocumentation",
-              "src": "6208:141:13",
+              "src": "6208:141:14",
               "text": " @dev Revert with an error when attempting to fulfill any number of\n      available orders when none are fulfillable."
             },
             "errorSelector": "d5da9a1b",
             "name": "NoSpecifiedOrdersAvailable",
-            "nameLocation": "6360:26:13",
+            "nameLocation": "6360:26:14",
             "parameters": {
-              "id": 1988,
+              "id": 2277,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "6386:2:13"
+              "src": "6386:2:14"
             }
           },
           {
-            "id": 1992,
+            "id": 2281,
             "nodeType": "ErrorDefinition",
-            "src": "6542:31:13",
+            "src": "6542:31:14",
             "documentation": {
-              "id": 1990,
+              "id": 2279,
               "nodeType": "StructuredDocumentation",
-              "src": "6395:142:13",
+              "src": "6395:142:14",
               "text": " @dev Revert with an error when attempting to fulfill an order with an\n      offer for ETH outside of matching orders."
             },
             "errorSelector": "12d3f5a3",
             "name": "InvalidNativeOfferItem",
-            "nameLocation": "6548:22:13",
+            "nameLocation": "6548:22:14",
             "parameters": {
-              "id": 1991,
+              "id": 2280,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "6570:2:13"
+              "src": "6570:2:14"
             }
           }
         ],
@@ -1598,40 +1598,40 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 1873,
+          "id": 2162,
           "nodeType": "StructuredDocumentation",
-          "src": "133:134:13",
+          "src": "133:134:14",
           "text": " @title ConsiderationEventsAndErrors\n @author 0age\n @notice ConsiderationEventsAndErrors contains all events and errors."
         },
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          1993
+          2282
         ],
         "name": "ConsiderationEventsAndErrors",
-        "nameLocation": "278:28:13",
-        "scope": 1994,
+        "nameLocation": "278:28:14",
+        "scope": 2283,
         "usedErrors": [
-          1922,
-          1925,
-          1932,
-          1935,
-          1940,
-          1949,
-          1952,
-          1959,
-          1962,
-          1967,
-          1972,
-          1975,
-          1978,
-          1983,
-          1986,
-          1989,
-          1992
+          2211,
+          2214,
+          2221,
+          2224,
+          2229,
+          2238,
+          2241,
+          2248,
+          2251,
+          2256,
+          2261,
+          2264,
+          2267,
+          2272,
+          2275,
+          2278,
+          2281
         ]
       }
     ],
     "license": "MIT"
   },
-  "id": 13
+  "id": 14
 }

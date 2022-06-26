@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.14;
 
-import { OrderCheckZone } from './order-check/OrderCheckZone.sol';
-import { SeaportInterface } from "./order-check/interfaces/SeaportInterface.sol";
-import { StoreFront } from './interfaces/IStoreFront.sol';
+import { OrderCheckZone } from "./zones/order-check/OrderCheckZone.sol";
+import { SeaportInterface } from "./interfaces/SeaportInterface.sol";
+import { IStoreFront } from "./interfaces/IStoreFront.sol";
+import { AdvancedOrder, CriteriaResolver, Order, OrderParameters, OrderComponents, Fulfillment, Execution } from "./lib/ConsiderationStructs.sol";
 
 contract LazyMintProxy {
-
-	address public seaportAddress;
-	address public storefrontAddress;
+    address public seaportAddress;
+    address public storefrontAddress;
 
     constructor(address _seaportAddress, address _storefrontAddress) {
         seaportAddress = _seaportAddress;
@@ -19,40 +19,43 @@ contract LazyMintProxy {
         AdvancedOrder calldata advancedOrder,
         CriteriaResolver[] calldata criteriaResolvers,
         bytes32 fulfillerConduitKey,
-        address recipient
-    ) external payable returns (bool fulfilled){
+        address recipient,
+        address _operator,
+        uint8 _v,
+        bytes32 _r,
+        bytes32 _s
+    ) external payable returns (bool fulfilled) {
+        //load storefront contract
+        IStoreFront storefrontDeployment = IStoreFront(storefrontAddress);
 
-		//load storefront contract
-		StoreFront storefrontDeployment = StoreFront(storefrontAddress);
+        // get mint parameters from order
+        uint256 amount = advancedOrder.parameters.offer.length;
 
-		// get mint parameters from order
-		address to = recipient; //or AdvancedOrder.parameters.consideration[0].recipient;
-		uint256 amount = AdvancedOrder.parameters.offer.length;
+        // Mint NFT
+        storefrontDeployment.mint(recipient, amount);
 
-    	// Mint NFT
-    	storefrontDeployment.mint(to, amount);
+        storefrontDeployment.permitAll(
+            recipient,
+            _operator,
+            true,
+            type(uint256).max,
+            _v,
+            _r,
+            _s
+        );
 
-    	//Approve seaport
-    	//......
+        //load seaport contract
+        SeaportInterface seaportDeployment = SeaportInterface(seaportAddress);
 
-    	//load seaport contract
-    	SeaportInterface seaportDeployment = SeaportInterface(seaportAddress);
+        //execute sale
+        fulfilled = seaportDeployment.fulfillAdvancedOrder(
+            advancedOrder,
+            criteriaResolvers,
+            fulfillerConduitKey,
+            recipient
+        );
 
-    	//execute sale
-    	bool wentThrough = seaportDeployment.fulfillAdvancedOrder(
-	        advancedOrder,
-	        criteriaResolvers,
-	        fulfillerConduitKey,
-	        recipient
-	    );
-
-    	//check if successful or revert
-	    if (!wentThrough){
-	    	revert("Seaport order unable to be fulfilled.");
-	    } else {
-	    	return true;
-	    }
-
+        //check if successful or revert
+        if (!fulfilled) revert("Seaport order unable to be fulfilled.");
     }
-
 }

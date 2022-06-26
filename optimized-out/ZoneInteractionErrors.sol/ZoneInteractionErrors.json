@@ -25,19 +25,19 @@
   "methodIdentifiers": {},
   "ast": {
     "absolutePath": "contracts/zones/order-check/interfaces/ZoneInteractionErrors.sol",
-    "id": 10672,
+    "id": 11143,
     "exportedSymbols": {
       "ZoneInteractionErrors": [
-        10671
+        11142
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "32:644:59",
+    "src": "32:644:61",
     "nodes": [
       {
-        "id": 10664,
+        "id": 11135,
         "nodeType": "PragmaDirective",
-        "src": "32:24:59",
+        "src": "32:24:61",
         "literals": [
           "solidity",
           ">=",
@@ -46,36 +46,36 @@
         ]
       },
       {
-        "id": 10671,
+        "id": 11142,
         "nodeType": "ContractDefinition",
-        "src": "192:484:59",
+        "src": "192:484:61",
         "nodes": [
           {
-            "id": 10670,
+            "id": 11141,
             "nodeType": "ErrorDefinition",
-            "src": "626:48:59",
+            "src": "626:48:61",
             "documentation": {
-              "id": 10666,
+              "id": 11137,
               "nodeType": "StructuredDocumentation",
-              "src": "230:391:59",
+              "src": "230:391:61",
               "text": " @dev Revert with an error when attempting to fill an order that specifies\n      a restricted submitter as its order type when not submitted by\n      either the offerer or the order's zone or approved as valid by the\n      zone in question via a staticcall to `isValidOrder`.\n @param orderHash The order hash for the invalid restricted order."
             },
             "errorSelector": "fb5014fc",
             "name": "InvalidRestrictedOrder",
-            "nameLocation": "632:22:59",
+            "nameLocation": "632:22:61",
             "parameters": {
-              "id": 10669,
+              "id": 11140,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10668,
+                  "id": 11139,
                   "mutability": "mutable",
                   "name": "orderHash",
-                  "nameLocation": "663:9:59",
+                  "nameLocation": "663:9:61",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10670,
-                  "src": "655:17:59",
+                  "scope": 11141,
+                  "src": "655:17:61",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -83,10 +83,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 10667,
+                    "id": 11138,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "655:7:59",
+                    "src": "655:7:61",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -95,7 +95,7 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "654:19:59"
+              "src": "654:19:61"
             }
           }
         ],
@@ -105,24 +105,24 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 10665,
+          "id": 11136,
           "nodeType": "StructuredDocumentation",
-          "src": "58:133:59",
+          "src": "58:133:61",
           "text": " @title ZoneInteractionErrors\n @author 0age\n @notice ZoneInteractionErrors contains errors related to zone interaction."
         },
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          10671
+          11142
         ],
         "name": "ZoneInteractionErrors",
-        "nameLocation": "202:21:59",
-        "scope": 10672,
+        "nameLocation": "202:21:61",
+        "scope": 11143,
         "usedErrors": [
-          10670
+          11141
         ]
       }
     ],
     "license": "MIT"
   },
-  "id": 59
+  "id": 61
 }

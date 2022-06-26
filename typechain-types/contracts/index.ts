@@ -13,5 +13,6 @@ import type * as test from "./test";
 export type { test };
 import type * as zones from "./zones";
 export type { zones };
+export type { LazyMintProxy } from "./LazyMintProxy";
 export type { Seaport } from "./Seaport";
 export type { StoreFront } from "./StoreFront";
