@@ -2633,14 +2633,18 @@ const getTestItem721 = (
     recipient,
     token
 ) =>
-    getOfferOrConsiderationItem(
-        2,
-        token,
-        identifierOrCriteria,
-        startAmount,
-        endAmount,
-        recipient
-    );
+
+	getOfferOrConsiderationItem(
+		3,
+		token,
+		identifierOrCriteria,
+		startAmount,
+		endAmount,
+		recipient
+	);
+
+
+
 
 const signOrder = async (orderComponents, signer) => {
     const signature = await signer._signTypedData(
@@ -2655,7 +2659,42 @@ const signOrder = async (orderComponents, signer) => {
 const mintTestNFTs = async () => {
     const provider = new ethers.providers.JsonRpcProvider(rinkeby, 4);
 
-    const signer = new ethers.Wallet(process.env.PK, provider);
+
+  const provider = new ethers.providers.JsonRpcProvider(rinkeby, 4);
+
+  const signer = new ethers.Wallet(process.env.PK, provider);
+
+  const storefrontContract = new ethers.Contract(storeFrontAddress, storeFrontABI, signer);
+  
+  const mint = await storefrontContract.mint(signer.address, 10, {gasLimit:25000000});
+
+  console.log("mint", mint)
+
+  const setApproval = await storefrontContract.setApprovalForAll("0x00000000006c3852cbef3e08e8df289169ede581", true);
+
+  console.log("set approval", setApproval)
+  
+  /*console.log("mint results", mint);
+
+  const nonce = await storefrontContract.nonces(signer.address);
+
+  console.log("got nonce", nonce)
+
+  const permitData = {
+  	  	owner: signer.address, //owner
+  		operator:"0x00000000006c3852cbef3e08e8df289169ede581", //operator
+  		approved:true,//approved
+  		nonce,
+  		deadline:"115792089237316195423570985008687907853269984665640564039457584007913129639935"//deadline
+  }
+
+  console.log("Permit data", permitData)
+
+  const signature = await signer._signTypedData(
+    domainDataStoreFront,
+    permitType,
+    permitData
+  );
 
     const storefrontContract = new ethers.Contract(
         storeFrontAddress,
@@ -2688,25 +2727,9 @@ const mintTestNFTs = async () => {
         permitData
     );
 
-    console.log("Split");
+  console.log("Permit ", permit)
+*/
 
-    const { r, s, recoveryParam, v } = ethers.utils.splitSignature(signature);
-
-    console.log("V R S", v, r, s);
-
-    const permit = await storefrontContract.permitAll(
-        signer.address, //owner
-        "0x00000000006c3852cbef3e08e8df289169ede581", //operator
-        true, //approved
-        "115792089237316195423570985008687907853269984665640564039457584007913129639935", //deadline
-        v,
-        r,
-        s,
-        { gasLimit: 25000000 }
-    );
-
-    console.log("here");
-    console.log("Permit ", permit);
 };
 
 /**
@@ -2770,17 +2793,19 @@ const generateAndSignOrder = async (voucherData) => {
         ...orderParameters,
         counter,
     };
+  
+  const signature = await signOrder(orderComponents, signer);
 
-    const signature = await signOrder(orderComponents, signer);
 
-    let advancedOrder = [
-        orderParameters, //order above
-        ethers.utils.parseEther("1"), // numerator
-        ethers.utils.parseEther("1"), //denominator
-        signature, //signature (to be added)
-        voucherData || "0x", //voucherData to be passed in (signature and input, in bytes format)
-    ];
+  let advancedOrder = [
+    orderParameters, //order above
+    1, // numerator
+    1, //denominator
+    signature, //signature (to be added)
+    voucherData || "0x" //voucherData to be passed in (signature and input, in bytes format)
+  ];
 
+   
     console.log(advancedOrder);
 
     return advancedOrder;
@@ -2807,24 +2832,22 @@ const partialFulfillOrder = async (advancedOrder) => {
 
     const fulfillerConduitKey = ethers.constants.HashZero;
 
-    const recipient = signer.address;
 
-    const tx = await seaportContract.fulfillAdvancedOrder(
-        advancedOrder,
-        criteriaResolvers,
-        fulfillerConduitKey,
-        recipient,
-        { gasLimit: 25000000 }
-    );
+	const recipient = "0x9d30d5c6eaffd9039a9f0ccba2b38b4b1f699591";
+
+	const tx = await seaportContract.fulfillAdvancedOrder(advancedOrder, criteriaResolvers, fulfillerConduitKey, recipient, {gasLimit:25000000, value:ethers.utils.parseEther("0.01")});
+
 
     console.log(tx);
 };
 
 //test
-(async () => {
-    /*const order = await generateAndSignOrder();
-  console.log("generated and signed order", order);
-  await partialFulfillOrder(order);*/
 
-    mintTestNFTs();
+(async() => {
+  const order = await generateAndSignOrder();
+  console.log("generated and signed order", order);
+  await partialFulfillOrder(order);
+
+
+  //mintTestNFTs();
 })();
