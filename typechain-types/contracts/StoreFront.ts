@@ -28,11 +28,15 @@ import type {
 
 export interface StoreFrontInterface extends utils.Interface {
   functions: {
+    "NAME()": FunctionFragment;
+    "VERSION()": FunctionFragment;
     "balanceOf(address,uint256)": FunctionFragment;
     "balanceOfBatch(address[],uint256[])": FunctionFragment;
     "isApprovedForAll(address,address)": FunctionFragment;
     "mint(address,uint256)": FunctionFragment;
+    "nonces(address)": FunctionFragment;
     "owner()": FunctionFragment;
+    "permitAll(address,address,bool,uint256,uint8,bytes32,bytes32)": FunctionFragment;
     "renounceOwnership()": FunctionFragment;
     "safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)": FunctionFragment;
     "safeTransferFrom(address,address,uint256,uint256,bytes)": FunctionFragment;
@@ -46,11 +50,15 @@ export interface StoreFrontInterface extends utils.Interface {
 
   getFunction(
     nameOrSignatureOrTopic:
+      | "NAME"
+      | "VERSION"
       | "balanceOf"
       | "balanceOfBatch"
       | "isApprovedForAll"
       | "mint"
+      | "nonces"
       | "owner"
+      | "permitAll"
       | "renounceOwnership"
       | "safeBatchTransferFrom"
       | "safeTransferFrom"
@@ -62,6 +70,8 @@ export interface StoreFrontInterface extends utils.Interface {
       | "uri"
   ): FunctionFragment;
 
+  encodeFunctionData(functionFragment: "NAME", values?: undefined): string;
+  encodeFunctionData(functionFragment: "VERSION", values?: undefined): string;
   encodeFunctionData(
     functionFragment: "balanceOf",
     values: [string, BigNumberish]
@@ -78,7 +88,20 @@ export interface StoreFrontInterface extends utils.Interface {
     functionFragment: "mint",
     values: [string, BigNumberish]
   ): string;
+  encodeFunctionData(functionFragment: "nonces", values: [string]): string;
   encodeFunctionData(functionFragment: "owner", values?: undefined): string;
+  encodeFunctionData(
+    functionFragment: "permitAll",
+    values: [
+      string,
+      string,
+      boolean,
+      BigNumberish,
+      BigNumberish,
+      BytesLike,
+      BytesLike
+    ]
+  ): string;
   encodeFunctionData(
     functionFragment: "renounceOwnership",
     values?: undefined
@@ -113,6 +136,8 @@ export interface StoreFrontInterface extends utils.Interface {
   ): string;
   encodeFunctionData(functionFragment: "uri", values: [BigNumberish]): string;
 
+  decodeFunctionResult(functionFragment: "NAME", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "VERSION", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "balanceOf", data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: "balanceOfBatch",
@@ -123,7 +148,9 @@ export interface StoreFrontInterface extends utils.Interface {
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "mint", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "nonces", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "owner", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "permitAll", data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: "renounceOwnership",
     data: BytesLike
@@ -260,6 +287,10 @@ export interface StoreFront extends BaseContract {
   removeListener: OnEvent<this>;
 
   functions: {
+    NAME(overrides?: CallOverrides): Promise<[string]>;
+
+    VERSION(overrides?: CallOverrides): Promise<[string]>;
+
     balanceOf(
       arg0: string,
       arg1: BigNumberish,
@@ -284,7 +315,20 @@ export interface StoreFront extends BaseContract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
+    nonces(arg0: string, overrides?: CallOverrides): Promise<[BigNumber]>;
+
     owner(overrides?: CallOverrides): Promise<[string]>;
+
+    permitAll(
+      _owner: string,
+      _operator: string,
+      _approved: boolean,
+      _deadline: BigNumberish,
+      _v: BigNumberish,
+      _r: BytesLike,
+      _s: BytesLike,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
 
     renounceOwnership(
       overrides?: Overrides & { from?: string | Promise<string> }
@@ -337,6 +381,10 @@ export interface StoreFront extends BaseContract {
     uri(id: BigNumberish, overrides?: CallOverrides): Promise<[string]>;
   };
 
+  NAME(overrides?: CallOverrides): Promise<string>;
+
+  VERSION(overrides?: CallOverrides): Promise<string>;
+
   balanceOf(
     arg0: string,
     arg1: BigNumberish,
@@ -361,7 +409,20 @@ export interface StoreFront extends BaseContract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
+  nonces(arg0: string, overrides?: CallOverrides): Promise<BigNumber>;
+
   owner(overrides?: CallOverrides): Promise<string>;
+
+  permitAll(
+    _owner: string,
+    _operator: string,
+    _approved: boolean,
+    _deadline: BigNumberish,
+    _v: BigNumberish,
+    _r: BytesLike,
+    _s: BytesLike,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
 
   renounceOwnership(
     overrides?: Overrides & { from?: string | Promise<string> }
@@ -414,6 +475,10 @@ export interface StoreFront extends BaseContract {
   uri(id: BigNumberish, overrides?: CallOverrides): Promise<string>;
 
   callStatic: {
+    NAME(overrides?: CallOverrides): Promise<string>;
+
+    VERSION(overrides?: CallOverrides): Promise<string>;
+
     balanceOf(
       arg0: string,
       arg1: BigNumberish,
@@ -438,7 +503,20 @@ export interface StoreFront extends BaseContract {
       overrides?: CallOverrides
     ): Promise<void>;
 
+    nonces(arg0: string, overrides?: CallOverrides): Promise<BigNumber>;
+
     owner(overrides?: CallOverrides): Promise<string>;
+
+    permitAll(
+      _owner: string,
+      _operator: string,
+      _approved: boolean,
+      _deadline: BigNumberish,
+      _v: BigNumberish,
+      _r: BytesLike,
+      _s: BytesLike,
+      overrides?: CallOverrides
+    ): Promise<void>;
 
     renounceOwnership(overrides?: CallOverrides): Promise<void>;
 
@@ -545,6 +623,10 @@ export interface StoreFront extends BaseContract {
   };
 
   estimateGas: {
+    NAME(overrides?: CallOverrides): Promise<BigNumber>;
+
+    VERSION(overrides?: CallOverrides): Promise<BigNumber>;
+
     balanceOf(
       arg0: string,
       arg1: BigNumberish,
@@ -569,7 +651,20 @@ export interface StoreFront extends BaseContract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
+    nonces(arg0: string, overrides?: CallOverrides): Promise<BigNumber>;
+
     owner(overrides?: CallOverrides): Promise<BigNumber>;
+
+    permitAll(
+      _owner: string,
+      _operator: string,
+      _approved: boolean,
+      _deadline: BigNumberish,
+      _v: BigNumberish,
+      _r: BytesLike,
+      _s: BytesLike,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
 
     renounceOwnership(
       overrides?: Overrides & { from?: string | Promise<string> }
@@ -623,6 +718,10 @@ export interface StoreFront extends BaseContract {
   };
 
   populateTransaction: {
+    NAME(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    VERSION(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
     balanceOf(
       arg0: string,
       arg1: BigNumberish,
@@ -647,7 +746,23 @@ export interface StoreFront extends BaseContract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
+    nonces(
+      arg0: string,
+      overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
+
     owner(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    permitAll(
+      _owner: string,
+      _operator: string,
+      _approved: boolean,
+      _deadline: BigNumberish,
+      _v: BigNumberish,
+      _r: BytesLike,
+      _s: BytesLike,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
 
     renounceOwnership(
       overrides?: Overrides & { from?: string | Promise<string> }

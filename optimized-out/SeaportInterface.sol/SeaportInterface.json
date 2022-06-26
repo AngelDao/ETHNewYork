@@ -2070,168 +2070,168 @@
     "validate(((address,address,(uint8,address,uint256,uint256,uint256)[],(uint8,address,uint256,uint256,uint256,address)[],uint8,uint256,uint256,bytes32,uint256,bytes32,uint256),bytes)[])": "88147732"
   },
   "ast": {
-    "absolutePath": "contracts/interfaces/SeaportInterface.sol",
-    "id": 2417,
+    "absolutePath": "contracts/zones/order-check/interfaces/SeaportInterface.sol",
+    "id": 10663,
     "exportedSymbols": {
       "AdvancedOrder": [
-        4844
+        10938
       ],
       "BasicOrderParameters": [
-        4793
+        10887
       ],
       "CriteriaResolver": [
-        4866
+        10960
       ],
       "Execution": [
-        4888
+        10982
       ],
       "Fulfillment": [
-        4875
+        10969
       ],
       "FulfillmentComponent": [
-        4880
+        10974
       ],
       "Order": [
-        4832
+        10926
       ],
       "OrderComponents": [
-        4705
+        10799
       ],
       "OrderStatus": [
-        4853
+        10947
       ],
       "SeaportInterface": [
-        2416
+        10662
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "32:23143:19",
+    "src": "32:23143:58",
     "nodes": [
       {
-        "id": 2194,
+        "id": 10440,
         "nodeType": "PragmaDirective",
-        "src": "32:23:19",
+        "src": "32:24:58",
         "literals": [
           "solidity",
-          "^",
+          ">=",
           "0.8",
           ".7"
         ]
       },
       {
-        "id": 2204,
+        "id": 10450,
         "nodeType": "ImportDirective",
-        "src": "76:223:19",
-        "absolutePath": "contracts/lib/ConsiderationStructs.sol",
+        "src": "77:223:58",
+        "absolutePath": "contracts/zones/order-check/lib/ConsiderationStructs.sol",
         "file": "../lib/ConsiderationStructs.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 2417,
-        "sourceUnit": 4889,
+        "scope": 10663,
+        "sourceUnit": 10983,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 2195,
+              "id": 10441,
               "name": "BasicOrderParameters",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 4793,
-              "src": "89:20:19",
+              "referencedDeclaration": 10887,
+              "src": "90:20:58",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
           },
           {
             "foreign": {
-              "id": 2196,
+              "id": 10442,
               "name": "OrderComponents",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 4705,
-              "src": "115:15:19",
+              "referencedDeclaration": 10799,
+              "src": "116:15:58",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
           },
           {
             "foreign": {
-              "id": 2197,
+              "id": 10443,
               "name": "Fulfillment",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 4875,
-              "src": "136:11:19",
+              "referencedDeclaration": 10969,
+              "src": "137:11:58",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
           },
           {
             "foreign": {
-              "id": 2198,
+              "id": 10444,
               "name": "FulfillmentComponent",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 4880,
-              "src": "153:20:19",
+              "referencedDeclaration": 10974,
+              "src": "154:20:58",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
           },
           {
             "foreign": {
-              "id": 2199,
+              "id": 10445,
               "name": "Execution",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 4888,
-              "src": "179:9:19",
+              "referencedDeclaration": 10982,
+              "src": "180:9:58",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
           },
           {
             "foreign": {
-              "id": 2200,
+              "id": 10446,
               "name": "Order",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 4832,
-              "src": "194:5:19",
+              "referencedDeclaration": 10926,
+              "src": "195:5:58",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
           },
           {
             "foreign": {
-              "id": 2201,
+              "id": 10447,
               "name": "AdvancedOrder",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 4844,
-              "src": "205:13:19",
+              "referencedDeclaration": 10938,
+              "src": "206:13:58",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
           },
           {
             "foreign": {
-              "id": 2202,
+              "id": 10448,
               "name": "OrderStatus",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 4853,
-              "src": "224:11:19",
+              "referencedDeclaration": 10947,
+              "src": "225:11:58",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
           },
           {
             "foreign": {
-              "id": 2203,
+              "id": 10449,
               "name": "CriteriaResolver",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 4866,
-              "src": "241:16:19",
+              "referencedDeclaration": 10960,
+              "src": "242:16:58",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -2240,18 +2240,18 @@
         "unitAlias": ""
       },
       {
-        "id": 2416,
+        "id": 10662,
         "nodeType": "ContractDefinition",
-        "src": "740:22434:19",
+        "src": "741:22434:58",
         "nodes": [
           {
-            "id": 2214,
+            "id": 10460,
             "nodeType": "FunctionDefinition",
-            "src": "1585:135:19",
+            "src": "1586:135:58",
             "documentation": {
-              "id": 2206,
+              "id": 10452,
               "nodeType": "StructuredDocumentation",
-              "src": "773:807:19",
+              "src": "774:807:58",
               "text": " @notice Fulfill an order offering an ERC721 token by supplying Ether (or\n         the native token for the given chain) as consideration for the\n         order. An arbitrary number of \"additional recipients\" may also be\n         supplied which will each receive native tokens from the fulfiller\n         as consideration.\n @param parameters Additional information on the fulfilled order. Note\n                   that the offerer must first approve this contract (or\n                   their preferred conduit if indicated by the order) for\n                   their offered ERC721 token to be transferred.\n @return fulfilled A boolean indicating whether the order has been\n                   successfully fulfilled."
             },
             "functionSelector": "fb0f3ee1",
@@ -2259,61 +2259,61 @@
             "kind": "function",
             "modifiers": [],
             "name": "fulfillBasicOrder",
-            "nameLocation": "1594:17:19",
+            "nameLocation": "1595:17:58",
             "parameters": {
-              "id": 2210,
+              "id": 10456,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2209,
+                  "id": 10455,
                   "mutability": "mutable",
                   "name": "parameters",
-                  "nameLocation": "1642:10:19",
+                  "nameLocation": "1643:10:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2214,
-                  "src": "1612:40:19",
+                  "scope": 10460,
+                  "src": "1613:40:58",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_BasicOrderParameters_$4793_calldata_ptr",
+                    "typeIdentifier": "t_struct$_BasicOrderParameters_$10887_calldata_ptr",
                     "typeString": "struct BasicOrderParameters"
                   },
                   "typeName": {
-                    "id": 2208,
+                    "id": 10454,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 2207,
+                      "id": 10453,
                       "name": "BasicOrderParameters",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 4793,
-                      "src": "1612:20:19"
+                      "referencedDeclaration": 10887,
+                      "src": "1613:20:58"
                     },
-                    "referencedDeclaration": 4793,
-                    "src": "1612:20:19",
+                    "referencedDeclaration": 10887,
+                    "src": "1613:20:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_BasicOrderParameters_$4793_storage_ptr",
+                      "typeIdentifier": "t_struct$_BasicOrderParameters_$10887_storage_ptr",
                       "typeString": "struct BasicOrderParameters"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "1611:42:19"
+              "src": "1612:42:58"
             },
             "returnParameters": {
-              "id": 2213,
+              "id": 10459,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2212,
+                  "id": 10458,
                   "mutability": "mutable",
                   "name": "fulfilled",
-                  "nameLocation": "1709:9:19",
+                  "nameLocation": "1710:9:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2214,
-                  "src": "1704:14:19",
+                  "scope": 10460,
+                  "src": "1705:14:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2321,10 +2321,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2211,
+                    "id": 10457,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1704:4:19",
+                    "src": "1705:4:58",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -2333,21 +2333,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1703:16:19"
+              "src": "1704:16:58"
             },
-            "scope": 2416,
+            "scope": 10662,
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 2225,
+            "id": 10471,
             "nodeType": "FunctionDefinition",
-            "src": "3072:139:19",
+            "src": "3073:139:58",
             "documentation": {
-              "id": 2215,
+              "id": 10461,
               "nodeType": "StructuredDocumentation",
-              "src": "1726:1341:19",
+              "src": "1727:1341:58",
               "text": " @notice Fulfill an order with an arbitrary number of items for offer and\n         consideration. Note that this function does not support\n         criteria-based orders or partial filling of orders (though\n         filling the remainder of a partially-filled order is supported).\n @param order               The order to fulfill. Note that both the\n                            offerer and the fulfiller must first approve\n                            this contract (or the corresponding conduit if\n                            indicated) to transfer any relevant tokens on\n                            their behalf and that contracts must implement\n                            `onERC1155Received` to receive ERC1155 tokens\n                            as consideration.\n @param fulfillerConduitKey A bytes32 value indicating what conduit, if\n                            any, to source the fulfiller's token approvals\n                            from. The zero hash signifies that no conduit\n                            should be used, with direct approvals set on\n                            Seaport.\n @return fulfilled A boolean indicating whether the order has been\n                   successfully fulfilled."
             },
             "functionSelector": "b3a34c4c",
@@ -2355,40 +2355,40 @@
             "kind": "function",
             "modifiers": [],
             "name": "fulfillOrder",
-            "nameLocation": "3081:12:19",
+            "nameLocation": "3082:12:58",
             "parameters": {
-              "id": 2221,
+              "id": 10467,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2218,
+                  "id": 10464,
                   "mutability": "mutable",
                   "name": "order",
-                  "nameLocation": "3109:5:19",
+                  "nameLocation": "3110:5:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2225,
-                  "src": "3094:20:19",
+                  "scope": 10471,
+                  "src": "3095:20:58",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_Order_$4832_calldata_ptr",
+                    "typeIdentifier": "t_struct$_Order_$10926_calldata_ptr",
                     "typeString": "struct Order"
                   },
                   "typeName": {
-                    "id": 2217,
+                    "id": 10463,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 2216,
+                      "id": 10462,
                       "name": "Order",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 4832,
-                      "src": "3094:5:19"
+                      "referencedDeclaration": 10926,
+                      "src": "3095:5:58"
                     },
-                    "referencedDeclaration": 4832,
-                    "src": "3094:5:19",
+                    "referencedDeclaration": 10926,
+                    "src": "3095:5:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Order_$4832_storage_ptr",
+                      "typeIdentifier": "t_struct$_Order_$10926_storage_ptr",
                       "typeString": "struct Order"
                     }
                   },
@@ -2396,13 +2396,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2220,
+                  "id": 10466,
                   "mutability": "mutable",
                   "name": "fulfillerConduitKey",
-                  "nameLocation": "3124:19:19",
+                  "nameLocation": "3125:19:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2225,
-                  "src": "3116:27:19",
+                  "scope": 10471,
+                  "src": "3117:27:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2410,10 +2410,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2219,
+                    "id": 10465,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3116:7:19",
+                    "src": "3117:7:58",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -2422,21 +2422,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3093:51:19"
+              "src": "3094:51:58"
             },
             "returnParameters": {
-              "id": 2224,
+              "id": 10470,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2223,
+                  "id": 10469,
                   "mutability": "mutable",
                   "name": "fulfilled",
-                  "nameLocation": "3200:9:19",
+                  "nameLocation": "3201:9:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2225,
-                  "src": "3195:14:19",
+                  "scope": 10471,
+                  "src": "3196:14:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2444,10 +2444,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2222,
+                    "id": 10468,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3195:4:19",
+                    "src": "3196:4:58",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -2456,21 +2456,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3194:16:19"
+              "src": "3195:16:58"
             },
-            "scope": 2416,
+            "scope": 10662,
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 2242,
+            "id": 10488,
             "nodeType": "FunctionDefinition",
-            "src": "5915:243:19",
+            "src": "5916:243:58",
             "documentation": {
-              "id": 2226,
+              "id": 10472,
               "nodeType": "StructuredDocumentation",
-              "src": "3217:2693:19",
+              "src": "3218:2693:58",
               "text": " @notice Fill an order, fully or partially, with an arbitrary number of\n         items for offer and consideration alongside criteria resolvers\n         containing specific token identifiers and associated proofs.\n @param advancedOrder       The order to fulfill along with the fraction\n                            of the order to attempt to fill. Note that\n                            both the offerer and the fulfiller must first\n                            approve this contract (or their preferred\n                            conduit if indicated by the order) to transfer\n                            any relevant tokens on their behalf and that\n                            contracts must implement `onERC1155Received`\n                            to receive ERC1155 tokens as consideration.\n                            Also note that all offer and consideration\n                            components must have no remainder after\n                            multiplication of the respective amount with\n                            the supplied fraction for the partial fill to\n                            be considered valid.\n @param criteriaResolvers   An array where each element contains a\n                            reference to a specific offer or\n                            consideration, a token identifier, and a proof\n                            that the supplied token identifier is\n                            contained in the merkle root held by the item\n                            in question's criteria element. Note that an\n                            empty criteria indicates that any\n                            (transferable) token identifier on the token\n                            in question is valid and that no associated\n                            proof needs to be supplied.\n @param fulfillerConduitKey A bytes32 value indicating what conduit, if\n                            any, to source the fulfiller's token approvals\n                            from. The zero hash signifies that no conduit\n                            should be used, with direct approvals set on\n                            Seaport.\n @param recipient           The intended recipient for all received items,\n                            with `address(0)` indicating that the caller\n                            should receive the items.\n @return fulfilled A boolean indicating whether the order has been\n                   successfully fulfilled."
             },
             "functionSelector": "e7acab24",
@@ -2478,40 +2478,40 @@
             "kind": "function",
             "modifiers": [],
             "name": "fulfillAdvancedOrder",
-            "nameLocation": "5924:20:19",
+            "nameLocation": "5925:20:58",
             "parameters": {
-              "id": 2238,
+              "id": 10484,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2229,
+                  "id": 10475,
                   "mutability": "mutable",
                   "name": "advancedOrder",
-                  "nameLocation": "5977:13:19",
+                  "nameLocation": "5978:13:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2242,
-                  "src": "5954:36:19",
+                  "scope": 10488,
+                  "src": "5955:36:58",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_AdvancedOrder_$4844_calldata_ptr",
+                    "typeIdentifier": "t_struct$_AdvancedOrder_$10938_calldata_ptr",
                     "typeString": "struct AdvancedOrder"
                   },
                   "typeName": {
-                    "id": 2228,
+                    "id": 10474,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 2227,
+                      "id": 10473,
                       "name": "AdvancedOrder",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 4844,
-                      "src": "5954:13:19"
+                      "referencedDeclaration": 10938,
+                      "src": "5955:13:58"
                     },
-                    "referencedDeclaration": 4844,
-                    "src": "5954:13:19",
+                    "referencedDeclaration": 10938,
+                    "src": "5955:13:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_AdvancedOrder_$4844_storage_ptr",
+                      "typeIdentifier": "t_struct$_AdvancedOrder_$10938_storage_ptr",
                       "typeString": "struct AdvancedOrder"
                     }
                   },
@@ -2519,42 +2519,42 @@
                 },
                 {
                   "constant": false,
-                  "id": 2233,
+                  "id": 10479,
                   "mutability": "mutable",
                   "name": "criteriaResolvers",
-                  "nameLocation": "6028:17:19",
+                  "nameLocation": "6029:17:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2242,
-                  "src": "6000:45:19",
+                  "scope": 10488,
+                  "src": "6001:45:58",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_CriteriaResolver_$4866_calldata_ptr_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_CriteriaResolver_$10960_calldata_ptr_$dyn_calldata_ptr",
                     "typeString": "struct CriteriaResolver[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 2231,
+                      "id": 10477,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 2230,
+                        "id": 10476,
                         "name": "CriteriaResolver",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4866,
-                        "src": "6000:16:19"
+                        "referencedDeclaration": 10960,
+                        "src": "6001:16:58"
                       },
-                      "referencedDeclaration": 4866,
-                      "src": "6000:16:19",
+                      "referencedDeclaration": 10960,
+                      "src": "6001:16:58",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_CriteriaResolver_$4866_storage_ptr",
+                        "typeIdentifier": "t_struct$_CriteriaResolver_$10960_storage_ptr",
                         "typeString": "struct CriteriaResolver"
                       }
                     },
-                    "id": 2232,
+                    "id": 10478,
                     "nodeType": "ArrayTypeName",
-                    "src": "6000:18:19",
+                    "src": "6001:18:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_CriteriaResolver_$4866_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_CriteriaResolver_$10960_storage_$dyn_storage_ptr",
                       "typeString": "struct CriteriaResolver[]"
                     }
                   },
@@ -2562,13 +2562,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2235,
+                  "id": 10481,
                   "mutability": "mutable",
                   "name": "fulfillerConduitKey",
-                  "nameLocation": "6063:19:19",
+                  "nameLocation": "6064:19:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2242,
-                  "src": "6055:27:19",
+                  "scope": 10488,
+                  "src": "6056:27:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2576,10 +2576,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2234,
+                    "id": 10480,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "6055:7:19",
+                    "src": "6056:7:58",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -2589,13 +2589,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2237,
+                  "id": 10483,
                   "mutability": "mutable",
                   "name": "recipient",
-                  "nameLocation": "6100:9:19",
+                  "nameLocation": "6101:9:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2242,
-                  "src": "6092:17:19",
+                  "scope": 10488,
+                  "src": "6093:17:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2603,10 +2603,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2236,
+                    "id": 10482,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "6092:7:19",
+                    "src": "6093:7:58",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2616,21 +2616,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "5944:171:19"
+              "src": "5945:171:58"
             },
             "returnParameters": {
-              "id": 2241,
+              "id": 10487,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2240,
+                  "id": 10486,
                   "mutability": "mutable",
                   "name": "fulfilled",
-                  "nameLocation": "6147:9:19",
+                  "nameLocation": "6148:9:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2242,
-                  "src": "6142:14:19",
+                  "scope": 10488,
+                  "src": "6143:14:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2638,10 +2638,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2239,
+                    "id": 10485,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "6142:4:19",
+                    "src": "6143:4:58",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -2650,21 +2650,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "6141:16:19"
+              "src": "6142:16:58"
             },
-            "scope": 2416,
+            "scope": 10662,
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 2271,
+            "id": 10517,
             "nodeType": "FunctionDefinition",
-            "src": "9153:384:19",
+            "src": "9154:384:58",
             "documentation": {
-              "id": 2243,
+              "id": 10489,
               "nodeType": "StructuredDocumentation",
-              "src": "6164:2984:19",
+              "src": "6165:2984:58",
               "text": " @notice Attempt to fill a group of orders, each with an arbitrary number\n         of items for offer and consideration. Any order that is not\n         currently active, has already been fully filled, or has been\n         cancelled will be omitted. Remaining offer and consideration\n         items will then be aggregated where possible as indicated by the\n         supplied offer and consideration component arrays and aggregated\n         items will be transferred to the fulfiller or to each intended\n         recipient, respectively. Note that a failing item transfer or an\n         issue with order formatting will cause the entire batch to fail.\n         Note that this function does not support criteria-based orders or\n         partial filling of orders (though filling the remainder of a\n         partially-filled order is supported).\n @param orders                    The orders to fulfill. Note that both\n                                  the offerer and the fulfiller must first\n                                  approve this contract (or the\n                                  corresponding conduit if indicated) to\n                                  transfer any relevant tokens on their\n                                  behalf and that contracts must implement\n                                  `onERC1155Received` to receive ERC1155\n                                  tokens as consideration.\n @param offerFulfillments         An array of FulfillmentComponent arrays\n                                  indicating which offer items to attempt\n                                  to aggregate when preparing executions.\n @param considerationFulfillments An array of FulfillmentComponent arrays\n                                  indicating which consideration items to\n                                  attempt to aggregate when preparing\n                                  executions.\n @param fulfillerConduitKey       A bytes32 value indicating what conduit,\n                                  if any, to source the fulfiller's token\n                                  approvals from. The zero hash signifies\n                                  that no conduit should be used, with\n                                  direct approvals set on this contract.\n @param maximumFulfilled          The maximum number of orders to fulfill.\n @return availableOrders An array of booleans indicating if each order\n                         with an index corresponding to the index of the\n                         returned boolean was fulfillable or not.\n @return executions      An array of elements indicating the sequence of\n                         transfers performed as part of matching the given\n                         orders."
             },
             "functionSelector": "ed98a574",
@@ -2672,49 +2672,49 @@
             "kind": "function",
             "modifiers": [],
             "name": "fulfillAvailableOrders",
-            "nameLocation": "9162:22:19",
+            "nameLocation": "9163:22:58",
             "parameters": {
-              "id": 2262,
+              "id": 10508,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2247,
+                  "id": 10493,
                   "mutability": "mutable",
                   "name": "orders",
-                  "nameLocation": "9211:6:19",
+                  "nameLocation": "9212:6:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2271,
-                  "src": "9194:23:19",
+                  "scope": 10517,
+                  "src": "9195:23:58",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_Order_$4832_calldata_ptr_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_Order_$10926_calldata_ptr_$dyn_calldata_ptr",
                     "typeString": "struct Order[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 2245,
+                      "id": 10491,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 2244,
+                        "id": 10490,
                         "name": "Order",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4832,
-                        "src": "9194:5:19"
+                        "referencedDeclaration": 10926,
+                        "src": "9195:5:58"
                       },
-                      "referencedDeclaration": 4832,
-                      "src": "9194:5:19",
+                      "referencedDeclaration": 10926,
+                      "src": "9195:5:58",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Order_$4832_storage_ptr",
+                        "typeIdentifier": "t_struct$_Order_$10926_storage_ptr",
                         "typeString": "struct Order"
                       }
                     },
-                    "id": 2246,
+                    "id": 10492,
                     "nodeType": "ArrayTypeName",
-                    "src": "9194:7:19",
+                    "src": "9195:7:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Order_$4832_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_Order_$10926_storage_$dyn_storage_ptr",
                       "typeString": "struct Order[]"
                     }
                   },
@@ -2722,51 +2722,51 @@
                 },
                 {
                   "constant": false,
-                  "id": 2252,
+                  "id": 10498,
                   "mutability": "mutable",
                   "name": "offerFulfillments",
-                  "nameLocation": "9261:17:19",
+                  "nameLocation": "9262:17:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2271,
-                  "src": "9227:51:19",
+                  "scope": 10517,
+                  "src": "9228:51:58",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_array$_t_struct$_FulfillmentComponent_$4880_calldata_ptr_$dyn_calldata_ptr_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_array$_t_struct$_FulfillmentComponent_$10974_calldata_ptr_$dyn_calldata_ptr_$dyn_calldata_ptr",
                     "typeString": "struct FulfillmentComponent[][]"
                   },
                   "typeName": {
                     "baseType": {
                       "baseType": {
-                        "id": 2249,
+                        "id": 10495,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 2248,
+                          "id": 10494,
                           "name": "FulfillmentComponent",
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 4880,
-                          "src": "9227:20:19"
+                          "referencedDeclaration": 10974,
+                          "src": "9228:20:58"
                         },
-                        "referencedDeclaration": 4880,
-                        "src": "9227:20:19",
+                        "referencedDeclaration": 10974,
+                        "src": "9228:20:58",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_FulfillmentComponent_$4880_storage_ptr",
+                          "typeIdentifier": "t_struct$_FulfillmentComponent_$10974_storage_ptr",
                           "typeString": "struct FulfillmentComponent"
                         }
                       },
-                      "id": 2250,
+                      "id": 10496,
                       "nodeType": "ArrayTypeName",
-                      "src": "9227:22:19",
+                      "src": "9228:22:58",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_FulfillmentComponent_$4880_storage_$dyn_storage_ptr",
+                        "typeIdentifier": "t_array$_t_struct$_FulfillmentComponent_$10974_storage_$dyn_storage_ptr",
                         "typeString": "struct FulfillmentComponent[]"
                       }
                     },
-                    "id": 2251,
+                    "id": 10497,
                     "nodeType": "ArrayTypeName",
-                    "src": "9227:24:19",
+                    "src": "9228:24:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_array$_t_struct$_FulfillmentComponent_$4880_storage_$dyn_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_array$_t_struct$_FulfillmentComponent_$10974_storage_$dyn_storage_$dyn_storage_ptr",
                       "typeString": "struct FulfillmentComponent[][]"
                     }
                   },
@@ -2774,51 +2774,51 @@
                 },
                 {
                   "constant": false,
-                  "id": 2257,
+                  "id": 10503,
                   "mutability": "mutable",
                   "name": "considerationFulfillments",
-                  "nameLocation": "9322:25:19",
+                  "nameLocation": "9323:25:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2271,
-                  "src": "9288:59:19",
+                  "scope": 10517,
+                  "src": "9289:59:58",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_array$_t_struct$_FulfillmentComponent_$4880_calldata_ptr_$dyn_calldata_ptr_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_array$_t_struct$_FulfillmentComponent_$10974_calldata_ptr_$dyn_calldata_ptr_$dyn_calldata_ptr",
                     "typeString": "struct FulfillmentComponent[][]"
                   },
                   "typeName": {
                     "baseType": {
                       "baseType": {
-                        "id": 2254,
+                        "id": 10500,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 2253,
+                          "id": 10499,
                           "name": "FulfillmentComponent",
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 4880,
-                          "src": "9288:20:19"
+                          "referencedDeclaration": 10974,
+                          "src": "9289:20:58"
                         },
-                        "referencedDeclaration": 4880,
-                        "src": "9288:20:19",
+                        "referencedDeclaration": 10974,
+                        "src": "9289:20:58",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_FulfillmentComponent_$4880_storage_ptr",
+                          "typeIdentifier": "t_struct$_FulfillmentComponent_$10974_storage_ptr",
                           "typeString": "struct FulfillmentComponent"
                         }
                       },
-                      "id": 2255,
+                      "id": 10501,
                       "nodeType": "ArrayTypeName",
-                      "src": "9288:22:19",
+                      "src": "9289:22:58",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_FulfillmentComponent_$4880_storage_$dyn_storage_ptr",
+                        "typeIdentifier": "t_array$_t_struct$_FulfillmentComponent_$10974_storage_$dyn_storage_ptr",
                         "typeString": "struct FulfillmentComponent[]"
                       }
                     },
-                    "id": 2256,
+                    "id": 10502,
                     "nodeType": "ArrayTypeName",
-                    "src": "9288:24:19",
+                    "src": "9289:24:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_array$_t_struct$_FulfillmentComponent_$4880_storage_$dyn_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_array$_t_struct$_FulfillmentComponent_$10974_storage_$dyn_storage_$dyn_storage_ptr",
                       "typeString": "struct FulfillmentComponent[][]"
                     }
                   },
@@ -2826,13 +2826,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2259,
+                  "id": 10505,
                   "mutability": "mutable",
                   "name": "fulfillerConduitKey",
-                  "nameLocation": "9365:19:19",
+                  "nameLocation": "9366:19:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2271,
-                  "src": "9357:27:19",
+                  "scope": 10517,
+                  "src": "9358:27:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2840,10 +2840,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2258,
+                    "id": 10504,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "9357:7:19",
+                    "src": "9358:7:58",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -2853,13 +2853,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2261,
+                  "id": 10507,
                   "mutability": "mutable",
                   "name": "maximumFulfilled",
-                  "nameLocation": "9402:16:19",
+                  "nameLocation": "9403:16:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2271,
-                  "src": "9394:24:19",
+                  "scope": 10517,
+                  "src": "9395:24:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2867,10 +2867,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2260,
+                    "id": 10506,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "9394:7:19",
+                    "src": "9395:7:58",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2879,21 +2879,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "9184:240:19"
+              "src": "9185:240:58"
             },
             "returnParameters": {
-              "id": 2270,
+              "id": 10516,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2265,
+                  "id": 10511,
                   "mutability": "mutable",
                   "name": "availableOrders",
-                  "nameLocation": "9489:15:19",
+                  "nameLocation": "9490:15:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2271,
-                  "src": "9475:29:19",
+                  "scope": 10517,
+                  "src": "9476:29:58",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -2902,18 +2902,18 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 2263,
+                      "id": 10509,
                       "name": "bool",
                       "nodeType": "ElementaryTypeName",
-                      "src": "9475:4:19",
+                      "src": "9476:4:58",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
                       }
                     },
-                    "id": 2264,
+                    "id": 10510,
                     "nodeType": "ArrayTypeName",
-                    "src": "9475:6:19",
+                    "src": "9476:6:58",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_bool_$dyn_storage_ptr",
                       "typeString": "bool[]"
@@ -2923,63 +2923,63 @@
                 },
                 {
                   "constant": false,
-                  "id": 2269,
+                  "id": 10515,
                   "mutability": "mutable",
                   "name": "executions",
-                  "nameLocation": "9525:10:19",
+                  "nameLocation": "9526:10:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2271,
-                  "src": "9506:29:19",
+                  "scope": 10517,
+                  "src": "9507:29:58",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_Execution_$4888_memory_ptr_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_Execution_$10982_memory_ptr_$dyn_memory_ptr",
                     "typeString": "struct Execution[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 2267,
+                      "id": 10513,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 2266,
+                        "id": 10512,
                         "name": "Execution",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4888,
-                        "src": "9506:9:19"
+                        "referencedDeclaration": 10982,
+                        "src": "9507:9:58"
                       },
-                      "referencedDeclaration": 4888,
-                      "src": "9506:9:19",
+                      "referencedDeclaration": 10982,
+                      "src": "9507:9:58",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Execution_$4888_storage_ptr",
+                        "typeIdentifier": "t_struct$_Execution_$10982_storage_ptr",
                         "typeString": "struct Execution"
                       }
                     },
-                    "id": 2268,
+                    "id": 10514,
                     "nodeType": "ArrayTypeName",
-                    "src": "9506:11:19",
+                    "src": "9507:11:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Execution_$4888_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_Execution_$10982_storage_$dyn_storage_ptr",
                       "typeString": "struct Execution[]"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "9474:62:19"
+              "src": "9475:62:58"
             },
-            "scope": 2416,
+            "scope": 10662,
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 2306,
+            "id": 10552,
             "nodeType": "FunctionDefinition",
-            "src": "14152:490:19",
+            "src": "14153:490:58",
             "documentation": {
-              "id": 2272,
+              "id": 10518,
               "nodeType": "StructuredDocumentation",
-              "src": "9543:4604:19",
+              "src": "9544:4604:58",
               "text": " @notice Attempt to fill a group of orders, fully or partially, with an\n         arbitrary number of items for offer and consideration per order\n         alongside criteria resolvers containing specific token\n         identifiers and associated proofs. Any order that is not\n         currently active, has already been fully filled, or has been\n         cancelled will be omitted. Remaining offer and consideration\n         items will then be aggregated where possible as indicated by the\n         supplied offer and consideration component arrays and aggregated\n         items will be transferred to the fulfiller or to each intended\n         recipient, respectively. Note that a failing item transfer or an\n         issue with order formatting will cause the entire batch to fail.\n @param advancedOrders            The orders to fulfill along with the\n                                  fraction of those orders to attempt to\n                                  fill. Note that both the offerer and the\n                                  fulfiller must first approve this\n                                  contract (or their preferred conduit if\n                                  indicated by the order) to transfer any\n                                  relevant tokens on their behalf and that\n                                  contracts must implement\n                                  `onERC1155Received` to enable receipt of\n                                  ERC1155 tokens as consideration. Also\n                                  note that all offer and consideration\n                                  components must have no remainder after\n                                  multiplication of the respective amount\n                                  with the supplied fraction for an\n                                  order's partial fill amount to be\n                                  considered valid.\n @param criteriaResolvers         An array where each element contains a\n                                  reference to a specific offer or\n                                  consideration, a token identifier, and a\n                                  proof that the supplied token identifier\n                                  is contained in the merkle root held by\n                                  the item in question's criteria element.\n                                  Note that an empty criteria indicates\n                                  that any (transferable) token\n                                  identifier on the token in question is\n                                  valid and that no associated proof needs\n                                  to be supplied.\n @param offerFulfillments         An array of FulfillmentComponent arrays\n                                  indicating which offer items to attempt\n                                  to aggregate when preparing executions.\n @param considerationFulfillments An array of FulfillmentComponent arrays\n                                  indicating which consideration items to\n                                  attempt to aggregate when preparing\n                                  executions.\n @param fulfillerConduitKey       A bytes32 value indicating what conduit,\n                                  if any, to source the fulfiller's token\n                                  approvals from. The zero hash signifies\n                                  that no conduit should be used, with\n                                  direct approvals set on this contract.\n @param recipient                 The intended recipient for all received\n                                  items, with `address(0)` indicating that\n                                  the caller should receive the items.\n @param maximumFulfilled          The maximum number of orders to fulfill.\n @return availableOrders An array of booleans indicating if each order\n                         with an index corresponding to the index of the\n                         returned boolean was fulfillable or not.\n @return executions      An array of elements indicating the sequence of\n                         transfers performed as part of matching the given\n                         orders."
             },
             "functionSelector": "87201b41",
@@ -2987,49 +2987,49 @@
             "kind": "function",
             "modifiers": [],
             "name": "fulfillAvailableAdvancedOrders",
-            "nameLocation": "14161:30:19",
+            "nameLocation": "14162:30:58",
             "parameters": {
-              "id": 2297,
+              "id": 10543,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2276,
+                  "id": 10522,
                   "mutability": "mutable",
                   "name": "advancedOrders",
-                  "nameLocation": "14226:14:19",
+                  "nameLocation": "14227:14:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2306,
-                  "src": "14201:39:19",
+                  "scope": 10552,
+                  "src": "14202:39:58",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_AdvancedOrder_$4844_calldata_ptr_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_AdvancedOrder_$10938_calldata_ptr_$dyn_calldata_ptr",
                     "typeString": "struct AdvancedOrder[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 2274,
+                      "id": 10520,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 2273,
+                        "id": 10519,
                         "name": "AdvancedOrder",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4844,
-                        "src": "14201:13:19"
+                        "referencedDeclaration": 10938,
+                        "src": "14202:13:58"
                       },
-                      "referencedDeclaration": 4844,
-                      "src": "14201:13:19",
+                      "referencedDeclaration": 10938,
+                      "src": "14202:13:58",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_AdvancedOrder_$4844_storage_ptr",
+                        "typeIdentifier": "t_struct$_AdvancedOrder_$10938_storage_ptr",
                         "typeString": "struct AdvancedOrder"
                       }
                     },
-                    "id": 2275,
+                    "id": 10521,
                     "nodeType": "ArrayTypeName",
-                    "src": "14201:15:19",
+                    "src": "14202:15:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_AdvancedOrder_$4844_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_AdvancedOrder_$10938_storage_$dyn_storage_ptr",
                       "typeString": "struct AdvancedOrder[]"
                     }
                   },
@@ -3037,42 +3037,42 @@
                 },
                 {
                   "constant": false,
-                  "id": 2280,
+                  "id": 10526,
                   "mutability": "mutable",
                   "name": "criteriaResolvers",
-                  "nameLocation": "14278:17:19",
+                  "nameLocation": "14279:17:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2306,
-                  "src": "14250:45:19",
+                  "scope": 10552,
+                  "src": "14251:45:58",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_CriteriaResolver_$4866_calldata_ptr_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_CriteriaResolver_$10960_calldata_ptr_$dyn_calldata_ptr",
                     "typeString": "struct CriteriaResolver[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 2278,
+                      "id": 10524,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 2277,
+                        "id": 10523,
                         "name": "CriteriaResolver",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4866,
-                        "src": "14250:16:19"
+                        "referencedDeclaration": 10960,
+                        "src": "14251:16:58"
                       },
-                      "referencedDeclaration": 4866,
-                      "src": "14250:16:19",
+                      "referencedDeclaration": 10960,
+                      "src": "14251:16:58",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_CriteriaResolver_$4866_storage_ptr",
+                        "typeIdentifier": "t_struct$_CriteriaResolver_$10960_storage_ptr",
                         "typeString": "struct CriteriaResolver"
                       }
                     },
-                    "id": 2279,
+                    "id": 10525,
                     "nodeType": "ArrayTypeName",
-                    "src": "14250:18:19",
+                    "src": "14251:18:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_CriteriaResolver_$4866_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_CriteriaResolver_$10960_storage_$dyn_storage_ptr",
                       "typeString": "struct CriteriaResolver[]"
                     }
                   },
@@ -3080,51 +3080,51 @@
                 },
                 {
                   "constant": false,
-                  "id": 2285,
+                  "id": 10531,
                   "mutability": "mutable",
                   "name": "offerFulfillments",
-                  "nameLocation": "14339:17:19",
+                  "nameLocation": "14340:17:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2306,
-                  "src": "14305:51:19",
+                  "scope": 10552,
+                  "src": "14306:51:58",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_array$_t_struct$_FulfillmentComponent_$4880_calldata_ptr_$dyn_calldata_ptr_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_array$_t_struct$_FulfillmentComponent_$10974_calldata_ptr_$dyn_calldata_ptr_$dyn_calldata_ptr",
                     "typeString": "struct FulfillmentComponent[][]"
                   },
                   "typeName": {
                     "baseType": {
                       "baseType": {
-                        "id": 2282,
+                        "id": 10528,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 2281,
+                          "id": 10527,
                           "name": "FulfillmentComponent",
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 4880,
-                          "src": "14305:20:19"
+                          "referencedDeclaration": 10974,
+                          "src": "14306:20:58"
                         },
-                        "referencedDeclaration": 4880,
-                        "src": "14305:20:19",
+                        "referencedDeclaration": 10974,
+                        "src": "14306:20:58",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_FulfillmentComponent_$4880_storage_ptr",
+                          "typeIdentifier": "t_struct$_FulfillmentComponent_$10974_storage_ptr",
                           "typeString": "struct FulfillmentComponent"
                         }
                       },
-                      "id": 2283,
+                      "id": 10529,
                       "nodeType": "ArrayTypeName",
-                      "src": "14305:22:19",
+                      "src": "14306:22:58",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_FulfillmentComponent_$4880_storage_$dyn_storage_ptr",
+                        "typeIdentifier": "t_array$_t_struct$_FulfillmentComponent_$10974_storage_$dyn_storage_ptr",
                         "typeString": "struct FulfillmentComponent[]"
                       }
                     },
-                    "id": 2284,
+                    "id": 10530,
                     "nodeType": "ArrayTypeName",
-                    "src": "14305:24:19",
+                    "src": "14306:24:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_array$_t_struct$_FulfillmentComponent_$4880_storage_$dyn_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_array$_t_struct$_FulfillmentComponent_$10974_storage_$dyn_storage_$dyn_storage_ptr",
                       "typeString": "struct FulfillmentComponent[][]"
                     }
                   },
@@ -3132,51 +3132,51 @@
                 },
                 {
                   "constant": false,
-                  "id": 2290,
+                  "id": 10536,
                   "mutability": "mutable",
                   "name": "considerationFulfillments",
-                  "nameLocation": "14400:25:19",
+                  "nameLocation": "14401:25:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2306,
-                  "src": "14366:59:19",
+                  "scope": 10552,
+                  "src": "14367:59:58",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_array$_t_struct$_FulfillmentComponent_$4880_calldata_ptr_$dyn_calldata_ptr_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_array$_t_struct$_FulfillmentComponent_$10974_calldata_ptr_$dyn_calldata_ptr_$dyn_calldata_ptr",
                     "typeString": "struct FulfillmentComponent[][]"
                   },
                   "typeName": {
                     "baseType": {
                       "baseType": {
-                        "id": 2287,
+                        "id": 10533,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 2286,
+                          "id": 10532,
                           "name": "FulfillmentComponent",
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 4880,
-                          "src": "14366:20:19"
+                          "referencedDeclaration": 10974,
+                          "src": "14367:20:58"
                         },
-                        "referencedDeclaration": 4880,
-                        "src": "14366:20:19",
+                        "referencedDeclaration": 10974,
+                        "src": "14367:20:58",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_FulfillmentComponent_$4880_storage_ptr",
+                          "typeIdentifier": "t_struct$_FulfillmentComponent_$10974_storage_ptr",
                           "typeString": "struct FulfillmentComponent"
                         }
                       },
-                      "id": 2288,
+                      "id": 10534,
                       "nodeType": "ArrayTypeName",
-                      "src": "14366:22:19",
+                      "src": "14367:22:58",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_FulfillmentComponent_$4880_storage_$dyn_storage_ptr",
+                        "typeIdentifier": "t_array$_t_struct$_FulfillmentComponent_$10974_storage_$dyn_storage_ptr",
                         "typeString": "struct FulfillmentComponent[]"
                       }
                     },
-                    "id": 2289,
+                    "id": 10535,
                     "nodeType": "ArrayTypeName",
-                    "src": "14366:24:19",
+                    "src": "14367:24:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_array$_t_struct$_FulfillmentComponent_$4880_storage_$dyn_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_array$_t_struct$_FulfillmentComponent_$10974_storage_$dyn_storage_$dyn_storage_ptr",
                       "typeString": "struct FulfillmentComponent[][]"
                     }
                   },
@@ -3184,13 +3184,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2292,
+                  "id": 10538,
                   "mutability": "mutable",
                   "name": "fulfillerConduitKey",
-                  "nameLocation": "14443:19:19",
+                  "nameLocation": "14444:19:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2306,
-                  "src": "14435:27:19",
+                  "scope": 10552,
+                  "src": "14436:27:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3198,10 +3198,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2291,
+                    "id": 10537,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "14435:7:19",
+                    "src": "14436:7:58",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -3211,13 +3211,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2294,
+                  "id": 10540,
                   "mutability": "mutable",
                   "name": "recipient",
-                  "nameLocation": "14480:9:19",
+                  "nameLocation": "14481:9:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2306,
-                  "src": "14472:17:19",
+                  "scope": 10552,
+                  "src": "14473:17:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3225,10 +3225,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2293,
+                    "id": 10539,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "14472:7:19",
+                    "src": "14473:7:58",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -3239,13 +3239,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2296,
+                  "id": 10542,
                   "mutability": "mutable",
                   "name": "maximumFulfilled",
-                  "nameLocation": "14507:16:19",
+                  "nameLocation": "14508:16:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2306,
-                  "src": "14499:24:19",
+                  "scope": 10552,
+                  "src": "14500:24:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3253,10 +3253,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2295,
+                    "id": 10541,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "14499:7:19",
+                    "src": "14500:7:58",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -3265,21 +3265,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "14191:338:19"
+              "src": "14192:338:58"
             },
             "returnParameters": {
-              "id": 2305,
+              "id": 10551,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2300,
+                  "id": 10546,
                   "mutability": "mutable",
                   "name": "availableOrders",
-                  "nameLocation": "14594:15:19",
+                  "nameLocation": "14595:15:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2306,
-                  "src": "14580:29:19",
+                  "scope": 10552,
+                  "src": "14581:29:58",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -3288,18 +3288,18 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 2298,
+                      "id": 10544,
                       "name": "bool",
                       "nodeType": "ElementaryTypeName",
-                      "src": "14580:4:19",
+                      "src": "14581:4:58",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
                       }
                     },
-                    "id": 2299,
+                    "id": 10545,
                     "nodeType": "ArrayTypeName",
-                    "src": "14580:6:19",
+                    "src": "14581:6:58",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_bool_$dyn_storage_ptr",
                       "typeString": "bool[]"
@@ -3309,63 +3309,63 @@
                 },
                 {
                   "constant": false,
-                  "id": 2304,
+                  "id": 10550,
                   "mutability": "mutable",
                   "name": "executions",
-                  "nameLocation": "14630:10:19",
+                  "nameLocation": "14631:10:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2306,
-                  "src": "14611:29:19",
+                  "scope": 10552,
+                  "src": "14612:29:58",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_Execution_$4888_memory_ptr_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_Execution_$10982_memory_ptr_$dyn_memory_ptr",
                     "typeString": "struct Execution[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 2302,
+                      "id": 10548,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 2301,
+                        "id": 10547,
                         "name": "Execution",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4888,
-                        "src": "14611:9:19"
+                        "referencedDeclaration": 10982,
+                        "src": "14612:9:58"
                       },
-                      "referencedDeclaration": 4888,
-                      "src": "14611:9:19",
+                      "referencedDeclaration": 10982,
+                      "src": "14612:9:58",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Execution_$4888_storage_ptr",
+                        "typeIdentifier": "t_struct$_Execution_$10982_storage_ptr",
                         "typeString": "struct Execution"
                       }
                     },
-                    "id": 2303,
+                    "id": 10549,
                     "nodeType": "ArrayTypeName",
-                    "src": "14611:11:19",
+                    "src": "14612:11:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Execution_$4888_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_Execution_$10982_storage_$dyn_storage_ptr",
                       "typeString": "struct Execution[]"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "14579:62:19"
+              "src": "14580:62:58"
             },
-            "scope": 2416,
+            "scope": 10662,
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 2322,
+            "id": 10568,
             "nodeType": "FunctionDefinition",
-            "src": "16050:162:19",
+            "src": "16051:162:58",
             "documentation": {
-              "id": 2307,
+              "id": 10553,
               "nodeType": "StructuredDocumentation",
-              "src": "14648:1397:19",
+              "src": "14649:1397:58",
               "text": " @notice Match an arbitrary number of orders, each with an arbitrary\n         number of items for offer and consideration along with as set of\n         fulfillments allocating offer components to consideration\n         components. Note that this function does not support\n         criteria-based or partial filling of orders (though filling the\n         remainder of a partially-filled order is supported).\n @param orders       The orders to match. Note that both the offerer and\n                     fulfiller on each order must first approve this\n                     contract (or their conduit if indicated by the order)\n                     to transfer any relevant tokens on their behalf and\n                     each consideration recipient must implement\n                     `onERC1155Received` to enable ERC1155 token receipt.\n @param fulfillments An array of elements allocating offer components to\n                     consideration components. Note that each\n                     consideration component must be fully met for the\n                     match operation to be valid.\n @return executions An array of elements indicating the sequence of\n                    transfers performed as part of matching the given\n                    orders."
             },
             "functionSelector": "a8174404",
@@ -3373,49 +3373,49 @@
             "kind": "function",
             "modifiers": [],
             "name": "matchOrders",
-            "nameLocation": "16059:11:19",
+            "nameLocation": "16060:11:58",
             "parameters": {
-              "id": 2316,
+              "id": 10562,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2311,
+                  "id": 10557,
                   "mutability": "mutable",
                   "name": "orders",
-                  "nameLocation": "16097:6:19",
+                  "nameLocation": "16098:6:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2322,
-                  "src": "16080:23:19",
+                  "scope": 10568,
+                  "src": "16081:23:58",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_Order_$4832_calldata_ptr_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_Order_$10926_calldata_ptr_$dyn_calldata_ptr",
                     "typeString": "struct Order[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 2309,
+                      "id": 10555,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 2308,
+                        "id": 10554,
                         "name": "Order",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4832,
-                        "src": "16080:5:19"
+                        "referencedDeclaration": 10926,
+                        "src": "16081:5:58"
                       },
-                      "referencedDeclaration": 4832,
-                      "src": "16080:5:19",
+                      "referencedDeclaration": 10926,
+                      "src": "16081:5:58",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Order_$4832_storage_ptr",
+                        "typeIdentifier": "t_struct$_Order_$10926_storage_ptr",
                         "typeString": "struct Order"
                       }
                     },
-                    "id": 2310,
+                    "id": 10556,
                     "nodeType": "ArrayTypeName",
-                    "src": "16080:7:19",
+                    "src": "16081:7:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Order_$4832_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_Order_$10926_storage_$dyn_storage_ptr",
                       "typeString": "struct Order[]"
                     }
                   },
@@ -3423,113 +3423,113 @@
                 },
                 {
                   "constant": false,
-                  "id": 2315,
+                  "id": 10561,
                   "mutability": "mutable",
                   "name": "fulfillments",
-                  "nameLocation": "16136:12:19",
+                  "nameLocation": "16137:12:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2322,
-                  "src": "16113:35:19",
+                  "scope": 10568,
+                  "src": "16114:35:58",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_Fulfillment_$4875_calldata_ptr_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_Fulfillment_$10969_calldata_ptr_$dyn_calldata_ptr",
                     "typeString": "struct Fulfillment[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 2313,
+                      "id": 10559,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 2312,
+                        "id": 10558,
                         "name": "Fulfillment",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4875,
-                        "src": "16113:11:19"
+                        "referencedDeclaration": 10969,
+                        "src": "16114:11:58"
                       },
-                      "referencedDeclaration": 4875,
-                      "src": "16113:11:19",
+                      "referencedDeclaration": 10969,
+                      "src": "16114:11:58",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Fulfillment_$4875_storage_ptr",
+                        "typeIdentifier": "t_struct$_Fulfillment_$10969_storage_ptr",
                         "typeString": "struct Fulfillment"
                       }
                     },
-                    "id": 2314,
+                    "id": 10560,
                     "nodeType": "ArrayTypeName",
-                    "src": "16113:13:19",
+                    "src": "16114:13:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Fulfillment_$4875_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_Fulfillment_$10969_storage_$dyn_storage_ptr",
                       "typeString": "struct Fulfillment[]"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "16070:84:19"
+              "src": "16071:84:58"
             },
             "returnParameters": {
-              "id": 2321,
+              "id": 10567,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2320,
+                  "id": 10566,
                   "mutability": "mutable",
                   "name": "executions",
-                  "nameLocation": "16200:10:19",
+                  "nameLocation": "16201:10:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2322,
-                  "src": "16181:29:19",
+                  "scope": 10568,
+                  "src": "16182:29:58",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_Execution_$4888_memory_ptr_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_Execution_$10982_memory_ptr_$dyn_memory_ptr",
                     "typeString": "struct Execution[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 2318,
+                      "id": 10564,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 2317,
+                        "id": 10563,
                         "name": "Execution",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4888,
-                        "src": "16181:9:19"
+                        "referencedDeclaration": 10982,
+                        "src": "16182:9:58"
                       },
-                      "referencedDeclaration": 4888,
-                      "src": "16181:9:19",
+                      "referencedDeclaration": 10982,
+                      "src": "16182:9:58",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Execution_$4888_storage_ptr",
+                        "typeIdentifier": "t_struct$_Execution_$10982_storage_ptr",
                         "typeString": "struct Execution"
                       }
                     },
-                    "id": 2319,
+                    "id": 10565,
                     "nodeType": "ArrayTypeName",
-                    "src": "16181:11:19",
+                    "src": "16182:11:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Execution_$4888_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_Execution_$10982_storage_$dyn_storage_ptr",
                       "typeString": "struct Execution[]"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "16180:31:19"
+              "src": "16181:31:58"
             },
-            "scope": 2416,
+            "scope": 10662,
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 2342,
+            "id": 10588,
             "nodeType": "FunctionDefinition",
-            "src": "18651:233:19",
+            "src": "18652:233:58",
             "documentation": {
-              "id": 2323,
+              "id": 10569,
               "nodeType": "StructuredDocumentation",
-              "src": "16218:2428:19",
+              "src": "16219:2428:58",
               "text": " @notice Match an arbitrary number of full or partial orders, each with an\n         arbitrary number of items for offer and consideration, supplying\n         criteria resolvers containing specific token identifiers and\n         associated proofs as well as fulfillments allocating offer\n         components to consideration components.\n @param orders            The advanced orders to match. Note that both the\n                          offerer and fulfiller on each order must first\n                          approve this contract (or a preferred conduit if\n                          indicated by the order) to transfer any relevant\n                          tokens on their behalf and each consideration\n                          recipient must implement `onERC1155Received` in\n                          order to receive ERC1155 tokens. Also note that\n                          the offer and consideration components for each\n                          order must have no remainder after multiplying\n                          the respective amount with the supplied fraction\n                          in order for the group of partial fills to be\n                          considered valid.\n @param criteriaResolvers An array where each element contains a reference\n                          to a specific order as well as that order's\n                          offer or consideration, a token identifier, and\n                          a proof that the supplied token identifier is\n                          contained in the order's merkle root. Note that\n                          an empty root indicates that any (transferable)\n                          token identifier is valid and that no associated\n                          proof needs to be supplied.\n @param fulfillments      An array of elements allocating offer components\n                          to consideration components. Note that each\n                          consideration component must be fully met in\n                          order for the match operation to be valid.\n @return executions An array of elements indicating the sequence of\n                    transfers performed as part of matching the given\n                    orders."
             },
             "functionSelector": "55944a42",
@@ -3537,49 +3537,49 @@
             "kind": "function",
             "modifiers": [],
             "name": "matchAdvancedOrders",
-            "nameLocation": "18660:19:19",
+            "nameLocation": "18661:19:58",
             "parameters": {
-              "id": 2336,
+              "id": 10582,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2327,
+                  "id": 10573,
                   "mutability": "mutable",
                   "name": "orders",
-                  "nameLocation": "18714:6:19",
+                  "nameLocation": "18715:6:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2342,
-                  "src": "18689:31:19",
+                  "scope": 10588,
+                  "src": "18690:31:58",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_AdvancedOrder_$4844_calldata_ptr_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_AdvancedOrder_$10938_calldata_ptr_$dyn_calldata_ptr",
                     "typeString": "struct AdvancedOrder[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 2325,
+                      "id": 10571,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 2324,
+                        "id": 10570,
                         "name": "AdvancedOrder",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4844,
-                        "src": "18689:13:19"
+                        "referencedDeclaration": 10938,
+                        "src": "18690:13:58"
                       },
-                      "referencedDeclaration": 4844,
-                      "src": "18689:13:19",
+                      "referencedDeclaration": 10938,
+                      "src": "18690:13:58",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_AdvancedOrder_$4844_storage_ptr",
+                        "typeIdentifier": "t_struct$_AdvancedOrder_$10938_storage_ptr",
                         "typeString": "struct AdvancedOrder"
                       }
                     },
-                    "id": 2326,
+                    "id": 10572,
                     "nodeType": "ArrayTypeName",
-                    "src": "18689:15:19",
+                    "src": "18690:15:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_AdvancedOrder_$4844_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_AdvancedOrder_$10938_storage_$dyn_storage_ptr",
                       "typeString": "struct AdvancedOrder[]"
                     }
                   },
@@ -3587,42 +3587,42 @@
                 },
                 {
                   "constant": false,
-                  "id": 2331,
+                  "id": 10577,
                   "mutability": "mutable",
                   "name": "criteriaResolvers",
-                  "nameLocation": "18758:17:19",
+                  "nameLocation": "18759:17:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2342,
-                  "src": "18730:45:19",
+                  "scope": 10588,
+                  "src": "18731:45:58",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_CriteriaResolver_$4866_calldata_ptr_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_CriteriaResolver_$10960_calldata_ptr_$dyn_calldata_ptr",
                     "typeString": "struct CriteriaResolver[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 2329,
+                      "id": 10575,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 2328,
+                        "id": 10574,
                         "name": "CriteriaResolver",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4866,
-                        "src": "18730:16:19"
+                        "referencedDeclaration": 10960,
+                        "src": "18731:16:58"
                       },
-                      "referencedDeclaration": 4866,
-                      "src": "18730:16:19",
+                      "referencedDeclaration": 10960,
+                      "src": "18731:16:58",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_CriteriaResolver_$4866_storage_ptr",
+                        "typeIdentifier": "t_struct$_CriteriaResolver_$10960_storage_ptr",
                         "typeString": "struct CriteriaResolver"
                       }
                     },
-                    "id": 2330,
+                    "id": 10576,
                     "nodeType": "ArrayTypeName",
-                    "src": "18730:18:19",
+                    "src": "18731:18:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_CriteriaResolver_$4866_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_CriteriaResolver_$10960_storage_$dyn_storage_ptr",
                       "typeString": "struct CriteriaResolver[]"
                     }
                   },
@@ -3630,113 +3630,113 @@
                 },
                 {
                   "constant": false,
-                  "id": 2335,
+                  "id": 10581,
                   "mutability": "mutable",
                   "name": "fulfillments",
-                  "nameLocation": "18808:12:19",
+                  "nameLocation": "18809:12:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2342,
-                  "src": "18785:35:19",
+                  "scope": 10588,
+                  "src": "18786:35:58",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_Fulfillment_$4875_calldata_ptr_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_Fulfillment_$10969_calldata_ptr_$dyn_calldata_ptr",
                     "typeString": "struct Fulfillment[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 2333,
+                      "id": 10579,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 2332,
+                        "id": 10578,
                         "name": "Fulfillment",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4875,
-                        "src": "18785:11:19"
+                        "referencedDeclaration": 10969,
+                        "src": "18786:11:58"
                       },
-                      "referencedDeclaration": 4875,
-                      "src": "18785:11:19",
+                      "referencedDeclaration": 10969,
+                      "src": "18786:11:58",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Fulfillment_$4875_storage_ptr",
+                        "typeIdentifier": "t_struct$_Fulfillment_$10969_storage_ptr",
                         "typeString": "struct Fulfillment"
                       }
                     },
-                    "id": 2334,
+                    "id": 10580,
                     "nodeType": "ArrayTypeName",
-                    "src": "18785:13:19",
+                    "src": "18786:13:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Fulfillment_$4875_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_Fulfillment_$10969_storage_$dyn_storage_ptr",
                       "typeString": "struct Fulfillment[]"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "18679:147:19"
+              "src": "18680:147:58"
             },
             "returnParameters": {
-              "id": 2341,
+              "id": 10587,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2340,
+                  "id": 10586,
                   "mutability": "mutable",
                   "name": "executions",
-                  "nameLocation": "18872:10:19",
+                  "nameLocation": "18873:10:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2342,
-                  "src": "18853:29:19",
+                  "scope": 10588,
+                  "src": "18854:29:58",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_Execution_$4888_memory_ptr_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_Execution_$10982_memory_ptr_$dyn_memory_ptr",
                     "typeString": "struct Execution[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 2338,
+                      "id": 10584,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 2337,
+                        "id": 10583,
                         "name": "Execution",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4888,
-                        "src": "18853:9:19"
+                        "referencedDeclaration": 10982,
+                        "src": "18854:9:58"
                       },
-                      "referencedDeclaration": 4888,
-                      "src": "18853:9:19",
+                      "referencedDeclaration": 10982,
+                      "src": "18854:9:58",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Execution_$4888_storage_ptr",
+                        "typeIdentifier": "t_struct$_Execution_$10982_storage_ptr",
                         "typeString": "struct Execution"
                       }
                     },
-                    "id": 2339,
+                    "id": 10585,
                     "nodeType": "ArrayTypeName",
-                    "src": "18853:11:19",
+                    "src": "18854:11:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Execution_$4888_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_Execution_$10982_storage_$dyn_storage_ptr",
                       "typeString": "struct Execution[]"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "18852:31:19"
+              "src": "18853:31:58"
             },
-            "scope": 2416,
+            "scope": 10662,
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 2352,
+            "id": 10598,
             "nodeType": "FunctionDefinition",
-            "src": "19403:101:19",
+            "src": "19404:101:58",
             "documentation": {
-              "id": 2343,
+              "id": 10589,
               "nodeType": "StructuredDocumentation",
-              "src": "18890:508:19",
+              "src": "18891:508:58",
               "text": " @notice Cancel an arbitrary number of orders. Note that only the offerer\n         or the zone of a given order may cancel it. Callers should ensure\n         that the intended order was cancelled by calling `getOrderStatus`\n         and confirming that `isCancelled` returns `true`.\n @param orders The orders to cancel.\n @return cancelled A boolean indicating whether the supplied orders have\n                   been successfully cancelled."
             },
             "functionSelector": "fd9f1e10",
@@ -3744,70 +3744,70 @@
             "kind": "function",
             "modifiers": [],
             "name": "cancel",
-            "nameLocation": "19412:6:19",
+            "nameLocation": "19413:6:58",
             "parameters": {
-              "id": 2348,
+              "id": 10594,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2347,
+                  "id": 10593,
                   "mutability": "mutable",
                   "name": "orders",
-                  "nameLocation": "19446:6:19",
+                  "nameLocation": "19447:6:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2352,
-                  "src": "19419:33:19",
+                  "scope": 10598,
+                  "src": "19420:33:58",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_OrderComponents_$4705_calldata_ptr_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_OrderComponents_$10799_calldata_ptr_$dyn_calldata_ptr",
                     "typeString": "struct OrderComponents[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 2345,
+                      "id": 10591,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 2344,
+                        "id": 10590,
                         "name": "OrderComponents",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4705,
-                        "src": "19419:15:19"
+                        "referencedDeclaration": 10799,
+                        "src": "19420:15:58"
                       },
-                      "referencedDeclaration": 4705,
-                      "src": "19419:15:19",
+                      "referencedDeclaration": 10799,
+                      "src": "19420:15:58",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_OrderComponents_$4705_storage_ptr",
+                        "typeIdentifier": "t_struct$_OrderComponents_$10799_storage_ptr",
                         "typeString": "struct OrderComponents"
                       }
                     },
-                    "id": 2346,
+                    "id": 10592,
                     "nodeType": "ArrayTypeName",
-                    "src": "19419:17:19",
+                    "src": "19420:17:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_OrderComponents_$4705_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_OrderComponents_$10799_storage_$dyn_storage_ptr",
                       "typeString": "struct OrderComponents[]"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "19418:35:19"
+              "src": "19419:35:58"
             },
             "returnParameters": {
-              "id": 2351,
+              "id": 10597,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2350,
+                  "id": 10596,
                   "mutability": "mutable",
                   "name": "cancelled",
-                  "nameLocation": "19493:9:19",
+                  "nameLocation": "19494:9:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2352,
-                  "src": "19488:14:19",
+                  "scope": 10598,
+                  "src": "19489:14:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3815,10 +3815,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2349,
+                    "id": 10595,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "19488:4:19",
+                    "src": "19489:4:58",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -3827,21 +3827,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "19487:16:19"
+              "src": "19488:16:58"
             },
-            "scope": 2416,
+            "scope": 10662,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 2362,
+            "id": 10608,
             "nodeType": "FunctionDefinition",
-            "src": "20344:93:19",
+            "src": "20345:93:58",
             "documentation": {
-              "id": 2353,
+              "id": 10599,
               "nodeType": "StructuredDocumentation",
-              "src": "19510:829:19",
+              "src": "19511:829:58",
               "text": " @notice Validate an arbitrary number of orders, thereby registering their\n         signatures as valid and allowing the fulfiller to skip signature\n         verification on fulfillment. Note that validated orders may still\n         be unfulfillable due to invalid item amounts or other factors;\n         callers should determine whether validated orders are fulfillable\n         by simulating the fulfillment call prior to execution. Also note\n         that anyone can validate a signed order, but only the offerer can\n         validate an order without supplying a signature.\n @param orders The orders to validate.\n @return validated A boolean indicating whether the supplied orders have\n                   been successfully validated."
             },
             "functionSelector": "88147732",
@@ -3849,70 +3849,70 @@
             "kind": "function",
             "modifiers": [],
             "name": "validate",
-            "nameLocation": "20353:8:19",
+            "nameLocation": "20354:8:58",
             "parameters": {
-              "id": 2358,
+              "id": 10604,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2357,
+                  "id": 10603,
                   "mutability": "mutable",
                   "name": "orders",
-                  "nameLocation": "20379:6:19",
+                  "nameLocation": "20380:6:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2362,
-                  "src": "20362:23:19",
+                  "scope": 10608,
+                  "src": "20363:23:58",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_Order_$4832_calldata_ptr_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_Order_$10926_calldata_ptr_$dyn_calldata_ptr",
                     "typeString": "struct Order[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 2355,
+                      "id": 10601,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 2354,
+                        "id": 10600,
                         "name": "Order",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4832,
-                        "src": "20362:5:19"
+                        "referencedDeclaration": 10926,
+                        "src": "20363:5:58"
                       },
-                      "referencedDeclaration": 4832,
-                      "src": "20362:5:19",
+                      "referencedDeclaration": 10926,
+                      "src": "20363:5:58",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Order_$4832_storage_ptr",
+                        "typeIdentifier": "t_struct$_Order_$10926_storage_ptr",
                         "typeString": "struct Order"
                       }
                     },
-                    "id": 2356,
+                    "id": 10602,
                     "nodeType": "ArrayTypeName",
-                    "src": "20362:7:19",
+                    "src": "20363:7:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Order_$4832_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_Order_$10926_storage_$dyn_storage_ptr",
                       "typeString": "struct Order[]"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "20361:25:19"
+              "src": "20362:25:58"
             },
             "returnParameters": {
-              "id": 2361,
+              "id": 10607,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2360,
+                  "id": 10606,
                   "mutability": "mutable",
                   "name": "validated",
-                  "nameLocation": "20426:9:19",
+                  "nameLocation": "20427:9:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2362,
-                  "src": "20421:14:19",
+                  "scope": 10608,
+                  "src": "20422:14:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3920,10 +3920,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2359,
+                    "id": 10605,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "20421:4:19",
+                    "src": "20422:4:58",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -3932,21 +3932,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "20420:16:19"
+              "src": "20421:16:58"
             },
-            "scope": 2416,
+            "scope": 10662,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 2368,
+            "id": 10614,
             "nodeType": "FunctionDefinition",
-            "src": "20700:66:19",
+            "src": "20701:66:58",
             "documentation": {
-              "id": 2363,
+              "id": 10609,
               "nodeType": "StructuredDocumentation",
-              "src": "20443:252:19",
+              "src": "20444:252:58",
               "text": " @notice Cancel all orders from a given offerer with a given zone in bulk\n         by incrementing a counter. Note that only the offerer may\n         increment the counter.\n @return newCounter The new counter."
             },
             "functionSelector": "5b34b966",
@@ -3954,26 +3954,26 @@
             "kind": "function",
             "modifiers": [],
             "name": "incrementCounter",
-            "nameLocation": "20709:16:19",
+            "nameLocation": "20710:16:58",
             "parameters": {
-              "id": 2364,
+              "id": 10610,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "20725:2:19"
+              "src": "20726:2:58"
             },
             "returnParameters": {
-              "id": 2367,
+              "id": 10613,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2366,
+                  "id": 10612,
                   "mutability": "mutable",
                   "name": "newCounter",
-                  "nameLocation": "20754:10:19",
+                  "nameLocation": "20755:10:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2368,
-                  "src": "20746:18:19",
+                  "scope": 10614,
+                  "src": "20747:18:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3981,10 +3981,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2365,
+                    "id": 10611,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "20746:7:19",
+                    "src": "20747:7:58",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -3993,21 +3993,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "20745:20:19"
+              "src": "20746:20:58"
             },
-            "scope": 2416,
+            "scope": 10662,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 2377,
+            "id": 10623,
             "nodeType": "FunctionDefinition",
-            "src": "20950:120:19",
+            "src": "20951:120:58",
             "documentation": {
-              "id": 2369,
+              "id": 10615,
               "nodeType": "StructuredDocumentation",
-              "src": "20772:173:19",
+              "src": "20773:173:58",
               "text": " @notice Retrieve the order hash for a given order.\n @param order The components of the order.\n @return orderHash The order hash."
             },
             "functionSelector": "79df72bd",
@@ -4015,61 +4015,61 @@
             "kind": "function",
             "modifiers": [],
             "name": "getOrderHash",
-            "nameLocation": "20959:12:19",
+            "nameLocation": "20960:12:58",
             "parameters": {
-              "id": 2373,
+              "id": 10619,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2372,
+                  "id": 10618,
                   "mutability": "mutable",
                   "name": "order",
-                  "nameLocation": "20997:5:19",
+                  "nameLocation": "20998:5:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2377,
-                  "src": "20972:30:19",
+                  "scope": 10623,
+                  "src": "20973:30:58",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_OrderComponents_$4705_calldata_ptr",
+                    "typeIdentifier": "t_struct$_OrderComponents_$10799_calldata_ptr",
                     "typeString": "struct OrderComponents"
                   },
                   "typeName": {
-                    "id": 2371,
+                    "id": 10617,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 2370,
+                      "id": 10616,
                       "name": "OrderComponents",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 4705,
-                      "src": "20972:15:19"
+                      "referencedDeclaration": 10799,
+                      "src": "20973:15:58"
                     },
-                    "referencedDeclaration": 4705,
-                    "src": "20972:15:19",
+                    "referencedDeclaration": 10799,
+                    "src": "20973:15:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_OrderComponents_$4705_storage_ptr",
+                      "typeIdentifier": "t_struct$_OrderComponents_$10799_storage_ptr",
                       "typeString": "struct OrderComponents"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "20971:32:19"
+              "src": "20972:32:58"
             },
             "returnParameters": {
-              "id": 2376,
+              "id": 10622,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2375,
+                  "id": 10621,
                   "mutability": "mutable",
                   "name": "orderHash",
-                  "nameLocation": "21059:9:19",
+                  "nameLocation": "21060:9:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2377,
-                  "src": "21051:17:19",
+                  "scope": 10623,
+                  "src": "21052:17:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4077,10 +4077,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2374,
+                    "id": 10620,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "21051:7:19",
+                    "src": "21052:7:58",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -4089,21 +4089,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "21050:19:19"
+              "src": "21051:19:58"
             },
-            "scope": 2416,
+            "scope": 10662,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 2391,
+            "id": 10637,
             "nodeType": "FunctionDefinition",
-            "src": "21957:224:19",
+            "src": "21958:224:58",
             "documentation": {
-              "id": 2378,
+              "id": 10624,
               "nodeType": "StructuredDocumentation",
-              "src": "21076:876:19",
+              "src": "21077:876:58",
               "text": " @notice Retrieve the status of a given order by hash, including whether\n         the order has been cancelled or validated and the fraction of the\n         order that has been filled.\n @param orderHash The order hash in question.\n @return isValidated A boolean indicating whether the order in question\n                     has been validated (i.e. previously approved or\n                     partially filled).\n @return isCancelled A boolean indicating whether the order in question\n                     has been cancelled.\n @return totalFilled The total portion of the order that has been filled\n                     (i.e. the \"numerator\").\n @return totalSize   The total size of the order that is either filled or\n                     unfilled (i.e. the \"denominator\")."
             },
             "functionSelector": "46423aa7",
@@ -4111,20 +4111,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "getOrderStatus",
-            "nameLocation": "21966:14:19",
+            "nameLocation": "21967:14:58",
             "parameters": {
-              "id": 2381,
+              "id": 10627,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2380,
+                  "id": 10626,
                   "mutability": "mutable",
                   "name": "orderHash",
-                  "nameLocation": "21989:9:19",
+                  "nameLocation": "21990:9:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2391,
-                  "src": "21981:17:19",
+                  "scope": 10637,
+                  "src": "21982:17:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4132,10 +4132,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2379,
+                    "id": 10625,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "21981:7:19",
+                    "src": "21982:7:58",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -4144,21 +4144,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "21980:19:19"
+              "src": "21981:19:58"
             },
             "returnParameters": {
-              "id": 2390,
+              "id": 10636,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2383,
+                  "id": 10629,
                   "mutability": "mutable",
                   "name": "isValidated",
-                  "nameLocation": "22065:11:19",
+                  "nameLocation": "22066:11:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2391,
-                  "src": "22060:16:19",
+                  "scope": 10637,
+                  "src": "22061:16:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4166,10 +4166,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2382,
+                    "id": 10628,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "22060:4:19",
+                    "src": "22061:4:58",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -4179,13 +4179,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2385,
+                  "id": 10631,
                   "mutability": "mutable",
                   "name": "isCancelled",
-                  "nameLocation": "22095:11:19",
+                  "nameLocation": "22096:11:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2391,
-                  "src": "22090:16:19",
+                  "scope": 10637,
+                  "src": "22091:16:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4193,10 +4193,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2384,
+                    "id": 10630,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "22090:4:19",
+                    "src": "22091:4:58",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -4206,13 +4206,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2387,
+                  "id": 10633,
                   "mutability": "mutable",
                   "name": "totalFilled",
-                  "nameLocation": "22128:11:19",
+                  "nameLocation": "22129:11:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2391,
-                  "src": "22120:19:19",
+                  "scope": 10637,
+                  "src": "22121:19:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4220,10 +4220,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2386,
+                    "id": 10632,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "22120:7:19",
+                    "src": "22121:7:58",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -4233,13 +4233,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2389,
+                  "id": 10635,
                   "mutability": "mutable",
                   "name": "totalSize",
-                  "nameLocation": "22161:9:19",
+                  "nameLocation": "22162:9:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2391,
-                  "src": "22153:17:19",
+                  "scope": 10637,
+                  "src": "22154:17:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4247,10 +4247,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2388,
+                    "id": 10634,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "22153:7:19",
+                    "src": "22154:7:58",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -4259,21 +4259,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "22046:134:19"
+              "src": "22047:134:58"
             },
-            "scope": 2416,
+            "scope": 10662,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 2399,
+            "id": 10645,
             "nodeType": "FunctionDefinition",
-            "src": "22373:101:19",
+            "src": "22374:101:58",
             "documentation": {
-              "id": 2392,
+              "id": 10638,
               "nodeType": "StructuredDocumentation",
-              "src": "22187:181:19",
+              "src": "22188:181:58",
               "text": " @notice Retrieve the current counter for a given offerer.\n @param offerer The offerer in question.\n @return counter The current counter."
             },
             "functionSelector": "f07ec373",
@@ -4281,20 +4281,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "getCounter",
-            "nameLocation": "22382:10:19",
+            "nameLocation": "22383:10:58",
             "parameters": {
-              "id": 2395,
+              "id": 10641,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2394,
+                  "id": 10640,
                   "mutability": "mutable",
                   "name": "offerer",
-                  "nameLocation": "22401:7:19",
+                  "nameLocation": "22402:7:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2399,
-                  "src": "22393:15:19",
+                  "scope": 10645,
+                  "src": "22394:15:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4302,10 +4302,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2393,
+                    "id": 10639,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "22393:7:19",
+                    "src": "22394:7:58",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -4315,21 +4315,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "22392:17:19"
+              "src": "22393:17:58"
             },
             "returnParameters": {
-              "id": 2398,
+              "id": 10644,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2397,
+                  "id": 10643,
                   "mutability": "mutable",
                   "name": "counter",
-                  "nameLocation": "22465:7:19",
+                  "nameLocation": "22466:7:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2399,
-                  "src": "22457:15:19",
+                  "scope": 10645,
+                  "src": "22458:15:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4337,10 +4337,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2396,
+                    "id": 10642,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "22457:7:19",
+                    "src": "22458:7:58",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -4349,21 +4349,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "22456:17:19"
+              "src": "22457:17:58"
             },
-            "scope": 2416,
+            "scope": 10662,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 2409,
+            "id": 10655,
             "nodeType": "FunctionDefinition",
-            "src": "22779:191:19",
+            "src": "22780:191:58",
             "documentation": {
-              "id": 2400,
+              "id": 10646,
               "nodeType": "StructuredDocumentation",
-              "src": "22480:294:19",
+              "src": "22481:294:58",
               "text": " @notice Retrieve configuration information for this contract.\n @return version           The contract version.\n @return domainSeparator   The domain separator for this contract.\n @return conduitController The conduit Controller set for this contract."
             },
             "functionSelector": "f47b7740",
@@ -4371,26 +4371,26 @@
             "kind": "function",
             "modifiers": [],
             "name": "information",
-            "nameLocation": "22788:11:19",
+            "nameLocation": "22789:11:58",
             "parameters": {
-              "id": 2401,
+              "id": 10647,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "22799:2:19"
+              "src": "22800:2:58"
             },
             "returnParameters": {
-              "id": 2408,
+              "id": 10654,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2403,
+                  "id": 10649,
                   "mutability": "mutable",
                   "name": "version",
-                  "nameLocation": "22876:7:19",
+                  "nameLocation": "22877:7:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2409,
-                  "src": "22862:21:19",
+                  "scope": 10655,
+                  "src": "22863:21:58",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -4398,10 +4398,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 2402,
+                    "id": 10648,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "22862:6:19",
+                    "src": "22863:6:58",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -4411,13 +4411,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2405,
+                  "id": 10651,
                   "mutability": "mutable",
                   "name": "domainSeparator",
-                  "nameLocation": "22905:15:19",
+                  "nameLocation": "22906:15:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2409,
-                  "src": "22897:23:19",
+                  "scope": 10655,
+                  "src": "22898:23:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4425,10 +4425,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2404,
+                    "id": 10650,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "22897:7:19",
+                    "src": "22898:7:58",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -4438,13 +4438,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2407,
+                  "id": 10653,
                   "mutability": "mutable",
                   "name": "conduitController",
-                  "nameLocation": "22942:17:19",
+                  "nameLocation": "22943:17:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2409,
-                  "src": "22934:25:19",
+                  "scope": 10655,
+                  "src": "22935:25:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4452,10 +4452,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2406,
+                    "id": 10652,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "22934:7:19",
+                    "src": "22935:7:58",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -4465,21 +4465,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "22848:121:19"
+              "src": "22849:121:58"
             },
-            "scope": 2416,
+            "scope": 10662,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 2415,
+            "id": 10661,
             "nodeType": "FunctionDefinition",
-            "src": "23105:67:19",
+            "src": "23106:67:58",
             "documentation": {
-              "id": 2410,
+              "id": 10656,
               "nodeType": "StructuredDocumentation",
-              "src": "22976:124:19",
+              "src": "22977:124:58",
               "text": " @notice Retrieve the name of this contract.\n @return contractName The name of this contract."
             },
             "functionSelector": "06fdde03",
@@ -4487,26 +4487,26 @@
             "kind": "function",
             "modifiers": [],
             "name": "name",
-            "nameLocation": "23114:4:19",
+            "nameLocation": "23115:4:58",
             "parameters": {
-              "id": 2411,
+              "id": 10657,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "23118:2:19"
+              "src": "23119:2:58"
             },
             "returnParameters": {
-              "id": 2414,
+              "id": 10660,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2413,
+                  "id": 10659,
                   "mutability": "mutable",
                   "name": "contractName",
-                  "nameLocation": "23158:12:19",
+                  "nameLocation": "23159:12:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2415,
-                  "src": "23144:26:19",
+                  "scope": 10661,
+                  "src": "23145:26:58",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -4514,10 +4514,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 2412,
+                    "id": 10658,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "23144:6:19",
+                    "src": "23145:6:58",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -4526,9 +4526,9 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "23143:28:19"
+              "src": "23144:28:58"
             },
-            "scope": 2416,
+            "scope": 10662,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -4540,22 +4540,22 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 2205,
+          "id": 10451,
           "nodeType": "StructuredDocumentation",
-          "src": "301:438:19",
+          "src": "302:438:58",
           "text": " @title SeaportInterface\n @author 0age\n @custom:version 1.1\n @notice Seaport is a generalized ETH/ERC20/ERC721/ERC1155 marketplace. It\n         minimizes external calls to the greatest extent possible and provides\n         lightweight methods for common routes as well as more flexible\n         methods for composing advanced orders.\n @dev SeaportInterface contains all external function interfaces for Seaport."
         },
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          2416
+          10662
         ],
         "name": "SeaportInterface",
-        "nameLocation": "750:16:19",
-        "scope": 2417,
+        "nameLocation": "751:16:58",
+        "scope": 10663,
         "usedErrors": []
       }
     ],
     "license": "MIT"
   },
-  "id": 19
+  "id": 58
 }
