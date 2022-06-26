@@ -26,7 +26,7 @@ contract FulfillBasicOrderTest is Test {
         );
 
     function setUp() public {
-        token = new StoreFront(address(this), "");
+        token = new StoreFront(address(this));
         verifyingContract = address(token);
     }
 
@@ -86,8 +86,8 @@ contract FulfillBasicOrderTest is Test {
             keccak256(
                 abi.encode(
                     DOMAIN_TYPEHASH,
-                    keccak256(bytes(NAME)),
-                    keccak256(bytes(VERSION)),
+                    NAME,
+                    VERSION,
                     block.chainid,
                     verifyingContract
                 )

@@ -28,7 +28,7 @@ contract LazyMintableTest is Test {
         );
 
     function setUp() public {
-        token = new StoreFront(address(this), "");
+        token = new StoreFront(address(this));
         proxy = new LazyMintProxy(address(0), address(token));
         token.transferMinter(address(proxy));
         verifyingContract = address(token);
