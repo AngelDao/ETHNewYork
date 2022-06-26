@@ -60,17 +60,17 @@
   },
   "ast": {
     "absolutePath": "contracts/test/ERC1155BatchRecipient.sol",
-    "id": 10249,
+    "id": 10262,
     "exportedSymbols": {
       "ERC1155BatchRecipient": [
-        10248
+        10261
       ]
     },
     "nodeType": "SourceUnit",
     "src": "32:446:52",
     "nodes": [
       {
-        "id": 10214,
+        "id": 10227,
         "nodeType": "PragmaDirective",
         "src": "32:23:52",
         "literals": [
@@ -81,30 +81,30 @@
         ]
       },
       {
-        "id": 10248,
+        "id": 10261,
         "nodeType": "ContractDefinition",
         "src": "57:420:52",
         "nodes": [
           {
-            "id": 10216,
+            "id": 10229,
             "nodeType": "ErrorDefinition",
             "src": "94:28:52",
             "errorSelector": "ef402e38",
             "name": "UnexpectedBatchData",
             "nameLocation": "100:19:52",
             "parameters": {
-              "id": 10215,
+              "id": 10228,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "119:2:52"
             }
           },
           {
-            "id": 10247,
+            "id": 10260,
             "nodeType": "FunctionDefinition",
             "src": "128:347:52",
             "body": {
-              "id": 10246,
+              "id": 10259,
               "nodeType": "Block",
               "src": "314:161:52",
               "statements": [
@@ -114,25 +114,25 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 10236,
+                    "id": 10249,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "expression": {
-                        "id": 10233,
+                        "id": 10246,
                         "name": "data",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 10228,
+                        "referencedDeclaration": 10241,
                         "src": "328:4:52",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes_memory_ptr",
                           "typeString": "bytes memory"
                         }
                       },
-                      "id": 10234,
+                      "id": 10247,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -149,7 +149,7 @@
                     "operator": "!=",
                     "rightExpression": {
                       "hexValue": "30",
-                      "id": 10235,
+                      "id": 10248,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -169,11 +169,11 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 10241,
+                  "id": 10254,
                   "nodeType": "IfStatement",
                   "src": "324:75:52",
                   "trueBody": {
-                    "id": 10240,
+                    "id": 10253,
                     "nodeType": "Block",
                     "src": "346:53:52",
                     "statements": [
@@ -182,18 +182,18 @@
                           "arguments": [],
                           "expression": {
                             "argumentTypes": [],
-                            "id": 10237,
+                            "id": 10250,
                             "name": "UnexpectedBatchData",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 10216,
+                            "referencedDeclaration": 10229,
                             "src": "367:19:52",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_error_pure$__$returns$__$",
                               "typeString": "function () pure"
                             }
                           },
-                          "id": 10238,
+                          "id": 10251,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -208,7 +208,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 10239,
+                        "id": 10252,
                         "nodeType": "RevertStatement",
                         "src": "360:28:52"
                       }
@@ -219,32 +219,32 @@
                   "expression": {
                     "expression": {
                       "expression": {
-                        "id": 10242,
+                        "id": 10255,
                         "name": "ERC1155BatchRecipient",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 10248,
+                        "referencedDeclaration": 10261,
                         "src": "415:21:52",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_ERC1155BatchRecipient_$10248_$",
+                          "typeIdentifier": "t_type$_t_contract$_ERC1155BatchRecipient_$10261_$",
                           "typeString": "type(contract ERC1155BatchRecipient)"
                         }
                       },
-                      "id": 10243,
+                      "id": 10256,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "lValueRequested": false,
                       "memberName": "onERC1155BatchReceived",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 10247,
+                      "referencedDeclaration": 10260,
                       "src": "415:44:52",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_declaration_pure$_t_address_$_t_address_$_t_array$_t_uint256_$dyn_calldata_ptr_$_t_array$_t_uint256_$dyn_calldata_ptr_$_t_bytes_memory_ptr_$returns$_t_bytes4_$",
                         "typeString": "function ERC1155BatchRecipient.onERC1155BatchReceived(address,address,uint256[] calldata,uint256[] calldata,bytes memory) pure returns (bytes4)"
                       }
                     },
-                    "id": 10244,
+                    "id": 10257,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -257,8 +257,8 @@
                       "typeString": "bytes4"
                     }
                   },
-                  "functionReturnParameters": 10232,
-                  "id": 10245,
+                  "functionReturnParameters": 10245,
+                  "id": 10258,
                   "nodeType": "Return",
                   "src": "408:60:52"
                 }
@@ -271,17 +271,17 @@
             "name": "onERC1155BatchReceived",
             "nameLocation": "137:22:52",
             "parameters": {
-              "id": 10229,
+              "id": 10242,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10218,
+                  "id": 10231,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10247,
+                  "scope": 10260,
                   "src": "169:7:52",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -290,7 +290,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 10217,
+                    "id": 10230,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "169:7:52",
@@ -304,12 +304,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 10220,
+                  "id": 10233,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10247,
+                  "scope": 10260,
                   "src": "186:7:52",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -318,7 +318,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 10219,
+                    "id": 10232,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "186:7:52",
@@ -332,12 +332,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 10223,
+                  "id": 10236,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10247,
+                  "scope": 10260,
                   "src": "203:18:52",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -347,7 +347,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 10221,
+                      "id": 10234,
                       "name": "uint256",
                       "nodeType": "ElementaryTypeName",
                       "src": "203:7:52",
@@ -356,7 +356,7 @@
                         "typeString": "uint256"
                       }
                     },
-                    "id": 10222,
+                    "id": 10235,
                     "nodeType": "ArrayTypeName",
                     "src": "203:9:52",
                     "typeDescriptions": {
@@ -368,12 +368,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 10226,
+                  "id": 10239,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10247,
+                  "scope": 10260,
                   "src": "231:18:52",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -383,7 +383,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 10224,
+                      "id": 10237,
                       "name": "uint256",
                       "nodeType": "ElementaryTypeName",
                       "src": "231:7:52",
@@ -392,7 +392,7 @@
                         "typeString": "uint256"
                       }
                     },
-                    "id": 10225,
+                    "id": 10238,
                     "nodeType": "ArrayTypeName",
                     "src": "231:9:52",
                     "typeDescriptions": {
@@ -404,12 +404,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 10228,
+                  "id": 10241,
                   "mutability": "mutable",
                   "name": "data",
                   "nameLocation": "272:4:52",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10247,
+                  "scope": 10260,
                   "src": "259:17:52",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -418,7 +418,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 10227,
+                    "id": 10240,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "259:5:52",
@@ -433,17 +433,17 @@
               "src": "159:123:52"
             },
             "returnParameters": {
-              "id": 10232,
+              "id": 10245,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10231,
+                  "id": 10244,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10247,
+                  "scope": 10260,
                   "src": "306:6:52",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -452,7 +452,7 @@
                     "typeString": "bytes4"
                   },
                   "typeName": {
-                    "id": 10230,
+                    "id": 10243,
                     "name": "bytes4",
                     "nodeType": "ElementaryTypeName",
                     "src": "306:6:52",
@@ -466,7 +466,7 @@
               ],
               "src": "305:8:52"
             },
-            "scope": 10248,
+            "scope": 10261,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "external"
@@ -479,13 +479,13 @@
         "contractKind": "contract",
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          10248
+          10261
         ],
         "name": "ERC1155BatchRecipient",
         "nameLocation": "66:21:52",
-        "scope": 10249,
+        "scope": 10262,
         "usedErrors": [
-          10216
+          10229
         ]
       }
     ],

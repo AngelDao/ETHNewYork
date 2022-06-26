@@ -40,20 +40,20 @@
   "methodIdentifiers": {},
   "ast": {
     "absolutePath": "contracts/interfaces/FulfillmentApplicationErrors.sol",
-    "id": 2565,
+    "id": 2578,
     "exportedSymbols": {
       "FulfillmentApplicationErrors": [
-        2564
+        2577
       ],
       "Side": [
-        5273
+        5286
       ]
     },
     "nodeType": "SourceUnit",
     "src": "32:1412:18",
     "nodes": [
       {
-        "id": 2545,
+        "id": 2558,
         "nodeType": "PragmaDirective",
         "src": "32:23:18",
         "literals": [
@@ -64,22 +64,22 @@
         ]
       },
       {
-        "id": 2547,
+        "id": 2560,
         "nodeType": "ImportDirective",
         "src": "57:53:18",
         "absolutePath": "contracts/lib/ConsiderationEnums.sol",
         "file": "../lib/ConsiderationEnums.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 2565,
-        "sourceUnit": 5274,
+        "scope": 2578,
+        "sourceUnit": 5287,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 2546,
+              "id": 2559,
               "name": "Side",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 5273,
+              "referencedDeclaration": 5286,
               "src": "66:4:18",
               "typeDescriptions": {}
             },
@@ -89,16 +89,16 @@
         "unitAlias": ""
       },
       {
-        "id": 2564,
+        "id": 2577,
         "nodeType": "ContractDefinition",
         "src": "294:1149:18",
         "nodes": [
           {
-            "id": 2554,
+            "id": 2567,
             "nodeType": "ErrorDefinition",
             "src": "535:58:18",
             "documentation": {
-              "id": 2549,
+              "id": 2562,
               "nodeType": "StructuredDocumentation",
               "src": "339:191:18",
               "text": " @dev Revert with an error when a fulfillment is provided that does not\n      declare at least one component as part of a call to fulfill\n      available orders."
@@ -107,38 +107,38 @@
             "name": "MissingFulfillmentComponentOnAggregation",
             "nameLocation": "541:40:18",
             "parameters": {
-              "id": 2553,
+              "id": 2566,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2552,
+                  "id": 2565,
                   "mutability": "mutable",
                   "name": "side",
                   "nameLocation": "587:4:18",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2554,
+                  "scope": 2567,
                   "src": "582:9:18",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_Side_$5273",
+                    "typeIdentifier": "t_enum$_Side_$5286",
                     "typeString": "enum Side"
                   },
                   "typeName": {
-                    "id": 2551,
+                    "id": 2564,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 2550,
+                      "id": 2563,
                       "name": "Side",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 5273,
+                      "referencedDeclaration": 5286,
                       "src": "582:4:18"
                     },
-                    "referencedDeclaration": 5273,
+                    "referencedDeclaration": 5286,
                     "src": "582:4:18",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Side_$5273",
+                      "typeIdentifier": "t_enum$_Side_$5286",
                       "typeString": "enum Side"
                     }
                   },
@@ -149,11 +149,11 @@
             }
           },
           {
-            "id": 2557,
+            "id": 2570,
             "nodeType": "ErrorDefinition",
             "src": "796:51:18",
             "documentation": {
-              "id": 2555,
+              "id": 2568,
               "nodeType": "StructuredDocumentation",
               "src": "599:192:18",
               "text": " @dev Revert with an error when a fulfillment is provided that does not\n      declare at least one offer component and at least one consideration\n      component."
@@ -162,18 +162,18 @@
             "name": "OfferAndConsiderationRequiredOnFulfillment",
             "nameLocation": "802:42:18",
             "parameters": {
-              "id": 2556,
+              "id": 2569,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "844:2:18"
             }
           },
           {
-            "id": 2560,
+            "id": 2573,
             "nodeType": "ErrorDefinition",
             "src": "1088:61:18",
             "documentation": {
-              "id": 2558,
+              "id": 2571,
               "nodeType": "StructuredDocumentation",
               "src": "853:230:18",
               "text": " @dev Revert with an error when the initial offer item named by a\n      fulfillment component does not match the type, token, identifier,\n      or conduit preference of the initial consideration item."
@@ -182,18 +182,18 @@
             "name": "MismatchedFulfillmentOfferAndConsiderationComponents",
             "nameLocation": "1094:52:18",
             "parameters": {
-              "id": 2559,
+              "id": 2572,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1146:2:18"
             }
           },
           {
-            "id": 2563,
+            "id": 2576,
             "nodeType": "ErrorDefinition",
             "src": "1401:40:18",
             "documentation": {
-              "id": 2561,
+              "id": 2574,
               "nodeType": "StructuredDocumentation",
               "src": "1155:241:18",
               "text": " @dev Revert with an error when an order or item index are out of range\n      or a fulfillment component does not match the type, token,\n      identifier, or conduit preference of the initial consideration item."
@@ -202,7 +202,7 @@
             "name": "InvalidFulfillmentComponentData",
             "nameLocation": "1407:31:18",
             "parameters": {
-              "id": 2562,
+              "id": 2575,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1438:2:18"
@@ -215,23 +215,23 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 2548,
+          "id": 2561,
           "nodeType": "StructuredDocumentation",
           "src": "112:181:18",
           "text": " @title FulfillmentApplicationErrors\n @author 0age\n @notice FulfillmentApplicationErrors contains errors related to fulfillment\n         application and aggregation."
         },
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          2564
+          2577
         ],
         "name": "FulfillmentApplicationErrors",
         "nameLocation": "304:28:18",
-        "scope": 2565,
+        "scope": 2578,
         "usedErrors": [
-          2554,
-          2557,
-          2560,
-          2563
+          2567,
+          2570,
+          2573,
+          2576
         ]
       }
     ],

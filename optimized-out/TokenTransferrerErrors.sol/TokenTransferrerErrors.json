@@ -133,17 +133,17 @@
   "methodIdentifiers": {},
   "ast": {
     "absolutePath": "contracts/interfaces/TokenTransferrerErrors.sol",
-    "id": 3098,
+    "id": 3111,
     "exportedSymbols": {
       "TokenTransferrerErrors": [
-        3097
+        3110
       ]
     },
     "nodeType": "SourceUnit",
     "src": "32:3232:24",
     "nodes": [
       {
-        "id": 3039,
+        "id": 3052,
         "nodeType": "PragmaDirective",
         "src": "32:23:24",
         "literals": [
@@ -154,16 +154,16 @@
         ]
       },
       {
-        "id": 3097,
+        "id": 3110,
         "nodeType": "ContractDefinition",
         "src": "98:3165:24",
         "nodes": [
           {
-            "id": 3043,
+            "id": 3056,
             "nodeType": "ErrorDefinition",
             "src": "263:36:24",
             "documentation": {
-              "id": 3041,
+              "id": 3054,
               "nodeType": "StructuredDocumentation",
               "src": "137:121:24",
               "text": " @dev Revert with an error when an ERC721 transfer with amount other than\n      one is attempted."
@@ -172,18 +172,18 @@
             "name": "InvalidERC721TransferAmount",
             "nameLocation": "269:27:24",
             "parameters": {
-              "id": 3042,
+              "id": 3055,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "296:2:24"
             }
           },
           {
-            "id": 3046,
+            "id": 3059,
             "nodeType": "ErrorDefinition",
             "src": "439:26:24",
             "documentation": {
-              "id": 3044,
+              "id": 3057,
               "nodeType": "StructuredDocumentation",
               "src": "305:129:24",
               "text": " @dev Revert with an error when attempting to fulfill an order where an\n      item has an amount of zero."
@@ -192,18 +192,18 @@
             "name": "MissingItemAmount",
             "nameLocation": "445:17:24",
             "parameters": {
-              "id": 3045,
+              "id": 3058,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "462:2:24"
             }
           },
           {
-            "id": 3049,
+            "id": 3062,
             "nodeType": "ErrorDefinition",
             "src": "903:29:24",
             "documentation": {
-              "id": 3047,
+              "id": 3060,
               "nodeType": "StructuredDocumentation",
               "src": "471:427:24",
               "text": " @dev Revert with an error when attempting to fulfill an order where an\n      item has unused parameters. This includes both the token and the\n      identifier parameters for native transfers as well as the identifier\n      parameter for ERC20 transfers. Note that the conduit does not\n      perform this check, leaving it up to the calling channel to enforce\n      when desired."
@@ -212,18 +212,18 @@
             "name": "UnusedItemParameters",
             "nameLocation": "909:20:24",
             "parameters": {
-              "id": 3048,
+              "id": 3061,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "929:2:24"
             }
           },
           {
-            "id": 3062,
+            "id": 3075,
             "nodeType": "ErrorDefinition",
             "src": "1398:157:24",
             "documentation": {
-              "id": 3050,
+              "id": 3063,
               "nodeType": "StructuredDocumentation",
               "src": "938:455:24",
               "text": " @dev Revert with an error when an ERC20, ERC721, or ERC1155 token\n      transfer reverts.\n @param token      The token for which the transfer was attempted.\n @param from       The source of the attempted transfer.\n @param to         The recipient of the attempted transfer.\n @param identifier The identifier for the attempted transfer.\n @param amount     The amount for the attempted transfer."
@@ -232,17 +232,17 @@
             "name": "TokenTransferGenericFailure",
             "nameLocation": "1404:27:24",
             "parameters": {
-              "id": 3061,
+              "id": 3074,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3052,
+                  "id": 3065,
                   "mutability": "mutable",
                   "name": "token",
                   "nameLocation": "1449:5:24",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3062,
+                  "scope": 3075,
                   "src": "1441:13:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -251,7 +251,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3051,
+                    "id": 3064,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1441:7:24",
@@ -265,12 +265,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 3054,
+                  "id": 3067,
                   "mutability": "mutable",
                   "name": "from",
                   "nameLocation": "1472:4:24",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3062,
+                  "scope": 3075,
                   "src": "1464:12:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -279,7 +279,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3053,
+                    "id": 3066,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1464:7:24",
@@ -293,12 +293,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 3056,
+                  "id": 3069,
                   "mutability": "mutable",
                   "name": "to",
                   "nameLocation": "1494:2:24",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3062,
+                  "scope": 3075,
                   "src": "1486:10:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -307,7 +307,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3055,
+                    "id": 3068,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1486:7:24",
@@ -321,12 +321,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 3058,
+                  "id": 3071,
                   "mutability": "mutable",
                   "name": "identifier",
                   "nameLocation": "1514:10:24",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3062,
+                  "scope": 3075,
                   "src": "1506:18:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -335,7 +335,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3057,
+                    "id": 3070,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1506:7:24",
@@ -348,12 +348,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 3060,
+                  "id": 3073,
                   "mutability": "mutable",
                   "name": "amount",
                   "nameLocation": "1542:6:24",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3062,
+                  "scope": 3075,
                   "src": "1534:14:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -362,7 +362,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3059,
+                    "id": 3072,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1534:7:24",
@@ -378,11 +378,11 @@
             }
           },
           {
-            "id": 3077,
+            "id": 3090,
             "nodeType": "ErrorDefinition",
             "src": "2003:170:24",
             "documentation": {
-              "id": 3063,
+              "id": 3076,
               "nodeType": "StructuredDocumentation",
               "src": "1561:437:24",
               "text": " @dev Revert with an error when a batch ERC1155 token transfer reverts.\n @param token       The token for which the transfer was attempted.\n @param from        The source of the attempted transfer.\n @param to          The recipient of the attempted transfer.\n @param identifiers The identifiers for the attempted transfer.\n @param amounts     The amounts for the attempted transfer."
@@ -391,17 +391,17 @@
             "name": "ERC1155BatchTransferGenericFailure",
             "nameLocation": "2009:34:24",
             "parameters": {
-              "id": 3076,
+              "id": 3089,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3065,
+                  "id": 3078,
                   "mutability": "mutable",
                   "name": "token",
                   "nameLocation": "2061:5:24",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3077,
+                  "scope": 3090,
                   "src": "2053:13:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -410,7 +410,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3064,
+                    "id": 3077,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2053:7:24",
@@ -424,12 +424,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 3067,
+                  "id": 3080,
                   "mutability": "mutable",
                   "name": "from",
                   "nameLocation": "2084:4:24",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3077,
+                  "scope": 3090,
                   "src": "2076:12:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -438,7 +438,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3066,
+                    "id": 3079,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2076:7:24",
@@ -452,12 +452,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 3069,
+                  "id": 3082,
                   "mutability": "mutable",
                   "name": "to",
                   "nameLocation": "2106:2:24",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3077,
+                  "scope": 3090,
                   "src": "2098:10:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -466,7 +466,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3068,
+                    "id": 3081,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2098:7:24",
@@ -480,12 +480,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 3072,
+                  "id": 3085,
                   "mutability": "mutable",
                   "name": "identifiers",
                   "nameLocation": "2128:11:24",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3077,
+                  "scope": 3090,
                   "src": "2118:21:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -495,7 +495,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 3070,
+                      "id": 3083,
                       "name": "uint256",
                       "nodeType": "ElementaryTypeName",
                       "src": "2118:7:24",
@@ -504,7 +504,7 @@
                         "typeString": "uint256"
                       }
                     },
-                    "id": 3071,
+                    "id": 3084,
                     "nodeType": "ArrayTypeName",
                     "src": "2118:9:24",
                     "typeDescriptions": {
@@ -516,12 +516,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 3075,
+                  "id": 3088,
                   "mutability": "mutable",
                   "name": "amounts",
                   "nameLocation": "2159:7:24",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3077,
+                  "scope": 3090,
                   "src": "2149:17:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -531,7 +531,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 3073,
+                      "id": 3086,
                       "name": "uint256",
                       "nodeType": "ElementaryTypeName",
                       "src": "2149:7:24",
@@ -540,7 +540,7 @@
                         "typeString": "uint256"
                       }
                     },
-                    "id": 3074,
+                    "id": 3087,
                     "nodeType": "ArrayTypeName",
                     "src": "2149:9:24",
                     "typeDescriptions": {
@@ -555,11 +555,11 @@
             }
           },
           {
-            "id": 3088,
+            "id": 3101,
             "nodeType": "ErrorDefinition",
             "src": "2590:135:24",
             "documentation": {
-              "id": 3078,
+              "id": 3091,
               "nodeType": "StructuredDocumentation",
               "src": "2179:406:24",
               "text": " @dev Revert with an error when an ERC20 token transfer returns a falsey\n      value.\n @param token      The token for which the ERC20 transfer was attempted.\n @param from       The source of the attempted ERC20 transfer.\n @param to         The recipient of the attempted ERC20 transfer.\n @param amount     The amount for the attempted ERC20 transfer."
@@ -568,17 +568,17 @@
             "name": "BadReturnValueFromERC20OnTransfer",
             "nameLocation": "2596:33:24",
             "parameters": {
-              "id": 3087,
+              "id": 3100,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3080,
+                  "id": 3093,
                   "mutability": "mutable",
                   "name": "token",
                   "nameLocation": "2647:5:24",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3088,
+                  "scope": 3101,
                   "src": "2639:13:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -587,7 +587,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3079,
+                    "id": 3092,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2639:7:24",
@@ -601,12 +601,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 3082,
+                  "id": 3095,
                   "mutability": "mutable",
                   "name": "from",
                   "nameLocation": "2670:4:24",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3088,
+                  "scope": 3101,
                   "src": "2662:12:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -615,7 +615,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3081,
+                    "id": 3094,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2662:7:24",
@@ -629,12 +629,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 3084,
+                  "id": 3097,
                   "mutability": "mutable",
                   "name": "to",
                   "nameLocation": "2692:2:24",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3088,
+                  "scope": 3101,
                   "src": "2684:10:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -643,7 +643,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3083,
+                    "id": 3096,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2684:7:24",
@@ -657,12 +657,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 3086,
+                  "id": 3099,
                   "mutability": "mutable",
                   "name": "amount",
                   "nameLocation": "2712:6:24",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3088,
+                  "scope": 3101,
                   "src": "2704:14:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -671,7 +671,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3085,
+                    "id": 3098,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2704:7:24",
@@ -687,11 +687,11 @@
             }
           },
           {
-            "id": 3093,
+            "id": 3106,
             "nodeType": "ErrorDefinition",
             "src": "2951:34:24",
             "documentation": {
-              "id": 3089,
+              "id": 3102,
               "nodeType": "StructuredDocumentation",
               "src": "2731:215:24",
               "text": " @dev Revert with an error when an account being called as an assumed\n      contract does not have code and returns no data.\n @param account The account that should contain code."
@@ -700,17 +700,17 @@
             "name": "NoContract",
             "nameLocation": "2957:10:24",
             "parameters": {
-              "id": 3092,
+              "id": 3105,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3091,
+                  "id": 3104,
                   "mutability": "mutable",
                   "name": "account",
                   "nameLocation": "2976:7:24",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3093,
+                  "scope": 3106,
                   "src": "2968:15:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -719,7 +719,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3090,
+                    "id": 3103,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2968:7:24",
@@ -736,11 +736,11 @@
             }
           },
           {
-            "id": 3096,
+            "id": 3109,
             "nodeType": "ErrorDefinition",
             "src": "3220:41:24",
             "documentation": {
-              "id": 3094,
+              "id": 3107,
               "nodeType": "StructuredDocumentation",
               "src": "2991:224:24",
               "text": " @dev Revert with an error when attempting to execute an 1155 batch\n      transfer using calldata not produced by default ABI encoding or with\n      different lengths for ids and amounts arrays."
@@ -749,7 +749,7 @@
             "name": "Invalid1155BatchTransferEncoding",
             "nameLocation": "3226:32:24",
             "parameters": {
-              "id": 3095,
+              "id": 3108,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "3258:2:24"
@@ -762,27 +762,27 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 3040,
+          "id": 3053,
           "nodeType": "StructuredDocumentation",
           "src": "57:40:24",
           "text": " @title TokenTransferrerErrors"
         },
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          3097
+          3110
         ],
         "name": "TokenTransferrerErrors",
         "nameLocation": "108:22:24",
-        "scope": 3098,
+        "scope": 3111,
         "usedErrors": [
-          3043,
-          3046,
-          3049,
+          3056,
+          3059,
           3062,
-          3077,
-          3088,
-          3093,
-          3096
+          3075,
+          3090,
+          3101,
+          3106,
+          3109
         ]
       }
     ],

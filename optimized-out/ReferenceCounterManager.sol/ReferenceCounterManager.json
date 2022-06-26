@@ -333,23 +333,23 @@
   "methodIdentifiers": {},
   "ast": {
     "absolutePath": "reference/lib/ReferenceCounterManager.sol",
-    "id": 40183,
+    "id": 40196,
     "exportedSymbols": {
       "ConsiderationEventsAndErrors": [
-        2282
+        2295
       ],
       "ReferenceCounterManager": [
-        40182
+        40195
       ],
       "ReferenceReentrancyGuard": [
-        45336
+        45349
       ]
     },
     "nodeType": "SourceUnit",
     "src": "32:1716:95",
     "nodes": [
       {
-        "id": 40130,
+        "id": 40143,
         "nodeType": "PragmaDirective",
         "src": "32:23:95",
         "literals": [
@@ -360,22 +360,22 @@
         ]
       },
       {
-        "id": 40132,
+        "id": 40145,
         "nodeType": "ImportDirective",
         "src": "76:105:95",
         "absolutePath": "contracts/interfaces/ConsiderationEventsAndErrors.sol",
         "file": "contracts/interfaces/ConsiderationEventsAndErrors.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 40183,
-        "sourceUnit": 2283,
+        "scope": 40196,
+        "sourceUnit": 2296,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 40131,
+              "id": 40144,
               "name": "ConsiderationEventsAndErrors",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 2282,
+              "referencedDeclaration": 2295,
               "src": "89:28:95",
               "typeDescriptions": {}
             },
@@ -385,22 +385,22 @@
         "unitAlias": ""
       },
       {
-        "id": 40134,
+        "id": 40147,
         "nodeType": "ImportDirective",
         "src": "183:74:95",
         "absolutePath": "reference/lib/ReferenceReentrancyGuard.sol",
         "file": "./ReferenceReentrancyGuard.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 40183,
-        "sourceUnit": 45337,
+        "scope": 40196,
+        "sourceUnit": 45350,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 40133,
+              "id": 40146,
               "name": "ReferenceReentrancyGuard",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 45336,
+              "referencedDeclaration": 45349,
               "src": "192:24:95",
               "typeDescriptions": {}
             },
@@ -410,19 +410,19 @@
         "unitAlias": ""
       },
       {
-        "id": 40182,
+        "id": 40195,
         "nodeType": "ContractDefinition",
         "src": "453:1294:95",
         "nodes": [
           {
-            "id": 40143,
+            "id": 40156,
             "nodeType": "VariableDeclaration",
             "src": "636:45:95",
             "constant": false,
             "mutability": "mutable",
             "name": "_counters",
             "nameLocation": "672:9:95",
-            "scope": 40182,
+            "scope": 40195,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -430,9 +430,9 @@
               "typeString": "mapping(address => uint256)"
             },
             "typeName": {
-              "id": 40142,
+              "id": 40155,
               "keyType": {
-                "id": 40140,
+                "id": 40153,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "644:7:95",
@@ -448,7 +448,7 @@
                 "typeString": "mapping(address => uint256)"
               },
               "valueType": {
-                "id": 40141,
+                "id": 40154,
                 "name": "uint256",
                 "nodeType": "ElementaryTypeName",
                 "src": "655:7:95",
@@ -461,27 +461,27 @@
             "visibility": "private"
           },
           {
-            "id": 40166,
+            "id": 40179,
             "nodeType": "FunctionDefinition",
             "src": "957:333:95",
             "body": {
-              "id": 40165,
+              "id": 40178,
               "nodeType": "Block",
               "src": "1063:227:95",
               "statements": [
                 {
                   "expression": {
-                    "id": 40157,
+                    "id": 40170,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 40151,
+                      "id": 40164,
                       "name": "newCounter",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 40149,
+                      "referencedDeclaration": 40162,
                       "src": "1136:10:95",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -491,7 +491,7 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 40156,
+                      "id": 40169,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -502,21 +502,21 @@
                       "src": "1149:23:95",
                       "subExpression": {
                         "baseExpression": {
-                          "id": 40152,
+                          "id": 40165,
                           "name": "_counters",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 40143,
+                          "referencedDeclaration": 40156,
                           "src": "1151:9:95",
                           "typeDescriptions": {
                             "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                             "typeString": "mapping(address => uint256)"
                           }
                         },
-                        "id": 40155,
+                        "id": 40168,
                         "indexExpression": {
                           "expression": {
-                            "id": 40153,
+                            "id": 40166,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
@@ -527,7 +527,7 @@
                               "typeString": "msg"
                             }
                           },
-                          "id": 40154,
+                          "id": 40167,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -562,7 +562,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 40158,
+                  "id": 40171,
                   "nodeType": "ExpressionStatement",
                   "src": "1136:36:95"
                 },
@@ -570,11 +570,11 @@
                   "eventCall": {
                     "arguments": [
                       {
-                        "id": 40160,
+                        "id": 40173,
                         "name": "newCounter",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 40149,
+                        "referencedDeclaration": 40162,
                         "src": "1260:10:95",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -583,7 +583,7 @@
                       },
                       {
                         "expression": {
-                          "id": 40161,
+                          "id": 40174,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
@@ -594,7 +594,7 @@
                             "typeString": "msg"
                           }
                         },
-                        "id": 40162,
+                        "id": 40175,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -619,18 +619,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 40159,
+                      "id": 40172,
                       "name": "CounterIncremented",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2206,
+                      "referencedDeclaration": 2219,
                       "src": "1241:18:95",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_address_$returns$__$",
                         "typeString": "function (uint256,address)"
                       }
                     },
-                    "id": 40163,
+                    "id": 40176,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -645,14 +645,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 40164,
+                  "id": 40177,
                   "nodeType": "EmitStatement",
                   "src": "1236:47:95"
                 }
               ]
             },
             "documentation": {
-              "id": 40144,
+              "id": 40157,
               "nodeType": "StructuredDocumentation",
               "src": "688:264:95",
               "text": " @dev Internal function to cancel all orders from a given offerer with a\n      given zone in bulk by incrementing a counter. Note that only the\n      offerer may increment the counter.\n @return newCounter The new counter."
@@ -661,13 +661,13 @@
             "kind": "function",
             "modifiers": [
               {
-                "id": 40147,
+                "id": 40160,
                 "kind": "modifierInvocation",
                 "modifierName": {
-                  "id": 40146,
+                  "id": 40159,
                   "name": "notEntered",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 45335,
+                  "referencedDeclaration": 45348,
                   "src": "1011:10:95"
                 },
                 "nodeType": "ModifierInvocation",
@@ -677,23 +677,23 @@
             "name": "_incrementCounter",
             "nameLocation": "966:17:95",
             "parameters": {
-              "id": 40145,
+              "id": 40158,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "983:2:95"
             },
             "returnParameters": {
-              "id": 40150,
+              "id": 40163,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 40149,
+                  "id": 40162,
                   "mutability": "mutable",
                   "name": "newCounter",
                   "nameLocation": "1047:10:95",
                   "nodeType": "VariableDeclaration",
-                  "scope": 40166,
+                  "scope": 40179,
                   "src": "1039:18:95",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -702,7 +702,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 40148,
+                    "id": 40161,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1039:7:95",
@@ -716,33 +716,33 @@
               ],
               "src": "1038:20:95"
             },
-            "scope": 40182,
+            "scope": 40195,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 40181,
+            "id": 40194,
             "nodeType": "FunctionDefinition",
             "src": "1524:221:95",
             "body": {
-              "id": 40180,
+              "id": 40193,
               "nodeType": "Block",
               "src": "1637:108:95",
               "statements": [
                 {
                   "expression": {
-                    "id": 40178,
+                    "id": 40191,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 40174,
+                      "id": 40187,
                       "name": "currentCounter",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 40172,
+                      "referencedDeclaration": 40185,
                       "src": "1703:14:95",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -753,24 +753,24 @@
                     "operator": "=",
                     "rightHandSide": {
                       "baseExpression": {
-                        "id": 40175,
+                        "id": 40188,
                         "name": "_counters",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 40143,
+                        "referencedDeclaration": 40156,
                         "src": "1720:9:95",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                           "typeString": "mapping(address => uint256)"
                         }
                       },
-                      "id": 40177,
+                      "id": 40190,
                       "indexExpression": {
-                        "id": 40176,
+                        "id": 40189,
                         "name": "offerer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 40169,
+                        "referencedDeclaration": 40182,
                         "src": "1730:7:95",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -794,14 +794,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 40179,
+                  "id": 40192,
                   "nodeType": "ExpressionStatement",
                   "src": "1703:35:95"
                 }
               ]
             },
             "documentation": {
-              "id": 40167,
+              "id": 40180,
               "nodeType": "StructuredDocumentation",
               "src": "1296:223:95",
               "text": " @dev Internal view function to retrieve the current counter for a given\n      offerer.\n @param offerer The offerer in question.\n @return currentCounter The current counter."
@@ -812,17 +812,17 @@
             "name": "_getCounter",
             "nameLocation": "1533:11:95",
             "parameters": {
-              "id": 40170,
+              "id": 40183,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 40169,
+                  "id": 40182,
                   "mutability": "mutable",
                   "name": "offerer",
                   "nameLocation": "1553:7:95",
                   "nodeType": "VariableDeclaration",
-                  "scope": 40181,
+                  "scope": 40194,
                   "src": "1545:15:95",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -831,7 +831,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 40168,
+                    "id": 40181,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1545:7:95",
@@ -847,17 +847,17 @@
               "src": "1544:17:95"
             },
             "returnParameters": {
-              "id": 40173,
+              "id": 40186,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 40172,
+                  "id": 40185,
                   "mutability": "mutable",
                   "name": "currentCounter",
                   "nameLocation": "1617:14:95",
                   "nodeType": "VariableDeclaration",
-                  "scope": 40181,
+                  "scope": 40194,
                   "src": "1609:22:95",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -866,7 +866,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 40171,
+                    "id": 40184,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1609:7:95",
@@ -880,7 +880,7 @@
               ],
               "src": "1608:24:95"
             },
-            "scope": 40182,
+            "scope": 40195,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "internal"
@@ -890,25 +890,25 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 40136,
+              "id": 40149,
               "name": "ConsiderationEventsAndErrors",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 2282,
+              "referencedDeclaration": 2295,
               "src": "493:28:95"
             },
-            "id": 40137,
+            "id": 40150,
             "nodeType": "InheritanceSpecifier",
             "src": "493:28:95"
           },
           {
             "baseName": {
-              "id": 40138,
+              "id": 40151,
               "name": "ReferenceReentrancyGuard",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 45336,
+              "referencedDeclaration": 45349,
               "src": "527:24:95"
             },
-            "id": 40139,
+            "id": 40152,
             "nodeType": "InheritanceSpecifier",
             "src": "527:24:95"
           }
@@ -917,40 +917,40 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "documentation": {
-          "id": 40135,
+          "id": 40148,
           "nodeType": "StructuredDocumentation",
           "src": "259:193:95",
           "text": " @title CounterManager\n @author 0age\n @notice CounterManager contains a storage mapping and related functionality\n         for retrieving and incrementing a per-offerer counter."
         },
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          40182,
-          45336,
-          2795,
-          2282
+          40195,
+          45349,
+          2808,
+          2295
         ],
         "name": "ReferenceCounterManager",
         "nameLocation": "462:23:95",
-        "scope": 40183,
+        "scope": 40196,
         "usedErrors": [
-          2211,
-          2214,
-          2221,
           2224,
-          2229,
-          2238,
-          2241,
-          2248,
+          2227,
+          2234,
+          2237,
+          2242,
           2251,
-          2256,
+          2254,
           2261,
           2264,
-          2267,
-          2272,
-          2275,
-          2278,
-          2281,
-          2794
+          2269,
+          2274,
+          2277,
+          2280,
+          2285,
+          2288,
+          2291,
+          2294,
+          2807
         ]
       }
     ],

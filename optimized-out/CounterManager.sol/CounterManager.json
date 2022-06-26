@@ -333,23 +333,23 @@
   "methodIdentifiers": {},
   "ast": {
     "absolutePath": "contracts/lib/CounterManager.sol",
-    "id": 5548,
+    "id": 5561,
     "exportedSymbols": {
       "ConsiderationEventsAndErrors": [
-        2282
+        2295
       ],
       "CounterManager": [
-        5547
+        5560
       ],
       "ReentrancyGuard": [
-        9227
+        9240
       ]
     },
     "nodeType": "SourceUnit",
     "src": "32:1837:36",
     "nodes": [
       {
-        "id": 5493,
+        "id": 5506,
         "nodeType": "PragmaDirective",
         "src": "32:24:36",
         "literals": [
@@ -360,22 +360,22 @@
         ]
       },
       {
-        "id": 5495,
+        "id": 5508,
         "nodeType": "ImportDirective",
         "src": "77:98:36",
         "absolutePath": "contracts/interfaces/ConsiderationEventsAndErrors.sol",
         "file": "../interfaces/ConsiderationEventsAndErrors.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 5548,
-        "sourceUnit": 2283,
+        "scope": 5561,
+        "sourceUnit": 2296,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 5494,
+              "id": 5507,
               "name": "ConsiderationEventsAndErrors",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 2282,
+              "referencedDeclaration": 2295,
               "src": "90:28:36",
               "typeDescriptions": {}
             },
@@ -385,22 +385,22 @@
         "unitAlias": ""
       },
       {
-        "id": 5497,
+        "id": 5510,
         "nodeType": "ImportDirective",
         "src": "177:56:36",
         "absolutePath": "contracts/lib/ReentrancyGuard.sol",
         "file": "./ReentrancyGuard.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 5548,
-        "sourceUnit": 9228,
+        "scope": 5561,
+        "sourceUnit": 9241,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 5496,
+              "id": 5509,
               "name": "ReentrancyGuard",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 9227,
+              "referencedDeclaration": 9240,
               "src": "186:15:36",
               "typeDescriptions": {}
             },
@@ -410,19 +410,19 @@
         "unitAlias": ""
       },
       {
-        "id": 5547,
+        "id": 5560,
         "nodeType": "ContractDefinition",
         "src": "429:1439:36",
         "nodes": [
           {
-            "id": 5506,
+            "id": 5519,
             "nodeType": "VariableDeclaration",
             "src": "586:45:36",
             "constant": false,
             "mutability": "mutable",
             "name": "_counters",
             "nameLocation": "622:9:36",
-            "scope": 5547,
+            "scope": 5560,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -430,9 +430,9 @@
               "typeString": "mapping(address => uint256)"
             },
             "typeName": {
-              "id": 5505,
+              "id": 5518,
               "keyType": {
-                "id": 5503,
+                "id": 5516,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "594:7:36",
@@ -448,7 +448,7 @@
                 "typeString": "mapping(address => uint256)"
               },
               "valueType": {
-                "id": 5504,
+                "id": 5517,
                 "name": "uint256",
                 "nodeType": "ElementaryTypeName",
                 "src": "605:7:36",
@@ -461,11 +461,11 @@
             "visibility": "private"
           },
           {
-            "id": 5531,
+            "id": 5544,
             "nodeType": "FunctionDefinition",
             "src": "907:504:36",
             "body": {
-              "id": 5530,
+              "id": 5543,
               "nodeType": "Block",
               "src": "974:437:36",
               "statements": [
@@ -474,18 +474,18 @@
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 5512,
+                      "id": 5525,
                       "name": "_assertNonReentrant",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9226,
+                      "referencedDeclaration": 9239,
                       "src": "1050:19:36",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$__$returns$__$",
                         "typeString": "function () view"
                       }
                     },
-                    "id": 5513,
+                    "id": 5526,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -500,28 +500,28 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 5514,
+                  "id": 5527,
                   "nodeType": "ExpressionStatement",
                   "src": "1050:21:36"
                 },
                 {
-                  "id": 5523,
+                  "id": 5536,
                   "nodeType": "UncheckedBlock",
                   "src": "1156:138:36",
                   "statements": [
                     {
                       "expression": {
-                        "id": 5521,
+                        "id": 5534,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftHandSide": {
-                          "id": 5515,
+                          "id": 5528,
                           "name": "newCounter",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 5510,
+                          "referencedDeclaration": 5523,
                           "src": "1247:10:36",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -531,7 +531,7 @@
                         "nodeType": "Assignment",
                         "operator": "=",
                         "rightHandSide": {
-                          "id": 5520,
+                          "id": 5533,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -542,21 +542,21 @@
                           "src": "1260:23:36",
                           "subExpression": {
                             "baseExpression": {
-                              "id": 5516,
+                              "id": 5529,
                               "name": "_counters",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 5506,
+                              "referencedDeclaration": 5519,
                               "src": "1262:9:36",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                                 "typeString": "mapping(address => uint256)"
                               }
                             },
-                            "id": 5519,
+                            "id": 5532,
                             "indexExpression": {
                               "expression": {
-                                "id": 5517,
+                                "id": 5530,
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
@@ -567,7 +567,7 @@
                                   "typeString": "msg"
                                 }
                               },
-                              "id": 5518,
+                              "id": 5531,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -602,7 +602,7 @@
                           "typeString": "uint256"
                         }
                       },
-                      "id": 5522,
+                      "id": 5535,
                       "nodeType": "ExpressionStatement",
                       "src": "1247:36:36"
                     }
@@ -612,11 +612,11 @@
                   "eventCall": {
                     "arguments": [
                       {
-                        "id": 5525,
+                        "id": 5538,
                         "name": "newCounter",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 5510,
+                        "referencedDeclaration": 5523,
                         "src": "1381:10:36",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -625,7 +625,7 @@
                       },
                       {
                         "expression": {
-                          "id": 5526,
+                          "id": 5539,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
@@ -636,7 +636,7 @@
                             "typeString": "msg"
                           }
                         },
-                        "id": 5527,
+                        "id": 5540,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -661,18 +661,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 5524,
+                      "id": 5537,
                       "name": "CounterIncremented",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2206,
+                      "referencedDeclaration": 2219,
                       "src": "1362:18:36",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_address_$returns$__$",
                         "typeString": "function (uint256,address)"
                       }
                     },
-                    "id": 5528,
+                    "id": 5541,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -687,14 +687,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 5529,
+                  "id": 5542,
                   "nodeType": "EmitStatement",
                   "src": "1357:47:36"
                 }
               ]
             },
             "documentation": {
-              "id": 5507,
+              "id": 5520,
               "nodeType": "StructuredDocumentation",
               "src": "638:264:36",
               "text": " @dev Internal function to cancel all orders from a given offerer with a\n      given zone in bulk by incrementing a counter. Note that only the\n      offerer may increment the counter.\n @return newCounter The new counter."
@@ -705,23 +705,23 @@
             "name": "_incrementCounter",
             "nameLocation": "916:17:36",
             "parameters": {
-              "id": 5508,
+              "id": 5521,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "933:2:36"
             },
             "returnParameters": {
-              "id": 5511,
+              "id": 5524,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 5510,
+                  "id": 5523,
                   "mutability": "mutable",
                   "name": "newCounter",
                   "nameLocation": "962:10:36",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5531,
+                  "scope": 5544,
                   "src": "954:18:36",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -730,7 +730,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 5509,
+                    "id": 5522,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "954:7:36",
@@ -744,33 +744,33 @@
               ],
               "src": "953:20:36"
             },
-            "scope": 5547,
+            "scope": 5560,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 5546,
+            "id": 5559,
             "nodeType": "FunctionDefinition",
             "src": "1645:221:36",
             "body": {
-              "id": 5545,
+              "id": 5558,
               "nodeType": "Block",
               "src": "1758:108:36",
               "statements": [
                 {
                   "expression": {
-                    "id": 5543,
+                    "id": 5556,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 5539,
+                      "id": 5552,
                       "name": "currentCounter",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 5537,
+                      "referencedDeclaration": 5550,
                       "src": "1824:14:36",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -781,24 +781,24 @@
                     "operator": "=",
                     "rightHandSide": {
                       "baseExpression": {
-                        "id": 5540,
+                        "id": 5553,
                         "name": "_counters",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 5506,
+                        "referencedDeclaration": 5519,
                         "src": "1841:9:36",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                           "typeString": "mapping(address => uint256)"
                         }
                       },
-                      "id": 5542,
+                      "id": 5555,
                       "indexExpression": {
-                        "id": 5541,
+                        "id": 5554,
                         "name": "offerer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 5534,
+                        "referencedDeclaration": 5547,
                         "src": "1851:7:36",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -822,14 +822,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 5544,
+                  "id": 5557,
                   "nodeType": "ExpressionStatement",
                   "src": "1824:35:36"
                 }
               ]
             },
             "documentation": {
-              "id": 5532,
+              "id": 5545,
               "nodeType": "StructuredDocumentation",
               "src": "1417:223:36",
               "text": " @dev Internal view function to retrieve the current counter for a given\n      offerer.\n @param offerer The offerer in question.\n @return currentCounter The current counter."
@@ -840,17 +840,17 @@
             "name": "_getCounter",
             "nameLocation": "1654:11:36",
             "parameters": {
-              "id": 5535,
+              "id": 5548,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 5534,
+                  "id": 5547,
                   "mutability": "mutable",
                   "name": "offerer",
                   "nameLocation": "1674:7:36",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5546,
+                  "scope": 5559,
                   "src": "1666:15:36",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -859,7 +859,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 5533,
+                    "id": 5546,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1666:7:36",
@@ -875,17 +875,17 @@
               "src": "1665:17:36"
             },
             "returnParameters": {
-              "id": 5538,
+              "id": 5551,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 5537,
+                  "id": 5550,
                   "mutability": "mutable",
                   "name": "currentCounter",
                   "nameLocation": "1738:14:36",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5546,
+                  "scope": 5559,
                   "src": "1730:22:36",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -894,7 +894,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 5536,
+                    "id": 5549,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1730:7:36",
@@ -908,7 +908,7 @@
               ],
               "src": "1729:24:36"
             },
-            "scope": 5547,
+            "scope": 5560,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "internal"
@@ -918,25 +918,25 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 5499,
+              "id": 5512,
               "name": "ConsiderationEventsAndErrors",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 2282,
+              "referencedDeclaration": 2295,
               "src": "456:28:36"
             },
-            "id": 5500,
+            "id": 5513,
             "nodeType": "InheritanceSpecifier",
             "src": "456:28:36"
           },
           {
             "baseName": {
-              "id": 5501,
+              "id": 5514,
               "name": "ReentrancyGuard",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 9227,
+              "referencedDeclaration": 9240,
               "src": "486:15:36"
             },
-            "id": 5502,
+            "id": 5515,
             "nodeType": "InheritanceSpecifier",
             "src": "486:15:36"
           }
@@ -945,40 +945,40 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "documentation": {
-          "id": 5498,
+          "id": 5511,
           "nodeType": "StructuredDocumentation",
           "src": "235:193:36",
           "text": " @title CounterManager\n @author 0age\n @notice CounterManager contains a storage mapping and related functionality\n         for retrieving and incrementing a per-offerer counter."
         },
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          5547,
-          9227,
-          2795,
-          2282
+          5560,
+          9240,
+          2808,
+          2295
         ],
         "name": "CounterManager",
         "nameLocation": "438:14:36",
-        "scope": 5548,
+        "scope": 5561,
         "usedErrors": [
-          2211,
-          2214,
-          2221,
           2224,
-          2229,
-          2238,
-          2241,
-          2248,
+          2227,
+          2234,
+          2237,
+          2242,
           2251,
-          2256,
+          2254,
           2261,
           2264,
-          2267,
-          2272,
-          2275,
-          2278,
-          2281,
-          2794
+          2269,
+          2274,
+          2277,
+          2280,
+          2285,
+          2288,
+          2291,
+          2294,
+          2807
         ]
       }
     ],

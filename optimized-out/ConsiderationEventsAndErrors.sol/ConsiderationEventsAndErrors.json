@@ -328,23 +328,23 @@
   "methodIdentifiers": {},
   "ast": {
     "absolutePath": "contracts/interfaces/ConsiderationEventsAndErrors.sol",
-    "id": 2283,
+    "id": 2296,
     "exportedSymbols": {
       "ConsiderationEventsAndErrors": [
-        2282
+        2295
       ],
       "ReceivedItem": [
-        5356
+        5369
       ],
       "SpentItem": [
-        5344
+        5357
       ]
     },
     "nodeType": "SourceUnit",
     "src": "32:6544:14",
     "nodes": [
       {
-        "id": 2158,
+        "id": 2171,
         "nodeType": "PragmaDirective",
         "src": "32:23:14",
         "literals": [
@@ -355,22 +355,22 @@
         ]
       },
       {
-        "id": 2161,
+        "id": 2174,
         "nodeType": "ImportDirective",
         "src": "57:74:14",
         "absolutePath": "contracts/lib/ConsiderationStructs.sol",
         "file": "../lib/ConsiderationStructs.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 2283,
-        "sourceUnit": 5492,
+        "scope": 2296,
+        "sourceUnit": 5505,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 2159,
+              "id": 2172,
               "name": "SpentItem",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 5344,
+              "referencedDeclaration": 5357,
               "src": "66:9:14",
               "typeDescriptions": {}
             },
@@ -378,11 +378,11 @@
           },
           {
             "foreign": {
-              "id": 2160,
+              "id": 2173,
               "name": "ReceivedItem",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 5356,
+              "referencedDeclaration": 5369,
               "src": "77:12:14",
               "typeDescriptions": {}
             },
@@ -392,17 +392,17 @@
         "unitAlias": ""
       },
       {
-        "id": 2282,
+        "id": 2295,
         "nodeType": "ContractDefinition",
         "src": "268:6307:14",
         "nodes": [
           {
-            "id": 2181,
+            "id": 2194,
             "nodeType": "EventDefinition",
             "src": "1192:209:14",
             "anonymous": false,
             "documentation": {
-              "id": 2163,
+              "id": 2176,
               "nodeType": "StructuredDocumentation",
               "src": "313:874:14",
               "text": " @dev Emit an event whenever an order is successfully fulfilled.\n @param orderHash     The hash of the fulfilled order.\n @param offerer       The offerer of the fulfilled order.\n @param zone          The zone of the fulfilled order.\n @param recipient     The recipient of each spent item on the fulfilled\n                      order, or the null address if there is no specific\n                      fulfiller (i.e. the order is part of a group of\n                      orders). Defaults to the caller unless explicitly\n                      specified otherwise by the fulfiller.\n @param offer         The offer items spent as part of the order.\n @param consideration The consideration items received as part of the\n                      order along with the recipients of each item."
@@ -411,18 +411,18 @@
             "name": "OrderFulfilled",
             "nameLocation": "1198:14:14",
             "parameters": {
-              "id": 2180,
+              "id": 2193,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2165,
+                  "id": 2178,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "orderHash",
                   "nameLocation": "1230:9:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2181,
+                  "scope": 2194,
                   "src": "1222:17:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -431,7 +431,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2164,
+                    "id": 2177,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "1222:7:14",
@@ -444,13 +444,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2167,
+                  "id": 2180,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "offerer",
                   "nameLocation": "1265:7:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2181,
+                  "scope": 2194,
                   "src": "1249:23:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -459,7 +459,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2166,
+                    "id": 2179,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1249:7:14",
@@ -473,13 +473,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2169,
+                  "id": 2182,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "zone",
                   "nameLocation": "1298:4:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2181,
+                  "scope": 2194,
                   "src": "1282:20:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -488,7 +488,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2168,
+                    "id": 2181,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1282:7:14",
@@ -502,13 +502,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2171,
+                  "id": 2184,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "recipient",
                   "nameLocation": "1320:9:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2181,
+                  "scope": 2194,
                   "src": "1312:17:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -517,7 +517,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2170,
+                    "id": 2183,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1312:7:14",
@@ -531,43 +531,43 @@
                 },
                 {
                   "constant": false,
-                  "id": 2175,
+                  "id": 2188,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "offer",
                   "nameLocation": "1351:5:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2181,
+                  "scope": 2194,
                   "src": "1339:17:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_SpentItem_$5344_memory_ptr_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_SpentItem_$5357_memory_ptr_$dyn_memory_ptr",
                     "typeString": "struct SpentItem[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 2173,
+                      "id": 2186,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 2172,
+                        "id": 2185,
                         "name": "SpentItem",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 5344,
+                        "referencedDeclaration": 5357,
                         "src": "1339:9:14"
                       },
-                      "referencedDeclaration": 5344,
+                      "referencedDeclaration": 5357,
                       "src": "1339:9:14",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_SpentItem_$5344_storage_ptr",
+                        "typeIdentifier": "t_struct$_SpentItem_$5357_storage_ptr",
                         "typeString": "struct SpentItem"
                       }
                     },
-                    "id": 2174,
+                    "id": 2187,
                     "nodeType": "ArrayTypeName",
                     "src": "1339:11:14",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_SpentItem_$5344_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_SpentItem_$5357_storage_$dyn_storage_ptr",
                       "typeString": "struct SpentItem[]"
                     }
                   },
@@ -575,43 +575,43 @@
                 },
                 {
                   "constant": false,
-                  "id": 2179,
+                  "id": 2192,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "consideration",
                   "nameLocation": "1381:13:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2181,
+                  "scope": 2194,
                   "src": "1366:28:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_ReceivedItem_$5356_memory_ptr_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_ReceivedItem_$5369_memory_ptr_$dyn_memory_ptr",
                     "typeString": "struct ReceivedItem[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 2177,
+                      "id": 2190,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 2176,
+                        "id": 2189,
                         "name": "ReceivedItem",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 5356,
+                        "referencedDeclaration": 5369,
                         "src": "1366:12:14"
                       },
-                      "referencedDeclaration": 5356,
+                      "referencedDeclaration": 5369,
                       "src": "1366:12:14",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_ReceivedItem_$5356_storage_ptr",
+                        "typeIdentifier": "t_struct$_ReceivedItem_$5369_storage_ptr",
                         "typeString": "struct ReceivedItem"
                       }
                     },
-                    "id": 2178,
+                    "id": 2191,
                     "nodeType": "ArrayTypeName",
                     "src": "1366:14:14",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_ReceivedItem_$5356_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_ReceivedItem_$5369_storage_$dyn_storage_ptr",
                       "typeString": "struct ReceivedItem[]"
                     }
                   },
@@ -622,12 +622,12 @@
             }
           },
           {
-            "id": 2190,
+            "id": 2203,
             "nodeType": "EventDefinition",
             "src": "1675:117:14",
             "anonymous": false,
             "documentation": {
-              "id": 2182,
+              "id": 2195,
               "nodeType": "StructuredDocumentation",
               "src": "1407:263:14",
               "text": " @dev Emit an event whenever an order is successfully cancelled.\n @param orderHash The hash of the cancelled order.\n @param offerer   The offerer of the cancelled order.\n @param zone      The zone of the cancelled order."
@@ -636,18 +636,18 @@
             "name": "OrderCancelled",
             "nameLocation": "1681:14:14",
             "parameters": {
-              "id": 2189,
+              "id": 2202,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2184,
+                  "id": 2197,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "orderHash",
                   "nameLocation": "1713:9:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2190,
+                  "scope": 2203,
                   "src": "1705:17:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -656,7 +656,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2183,
+                    "id": 2196,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "1705:7:14",
@@ -669,13 +669,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2186,
+                  "id": 2199,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "offerer",
                   "nameLocation": "1748:7:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2190,
+                  "scope": 2203,
                   "src": "1732:23:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -684,7 +684,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2185,
+                    "id": 2198,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1732:7:14",
@@ -698,13 +698,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2188,
+                  "id": 2201,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "zone",
                   "nameLocation": "1781:4:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2190,
+                  "scope": 2203,
                   "src": "1765:20:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -713,7 +713,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2187,
+                    "id": 2200,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1765:7:14",
@@ -730,12 +730,12 @@
             }
           },
           {
-            "id": 2199,
+            "id": 2212,
             "nodeType": "EventDefinition",
             "src": "2217:117:14",
             "anonymous": false,
             "documentation": {
-              "id": 2191,
+              "id": 2204,
               "nodeType": "StructuredDocumentation",
               "src": "1798:414:14",
               "text": " @dev Emit an event whenever an order is explicitly validated. Note that\n      this event will not be emitted on partial fills even though they do\n      validate the order as part of partial fulfillment.\n @param orderHash The hash of the validated order.\n @param offerer   The offerer of the validated order.\n @param zone      The zone of the validated order."
@@ -744,18 +744,18 @@
             "name": "OrderValidated",
             "nameLocation": "2223:14:14",
             "parameters": {
-              "id": 2198,
+              "id": 2211,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2193,
+                  "id": 2206,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "orderHash",
                   "nameLocation": "2255:9:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2199,
+                  "scope": 2212,
                   "src": "2247:17:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -764,7 +764,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2192,
+                    "id": 2205,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "2247:7:14",
@@ -777,13 +777,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2195,
+                  "id": 2208,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "offerer",
                   "nameLocation": "2290:7:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2199,
+                  "scope": 2212,
                   "src": "2274:23:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -792,7 +792,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2194,
+                    "id": 2207,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2274:7:14",
@@ -806,13 +806,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2197,
+                  "id": 2210,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "zone",
                   "nameLocation": "2323:4:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2199,
+                  "scope": 2212,
                   "src": "2307:20:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -821,7 +821,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2196,
+                    "id": 2209,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2307:7:14",
@@ -838,12 +838,12 @@
             }
           },
           {
-            "id": 2206,
+            "id": 2219,
             "nodeType": "EventDefinition",
             "src": "2550:70:14",
             "anonymous": false,
             "documentation": {
-              "id": 2200,
+              "id": 2213,
               "nodeType": "StructuredDocumentation",
               "src": "2340:205:14",
               "text": " @dev Emit an event whenever a counter for a given offerer is incremented.\n @param newCounter The new counter for the offerer.\n @param offerer  The offerer in question."
@@ -852,18 +852,18 @@
             "name": "CounterIncremented",
             "nameLocation": "2556:18:14",
             "parameters": {
-              "id": 2205,
+              "id": 2218,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2202,
+                  "id": 2215,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "newCounter",
                   "nameLocation": "2583:10:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2206,
+                  "scope": 2219,
                   "src": "2575:18:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -872,7 +872,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2201,
+                    "id": 2214,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2575:7:14",
@@ -885,13 +885,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2204,
+                  "id": 2217,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "offerer",
                   "nameLocation": "2611:7:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2206,
+                  "scope": 2219,
                   "src": "2595:23:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -900,7 +900,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2203,
+                    "id": 2216,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2595:7:14",
@@ -917,11 +917,11 @@
             }
           },
           {
-            "id": 2211,
+            "id": 2224,
             "nodeType": "ErrorDefinition",
             "src": "2833:44:14",
             "documentation": {
-              "id": 2207,
+              "id": 2220,
               "nodeType": "StructuredDocumentation",
               "src": "2626:202:14",
               "text": " @dev Revert with an error when attempting to fill an order that has\n      already been fully filled.\n @param orderHash The order hash on which a fill was attempted."
@@ -930,17 +930,17 @@
             "name": "OrderAlreadyFilled",
             "nameLocation": "2839:18:14",
             "parameters": {
-              "id": 2210,
+              "id": 2223,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2209,
+                  "id": 2222,
                   "mutability": "mutable",
                   "name": "orderHash",
                   "nameLocation": "2866:9:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2211,
+                  "scope": 2224,
                   "src": "2858:17:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -949,7 +949,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2208,
+                    "id": 2221,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "2858:7:14",
@@ -965,11 +965,11 @@
             }
           },
           {
-            "id": 2214,
+            "id": 2227,
             "nodeType": "ErrorDefinition",
             "src": "3024:20:14",
             "documentation": {
-              "id": 2212,
+              "id": 2225,
               "nodeType": "StructuredDocumentation",
               "src": "2883:136:14",
               "text": " @dev Revert with an error when attempting to fill an order outside the\n      specified start time and end time."
@@ -978,18 +978,18 @@
             "name": "InvalidTime",
             "nameLocation": "3030:11:14",
             "parameters": {
-              "id": 2213,
+              "id": 2226,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "3041:2:14"
             }
           },
           {
-            "id": 2221,
+            "id": 2234,
             "nodeType": "ErrorDefinition",
             "src": "3214:58:14",
             "documentation": {
-              "id": 2215,
+              "id": 2228,
               "nodeType": "StructuredDocumentation",
               "src": "3050:159:14",
               "text": " @dev Revert with an error when attempting to fill an order referencing an\n      invalid conduit (i.e. one that has not been deployed)."
@@ -998,17 +998,17 @@
             "name": "InvalidConduit",
             "nameLocation": "3220:14:14",
             "parameters": {
-              "id": 2220,
+              "id": 2233,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2217,
+                  "id": 2230,
                   "mutability": "mutable",
                   "name": "conduitKey",
                   "nameLocation": "3243:10:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2221,
+                  "scope": 2234,
                   "src": "3235:18:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1017,7 +1017,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2216,
+                    "id": 2229,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "3235:7:14",
@@ -1030,12 +1030,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2219,
+                  "id": 2232,
                   "mutability": "mutable",
                   "name": "conduit",
                   "nameLocation": "3263:7:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2221,
+                  "scope": 2234,
                   "src": "3255:15:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1044,7 +1044,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2218,
+                    "id": 2231,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "3255:7:14",
@@ -1061,11 +1061,11 @@
             }
           },
           {
-            "id": 2224,
+            "id": 2237,
             "nodeType": "ErrorDefinition",
             "src": "3449:42:14",
             "documentation": {
-              "id": 2222,
+              "id": 2235,
               "nodeType": "StructuredDocumentation",
               "src": "3278:166:14",
               "text": " @dev Revert with an error when an order is supplied for fulfillment with\n      a consideration array that is shorter than the original array."
@@ -1074,18 +1074,18 @@
             "name": "MissingOriginalConsiderationItems",
             "nameLocation": "3455:33:14",
             "parameters": {
-              "id": 2223,
+              "id": 2236,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "3488:2:14"
             }
           },
           {
-            "id": 2229,
+            "id": 2242,
             "nodeType": "ErrorDefinition",
             "src": "3639:44:14",
             "documentation": {
-              "id": 2225,
+              "id": 2238,
               "nodeType": "StructuredDocumentation",
               "src": "3497:137:14",
               "text": " @dev Revert with an error when a call to a conduit fails with revert data\n      that is too expensive to return."
@@ -1094,17 +1094,17 @@
             "name": "InvalidCallToConduit",
             "nameLocation": "3645:20:14",
             "parameters": {
-              "id": 2228,
+              "id": 2241,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2227,
+                  "id": 2240,
                   "mutability": "mutable",
                   "name": "conduit",
                   "nameLocation": "3674:7:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2229,
+                  "scope": 2242,
                   "src": "3666:15:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1113,7 +1113,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2226,
+                    "id": 2239,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "3666:7:14",
@@ -1130,11 +1130,11 @@
             }
           },
           {
-            "id": 2238,
+            "id": 2251,
             "nodeType": "ErrorDefinition",
             "src": "4168:129:14",
             "documentation": {
-              "id": 2230,
+              "id": 2243,
               "nodeType": "StructuredDocumentation",
               "src": "3689:474:14",
               "text": " @dev Revert with an error if a consideration amount has not been fully\n      zeroed out after applying all fulfillments.\n @param orderIndex         The index of the order with the consideration\n                           item with a shortfall.\n @param considerationIndex The index of the consideration item on the\n                           order.\n @param shortfallAmount    The unfulfilled consideration amount."
@@ -1143,17 +1143,17 @@
             "name": "ConsiderationNotMet",
             "nameLocation": "4174:19:14",
             "parameters": {
-              "id": 2237,
+              "id": 2250,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2232,
+                  "id": 2245,
                   "mutability": "mutable",
                   "name": "orderIndex",
                   "nameLocation": "4211:10:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2238,
+                  "scope": 2251,
                   "src": "4203:18:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1162,7 +1162,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2231,
+                    "id": 2244,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "4203:7:14",
@@ -1175,12 +1175,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2234,
+                  "id": 2247,
                   "mutability": "mutable",
                   "name": "considerationIndex",
                   "nameLocation": "4239:18:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2238,
+                  "scope": 2251,
                   "src": "4231:26:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1189,7 +1189,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2233,
+                    "id": 2246,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "4231:7:14",
@@ -1202,12 +1202,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2236,
+                  "id": 2249,
                   "mutability": "mutable",
                   "name": "shortfallAmount",
                   "nameLocation": "4275:15:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2238,
+                  "scope": 2251,
                   "src": "4267:23:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1216,7 +1216,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2235,
+                    "id": 2248,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "4267:7:14",
@@ -1232,11 +1232,11 @@
             }
           },
           {
-            "id": 2241,
+            "id": 2254,
             "nodeType": "ErrorDefinition",
             "src": "4445:34:14",
             "documentation": {
-              "id": 2239,
+              "id": 2252,
               "nodeType": "StructuredDocumentation",
               "src": "4303:137:14",
               "text": " @dev Revert with an error when insufficient ether is supplied as part of\n      msg.value when fulfilling orders."
@@ -1245,18 +1245,18 @@
             "name": "InsufficientEtherSupplied",
             "nameLocation": "4451:25:14",
             "parameters": {
-              "id": 2240,
+              "id": 2253,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "4476:2:14"
             }
           },
           {
-            "id": 2248,
+            "id": 2261,
             "nodeType": "ErrorDefinition",
             "src": "4566:67:14",
             "documentation": {
-              "id": 2242,
+              "id": 2255,
               "nodeType": "StructuredDocumentation",
               "src": "4485:76:14",
               "text": " @dev Revert with an error when an ether transfer reverts."
@@ -1265,17 +1265,17 @@
             "name": "EtherTransferGenericFailure",
             "nameLocation": "4572:27:14",
             "parameters": {
-              "id": 2247,
+              "id": 2260,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2244,
+                  "id": 2257,
                   "mutability": "mutable",
                   "name": "account",
                   "nameLocation": "4608:7:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2248,
+                  "scope": 2261,
                   "src": "4600:15:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1284,7 +1284,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2243,
+                    "id": 2256,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "4600:7:14",
@@ -1298,12 +1298,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2246,
+                  "id": 2259,
                   "mutability": "mutable",
                   "name": "amount",
                   "nameLocation": "4625:6:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2248,
+                  "scope": 2261,
                   "src": "4617:14:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1312,7 +1312,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2245,
+                    "id": 2258,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "4617:7:14",
@@ -1328,11 +1328,11 @@
             }
           },
           {
-            "id": 2251,
+            "id": 2264,
             "nodeType": "ErrorDefinition",
             "src": "4807:39:14",
             "documentation": {
-              "id": 2249,
+              "id": 2262,
               "nodeType": "StructuredDocumentation",
               "src": "4639:163:14",
               "text": " @dev Revert with an error when a partial fill is attempted on an order\n      that does not specify partial fill support in its order type."
@@ -1341,18 +1341,18 @@
             "name": "PartialFillsNotEnabledForOrder",
             "nameLocation": "4813:30:14",
             "parameters": {
-              "id": 2250,
+              "id": 2263,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "4843:2:14"
             }
           },
           {
-            "id": 2256,
+            "id": 2269,
             "nodeType": "ErrorDefinition",
             "src": "5035:42:14",
             "documentation": {
-              "id": 2252,
+              "id": 2265,
               "nodeType": "StructuredDocumentation",
               "src": "4852:178:14",
               "text": " @dev Revert with an error when attempting to fill an order that has been\n      cancelled.\n @param orderHash The hash of the cancelled order."
@@ -1361,17 +1361,17 @@
             "name": "OrderIsCancelled",
             "nameLocation": "5041:16:14",
             "parameters": {
-              "id": 2255,
+              "id": 2268,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2254,
+                  "id": 2267,
                   "mutability": "mutable",
                   "name": "orderHash",
                   "nameLocation": "5066:9:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2256,
+                  "scope": 2269,
                   "src": "5058:17:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1380,7 +1380,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2253,
+                    "id": 2266,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "5058:7:14",
@@ -1396,11 +1396,11 @@
             }
           },
           {
-            "id": 2261,
+            "id": 2274,
             "nodeType": "ErrorDefinition",
             "src": "5283:46:14",
             "documentation": {
-              "id": 2257,
+              "id": 2270,
               "nodeType": "StructuredDocumentation",
               "src": "5083:195:14",
               "text": " @dev Revert with an error when attempting to fill a basic order that has\n      been partially filled.\n @param orderHash The hash of the partially used order."
@@ -1409,17 +1409,17 @@
             "name": "OrderPartiallyFilled",
             "nameLocation": "5289:20:14",
             "parameters": {
-              "id": 2260,
+              "id": 2273,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2259,
+                  "id": 2272,
                   "mutability": "mutable",
                   "name": "orderHash",
                   "nameLocation": "5318:9:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2261,
+                  "scope": 2274,
                   "src": "5310:17:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1428,7 +1428,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2258,
+                    "id": 2271,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "5310:7:14",
@@ -1444,11 +1444,11 @@
             }
           },
           {
-            "id": 2264,
+            "id": 2277,
             "nodeType": "ErrorDefinition",
             "src": "5485:25:14",
             "documentation": {
-              "id": 2262,
+              "id": 2275,
               "nodeType": "StructuredDocumentation",
               "src": "5335:145:14",
               "text": " @dev Revert with an error when attempting to cancel an order as a caller\n      other than the indicated offerer or zone."
@@ -1457,18 +1457,18 @@
             "name": "InvalidCanceller",
             "nameLocation": "5491:16:14",
             "parameters": {
-              "id": 2263,
+              "id": 2276,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "5507:2:14"
             }
           },
           {
-            "id": 2267,
+            "id": 2280,
             "nodeType": "ErrorDefinition",
             "src": "5722:20:14",
             "documentation": {
-              "id": 2265,
+              "id": 2278,
               "nodeType": "StructuredDocumentation",
               "src": "5516:201:14",
               "text": " @dev Revert with an error when supplying a fraction with a value of zero\n      for the numerator or denominator, or one where the numerator exceeds\n      the denominator."
@@ -1477,18 +1477,18 @@
             "name": "BadFraction",
             "nameLocation": "5728:11:14",
             "parameters": {
-              "id": 2266,
+              "id": 2279,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "5739:2:14"
             }
           },
           {
-            "id": 2272,
+            "id": 2285,
             "nodeType": "ErrorDefinition",
             "src": "5964:37:14",
             "documentation": {
-              "id": 2268,
+              "id": 2281,
               "nodeType": "StructuredDocumentation",
               "src": "5748:211:14",
               "text": " @dev Revert with an error when a caller attempts to supply callvalue to a\n      non-payable basic order route or does not supply any callvalue to a\n      payable basic order route."
@@ -1497,17 +1497,17 @@
             "name": "InvalidMsgValue",
             "nameLocation": "5970:15:14",
             "parameters": {
-              "id": 2271,
+              "id": 2284,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2270,
+                  "id": 2283,
                   "mutability": "mutable",
                   "name": "value",
                   "nameLocation": "5994:5:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2272,
+                  "scope": 2285,
                   "src": "5986:13:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1516,7 +1516,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2269,
+                    "id": 2282,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "5986:7:14",
@@ -1532,11 +1532,11 @@
             }
           },
           {
-            "id": 2275,
+            "id": 2288,
             "nodeType": "ErrorDefinition",
             "src": "6159:43:14",
             "documentation": {
-              "id": 2273,
+              "id": 2286,
               "nodeType": "StructuredDocumentation",
               "src": "6007:147:14",
               "text": " @dev Revert with an error when attempting to fill a basic order using\n      calldata not produced by default ABI encoding."
@@ -1545,18 +1545,18 @@
             "name": "InvalidBasicOrderParameterEncoding",
             "nameLocation": "6165:34:14",
             "parameters": {
-              "id": 2274,
+              "id": 2287,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "6199:2:14"
             }
           },
           {
-            "id": 2278,
+            "id": 2291,
             "nodeType": "ErrorDefinition",
             "src": "6354:35:14",
             "documentation": {
-              "id": 2276,
+              "id": 2289,
               "nodeType": "StructuredDocumentation",
               "src": "6208:141:14",
               "text": " @dev Revert with an error when attempting to fulfill any number of\n      available orders when none are fulfillable."
@@ -1565,18 +1565,18 @@
             "name": "NoSpecifiedOrdersAvailable",
             "nameLocation": "6360:26:14",
             "parameters": {
-              "id": 2277,
+              "id": 2290,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "6386:2:14"
             }
           },
           {
-            "id": 2281,
+            "id": 2294,
             "nodeType": "ErrorDefinition",
             "src": "6542:31:14",
             "documentation": {
-              "id": 2279,
+              "id": 2292,
               "nodeType": "StructuredDocumentation",
               "src": "6395:142:14",
               "text": " @dev Revert with an error when attempting to fulfill an order with an\n      offer for ETH outside of matching orders."
@@ -1585,7 +1585,7 @@
             "name": "InvalidNativeOfferItem",
             "nameLocation": "6548:22:14",
             "parameters": {
-              "id": 2280,
+              "id": 2293,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "6570:2:14"
@@ -1598,36 +1598,36 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 2162,
+          "id": 2175,
           "nodeType": "StructuredDocumentation",
           "src": "133:134:14",
           "text": " @title ConsiderationEventsAndErrors\n @author 0age\n @notice ConsiderationEventsAndErrors contains all events and errors."
         },
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          2282
+          2295
         ],
         "name": "ConsiderationEventsAndErrors",
         "nameLocation": "278:28:14",
-        "scope": 2283,
+        "scope": 2296,
         "usedErrors": [
-          2211,
-          2214,
-          2221,
           2224,
-          2229,
-          2238,
-          2241,
-          2248,
+          2227,
+          2234,
+          2237,
+          2242,
           2251,
-          2256,
+          2254,
           2261,
           2264,
-          2267,
-          2272,
-          2275,
-          2278,
-          2281
+          2269,
+          2274,
+          2277,
+          2280,
+          2285,
+          2288,
+          2291,
+          2294
         ]
       }
     ],

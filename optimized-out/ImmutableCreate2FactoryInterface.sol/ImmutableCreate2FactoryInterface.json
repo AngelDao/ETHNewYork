@@ -110,17 +110,17 @@
   },
   "ast": {
     "absolutePath": "contracts/interfaces/ImmutableCreate2FactoryInterface.sol",
-    "id": 2789,
+    "id": 2802,
     "exportedSymbols": {
       "ImmutableCreate2FactoryInterface": [
-        2788
+        2801
       ]
     },
     "nodeType": "SourceUnit",
     "src": "32:4577:20",
     "nodes": [
       {
-        "id": 2748,
+        "id": 2761,
         "nodeType": "PragmaDirective",
         "src": "32:23:20",
         "literals": [
@@ -131,16 +131,16 @@
         ]
       },
       {
-        "id": 2788,
+        "id": 2801,
         "nodeType": "ContractDefinition",
         "src": "885:3723:20",
         "nodes": [
           {
-            "id": 2759,
+            "id": 2772,
             "nodeType": "FunctionDefinition",
             "src": "1642:147:20",
             "documentation": {
-              "id": 2750,
+              "id": 2763,
               "nodeType": "StructuredDocumentation",
               "src": "934:703:20",
               "text": " @dev Create a contract using CREATE2 by submitting a given salt or nonce\n      along with the initialization code for the contract. Note that the\n      first 20 bytes of the salt must match those of the calling address,\n      which prevents contract creation events from being submitted by\n      unintended parties.\n @param salt               The nonce that will be passed into the CREATE2\n                           call.\n @param initializationCode The initialization code that will be passed\n                           into the CREATE2 call.\n @return deploymentAddress Address of the contract that will be created."
@@ -152,17 +152,17 @@
             "name": "safeCreate2",
             "nameLocation": "1651:11:20",
             "parameters": {
-              "id": 2755,
+              "id": 2768,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2752,
+                  "id": 2765,
                   "mutability": "mutable",
                   "name": "salt",
                   "nameLocation": "1671:4:20",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2759,
+                  "scope": 2772,
                   "src": "1663:12:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -171,7 +171,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2751,
+                    "id": 2764,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "1663:7:20",
@@ -184,12 +184,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2754,
+                  "id": 2767,
                   "mutability": "mutable",
                   "name": "initializationCode",
                   "nameLocation": "1692:18:20",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2759,
+                  "scope": 2772,
                   "src": "1677:33:20",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -198,7 +198,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 2753,
+                    "id": 2766,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "1677:5:20",
@@ -213,17 +213,17 @@
               "src": "1662:49:20"
             },
             "returnParameters": {
-              "id": 2758,
+              "id": 2771,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2757,
+                  "id": 2770,
                   "mutability": "mutable",
                   "name": "deploymentAddress",
                   "nameLocation": "1770:17:20",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2759,
+                  "scope": 2772,
                   "src": "1762:25:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -232,7 +232,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2756,
+                    "id": 2769,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1762:7:20",
@@ -247,17 +247,17 @@
               ],
               "src": "1761:27:20"
             },
-            "scope": 2788,
+            "scope": 2801,
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 2769,
+            "id": 2782,
             "nodeType": "FunctionDefinition",
             "src": "2836:141:20",
             "documentation": {
-              "id": 2760,
+              "id": 2773,
               "nodeType": "StructuredDocumentation",
               "src": "1795:1036:20",
               "text": " @dev Compute the address of the contract that will be created when\n      submitting a given salt or nonce to the contract along with the\n      contract's initialization code. The CREATE2 address is computed in\n      accordance with EIP-1014, and adheres to the formula therein of\n      `keccak256( 0xff ++ address ++ salt ++ keccak256(init_code)))[12:]`\n      when performing the computation. The computed address is then\n      checked for any existing contract code - if so, the null address\n      will be returned instead.\n @param salt     The nonce passed into the CREATE2 address calculation.\n @param initCode The contract initialization code to be used that will be\n                 passed into the CREATE2 address calculation.\n @return deploymentAddress Address of the contract that will be created,\n                           or the null address if a contract already\n                           exists at that address."
@@ -269,17 +269,17 @@
             "name": "findCreate2Address",
             "nameLocation": "2845:18:20",
             "parameters": {
-              "id": 2765,
+              "id": 2778,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2762,
+                  "id": 2775,
                   "mutability": "mutable",
                   "name": "salt",
                   "nameLocation": "2872:4:20",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2769,
+                  "scope": 2782,
                   "src": "2864:12:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -288,7 +288,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2761,
+                    "id": 2774,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "2864:7:20",
@@ -301,12 +301,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2764,
+                  "id": 2777,
                   "mutability": "mutable",
                   "name": "initCode",
                   "nameLocation": "2893:8:20",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2769,
+                  "scope": 2782,
                   "src": "2878:23:20",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -315,7 +315,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 2763,
+                    "id": 2776,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "2878:5:20",
@@ -330,17 +330,17 @@
               "src": "2863:39:20"
             },
             "returnParameters": {
-              "id": 2768,
+              "id": 2781,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2767,
+                  "id": 2780,
                   "mutability": "mutable",
                   "name": "deploymentAddress",
                   "nameLocation": "2958:17:20",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2769,
+                  "scope": 2782,
                   "src": "2950:25:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -349,7 +349,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2766,
+                    "id": 2779,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2950:7:20",
@@ -364,17 +364,17 @@
               ],
               "src": "2949:27:20"
             },
-            "scope": 2788,
+            "scope": 2801,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 2779,
+            "id": 2792,
             "nodeType": "FunctionDefinition",
             "src": "4076:145:20",
             "documentation": {
-              "id": 2770,
+              "id": 2783,
               "nodeType": "StructuredDocumentation",
               "src": "2983:1088:20",
               "text": " @dev Compute the address of the contract that will be created when\n      submitting a given salt or nonce to the contract along with the\n      keccak256 hash of the contract's initialization code. The CREATE2\n      address is computed in accordance with EIP-1014, and adheres to the\n      `keccak256( 0xff ++ address ++ salt ++ keccak256(init_code)))[12:]`\n      formula when performing the computation. The computed address is\n      then checked for any existing contract code - if so, the null\n      address will be returned instead.\n @param salt         The nonce passed into the CREATE2 address\n                     calculation.\n @param initCodeHash The keccak256 hash of the initialization code that\n                     will be passed into the CREATE2 address calculation.\n @return deploymentAddress Address of the contract that will be created,\n                           or the null address if a contract already\n                           exists at that address."
@@ -386,17 +386,17 @@
             "name": "findCreate2AddressViaHash",
             "nameLocation": "4085:25:20",
             "parameters": {
-              "id": 2775,
+              "id": 2788,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2772,
+                  "id": 2785,
                   "mutability": "mutable",
                   "name": "salt",
                   "nameLocation": "4119:4:20",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2779,
+                  "scope": 2792,
                   "src": "4111:12:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -405,7 +405,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2771,
+                    "id": 2784,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "4111:7:20",
@@ -418,12 +418,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2774,
+                  "id": 2787,
                   "mutability": "mutable",
                   "name": "initCodeHash",
                   "nameLocation": "4133:12:20",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2779,
+                  "scope": 2792,
                   "src": "4125:20:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -432,7 +432,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2773,
+                    "id": 2786,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "4125:7:20",
@@ -447,17 +447,17 @@
               "src": "4110:36:20"
             },
             "returnParameters": {
-              "id": 2778,
+              "id": 2791,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2777,
+                  "id": 2790,
                   "mutability": "mutable",
                   "name": "deploymentAddress",
                   "nameLocation": "4202:17:20",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2779,
+                  "scope": 2792,
                   "src": "4194:25:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -466,7 +466,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2776,
+                    "id": 2789,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "4194:7:20",
@@ -481,17 +481,17 @@
               ],
               "src": "4193:27:20"
             },
-            "scope": 2788,
+            "scope": 2801,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 2787,
+            "id": 2800,
             "nodeType": "FunctionDefinition",
             "src": "4501:105:20",
             "documentation": {
-              "id": 2780,
+              "id": 2793,
               "nodeType": "StructuredDocumentation",
               "src": "4227:269:20",
               "text": " @dev Determine if a contract has already been deployed by the factory to\n      a given address.\n @param deploymentAddress The contract address to check.\n @return True if the contract has been deployed, false otherwise."
@@ -503,17 +503,17 @@
             "name": "hasBeenDeployed",
             "nameLocation": "4510:15:20",
             "parameters": {
-              "id": 2783,
+              "id": 2796,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2782,
+                  "id": 2795,
                   "mutability": "mutable",
                   "name": "deploymentAddress",
                   "nameLocation": "4534:17:20",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2787,
+                  "scope": 2800,
                   "src": "4526:25:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -522,7 +522,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2781,
+                    "id": 2794,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "4526:7:20",
@@ -538,17 +538,17 @@
               "src": "4525:27:20"
             },
             "returnParameters": {
-              "id": 2786,
+              "id": 2799,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2785,
+                  "id": 2798,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2787,
+                  "scope": 2800,
                   "src": "4600:4:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -557,7 +557,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2784,
+                    "id": 2797,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "4600:4:20",
@@ -571,7 +571,7 @@
               ],
               "src": "4599:6:20"
             },
-            "scope": 2788,
+            "scope": 2801,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -583,18 +583,18 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 2749,
+          "id": 2762,
           "nodeType": "StructuredDocumentation",
           "src": "57:827:20",
           "text": " @title ImmutableCreate2FactoryInterface\n @author 0age\n @notice This contract provides a safeCreate2 function that takes a salt value\n         and a block of initialization code as arguments and passes them into\n         inline assembly. The contract prevents redeploys by maintaining a\n         mapping of all contracts that have already been deployed, and\n         prevents frontrunning or other collisions by requiring that the first\n         20 bytes of the salt are equal to the address of the caller (this can\n         be bypassed by setting the first 20 bytes to the null address). There\n         is also a view function that computes the address of the contract\n         that will be created when submitting a given salt or nonce along with\n         a given block of initialization code."
         },
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          2788
+          2801
         ],
         "name": "ImmutableCreate2FactoryInterface",
         "nameLocation": "895:32:20",
-        "scope": 2789,
+        "scope": 2802,
         "usedErrors": []
       }
     ],

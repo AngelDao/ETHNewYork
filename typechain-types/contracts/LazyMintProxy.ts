@@ -155,7 +155,8 @@ export type CriteriaResolverStructOutput = [
 
 export interface LazyMintProxyInterface extends utils.Interface {
   functions: {
-    "fulfillAdvancedOrder(((address,address,(uint8,address,uint256,uint256,uint256)[],(uint8,address,uint256,uint256,uint256,address)[],uint8,uint256,uint256,bytes32,uint256,bytes32,uint256),uint120,uint120,bytes,bytes),(uint256,uint8,uint256,uint256,bytes32[])[],bytes32,address,address,uint8,bytes32,bytes32)": FunctionFragment;
+    "fulfillAdvancedOrder(((address,address,(uint8,address,uint256,uint256,uint256)[],(uint8,address,uint256,uint256,uint256,address)[],uint8,uint256,uint256,bytes32,uint256,bytes32,uint256),uint120,uint120,bytes,bytes),(uint256,uint8,uint256,uint256,bytes32[])[],bytes32,address)": FunctionFragment;
+    "fulfillAdvancedOrderWithPermit(((address,address,(uint8,address,uint256,uint256,uint256)[],(uint8,address,uint256,uint256,uint256,address)[],uint8,uint256,uint256,bytes32,uint256,bytes32,uint256),uint120,uint120,bytes,bytes),(uint256,uint8,uint256,uint256,bytes32[])[],bytes32,address,address,uint8,bytes32,bytes32)": FunctionFragment;
     "seaportAddress()": FunctionFragment;
     "storefrontAddress()": FunctionFragment;
   };
@@ -163,12 +164,17 @@ export interface LazyMintProxyInterface extends utils.Interface {
   getFunction(
     nameOrSignatureOrTopic:
       | "fulfillAdvancedOrder"
+      | "fulfillAdvancedOrderWithPermit"
       | "seaportAddress"
       | "storefrontAddress"
   ): FunctionFragment;
 
   encodeFunctionData(
     functionFragment: "fulfillAdvancedOrder",
+    values: [AdvancedOrderStruct, CriteriaResolverStruct[], BytesLike, string]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "fulfillAdvancedOrderWithPermit",
     values: [
       AdvancedOrderStruct,
       CriteriaResolverStruct[],
@@ -191,6 +197,10 @@ export interface LazyMintProxyInterface extends utils.Interface {
 
   decodeFunctionResult(
     functionFragment: "fulfillAdvancedOrder",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: "fulfillAdvancedOrderWithPermit",
     data: BytesLike
   ): Result;
   decodeFunctionResult(
@@ -237,6 +247,14 @@ export interface LazyMintProxy extends BaseContract {
       criteriaResolvers: CriteriaResolverStruct[],
       fulfillerConduitKey: BytesLike,
       recipient: string,
+      overrides?: PayableOverrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    fulfillAdvancedOrderWithPermit(
+      advancedOrder: AdvancedOrderStruct,
+      criteriaResolvers: CriteriaResolverStruct[],
+      fulfillerConduitKey: BytesLike,
+      recipient: string,
       _operator: string,
       _v: BigNumberish,
       _r: BytesLike,
@@ -254,6 +272,14 @@ export interface LazyMintProxy extends BaseContract {
     criteriaResolvers: CriteriaResolverStruct[],
     fulfillerConduitKey: BytesLike,
     recipient: string,
+    overrides?: PayableOverrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  fulfillAdvancedOrderWithPermit(
+    advancedOrder: AdvancedOrderStruct,
+    criteriaResolvers: CriteriaResolverStruct[],
+    fulfillerConduitKey: BytesLike,
+    recipient: string,
     _operator: string,
     _v: BigNumberish,
     _r: BytesLike,
@@ -267,6 +293,14 @@ export interface LazyMintProxy extends BaseContract {
 
   callStatic: {
     fulfillAdvancedOrder(
+      advancedOrder: AdvancedOrderStruct,
+      criteriaResolvers: CriteriaResolverStruct[],
+      fulfillerConduitKey: BytesLike,
+      recipient: string,
+      overrides?: CallOverrides
+    ): Promise<boolean>;
+
+    fulfillAdvancedOrderWithPermit(
       advancedOrder: AdvancedOrderStruct,
       criteriaResolvers: CriteriaResolverStruct[],
       fulfillerConduitKey: BytesLike,
@@ -291,6 +325,14 @@ export interface LazyMintProxy extends BaseContract {
       criteriaResolvers: CriteriaResolverStruct[],
       fulfillerConduitKey: BytesLike,
       recipient: string,
+      overrides?: PayableOverrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    fulfillAdvancedOrderWithPermit(
+      advancedOrder: AdvancedOrderStruct,
+      criteriaResolvers: CriteriaResolverStruct[],
+      fulfillerConduitKey: BytesLike,
+      recipient: string,
       _operator: string,
       _v: BigNumberish,
       _r: BytesLike,
@@ -305,6 +347,14 @@ export interface LazyMintProxy extends BaseContract {
 
   populateTransaction: {
     fulfillAdvancedOrder(
+      advancedOrder: AdvancedOrderStruct,
+      criteriaResolvers: CriteriaResolverStruct[],
+      fulfillerConduitKey: BytesLike,
+      recipient: string,
+      overrides?: PayableOverrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    fulfillAdvancedOrderWithPermit(
       advancedOrder: AdvancedOrderStruct,
       criteriaResolvers: CriteriaResolverStruct[],
       fulfillerConduitKey: BytesLike,

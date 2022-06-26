@@ -18,6 +18,36 @@ contract LazyMintProxy {
         AdvancedOrder calldata advancedOrder,
         CriteriaResolver[] calldata criteriaResolvers,
         bytes32 fulfillerConduitKey,
+        address recipient
+    ) external payable returns (bool fulfilled) {
+        //load storefront contract
+        IStoreFront storefrontDeployment = IStoreFront(storefrontAddress);
+
+        // get mint parameters from order
+        uint256 amount = advancedOrder.parameters.offer.length;
+
+        // Mint NFT
+        storefrontDeployment.mint(recipient, amount);
+
+        //load seaport contract
+        SeaportInterface seaportDeployment = SeaportInterface(seaportAddress);
+
+        //execute sale
+        fulfilled = seaportDeployment.fulfillAdvancedOrder{ value: msg.value }(
+            advancedOrder,
+            criteriaResolvers,
+            fulfillerConduitKey,
+            recipient
+        );
+
+        //check if successful or revert
+        if (!fulfilled) revert("Seaport order unable to be fulfilled.");
+    }
+
+    function fulfillAdvancedOrderWithPermit(
+        AdvancedOrder calldata advancedOrder,
+        CriteriaResolver[] calldata criteriaResolvers,
+        bytes32 fulfillerConduitKey,
         address recipient,
         address _operator,
         uint8 _v,

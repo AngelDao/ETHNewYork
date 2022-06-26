@@ -25,17 +25,17 @@
   "methodIdentifiers": {},
   "ast": {
     "absolutePath": "contracts/zones/order-check/interfaces/ZoneInteractionErrors.sol",
-    "id": 11143,
+    "id": 11156,
     "exportedSymbols": {
       "ZoneInteractionErrors": [
-        11142
+        11155
       ]
     },
     "nodeType": "SourceUnit",
     "src": "32:644:61",
     "nodes": [
       {
-        "id": 11135,
+        "id": 11148,
         "nodeType": "PragmaDirective",
         "src": "32:24:61",
         "literals": [
@@ -46,16 +46,16 @@
         ]
       },
       {
-        "id": 11142,
+        "id": 11155,
         "nodeType": "ContractDefinition",
         "src": "192:484:61",
         "nodes": [
           {
-            "id": 11141,
+            "id": 11154,
             "nodeType": "ErrorDefinition",
             "src": "626:48:61",
             "documentation": {
-              "id": 11137,
+              "id": 11150,
               "nodeType": "StructuredDocumentation",
               "src": "230:391:61",
               "text": " @dev Revert with an error when attempting to fill an order that specifies\n      a restricted submitter as its order type when not submitted by\n      either the offerer or the order's zone or approved as valid by the\n      zone in question via a staticcall to `isValidOrder`.\n @param orderHash The order hash for the invalid restricted order."
@@ -64,17 +64,17 @@
             "name": "InvalidRestrictedOrder",
             "nameLocation": "632:22:61",
             "parameters": {
-              "id": 11140,
+              "id": 11153,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11139,
+                  "id": 11152,
                   "mutability": "mutable",
                   "name": "orderHash",
                   "nameLocation": "663:9:61",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11141,
+                  "scope": 11154,
                   "src": "655:17:61",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -83,7 +83,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 11138,
+                    "id": 11151,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "655:7:61",
@@ -105,20 +105,20 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 11136,
+          "id": 11149,
           "nodeType": "StructuredDocumentation",
           "src": "58:133:61",
           "text": " @title ZoneInteractionErrors\n @author 0age\n @notice ZoneInteractionErrors contains errors related to zone interaction."
         },
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          11142
+          11155
         ],
         "name": "ZoneInteractionErrors",
         "nameLocation": "202:21:61",
-        "scope": 11143,
+        "scope": 11156,
         "usedErrors": [
-          11141
+          11154
         ]
       }
     ],
