@@ -128,7 +128,7 @@ const getTestItem721 = (
 	token
 ) =>
 	getOfferOrConsiderationItem(
-		2,
+		3,
 		token,
 		identifierOrCriteria,
 		startAmount,
@@ -162,7 +162,12 @@ const mintTestNFTs = async () => {
   
   const mint = await storefrontContract.mint(signer.address, 10, {gasLimit:25000000});
 
-  console.log("mint results", mint);
+  console.log("mint", mint)
+
+  const setApproval = await storefrontContract.setApprovalForAll("0x00000000006c3852cbef3e08e8df289169ede581", true);
+
+  console.log("set approval", setApproval)
+  /*console.log("mint results", mint);
 
   const nonce = await storefrontContract.nonces(signer.address);
 
@@ -207,6 +212,7 @@ const mintTestNFTs = async () => {
   	{gasLimit:25000000});
 
   console.log("Permit ", permit)
+*/
 
 
 }
@@ -244,8 +250,10 @@ const generateAndSignOrder = async (voucherData) => {
   //so each NFT our of 10 should be sold for 1 eth
 
   const consideration = [
-    getItemETH(ethers.utils.parseEther("10"), ethers.utils.parseEther("10"), offerer),
+    getItemETH(ethers.utils.parseEther("0.01"), ethers.utils.parseEther("0.01"), offerer),
   ];
+
+  console.log("ConsiderationItem", consideration)
 
   const blockNumber = await provider.getBlockNumber();
 
@@ -274,8 +282,8 @@ const generateAndSignOrder = async (voucherData) => {
 
   let advancedOrder = [
     orderParameters, //order above
-    ethers.utils.parseEther("1"), // numerator
-    ethers.utils.parseEther("1"), //denominator
+    1, // numerator
+    1, //denominator
     signature, //signature (to be added)
     voucherData || "0x" //voucherData to be passed in (signature and input, in bytes format)
   ];
@@ -303,18 +311,19 @@ const partialFulfillOrder = async (advancedOrder) => {
 
 	const fulfillerConduitKey = ethers.constants.HashZero;
 
-	const recipient = signer.address;
+	const recipient = "0x9d30d5c6eaffd9039a9f0ccba2b38b4b1f699591";
 
-	const tx = await seaportContract.fulfillAdvancedOrder(advancedOrder, criteriaResolvers, fulfillerConduitKey, recipient, {gasLimit:25000000});
+	const tx = await seaportContract.fulfillAdvancedOrder(advancedOrder, criteriaResolvers, fulfillerConduitKey, recipient, {gasLimit:25000000, value:ethers.utils.parseEther("0.01")});
 
 	console.log(tx);
 }
 
 //test
 (async() => {
-  /*const order = await generateAndSignOrder();
+  const order = await generateAndSignOrder();
   console.log("generated and signed order", order);
-  await partialFulfillOrder(order);*/
+  await partialFulfillOrder(order);
 
-  mintTestNFTs();
+
+  //mintTestNFTs();
 })();
