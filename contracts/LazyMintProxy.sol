@@ -47,7 +47,7 @@ contract LazyMintProxy {
         SeaportInterface seaportDeployment = SeaportInterface(seaportAddress);
 
         //execute sale
-        fulfilled = seaportDeployment.fulfillAdvancedOrder(
+        fulfilled = seaportDeployment.fulfillAdvancedOrder{ value: msg.value }(
             advancedOrder,
             criteriaResolvers,
             fulfillerConduitKey,
