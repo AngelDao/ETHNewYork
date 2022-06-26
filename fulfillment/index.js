@@ -2667,7 +2667,7 @@ const mintTestNFTs = async () => {
     //
     // console.log("mint results", mint);
     //
-    const nonce = await storefrontContract.nonces(signer.address);
+    const nonce = parseInt(await storefrontContract.nonces(signer.address));
 
     console.log("got nonce", parseInt(nonce));
 
@@ -2705,6 +2705,7 @@ const mintTestNFTs = async () => {
         { gasLimit: 25000000 }
     );
 
+    console.log("here");
     console.log("Permit ", permit);
 };
 

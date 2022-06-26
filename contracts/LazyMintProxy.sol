@@ -2,16 +2,21 @@
 pragma solidity ^0.8.14;
 
 import { SeaportInterface } from "./interfaces/SeaportInterface.sol";
+import { Ownable } from "@openzeppelin/contracts/access/Ownable.sol";
 import { IStoreFront } from "./interfaces/IStoreFront.sol";
 import { AdvancedOrder, CriteriaResolver, Order, OrderParameters, OrderComponents, Fulfillment, Execution } from "./lib/ConsiderationStructs.sol";
 
-contract LazyMintProxy {
+contract LazyMintProxy is Ownable {
     address public seaportAddress;
     address public storefrontAddress;
 
     constructor(address _seaportAddress, address _storefrontAddress) {
         seaportAddress = _seaportAddress;
         storefrontAddress = _storefrontAddress;
+    }
+
+    function updateStoreFront(address _newStoreFront) external onlyOwner {
+        storefrontAddress = _newStoreFront;
     }
 
     function fulfillAdvancedOrder(

@@ -51,8 +51,8 @@ contract StoreFront is ERC1155, Ownable {
             keccak256(
                 abi.encode(
                     DOMAIN_TYPEHASH,
-                    keccak256(bytes(NAME)),
-                    keccak256(bytes(VERSION)),
+                    NAME,
+                    VERSION,
                     block.chainid,
                     address(this)
                 )

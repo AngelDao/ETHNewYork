@@ -8,12 +8,17 @@ import type {
   BytesLike,
   CallOverrides,
   ContractTransaction,
+  Overrides,
   PayableOverrides,
   PopulatedTransaction,
   Signer,
   utils,
 } from "ethers";
-import type { FunctionFragment, Result } from "@ethersproject/abi";
+import type {
+  FunctionFragment,
+  Result,
+  EventFragment,
+} from "@ethersproject/abi";
 import type { Listener, Provider } from "@ethersproject/providers";
 import type {
   TypedEventFilter,
@@ -157,16 +162,24 @@ export interface LazyMintProxyInterface extends utils.Interface {
   functions: {
     "fulfillAdvancedOrder(((address,address,(uint8,address,uint256,uint256,uint256)[],(uint8,address,uint256,uint256,uint256,address)[],uint8,uint256,uint256,bytes32,uint256,bytes32,uint256),uint120,uint120,bytes,bytes),(uint256,uint8,uint256,uint256,bytes32[])[],bytes32,address)": FunctionFragment;
     "fulfillAdvancedOrderWithPermit(((address,address,(uint8,address,uint256,uint256,uint256)[],(uint8,address,uint256,uint256,uint256,address)[],uint8,uint256,uint256,bytes32,uint256,bytes32,uint256),uint120,uint120,bytes,bytes),(uint256,uint8,uint256,uint256,bytes32[])[],bytes32,address,address,uint8,bytes32,bytes32)": FunctionFragment;
+    "owner()": FunctionFragment;
+    "renounceOwnership()": FunctionFragment;
     "seaportAddress()": FunctionFragment;
     "storefrontAddress()": FunctionFragment;
+    "transferOwnership(address)": FunctionFragment;
+    "updateStoreFront(address)": FunctionFragment;
   };
 
   getFunction(
     nameOrSignatureOrTopic:
       | "fulfillAdvancedOrder"
       | "fulfillAdvancedOrderWithPermit"
+      | "owner"
+      | "renounceOwnership"
       | "seaportAddress"
       | "storefrontAddress"
+      | "transferOwnership"
+      | "updateStoreFront"
   ): FunctionFragment;
 
   encodeFunctionData(
@@ -186,6 +199,11 @@ export interface LazyMintProxyInterface extends utils.Interface {
       BytesLike
     ]
   ): string;
+  encodeFunctionData(functionFragment: "owner", values?: undefined): string;
+  encodeFunctionData(
+    functionFragment: "renounceOwnership",
+    values?: undefined
+  ): string;
   encodeFunctionData(
     functionFragment: "seaportAddress",
     values?: undefined
@@ -193,6 +211,14 @@ export interface LazyMintProxyInterface extends utils.Interface {
   encodeFunctionData(
     functionFragment: "storefrontAddress",
     values?: undefined
+  ): string;
+  encodeFunctionData(
+    functionFragment: "transferOwnership",
+    values: [string]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "updateStoreFront",
+    values: [string]
   ): string;
 
   decodeFunctionResult(
@@ -203,6 +229,11 @@ export interface LazyMintProxyInterface extends utils.Interface {
     functionFragment: "fulfillAdvancedOrderWithPermit",
     data: BytesLike
   ): Result;
+  decodeFunctionResult(functionFragment: "owner", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "renounceOwnership",
+    data: BytesLike
+  ): Result;
   decodeFunctionResult(
     functionFragment: "seaportAddress",
     data: BytesLike
@@ -211,9 +242,33 @@ export interface LazyMintProxyInterface extends utils.Interface {
     functionFragment: "storefrontAddress",
     data: BytesLike
   ): Result;
+  decodeFunctionResult(
+    functionFragment: "transferOwnership",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: "updateStoreFront",
+    data: BytesLike
+  ): Result;
 
-  events: {};
+  events: {
+    "OwnershipTransferred(address,address)": EventFragment;
+  };
+
+  getEvent(nameOrSignatureOrTopic: "OwnershipTransferred"): EventFragment;
 }
+
+export interface OwnershipTransferredEventObject {
+  previousOwner: string;
+  newOwner: string;
+}
+export type OwnershipTransferredEvent = TypedEvent<
+  [string, string],
+  OwnershipTransferredEventObject
+>;
+
+export type OwnershipTransferredEventFilter =
+  TypedEventFilter<OwnershipTransferredEvent>;
 
 export interface LazyMintProxy extends BaseContract {
   connect(signerOrProvider: Signer | Provider | string): this;
@@ -262,9 +317,25 @@ export interface LazyMintProxy extends BaseContract {
       overrides?: PayableOverrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
+    owner(overrides?: CallOverrides): Promise<[string]>;
+
+    renounceOwnership(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
     seaportAddress(overrides?: CallOverrides): Promise<[string]>;
 
     storefrontAddress(overrides?: CallOverrides): Promise<[string]>;
+
+    transferOwnership(
+      newOwner: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    updateStoreFront(
+      _newStoreFront: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
   };
 
   fulfillAdvancedOrder(
@@ -287,9 +358,25 @@ export interface LazyMintProxy extends BaseContract {
     overrides?: PayableOverrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
+  owner(overrides?: CallOverrides): Promise<string>;
+
+  renounceOwnership(
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
   seaportAddress(overrides?: CallOverrides): Promise<string>;
 
   storefrontAddress(overrides?: CallOverrides): Promise<string>;
+
+  transferOwnership(
+    newOwner: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  updateStoreFront(
+    _newStoreFront: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
 
   callStatic: {
     fulfillAdvancedOrder(
@@ -312,12 +399,35 @@ export interface LazyMintProxy extends BaseContract {
       overrides?: CallOverrides
     ): Promise<boolean>;
 
+    owner(overrides?: CallOverrides): Promise<string>;
+
+    renounceOwnership(overrides?: CallOverrides): Promise<void>;
+
     seaportAddress(overrides?: CallOverrides): Promise<string>;
 
     storefrontAddress(overrides?: CallOverrides): Promise<string>;
+
+    transferOwnership(
+      newOwner: string,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    updateStoreFront(
+      _newStoreFront: string,
+      overrides?: CallOverrides
+    ): Promise<void>;
   };
 
-  filters: {};
+  filters: {
+    "OwnershipTransferred(address,address)"(
+      previousOwner?: string | null,
+      newOwner?: string | null
+    ): OwnershipTransferredEventFilter;
+    OwnershipTransferred(
+      previousOwner?: string | null,
+      newOwner?: string | null
+    ): OwnershipTransferredEventFilter;
+  };
 
   estimateGas: {
     fulfillAdvancedOrder(
@@ -340,9 +450,25 @@ export interface LazyMintProxy extends BaseContract {
       overrides?: PayableOverrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
+    owner(overrides?: CallOverrides): Promise<BigNumber>;
+
+    renounceOwnership(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
     seaportAddress(overrides?: CallOverrides): Promise<BigNumber>;
 
     storefrontAddress(overrides?: CallOverrides): Promise<BigNumber>;
+
+    transferOwnership(
+      newOwner: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    updateStoreFront(
+      _newStoreFront: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
   };
 
   populateTransaction: {
@@ -366,8 +492,24 @@ export interface LazyMintProxy extends BaseContract {
       overrides?: PayableOverrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
+    owner(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    renounceOwnership(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
     seaportAddress(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     storefrontAddress(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    transferOwnership(
+      newOwner: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    updateStoreFront(
+      _newStoreFront: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
   };
 }
