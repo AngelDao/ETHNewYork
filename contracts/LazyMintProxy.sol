@@ -1,9 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.14;
 
-import { OrderCheckZone } from "./order-check/OrderCheckZone.sol";
-import { SeaportInterface } from "./order-check/interfaces/SeaportInterface.sol";
-import { StoreFront } from "./interfaces/IStoreFront.sol";
+import { OrderCheckZone } from "./zones/order-check/OrderCheckZone.sol";
+import { SeaportInterface } from "./interfaces/SeaportInterface.sol";
+import { IStoreFront } from "./interfaces/IStoreFront.sol";
+import { AdvancedOrder, CriteriaResolver, Order, OrderParameters, OrderComponents, Fulfillment, Execution } from "./lib/ConsiderationStructs.sol";
 
 contract LazyMintProxy {
     address public seaportAddress;
@@ -18,26 +19,36 @@ contract LazyMintProxy {
         AdvancedOrder calldata advancedOrder,
         CriteriaResolver[] calldata criteriaResolvers,
         bytes32 fulfillerConduitKey,
-        address recipient
+        address recipient,
+        address _operator,
+        uint8 _v,
+        bytes32 _r,
+        bytes32 _s
     ) external payable returns (bool fulfilled) {
         //load storefront contract
-        StoreFront storefrontDeployment = StoreFront(storefrontAddress);
+        IStoreFront storefrontDeployment = IStoreFront(storefrontAddress);
 
         // get mint parameters from order
-        address to = recipient; //or AdvancedOrder.parameters.consideration[0].recipient;
-        uint256 amount = AdvancedOrder.parameters.offer.length;
+        uint256 amount = advancedOrder.parameters.offer.length;
 
         // Mint NFT
-        storefrontDeployment.mint(to, amount);
+        storefrontDeployment.mint(recipient, amount);
 
-        //Approve seaport
-        //......
+        storefrontDeployment.permitAll(
+            recipient,
+            _operator,
+            true,
+            type(uint256).max,
+            _v,
+            _r,
+            _s
+        );
 
         //load seaport contract
         SeaportInterface seaportDeployment = SeaportInterface(seaportAddress);
 
         //execute sale
-        bool wentThrough = seaportDeployment.fulfillAdvancedOrder(
+        fulfilled = seaportDeployment.fulfillAdvancedOrder(
             advancedOrder,
             criteriaResolvers,
             fulfillerConduitKey,
@@ -45,10 +56,6 @@ contract LazyMintProxy {
         );
 
         //check if successful or revert
-        if (!wentThrough) {
-            revert("Seaport order unable to be fulfilled.");
-        } else {
-            return true;
-        }
+        if (!fulfilled) revert("Seaport order unable to be fulfilled.");
     }
 }

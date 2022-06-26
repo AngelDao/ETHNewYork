@@ -43,6 +43,7 @@ export interface StoreFrontInterface extends utils.Interface {
     "setApprovalForAll(address,bool)": FunctionFragment;
     "supportsInterface(bytes4)": FunctionFragment;
     "totalSupply(uint256)": FunctionFragment;
+    "transferMinter(address)": FunctionFragment;
     "transferOwnership(address)": FunctionFragment;
     "updateBaseUri(string)": FunctionFragment;
     "uri(uint256)": FunctionFragment;
@@ -65,6 +66,7 @@ export interface StoreFrontInterface extends utils.Interface {
       | "setApprovalForAll"
       | "supportsInterface"
       | "totalSupply"
+      | "transferMinter"
       | "transferOwnership"
       | "updateBaseUri"
       | "uri"
@@ -127,6 +129,10 @@ export interface StoreFrontInterface extends utils.Interface {
     values: [BigNumberish]
   ): string;
   encodeFunctionData(
+    functionFragment: "transferMinter",
+    values: [string]
+  ): string;
+  encodeFunctionData(
     functionFragment: "transferOwnership",
     values: [string]
   ): string;
@@ -173,6 +179,10 @@ export interface StoreFrontInterface extends utils.Interface {
   ): Result;
   decodeFunctionResult(
     functionFragment: "totalSupply",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: "transferMinter",
     data: BytesLike
   ): Result;
   decodeFunctionResult(
@@ -368,6 +378,11 @@ export interface StoreFront extends BaseContract {
       overrides?: CallOverrides
     ): Promise<[BigNumber]>;
 
+    transferMinter(
+      _newMinter: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
     transferOwnership(
       newOwner: string,
       overrides?: Overrides & { from?: string | Promise<string> }
@@ -462,6 +477,11 @@ export interface StoreFront extends BaseContract {
     overrides?: CallOverrides
   ): Promise<BigNumber>;
 
+  transferMinter(
+    _newMinter: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
   transferOwnership(
     newOwner: string,
     overrides?: Overrides & { from?: string | Promise<string> }
@@ -553,6 +573,11 @@ export interface StoreFront extends BaseContract {
       arg0: BigNumberish,
       overrides?: CallOverrides
     ): Promise<BigNumber>;
+
+    transferMinter(
+      _newMinter: string,
+      overrides?: CallOverrides
+    ): Promise<void>;
 
     transferOwnership(
       newOwner: string,
@@ -704,6 +729,11 @@ export interface StoreFront extends BaseContract {
       overrides?: CallOverrides
     ): Promise<BigNumber>;
 
+    transferMinter(
+      _newMinter: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
     transferOwnership(
       newOwner: string,
       overrides?: Overrides & { from?: string | Promise<string> }
@@ -800,6 +830,11 @@ export interface StoreFront extends BaseContract {
     totalSupply(
       arg0: BigNumberish,
       overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
+
+    transferMinter(
+      _newMinter: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     transferOwnership(

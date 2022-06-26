@@ -7,5 +7,6 @@ export * as interfaces from "./interfaces";
 export * as lib from "./lib";
 export * as test from "./test";
 export * as zones from "./zones";
+export { LazyMintProxy__factory } from "./LazyMintProxy__factory";
 export { Seaport__factory } from "./Seaport__factory";
 export { StoreFront__factory } from "./StoreFront__factory";

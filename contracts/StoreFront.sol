@@ -41,6 +41,10 @@ contract StoreFront is ERC1155, Ownable {
         totalSupply[nextId++] += _amount;
     }
 
+    function transferMinter(address _newMinter) external onlyMinter {
+        minter = _newMinter;
+    }
+
     function _computeDomainSeparator() internal view returns (bytes32) {
         return
             keccak256(

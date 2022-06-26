@@ -97,6 +97,10 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.ImmutableCreate2FactoryInterface__factory>;
     getContractFactory(
+      name: "IStoreFront",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.IStoreFront__factory>;
+    getContractFactory(
       name: "ReentrancyErrors",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.ReentrancyErrors__factory>;
@@ -124,6 +128,10 @@ declare module "hardhat/types/runtime" {
       name: "ZoneInterface",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.ZoneInterface__factory>;
+    getContractFactory(
+      name: "LazyMintProxy",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.LazyMintProxy__factory>;
     getContractFactory(
       name: "AmountDeriver",
       signerOrOptions?: ethers.Signer | FactoryOptions
@@ -387,6 +395,11 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.ImmutableCreate2FactoryInterface>;
     getContractAt(
+      name: "IStoreFront",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.IStoreFront>;
+    getContractAt(
       name: "ReentrancyErrors",
       address: string,
       signer?: ethers.Signer
@@ -421,6 +434,11 @@ declare module "hardhat/types/runtime" {
       address: string,
       signer?: ethers.Signer
     ): Promise<Contracts.ZoneInterface>;
+    getContractAt(
+      name: "LazyMintProxy",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.LazyMintProxy>;
     getContractAt(
       name: "AmountDeriver",
       address: string,
