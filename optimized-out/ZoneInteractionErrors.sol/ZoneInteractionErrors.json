@@ -24,58 +24,58 @@
   },
   "methodIdentifiers": {},
   "ast": {
-    "absolutePath": "contracts/interfaces/ZoneInteractionErrors.sol",
-    "id": 2526,
+    "absolutePath": "contracts/zones/order-check/interfaces/ZoneInteractionErrors.sol",
+    "id": 10672,
     "exportedSymbols": {
       "ZoneInteractionErrors": [
-        2525
+        10671
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "32:644:23",
+    "src": "32:644:59",
     "nodes": [
       {
-        "id": 2518,
+        "id": 10664,
         "nodeType": "PragmaDirective",
-        "src": "32:23:23",
+        "src": "32:24:59",
         "literals": [
           "solidity",
-          "^",
+          ">=",
           "0.8",
           ".7"
         ]
       },
       {
-        "id": 2525,
+        "id": 10671,
         "nodeType": "ContractDefinition",
-        "src": "191:484:23",
+        "src": "192:484:59",
         "nodes": [
           {
-            "id": 2524,
+            "id": 10670,
             "nodeType": "ErrorDefinition",
-            "src": "625:48:23",
+            "src": "626:48:59",
             "documentation": {
-              "id": 2520,
+              "id": 10666,
               "nodeType": "StructuredDocumentation",
-              "src": "229:391:23",
+              "src": "230:391:59",
               "text": " @dev Revert with an error when attempting to fill an order that specifies\n      a restricted submitter as its order type when not submitted by\n      either the offerer or the order's zone or approved as valid by the\n      zone in question via a staticcall to `isValidOrder`.\n @param orderHash The order hash for the invalid restricted order."
             },
             "errorSelector": "fb5014fc",
             "name": "InvalidRestrictedOrder",
-            "nameLocation": "631:22:23",
+            "nameLocation": "632:22:59",
             "parameters": {
-              "id": 2523,
+              "id": 10669,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2522,
+                  "id": 10668,
                   "mutability": "mutable",
                   "name": "orderHash",
-                  "nameLocation": "662:9:23",
+                  "nameLocation": "663:9:59",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2524,
-                  "src": "654:17:23",
+                  "scope": 10670,
+                  "src": "655:17:59",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -83,10 +83,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2521,
+                    "id": 10667,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "654:7:23",
+                    "src": "655:7:59",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -95,7 +95,7 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "653:19:23"
+              "src": "654:19:59"
             }
           }
         ],
@@ -105,24 +105,24 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 2519,
+          "id": 10665,
           "nodeType": "StructuredDocumentation",
-          "src": "57:133:23",
+          "src": "58:133:59",
           "text": " @title ZoneInteractionErrors\n @author 0age\n @notice ZoneInteractionErrors contains errors related to zone interaction."
         },
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          2525
+          10671
         ],
         "name": "ZoneInteractionErrors",
-        "nameLocation": "201:21:23",
-        "scope": 2526,
+        "nameLocation": "202:21:59",
+        "scope": 10672,
         "usedErrors": [
-          2524
+          10670
         ]
       }
     ],
     "license": "MIT"
   },
-  "id": 23
+  "id": 59
 }

@@ -40,19 +40,19 @@
   "methodIdentifiers": {},
   "ast": {
     "absolutePath": "contracts/interfaces/SignatureVerificationErrors.sol",
-    "id": 2435,
+    "id": 2567,
     "exportedSymbols": {
       "SignatureVerificationErrors": [
-        2434
+        2566
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "32:1007:20",
+    "src": "32:1007:21",
     "nodes": [
       {
-        "id": 2418,
+        "id": 2550,
         "nodeType": "PragmaDirective",
-        "src": "32:23:20",
+        "src": "32:23:21",
         "literals": [
           "solidity",
           "^",
@@ -61,36 +61,36 @@
         ]
       },
       {
-        "id": 2434,
+        "id": 2566,
         "nodeType": "ContractDefinition",
-        "src": "224:814:20",
+        "src": "224:814:21",
         "nodes": [
           {
-            "id": 2424,
+            "id": 2556,
             "nodeType": "ErrorDefinition",
-            "src": "453:29:20",
+            "src": "453:29:21",
             "documentation": {
-              "id": 2420,
+              "id": 2552,
               "nodeType": "StructuredDocumentation",
-              "src": "268:180:20",
+              "src": "268:180:21",
               "text": " @dev Revert with an error when a signature that does not contain a v\n      value of 27 or 28 has been supplied.\n @param v The invalid v value."
             },
             "errorSelector": "1f003d0a",
             "name": "BadSignatureV",
-            "nameLocation": "459:13:20",
+            "nameLocation": "459:13:21",
             "parameters": {
-              "id": 2423,
+              "id": 2555,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2422,
+                  "id": 2554,
                   "mutability": "mutable",
                   "name": "v",
-                  "nameLocation": "479:1:20",
+                  "nameLocation": "479:1:21",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2424,
-                  "src": "473:7:20",
+                  "scope": 2556,
+                  "src": "473:7:21",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -98,10 +98,10 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 2421,
+                    "id": 2553,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
-                    "src": "473:5:20",
+                    "src": "473:5:21",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint8",
                       "typeString": "uint8"
@@ -110,67 +110,67 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "472:9:20"
+              "src": "472:9:21"
             }
           },
           {
-            "id": 2427,
+            "id": 2559,
             "nodeType": "ErrorDefinition",
-            "src": "732:22:20",
+            "src": "732:22:21",
             "documentation": {
-              "id": 2425,
+              "id": 2557,
               "nodeType": "StructuredDocumentation",
-              "src": "488:239:20",
+              "src": "488:239:21",
               "text": " @dev Revert with an error when the signer recovered by the supplied\n      signature does not match the offerer or an allowed EIP-1271 signer\n      as specified by the offerer in the event they are a contract."
             },
             "errorSelector": "815e1d64",
             "name": "InvalidSigner",
-            "nameLocation": "738:13:20",
+            "nameLocation": "738:13:21",
             "parameters": {
-              "id": 2426,
+              "id": 2558,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "751:2:20"
+              "src": "751:2:21"
             }
           },
           {
-            "id": 2430,
+            "id": 2562,
             "nodeType": "ErrorDefinition",
-            "src": "884:25:20",
+            "src": "884:25:21",
             "documentation": {
-              "id": 2428,
+              "id": 2560,
               "nodeType": "StructuredDocumentation",
-              "src": "760:119:20",
+              "src": "760:119:21",
               "text": " @dev Revert with an error when a signer cannot be recovered from the\n      supplied signature."
             },
             "errorSelector": "8baa579f",
             "name": "InvalidSignature",
-            "nameLocation": "890:16:20",
+            "nameLocation": "890:16:21",
             "parameters": {
-              "id": 2429,
+              "id": 2561,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "906:2:20"
+              "src": "906:2:21"
             }
           },
           {
-            "id": 2433,
+            "id": 2565,
             "nodeType": "ErrorDefinition",
-            "src": "1007:29:20",
+            "src": "1007:29:21",
             "documentation": {
-              "id": 2431,
+              "id": 2563,
               "nodeType": "StructuredDocumentation",
-              "src": "915:87:20",
+              "src": "915:87:21",
               "text": " @dev Revert with an error when an EIP-1271 call to an account fails."
             },
             "errorSelector": "4f7fb80d",
             "name": "BadContractSignature",
-            "nameLocation": "1013:20:20",
+            "nameLocation": "1013:20:21",
             "parameters": {
-              "id": 2432,
+              "id": 2564,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1033:2:20"
+              "src": "1033:2:21"
             }
           }
         ],
@@ -180,27 +180,27 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 2419,
+          "id": 2551,
           "nodeType": "StructuredDocumentation",
-          "src": "57:166:20",
+          "src": "57:166:21",
           "text": " @title SignatureVerificationErrors\n @author 0age\n @notice SignatureVerificationErrors contains all errors related to signature\n         verification."
         },
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          2434
+          2566
         ],
         "name": "SignatureVerificationErrors",
-        "nameLocation": "234:27:20",
-        "scope": 2435,
+        "nameLocation": "234:27:21",
+        "scope": 2567,
         "usedErrors": [
-          2424,
-          2427,
-          2430,
-          2433
+          2556,
+          2559,
+          2562,
+          2565
         ]
       }
     ],
     "license": "MIT"
   },
-  "id": 20
+  "id": 21
 }

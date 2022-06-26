@@ -707,40 +707,40 @@
   },
   "ast": {
     "absolutePath": "contracts/zones/pausable/interfaces/PausableZoneInterface.sol",
-    "id": 10358,
+    "id": 12063,
     "exportedSymbols": {
       "AdvancedOrder": [
-        4598
+        4976
       ],
       "CriteriaResolver": [
-        4620
+        4998
       ],
       "Execution": [
-        4642
+        5020
       ],
       "Fulfillment": [
-        4629
+        5007
       ],
       "Order": [
-        4586
+        4964
       ],
       "OrderComponents": [
-        4459
+        4837
       ],
       "PausableZoneInterface": [
-        10357
+        12062
       ],
       "SeaportInterface": [
-        2192
+        2548
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "32:3989:51",
+    "src": "32:3989:67",
     "nodes": [
       {
-        "id": 10279,
+        "id": 11984,
         "nodeType": "PragmaDirective",
-        "src": "32:24:51",
+        "src": "32:24:67",
         "literals": [
           "solidity",
           ">=",
@@ -749,23 +749,23 @@
         ]
       },
       {
-        "id": 10281,
+        "id": 11986,
         "nodeType": "ImportDirective",
-        "src": "58:76:51",
+        "src": "58:76:67",
         "absolutePath": "contracts/interfaces/SeaportInterface.sol",
         "file": "../../../interfaces/SeaportInterface.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 10358,
-        "sourceUnit": 2193,
+        "scope": 12063,
+        "sourceUnit": 2549,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 10280,
+              "id": 11985,
               "name": "SeaportInterface",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 2192,
-              "src": "67:16:51",
+              "referencedDeclaration": 2548,
+              "src": "67:16:67",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -774,83 +774,83 @@
         "unitAlias": ""
       },
       {
-        "id": 10288,
+        "id": 11993,
         "nodeType": "ImportDirective",
-        "src": "155:160:51",
+        "src": "155:160:67",
         "absolutePath": "contracts/lib/ConsiderationStructs.sol",
         "file": "../../../lib/ConsiderationStructs.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 10358,
-        "sourceUnit": 4643,
+        "scope": 12063,
+        "sourceUnit": 5021,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 10282,
+              "id": 11987,
               "name": "AdvancedOrder",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 4598,
-              "src": "168:13:51",
+              "referencedDeclaration": 4976,
+              "src": "168:13:67",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
           },
           {
             "foreign": {
-              "id": 10283,
+              "id": 11988,
               "name": "CriteriaResolver",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 4620,
-              "src": "187:16:51",
+              "referencedDeclaration": 4998,
+              "src": "187:16:67",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
           },
           {
             "foreign": {
-              "id": 10284,
+              "id": 11989,
               "name": "Order",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 4586,
-              "src": "209:5:51",
+              "referencedDeclaration": 4964,
+              "src": "209:5:67",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
           },
           {
             "foreign": {
-              "id": 10285,
+              "id": 11990,
               "name": "OrderComponents",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 4459,
-              "src": "220:15:51",
+              "referencedDeclaration": 4837,
+              "src": "220:15:67",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
           },
           {
             "foreign": {
-              "id": 10286,
+              "id": 11991,
               "name": "Fulfillment",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 4629,
-              "src": "241:11:51",
+              "referencedDeclaration": 5007,
+              "src": "241:11:67",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
           },
           {
             "foreign": {
-              "id": 10287,
+              "id": 11992,
               "name": "Execution",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 4642,
-              "src": "258:9:51",
+              "referencedDeclaration": 5020,
+              "src": "258:9:67",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -859,18 +859,18 @@
         "unitAlias": ""
       },
       {
-        "id": 10357,
+        "id": 12062,
         "nodeType": "ContractDefinition",
-        "src": "598:3422:51",
+        "src": "598:3422:67",
         "nodes": [
           {
-            "id": 10302,
+            "id": 12007,
             "nodeType": "FunctionDefinition",
-            "src": "1007:139:51",
+            "src": "1007:139:67",
             "documentation": {
-              "id": 10290,
+              "id": 11995,
               "nodeType": "StructuredDocumentation",
-              "src": "636:366:51",
+              "src": "636:366:67",
               "text": " @notice Cancel an arbitrary number of orders that have agreed to use the\n         contract as their zone.\n @param seaport  The Seaport address.\n @param orders   The orders to cancel.\n @return cancelled A boolean indicating whether the supplied orders have\n                   been successfully cancelled."
             },
             "functionSelector": "e5c27af1",
@@ -878,40 +878,40 @@
             "kind": "function",
             "modifiers": [],
             "name": "cancelOrders",
-            "nameLocation": "1016:12:51",
+            "nameLocation": "1016:12:67",
             "parameters": {
-              "id": 10298,
+              "id": 12003,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10293,
+                  "id": 11998,
                   "mutability": "mutable",
                   "name": "seaport",
-                  "nameLocation": "1055:7:51",
+                  "nameLocation": "1055:7:67",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10302,
-                  "src": "1038:24:51",
+                  "scope": 12007,
+                  "src": "1038:24:67",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_SeaportInterface_$2192",
+                    "typeIdentifier": "t_contract$_SeaportInterface_$2548",
                     "typeString": "contract SeaportInterface"
                   },
                   "typeName": {
-                    "id": 10292,
+                    "id": 11997,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 10291,
+                      "id": 11996,
                       "name": "SeaportInterface",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 2192,
-                      "src": "1038:16:51"
+                      "referencedDeclaration": 2548,
+                      "src": "1038:16:67"
                     },
-                    "referencedDeclaration": 2192,
-                    "src": "1038:16:51",
+                    "referencedDeclaration": 2548,
+                    "src": "1038:16:67",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_SeaportInterface_$2192",
+                      "typeIdentifier": "t_contract$_SeaportInterface_$2548",
                       "typeString": "contract SeaportInterface"
                     }
                   },
@@ -919,63 +919,63 @@
                 },
                 {
                   "constant": false,
-                  "id": 10297,
+                  "id": 12002,
                   "mutability": "mutable",
                   "name": "orders",
-                  "nameLocation": "1099:6:51",
+                  "nameLocation": "1099:6:67",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10302,
-                  "src": "1072:33:51",
+                  "scope": 12007,
+                  "src": "1072:33:67",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_OrderComponents_$4459_calldata_ptr_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_OrderComponents_$4837_calldata_ptr_$dyn_calldata_ptr",
                     "typeString": "struct OrderComponents[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 10295,
+                      "id": 12000,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 10294,
+                        "id": 11999,
                         "name": "OrderComponents",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4459,
-                        "src": "1072:15:51"
+                        "referencedDeclaration": 4837,
+                        "src": "1072:15:67"
                       },
-                      "referencedDeclaration": 4459,
-                      "src": "1072:15:51",
+                      "referencedDeclaration": 4837,
+                      "src": "1072:15:67",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_OrderComponents_$4459_storage_ptr",
+                        "typeIdentifier": "t_struct$_OrderComponents_$4837_storage_ptr",
                         "typeString": "struct OrderComponents"
                       }
                     },
-                    "id": 10296,
+                    "id": 12001,
                     "nodeType": "ArrayTypeName",
-                    "src": "1072:17:51",
+                    "src": "1072:17:67",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_OrderComponents_$4459_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_OrderComponents_$4837_storage_$dyn_storage_ptr",
                       "typeString": "struct OrderComponents[]"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "1028:83:51"
+              "src": "1028:83:67"
             },
             "returnParameters": {
-              "id": 10301,
+              "id": 12006,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10300,
+                  "id": 12005,
                   "mutability": "mutable",
                   "name": "cancelled",
-                  "nameLocation": "1135:9:51",
+                  "nameLocation": "1135:9:67",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10302,
-                  "src": "1130:14:51",
+                  "scope": 12007,
+                  "src": "1130:14:67",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -983,10 +983,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 10299,
+                    "id": 12004,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1130:4:51",
+                    "src": "1130:4:67",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -995,21 +995,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1129:16:51"
+              "src": "1129:16:67"
             },
-            "scope": 10357,
+            "scope": 12062,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 10321,
+            "id": 12026,
             "nodeType": "FunctionDefinition",
-            "src": "1858:203:51",
+            "src": "1858:203:67",
             "documentation": {
-              "id": 10303,
+              "id": 12008,
               "nodeType": "StructuredDocumentation",
-              "src": "1152:701:51",
+              "src": "1152:701:67",
               "text": " @notice Execute an arbitrary number of matched orders, each with\n         an arbitrary number of items for offer and consideration\n         along with a set of fulfillments allocating offer components\n         to consideration components.\n @param seaport      The Seaport address.\n @param orders       The orders to match.\n @param fulfillments An array of elements allocating offer components\n                     to consideration components.\n @return executions An array of elements indicating the sequence of\n                    transfers performed as part of matching the given\n                    orders."
             },
             "functionSelector": "2718034d",
@@ -1017,40 +1017,40 @@
             "kind": "function",
             "modifiers": [],
             "name": "executeMatchOrders",
-            "nameLocation": "1867:18:51",
+            "nameLocation": "1867:18:67",
             "parameters": {
-              "id": 10315,
+              "id": 12020,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10306,
+                  "id": 12011,
                   "mutability": "mutable",
                   "name": "seaport",
-                  "nameLocation": "1912:7:51",
+                  "nameLocation": "1912:7:67",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10321,
-                  "src": "1895:24:51",
+                  "scope": 12026,
+                  "src": "1895:24:67",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_SeaportInterface_$2192",
+                    "typeIdentifier": "t_contract$_SeaportInterface_$2548",
                     "typeString": "contract SeaportInterface"
                   },
                   "typeName": {
-                    "id": 10305,
+                    "id": 12010,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 10304,
+                      "id": 12009,
                       "name": "SeaportInterface",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 2192,
-                      "src": "1895:16:51"
+                      "referencedDeclaration": 2548,
+                      "src": "1895:16:67"
                     },
-                    "referencedDeclaration": 2192,
-                    "src": "1895:16:51",
+                    "referencedDeclaration": 2548,
+                    "src": "1895:16:67",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_SeaportInterface_$2192",
+                      "typeIdentifier": "t_contract$_SeaportInterface_$2548",
                       "typeString": "contract SeaportInterface"
                     }
                   },
@@ -1058,42 +1058,42 @@
                 },
                 {
                   "constant": false,
-                  "id": 10310,
+                  "id": 12015,
                   "mutability": "mutable",
                   "name": "orders",
-                  "nameLocation": "1946:6:51",
+                  "nameLocation": "1946:6:67",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10321,
-                  "src": "1929:23:51",
+                  "scope": 12026,
+                  "src": "1929:23:67",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_Order_$4586_calldata_ptr_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_Order_$4964_calldata_ptr_$dyn_calldata_ptr",
                     "typeString": "struct Order[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 10308,
+                      "id": 12013,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 10307,
+                        "id": 12012,
                         "name": "Order",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4586,
-                        "src": "1929:5:51"
+                        "referencedDeclaration": 4964,
+                        "src": "1929:5:67"
                       },
-                      "referencedDeclaration": 4586,
-                      "src": "1929:5:51",
+                      "referencedDeclaration": 4964,
+                      "src": "1929:5:67",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Order_$4586_storage_ptr",
+                        "typeIdentifier": "t_struct$_Order_$4964_storage_ptr",
                         "typeString": "struct Order"
                       }
                     },
-                    "id": 10309,
+                    "id": 12014,
                     "nodeType": "ArrayTypeName",
-                    "src": "1929:7:51",
+                    "src": "1929:7:67",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Order_$4586_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_Order_$4964_storage_$dyn_storage_ptr",
                       "typeString": "struct Order[]"
                     }
                   },
@@ -1101,113 +1101,113 @@
                 },
                 {
                   "constant": false,
-                  "id": 10314,
+                  "id": 12019,
                   "mutability": "mutable",
                   "name": "fulfillments",
-                  "nameLocation": "1985:12:51",
+                  "nameLocation": "1985:12:67",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10321,
-                  "src": "1962:35:51",
+                  "scope": 12026,
+                  "src": "1962:35:67",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_Fulfillment_$4629_calldata_ptr_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_Fulfillment_$5007_calldata_ptr_$dyn_calldata_ptr",
                     "typeString": "struct Fulfillment[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 10312,
+                      "id": 12017,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 10311,
+                        "id": 12016,
                         "name": "Fulfillment",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4629,
-                        "src": "1962:11:51"
+                        "referencedDeclaration": 5007,
+                        "src": "1962:11:67"
                       },
-                      "referencedDeclaration": 4629,
-                      "src": "1962:11:51",
+                      "referencedDeclaration": 5007,
+                      "src": "1962:11:67",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Fulfillment_$4629_storage_ptr",
+                        "typeIdentifier": "t_struct$_Fulfillment_$5007_storage_ptr",
                         "typeString": "struct Fulfillment"
                       }
                     },
-                    "id": 10313,
+                    "id": 12018,
                     "nodeType": "ArrayTypeName",
-                    "src": "1962:13:51",
+                    "src": "1962:13:67",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Fulfillment_$4629_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_Fulfillment_$5007_storage_$dyn_storage_ptr",
                       "typeString": "struct Fulfillment[]"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "1885:118:51"
+              "src": "1885:118:67"
             },
             "returnParameters": {
-              "id": 10320,
+              "id": 12025,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10319,
+                  "id": 12024,
                   "mutability": "mutable",
                   "name": "executions",
-                  "nameLocation": "2049:10:51",
+                  "nameLocation": "2049:10:67",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10321,
-                  "src": "2030:29:51",
+                  "scope": 12026,
+                  "src": "2030:29:67",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_Execution_$4642_memory_ptr_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_Execution_$5020_memory_ptr_$dyn_memory_ptr",
                     "typeString": "struct Execution[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 10317,
+                      "id": 12022,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 10316,
+                        "id": 12021,
                         "name": "Execution",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4642,
-                        "src": "2030:9:51"
+                        "referencedDeclaration": 5020,
+                        "src": "2030:9:67"
                       },
-                      "referencedDeclaration": 4642,
-                      "src": "2030:9:51",
+                      "referencedDeclaration": 5020,
+                      "src": "2030:9:67",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Execution_$4642_storage_ptr",
+                        "typeIdentifier": "t_struct$_Execution_$5020_storage_ptr",
                         "typeString": "struct Execution"
                       }
                     },
-                    "id": 10318,
+                    "id": 12023,
                     "nodeType": "ArrayTypeName",
-                    "src": "2030:11:51",
+                    "src": "2030:11:67",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Execution_$4642_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_Execution_$5020_storage_$dyn_storage_ptr",
                       "typeString": "struct Execution[]"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "2029:31:51"
+              "src": "2029:31:67"
             },
-            "scope": 10357,
+            "scope": 12062,
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 10344,
+            "id": 12049,
             "nodeType": "FunctionDefinition",
-            "src": "3187:274:51",
+            "src": "3187:274:67",
             "documentation": {
-              "id": 10322,
+              "id": 12027,
               "nodeType": "StructuredDocumentation",
-              "src": "2067:1115:51",
+              "src": "2067:1115:67",
               "text": " @notice Execute an arbitrary number of matched advanced orders,\n         each with an arbitrary number of items for offer and\n         consideration along with a set of fulfillments allocating\n         offer components to consideration components.\n @param seaport           The Seaport address.\n @param orders            The orders to match.\n @param criteriaResolvers An array where each element contains a reference\n                          to a specific order as well as that order's\n                          offer or consideration, a token identifier, and\n                          a proof that the supplied token identifier is\n                          contained in the order's merkle root.\n @param fulfillments      An array of elements allocating offer components\n                          to consideration components.\n @return executions An array of elements indicating the sequence of\n                    transfers performed as part of matching the given\n                    orders."
             },
             "functionSelector": "65c4eb72",
@@ -1215,40 +1215,40 @@
             "kind": "function",
             "modifiers": [],
             "name": "executeMatchAdvancedOrders",
-            "nameLocation": "3196:26:51",
+            "nameLocation": "3196:26:67",
             "parameters": {
-              "id": 10338,
+              "id": 12043,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10325,
+                  "id": 12030,
                   "mutability": "mutable",
                   "name": "seaport",
-                  "nameLocation": "3249:7:51",
+                  "nameLocation": "3249:7:67",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10344,
-                  "src": "3232:24:51",
+                  "scope": 12049,
+                  "src": "3232:24:67",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_SeaportInterface_$2192",
+                    "typeIdentifier": "t_contract$_SeaportInterface_$2548",
                     "typeString": "contract SeaportInterface"
                   },
                   "typeName": {
-                    "id": 10324,
+                    "id": 12029,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 10323,
+                      "id": 12028,
                       "name": "SeaportInterface",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 2192,
-                      "src": "3232:16:51"
+                      "referencedDeclaration": 2548,
+                      "src": "3232:16:67"
                     },
-                    "referencedDeclaration": 2192,
-                    "src": "3232:16:51",
+                    "referencedDeclaration": 2548,
+                    "src": "3232:16:67",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_SeaportInterface_$2192",
+                      "typeIdentifier": "t_contract$_SeaportInterface_$2548",
                       "typeString": "contract SeaportInterface"
                     }
                   },
@@ -1256,42 +1256,42 @@
                 },
                 {
                   "constant": false,
-                  "id": 10329,
+                  "id": 12034,
                   "mutability": "mutable",
                   "name": "orders",
-                  "nameLocation": "3291:6:51",
+                  "nameLocation": "3291:6:67",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10344,
-                  "src": "3266:31:51",
+                  "scope": 12049,
+                  "src": "3266:31:67",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_AdvancedOrder_$4598_calldata_ptr_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_AdvancedOrder_$4976_calldata_ptr_$dyn_calldata_ptr",
                     "typeString": "struct AdvancedOrder[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 10327,
+                      "id": 12032,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 10326,
+                        "id": 12031,
                         "name": "AdvancedOrder",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4598,
-                        "src": "3266:13:51"
+                        "referencedDeclaration": 4976,
+                        "src": "3266:13:67"
                       },
-                      "referencedDeclaration": 4598,
-                      "src": "3266:13:51",
+                      "referencedDeclaration": 4976,
+                      "src": "3266:13:67",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_AdvancedOrder_$4598_storage_ptr",
+                        "typeIdentifier": "t_struct$_AdvancedOrder_$4976_storage_ptr",
                         "typeString": "struct AdvancedOrder"
                       }
                     },
-                    "id": 10328,
+                    "id": 12033,
                     "nodeType": "ArrayTypeName",
-                    "src": "3266:15:51",
+                    "src": "3266:15:67",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_AdvancedOrder_$4598_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_AdvancedOrder_$4976_storage_$dyn_storage_ptr",
                       "typeString": "struct AdvancedOrder[]"
                     }
                   },
@@ -1299,42 +1299,42 @@
                 },
                 {
                   "constant": false,
-                  "id": 10333,
+                  "id": 12038,
                   "mutability": "mutable",
                   "name": "criteriaResolvers",
-                  "nameLocation": "3335:17:51",
+                  "nameLocation": "3335:17:67",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10344,
-                  "src": "3307:45:51",
+                  "scope": 12049,
+                  "src": "3307:45:67",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_CriteriaResolver_$4620_calldata_ptr_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_CriteriaResolver_$4998_calldata_ptr_$dyn_calldata_ptr",
                     "typeString": "struct CriteriaResolver[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 10331,
+                      "id": 12036,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 10330,
+                        "id": 12035,
                         "name": "CriteriaResolver",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4620,
-                        "src": "3307:16:51"
+                        "referencedDeclaration": 4998,
+                        "src": "3307:16:67"
                       },
-                      "referencedDeclaration": 4620,
-                      "src": "3307:16:51",
+                      "referencedDeclaration": 4998,
+                      "src": "3307:16:67",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_CriteriaResolver_$4620_storage_ptr",
+                        "typeIdentifier": "t_struct$_CriteriaResolver_$4998_storage_ptr",
                         "typeString": "struct CriteriaResolver"
                       }
                     },
-                    "id": 10332,
+                    "id": 12037,
                     "nodeType": "ArrayTypeName",
-                    "src": "3307:18:51",
+                    "src": "3307:18:67",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_CriteriaResolver_$4620_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_CriteriaResolver_$4998_storage_$dyn_storage_ptr",
                       "typeString": "struct CriteriaResolver[]"
                     }
                   },
@@ -1342,113 +1342,113 @@
                 },
                 {
                   "constant": false,
-                  "id": 10337,
+                  "id": 12042,
                   "mutability": "mutable",
                   "name": "fulfillments",
-                  "nameLocation": "3385:12:51",
+                  "nameLocation": "3385:12:67",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10344,
-                  "src": "3362:35:51",
+                  "scope": 12049,
+                  "src": "3362:35:67",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_Fulfillment_$4629_calldata_ptr_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_Fulfillment_$5007_calldata_ptr_$dyn_calldata_ptr",
                     "typeString": "struct Fulfillment[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 10335,
+                      "id": 12040,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 10334,
+                        "id": 12039,
                         "name": "Fulfillment",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4629,
-                        "src": "3362:11:51"
+                        "referencedDeclaration": 5007,
+                        "src": "3362:11:67"
                       },
-                      "referencedDeclaration": 4629,
-                      "src": "3362:11:51",
+                      "referencedDeclaration": 5007,
+                      "src": "3362:11:67",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Fulfillment_$4629_storage_ptr",
+                        "typeIdentifier": "t_struct$_Fulfillment_$5007_storage_ptr",
                         "typeString": "struct Fulfillment"
                       }
                     },
-                    "id": 10336,
+                    "id": 12041,
                     "nodeType": "ArrayTypeName",
-                    "src": "3362:13:51",
+                    "src": "3362:13:67",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Fulfillment_$4629_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_Fulfillment_$5007_storage_$dyn_storage_ptr",
                       "typeString": "struct Fulfillment[]"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "3222:181:51"
+              "src": "3222:181:67"
             },
             "returnParameters": {
-              "id": 10343,
+              "id": 12048,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10342,
+                  "id": 12047,
                   "mutability": "mutable",
                   "name": "executions",
-                  "nameLocation": "3449:10:51",
+                  "nameLocation": "3449:10:67",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10344,
-                  "src": "3430:29:51",
+                  "scope": 12049,
+                  "src": "3430:29:67",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_Execution_$4642_memory_ptr_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_Execution_$5020_memory_ptr_$dyn_memory_ptr",
                     "typeString": "struct Execution[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 10340,
+                      "id": 12045,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 10339,
+                        "id": 12044,
                         "name": "Execution",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 4642,
-                        "src": "3430:9:51"
+                        "referencedDeclaration": 5020,
+                        "src": "3430:9:67"
                       },
-                      "referencedDeclaration": 4642,
-                      "src": "3430:9:51",
+                      "referencedDeclaration": 5020,
+                      "src": "3430:9:67",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Execution_$4642_storage_ptr",
+                        "typeIdentifier": "t_struct$_Execution_$5020_storage_ptr",
                         "typeString": "struct Execution"
                       }
                     },
-                    "id": 10341,
+                    "id": 12046,
                     "nodeType": "ArrayTypeName",
-                    "src": "3430:11:51",
+                    "src": "3430:11:67",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Execution_$4642_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_Execution_$5020_storage_$dyn_storage_ptr",
                       "typeString": "struct Execution[]"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "3429:31:51"
+              "src": "3429:31:67"
             },
-            "scope": 10357,
+            "scope": 12062,
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 10350,
+            "id": 12055,
             "nodeType": "FunctionDefinition",
-            "src": "3743:39:51",
+            "src": "3743:39:67",
             "documentation": {
-              "id": 10345,
+              "id": 12050,
               "nodeType": "StructuredDocumentation",
-              "src": "3467:271:51",
+              "src": "3467:271:67",
               "text": " @notice Pause this contract, safely stopping orders from using\n         the contract as a zone. Restricted orders with this address as a\n         zone will not be fulfillable unless the zone is redeployed to the\n         same address."
             },
             "functionSelector": "76a67a51",
@@ -1456,20 +1456,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "pause",
-            "nameLocation": "3752:5:51",
+            "nameLocation": "3752:5:67",
             "parameters": {
-              "id": 10348,
+              "id": 12053,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10347,
+                  "id": 12052,
                   "mutability": "mutable",
                   "name": "payee",
-                  "nameLocation": "3766:5:51",
+                  "nameLocation": "3766:5:67",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10350,
-                  "src": "3758:13:51",
+                  "scope": 12055,
+                  "src": "3758:13:67",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1477,10 +1477,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 10346,
+                    "id": 12051,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3758:7:51",
+                    "src": "3758:7:67",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1490,27 +1490,27 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3757:15:51"
+              "src": "3757:15:67"
             },
             "returnParameters": {
-              "id": 10349,
+              "id": 12054,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "3781:0:51"
+              "src": "3781:0:67"
             },
-            "scope": 10357,
+            "scope": 12062,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 10356,
+            "id": 12061,
             "nodeType": "FunctionDefinition",
-            "src": "3959:59:51",
+            "src": "3959:59:67",
             "documentation": {
-              "id": 10351,
+              "id": 12056,
               "nodeType": "StructuredDocumentation",
-              "src": "3788:166:51",
+              "src": "3788:166:67",
               "text": " @notice Assign the given address with the ability to operate the zone.\n @param operatorToAssign The address to assign as the operator."
             },
             "functionSelector": "84385c6f",
@@ -1518,20 +1518,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "assignOperator",
-            "nameLocation": "3968:14:51",
+            "nameLocation": "3968:14:67",
             "parameters": {
-              "id": 10354,
+              "id": 12059,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10353,
+                  "id": 12058,
                   "mutability": "mutable",
                   "name": "operatorToAssign",
-                  "nameLocation": "3991:16:51",
+                  "nameLocation": "3991:16:67",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10356,
-                  "src": "3983:24:51",
+                  "scope": 12061,
+                  "src": "3983:24:67",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1539,10 +1539,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 10352,
+                    "id": 12057,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3983:7:51",
+                    "src": "3983:7:67",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1552,15 +1552,15 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3982:26:51"
+              "src": "3982:26:67"
             },
             "returnParameters": {
-              "id": 10355,
+              "id": 12060,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "4017:0:51"
+              "src": "4017:0:67"
             },
-            "scope": 10357,
+            "scope": 12062,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -1572,22 +1572,22 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 10289,
+          "id": 11994,
           "nodeType": "StructuredDocumentation",
-          "src": "317:280:51",
+          "src": "317:280:67",
           "text": " @title  PausableZone\n @author cupOJoseph, BCLeFevre, ryanio\n @notice PausableZone is a simple zone implementation that approves every\n         order. It can be self-destructed by its controller to pause\n         restricted orders that have it set as their zone."
         },
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          10357
+          12062
         ],
         "name": "PausableZoneInterface",
-        "nameLocation": "608:21:51",
-        "scope": 10358,
+        "nameLocation": "608:21:67",
+        "scope": 12063,
         "usedErrors": []
       }
     ],
     "license": "MIT"
   },
-  "id": 51
+  "id": 67
 }
