@@ -11,6 +11,7 @@ export type { ConsiderationInterface } from "./ConsiderationInterface";
 export type { CriteriaResolutionErrors } from "./CriteriaResolutionErrors";
 export type { EIP1271Interface } from "./EIP1271Interface";
 export type { FulfillmentApplicationErrors } from "./FulfillmentApplicationErrors";
+export type { IStoreFront } from "./IStoreFront";
 export type { ImmutableCreate2FactoryInterface } from "./ImmutableCreate2FactoryInterface";
 export type { ReentrancyErrors } from "./ReentrancyErrors";
 export type { SeaportInterface } from "./SeaportInterface";
