@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.14;
 
-import { OrderCheckZone } from "./zones/order-check/OrderCheckZone.sol";
 import { SeaportInterface } from "./interfaces/SeaportInterface.sol";
 import { IStoreFront } from "./interfaces/IStoreFront.sol";
 import { AdvancedOrder, CriteriaResolver, Order, OrderParameters, OrderComponents, Fulfillment, Execution } from "./lib/ConsiderationStructs.sol";
