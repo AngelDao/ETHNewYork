@@ -26,9 +26,9 @@ contract StoreFront is ERC1155, Ownable {
     address minter;
     uint256 nextId;
 
-    constructor(address _minter, string memory _baseURI) {
+    constructor(address _minter) {
         minter = _minter;
-        baseURI = _baseURI;
+        baseURI = "";
     }
 
     modifier onlyMinter() {
@@ -41,13 +41,18 @@ contract StoreFront is ERC1155, Ownable {
         totalSupply[nextId++] += _amount;
     }
 
+    function transferMinter(address _newMinter) external {
+        require(msg.sender == minter || msg.sender == owner());
+        minter = _newMinter;
+    }
+
     function _computeDomainSeparator() internal view returns (bytes32) {
         return
             keccak256(
                 abi.encode(
                     DOMAIN_TYPEHASH,
-                    keccak256(bytes(NAME)),
-                    keccak256(bytes(VERSION)),
+                    NAME,
+                    VERSION,
                     block.chainid,
                     address(this)
                 )

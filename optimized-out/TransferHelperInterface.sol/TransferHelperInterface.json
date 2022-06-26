@@ -72,22 +72,22 @@
   },
   "ast": {
     "absolutePath": "contracts/interfaces/TransferHelperInterface.sol",
-    "id": 2649,
+    "id": 3133,
     "exportedSymbols": {
       "TransferHelperInterface": [
-        2648
+        3132
       ],
       "TransferHelperItem": [
-        1529
+        1831
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "32:730:23",
+    "src": "32:730:25",
     "nodes": [
       {
-        "id": 2628,
+        "id": 3112,
         "nodeType": "PragmaDirective",
-        "src": "32:23:23",
+        "src": "32:23:25",
         "literals": [
           "solidity",
           "^",
@@ -96,23 +96,23 @@
         ]
       },
       {
-        "id": 2630,
+        "id": 3114,
         "nodeType": "ImportDirective",
-        "src": "57:74:23",
+        "src": "57:74:25",
         "absolutePath": "contracts/helpers/TransferHelperStructs.sol",
         "file": "../helpers/TransferHelperStructs.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 2649,
-        "sourceUnit": 1530,
+        "scope": 3133,
+        "sourceUnit": 1832,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 2629,
+              "id": 3113,
               "name": "TransferHelperItem",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 1529,
-              "src": "66:18:23",
+              "referencedDeclaration": 1831,
+              "src": "66:18:25",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -121,38 +121,38 @@
         "unitAlias": ""
       },
       {
-        "id": 2648,
+        "id": 3132,
         "nodeType": "ContractDefinition",
-        "src": "133:628:23",
+        "src": "133:628:25",
         "nodes": [
           {
-            "id": 2633,
+            "id": 3117,
             "nodeType": "ErrorDefinition",
-            "src": "295:24:23",
+            "src": "295:24:25",
             "documentation": {
-              "id": 2631,
+              "id": 3115,
               "nodeType": "StructuredDocumentation",
-              "src": "173:117:23",
+              "src": "173:117:25",
               "text": " @dev Revert with an error when attempting to execute transfers with a\n      NATIVE itemType."
             },
             "errorSelector": "7932f1fc",
             "name": "InvalidItemType",
-            "nameLocation": "301:15:23",
+            "nameLocation": "301:15:25",
             "parameters": {
-              "id": 2632,
+              "id": 3116,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "316:2:23"
+              "src": "316:2:25"
             }
           },
           {
-            "id": 2647,
+            "id": 3131,
             "nodeType": "FunctionDefinition",
-            "src": "605:154:23",
+            "src": "605:154:25",
             "documentation": {
-              "id": 2634,
+              "id": 3118,
               "nodeType": "StructuredDocumentation",
-              "src": "325:275:23",
+              "src": "325:275:25",
               "text": " @notice Transfer multiple items to a single recipient.\n @param items The items to transfer.\n @param recipient  The address the items should be transferred to.\n @param conduitKey  The key of the conduit performing the bulk transfer."
             },
             "functionSelector": "73b69d03",
@@ -160,49 +160,49 @@
             "kind": "function",
             "modifiers": [],
             "name": "bulkTransfer",
-            "nameLocation": "614:12:23",
+            "nameLocation": "614:12:25",
             "parameters": {
-              "id": 2643,
+              "id": 3127,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2638,
+                  "id": 3122,
                   "mutability": "mutable",
                   "name": "items",
-                  "nameLocation": "666:5:23",
+                  "nameLocation": "666:5:25",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2647,
-                  "src": "636:35:23",
+                  "scope": 3131,
+                  "src": "636:35:25",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_TransferHelperItem_$1529_calldata_ptr_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_TransferHelperItem_$1831_calldata_ptr_$dyn_calldata_ptr",
                     "typeString": "struct TransferHelperItem[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 2636,
+                      "id": 3120,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 2635,
+                        "id": 3119,
                         "name": "TransferHelperItem",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 1529,
-                        "src": "636:18:23"
+                        "referencedDeclaration": 1831,
+                        "src": "636:18:25"
                       },
-                      "referencedDeclaration": 1529,
-                      "src": "636:18:23",
+                      "referencedDeclaration": 1831,
+                      "src": "636:18:25",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_TransferHelperItem_$1529_storage_ptr",
+                        "typeIdentifier": "t_struct$_TransferHelperItem_$1831_storage_ptr",
                         "typeString": "struct TransferHelperItem"
                       }
                     },
-                    "id": 2637,
+                    "id": 3121,
                     "nodeType": "ArrayTypeName",
-                    "src": "636:20:23",
+                    "src": "636:20:25",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_TransferHelperItem_$1529_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_TransferHelperItem_$1831_storage_$dyn_storage_ptr",
                       "typeString": "struct TransferHelperItem[]"
                     }
                   },
@@ -210,13 +210,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2640,
+                  "id": 3124,
                   "mutability": "mutable",
                   "name": "recipient",
-                  "nameLocation": "689:9:23",
+                  "nameLocation": "689:9:25",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2647,
-                  "src": "681:17:23",
+                  "scope": 3131,
+                  "src": "681:17:25",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -224,10 +224,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2639,
+                    "id": 3123,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "681:7:23",
+                    "src": "681:7:25",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -238,13 +238,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2642,
+                  "id": 3126,
                   "mutability": "mutable",
                   "name": "conduitKey",
-                  "nameLocation": "716:10:23",
+                  "nameLocation": "716:10:25",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2647,
-                  "src": "708:18:23",
+                  "scope": 3131,
+                  "src": "708:18:25",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -252,10 +252,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2641,
+                    "id": 3125,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "708:7:23",
+                    "src": "708:7:25",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -264,21 +264,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "626:106:23"
+              "src": "626:106:25"
             },
             "returnParameters": {
-              "id": 2646,
+              "id": 3130,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2645,
+                  "id": 3129,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2647,
-                  "src": "751:6:23",
+                  "scope": 3131,
+                  "src": "751:6:25",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -286,10 +286,10 @@
                     "typeString": "bytes4"
                   },
                   "typeName": {
-                    "id": 2644,
+                    "id": 3128,
                     "name": "bytes4",
                     "nodeType": "ElementaryTypeName",
-                    "src": "751:6:23",
+                    "src": "751:6:25",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes4",
                       "typeString": "bytes4"
@@ -298,9 +298,9 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "750:8:23"
+              "src": "750:8:25"
             },
-            "scope": 2648,
+            "scope": 3132,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -313,17 +313,17 @@
         "contractKind": "interface",
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          2648
+          3132
         ],
         "name": "TransferHelperInterface",
-        "nameLocation": "143:23:23",
-        "scope": 2649,
+        "nameLocation": "143:23:25",
+        "scope": 3133,
         "usedErrors": [
-          2633
+          3117
         ]
       }
     ],
     "license": "MIT"
   },
-  "id": 23
+  "id": 25
 }

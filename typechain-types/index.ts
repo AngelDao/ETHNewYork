@@ -50,6 +50,8 @@ export type { FulfillmentApplicationErrors } from "./contracts/interfaces/Fulfil
 export { FulfillmentApplicationErrors__factory } from "./factories/contracts/interfaces/FulfillmentApplicationErrors__factory";
 export type { ImmutableCreate2FactoryInterface } from "./contracts/interfaces/ImmutableCreate2FactoryInterface";
 export { ImmutableCreate2FactoryInterface__factory } from "./factories/contracts/interfaces/ImmutableCreate2FactoryInterface__factory";
+export type { IStoreFront } from "./contracts/interfaces/IStoreFront";
+export { IStoreFront__factory } from "./factories/contracts/interfaces/IStoreFront__factory";
 export type { ReentrancyErrors } from "./contracts/interfaces/ReentrancyErrors";
 export { ReentrancyErrors__factory } from "./factories/contracts/interfaces/ReentrancyErrors__factory";
 export type { SeaportInterface } from "./contracts/interfaces/SeaportInterface";
@@ -64,6 +66,8 @@ export type { ZoneInteractionErrors } from "./contracts/interfaces/ZoneInteracti
 export { ZoneInteractionErrors__factory } from "./factories/contracts/interfaces/ZoneInteractionErrors__factory";
 export type { ZoneInterface } from "./contracts/interfaces/ZoneInterface";
 export { ZoneInterface__factory } from "./factories/contracts/interfaces/ZoneInterface__factory";
+export type { LazyMintProxy } from "./contracts/LazyMintProxy";
+export { LazyMintProxy__factory } from "./factories/contracts/LazyMintProxy__factory";
 export type { AmountDeriver } from "./contracts/lib/AmountDeriver";
 export { AmountDeriver__factory } from "./factories/contracts/lib/AmountDeriver__factory";
 export type { Assertions } from "./contracts/lib/Assertions";
