@@ -5,7 +5,9 @@ const seaportABI = [{"inputs":[{"internalType":"address","name":"conduitControll
 
 const seaportAddress = "0x00000000006c3852cbEf3e08E8dF289169EdE581";
 
-const storeFrontAddress = "0x2610F6dD719dDd428F09436cD221b29b8E69ebA9";
+const storeFrontAddress = "0xc164004212e5cf9eda62e26af346714c48f2b775";
+
+const storeFrontABI = [    {      "inputs": [        {          "internalType": "address",          "name": "_minter",          "type": "address"        },        {          "internalType": "string",          "name": "_baseURI",          "type": "string"        }      ],      "stateMutability": "nonpayable",      "type": "constructor"    },    {      "anonymous": false,      "inputs": [        {          "indexed": true,          "internalType": "address",          "name": "owner",          "type": "address"        },        {          "indexed": true,          "internalType": "address",          "name": "operator",          "type": "address"        },        {          "indexed": false,          "internalType": "bool",          "name": "approved",          "type": "bool"        }      ],      "name": "ApprovalForAll",      "type": "event"    },    {      "anonymous": false,      "inputs": [        {          "indexed": true,          "internalType": "address",          "name": "previousOwner",          "type": "address"        },        {          "indexed": true,          "internalType": "address",          "name": "newOwner",          "type": "address"        }      ],      "name": "OwnershipTransferred",      "type": "event"    },    {      "anonymous": false,      "inputs": [        {          "indexed": true,          "internalType": "address",          "name": "operator",          "type": "address"        },        {          "indexed": true,          "internalType": "address",          "name": "from",          "type": "address"        },        {          "indexed": true,          "internalType": "address",          "name": "to",          "type": "address"        },        {          "indexed": false,          "internalType": "uint256[]",          "name": "ids",          "type": "uint256[]"        },        {          "indexed": false,          "internalType": "uint256[]",          "name": "amounts",          "type": "uint256[]"        }      ],      "name": "TransferBatch",      "type": "event"    },    {      "anonymous": false,      "inputs": [        {          "indexed": true,          "internalType": "address",          "name": "operator",          "type": "address"        },        {          "indexed": true,          "internalType": "address",          "name": "from",          "type": "address"        },        {          "indexed": true,          "internalType": "address",          "name": "to",          "type": "address"        },        {          "indexed": false,          "internalType": "uint256",          "name": "id",          "type": "uint256"        },        {          "indexed": false,          "internalType": "uint256",          "name": "amount",          "type": "uint256"        }      ],      "name": "TransferSingle",      "type": "event"    },    {      "anonymous": false,      "inputs": [        {          "indexed": false,          "internalType": "string",          "name": "value",          "type": "string"        },        {          "indexed": true,          "internalType": "uint256",          "name": "id",          "type": "uint256"        }      ],      "name": "URI",      "type": "event"    },    {      "inputs": [],      "name": "NAME",      "outputs": [        {          "internalType": "string",          "name": "",          "type": "string"        }      ],      "stateMutability": "view",      "type": "function"    },    {      "inputs": [],      "name": "VERSION",      "outputs": [        {          "internalType": "string",          "name": "",          "type": "string"        }      ],      "stateMutability": "view",      "type": "function"    },    {      "inputs": [        {          "internalType": "address",          "name": "",          "type": "address"        },        {          "internalType": "uint256",          "name": "",          "type": "uint256"        }      ],      "name": "balanceOf",      "outputs": [        {          "internalType": "uint256",          "name": "",          "type": "uint256"        }      ],      "stateMutability": "view",      "type": "function"    },    {      "inputs": [        {          "internalType": "address[]",          "name": "owners",          "type": "address[]"        },        {          "internalType": "uint256[]",          "name": "ids",          "type": "uint256[]"        }      ],      "name": "balanceOfBatch",      "outputs": [        {          "internalType": "uint256[]",          "name": "balances",          "type": "uint256[]"        }      ],      "stateMutability": "view",      "type": "function"    },    {      "inputs": [        {          "internalType": "address",          "name": "",          "type": "address"        },        {          "internalType": "address",          "name": "",          "type": "address"        }      ],      "name": "isApprovedForAll",      "outputs": [        {          "internalType": "bool",          "name": "",          "type": "bool"        }      ],      "stateMutability": "view",      "type": "function"    },    {      "inputs": [        {          "internalType": "address",          "name": "_to",          "type": "address"        },        {          "internalType": "uint256",          "name": "_amount",          "type": "uint256"        }      ],      "name": "mint",      "outputs": [],      "stateMutability": "nonpayable",      "type": "function"    },    {      "inputs": [        {          "internalType": "address",          "name": "",          "type": "address"        }      ],      "name": "nonces",      "outputs": [        {          "internalType": "uint256",          "name": "",          "type": "uint256"        }      ],      "stateMutability": "view",      "type": "function"    },    {      "inputs": [],      "name": "owner",      "outputs": [        {          "internalType": "address",          "name": "",          "type": "address"        }      ],      "stateMutability": "view",      "type": "function"    },    {      "inputs": [        {          "internalType": "address",          "name": "_owner",          "type": "address"        },        {          "internalType": "address",          "name": "_operator",          "type": "address"        },        {          "internalType": "bool",          "name": "_approved",          "type": "bool"        },        {          "internalType": "uint256",          "name": "_deadline",          "type": "uint256"        },        {          "internalType": "uint8",          "name": "_v",          "type": "uint8"        },        {          "internalType": "bytes32",          "name": "_r",          "type": "bytes32"        },        {          "internalType": "bytes32",          "name": "_s",          "type": "bytes32"        }      ],      "name": "permitAll",      "outputs": [],      "stateMutability": "nonpayable",      "type": "function"    },    {      "inputs": [],      "name": "renounceOwnership",      "outputs": [],      "stateMutability": "nonpayable",      "type": "function"    },    {      "inputs": [        {          "internalType": "address",          "name": "from",          "type": "address"        },        {          "internalType": "address",          "name": "to",          "type": "address"        },        {          "internalType": "uint256[]",          "name": "ids",          "type": "uint256[]"        },        {          "internalType": "uint256[]",          "name": "amounts",          "type": "uint256[]"        },        {          "internalType": "bytes",          "name": "data",          "type": "bytes"        }      ],      "name": "safeBatchTransferFrom",      "outputs": [],      "stateMutability": "nonpayable",      "type": "function"    },    {      "inputs": [        {          "internalType": "address",          "name": "from",          "type": "address"        },        {          "internalType": "address",          "name": "to",          "type": "address"        },        {          "internalType": "uint256",          "name": "id",          "type": "uint256"        },        {          "internalType": "uint256",          "name": "amount",          "type": "uint256"        },        {          "internalType": "bytes",          "name": "data",          "type": "bytes"        }      ],      "name": "safeTransferFrom",      "outputs": [],      "stateMutability": "nonpayable",      "type": "function"    },    {      "inputs": [        {          "internalType": "address",          "name": "operator",          "type": "address"        },        {          "internalType": "bool",          "name": "approved",          "type": "bool"        }      ],      "name": "setApprovalForAll",      "outputs": [],      "stateMutability": "nonpayable",      "type": "function"    },    {      "inputs": [        {          "internalType": "bytes4",          "name": "interfaceId",          "type": "bytes4"        }      ],      "name": "supportsInterface",      "outputs": [        {          "internalType": "bool",          "name": "",          "type": "bool"        }      ],      "stateMutability": "pure",      "type": "function"    },    {      "inputs": [        {          "internalType": "uint256",          "name": "",          "type": "uint256"        }      ],      "name": "totalSupply",      "outputs": [        {          "internalType": "uint256",          "name": "",          "type": "uint256"        }      ],      "stateMutability": "view",      "type": "function"    },    {      "inputs": [        {          "internalType": "address",          "name": "_newMinter",          "type": "address"        }      ],      "name": "transferMinter",      "outputs": [],      "stateMutability": "nonpayable",      "type": "function"    },    {      "inputs": [        {          "internalType": "address",          "name": "newOwner",          "type": "address"        }      ],      "name": "transferOwnership",      "outputs": [],      "stateMutability": "nonpayable",      "type": "function"    },    {      "inputs": [        {          "internalType": "string",          "name": "base",          "type": "string"        }      ],      "name": "updateBaseUri",      "outputs": [],      "stateMutability": "nonpayable",      "type": "function"    },    {      "inputs": [        {          "internalType": "uint256",          "name": "id",          "type": "uint256"        }      ],      "name": "uri",      "outputs": [        {          "internalType": "string",          "name": "",          "type": "string"        }      ],      "stateMutability": "view",      "type": "function"    }  ]
 
 const zone = ethers.constants.AddressZero; //"";
 
@@ -19,6 +21,33 @@ const domainData = {
   chainId: "4",
   verifyingContract: seaportAddress,
 };
+
+const domainDataStoreFront = {
+  name: "STOREFRONT",
+  version: "1",
+  chainId: "4",
+  verifyingContract: storeFrontAddress,
+};
+
+const permitType = {
+	PermitAll: [
+		{
+			type: "address", name:"owner",
+		},
+		{ 
+			type: "address", name:"operator",
+		},
+		{
+			type: "bool", name:"approved" ,
+		},
+		{
+			type: "uint256", name:"nonce",
+		},
+		{
+			type: "uint256", name:"deadline"
+		}
+	]
+}
 
 const orderType = {
   OrderComponents: [
@@ -122,6 +151,68 @@ const signOrder = async (
   return signature;
 };
 
+
+const mintTestNFTs = async () => {
+
+  const provider = new ethers.providers.JsonRpcProvider(rinkeby, 4);
+
+  const signer = new ethers.Wallet(process.env.PK, provider);
+
+  const storefrontContract = new ethers.Contract(storeFrontAddress, storeFrontABI, signer);
+  
+  const mint = await storefrontContract.mint(signer.address, 10, {gasLimit:25000000});
+
+  console.log("mint results", mint);
+
+  const nonce = await storefrontContract.nonces(signer.address);
+
+  console.log("got nonce", nonce)
+
+  const permitData = {
+  	  	owner: signer.address, //owner
+  		operator:"0x00000000006c3852cbef3e08e8df289169ede581", //operator
+  		approved:true,//approved
+  		nonce,
+  		deadline:"115792089237316195423570985008687907853269984665640564039457584007913129639935"//deadline
+  }
+
+  console.log("Permit data", permitData)
+
+  const signature = await signer._signTypedData(
+    domainDataStoreFront,
+    permitType,
+    permitData
+  );
+
+  console.log("Split")
+
+  const {
+  	r,
+  	s,
+  	recoveryParam,
+  	v
+  } = ethers.utils.splitSignature(signature);
+
+
+  console.log("V R S", v,r,s)
+
+  const permit = await storefrontContract.permitAll(
+  		signer.address, //owner
+  		"0x00000000006c3852cbef3e08e8df289169ede581", //operator
+  		true,//approved
+  		"115792089237316195423570985008687907853269984665640564039457584007913129639935",//deadline
+  		v,
+  		r,
+  		s,
+  	{gasLimit:25000000});
+
+  console.log("Permit ", permit)
+
+
+}
+
+
+
  /**
   * @dev create advanced order
   * @dev called by collection creator
@@ -140,7 +231,7 @@ const generateAndSignOrder = async (voucherData) => {
   const offerer = signer.address;
 
   let offers = [];
- // for lazy minting of an NFT collection we will make an array of 100 NFTs and pass in 0 for the id criteria and address will be the same for 1155
+ // for lazy minting of an NFT collection we will make an array of 10 NFTs and pass in 0 for the id criteria and address will be the same for 1155
 
   for (var i = 0; i < 10; i++){
     offers.push(
@@ -149,8 +240,8 @@ const generateAndSignOrder = async (voucherData) => {
   }
 
   //the entire collection should be sold for 10 eth
-  //and the numerator/denominator in the advanced order below is 1/100
-  //so each NFT our of 100 should be sold for 0.1 eth
+  //and the numerator/denominator in the advanced order below is 1/10
+  //so each NFT our of 10 should be sold for 1 eth
 
   const consideration = [
     getItemETH(ethers.utils.parseEther("10"), ethers.utils.parseEther("10"), offerer),
@@ -221,7 +312,9 @@ const partialFulfillOrder = async (advancedOrder) => {
 
 //test
 (async() => {
-  const order = await generateAndSignOrder();
+  /*const order = await generateAndSignOrder();
   console.log("generated and signed order", order);
-  await partialFulfillOrder(order);
+  await partialFulfillOrder(order);*/
+
+  mintTestNFTs();
 })();
